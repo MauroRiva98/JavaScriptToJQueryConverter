@@ -1,4 +1,4 @@
-grammar SimpleJava2022;
+grammar JavaScriptToJQueryConverter;
 
 options {
 	language = Java;
@@ -6,11 +6,11 @@ options {
 }
 
 @header {
-	package compilerPackage;
+	package JS2JQConverter;
 }
 
 @lexer::header {
-	package compilerPackage;
+	package JS2JQConverter;
 }
 
 @members {

@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g 2023-05-23 17:01:00
+// $ANTLR 3.5.1 C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g 2023-05-23 17:07:07
 
 	package JS2JQConverter;
 
@@ -132,7 +132,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 	}
 
 	@Override public String[] getTokenNames() { return JavaScriptToJQueryConverterParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g"; }
+	@Override public String getGrammarFileName() { return "C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g"; }
 
 
 		Handler h;
@@ -165,12 +165,12 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "parseJava"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:50:1: parseJava : getRule ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:50:1: parseJava : getRule ;
 	public final void parseJava() throws RecognitionException {
 		initParser();
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:52:2: ( getRule )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:53:3: getRule
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:52:2: ( getRule )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:53:3: getRule
 			{
 			pushFollow(FOLLOW_getRule_in_parseJava64);
 			getRule();
@@ -192,14 +192,14 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "getRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:55:1: getRule : DOCUMENT DOT get= ID LP i= STRING RP SC ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:55:1: getRule : DOCUMENT DOT get= ID LP i= STRING RP SC ;
 	public final void getRule() throws RecognitionException {
 		Token get=null;
 		Token i=null;
 
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:56:2: ( DOCUMENT DOT get= ID LP i= STRING RP SC )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:57:3: DOCUMENT DOT get= ID LP i= STRING RP SC
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:56:2: ( DOCUMENT DOT get= ID LP i= STRING RP SC )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:57:3: DOCUMENT DOT get= ID LP i= STRING RP SC
 			{
 			match(input,DOCUMENT,FOLLOW_DOCUMENT_in_getRule76); 
 			System.out.println("Ho riconosciuto DOCUMENT");
@@ -226,13 +226,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "prologRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:60:1: prologRule : ( packageDefintionRule )? ( importRule )* ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:60:1: prologRule : ( packageDefintionRule )? ( importRule )* ;
 	public final void prologRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:61:2: ( ( packageDefintionRule )? ( importRule )* )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:62:3: ( packageDefintionRule )? ( importRule )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:61:2: ( ( packageDefintionRule )? ( importRule )* )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:62:3: ( packageDefintionRule )? ( importRule )*
 			{
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:62:3: ( packageDefintionRule )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:62:3: ( packageDefintionRule )?
 			int alt1=2;
 			int LA1_0 = input.LA(1);
 			if ( (LA1_0==PACKAGE) ) {
@@ -240,7 +240,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt1) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:62:3: packageDefintionRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:62:3: packageDefintionRule
 					{
 					pushFollow(FOLLOW_packageDefintionRule_in_prologRule109);
 					packageDefintionRule();
@@ -251,7 +251,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:63:3: ( importRule )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:63:3: ( importRule )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -262,7 +262,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt2) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:63:3: importRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:63:3: importRule
 					{
 					pushFollow(FOLLOW_importRule_in_prologRule114);
 					importRule();
@@ -292,15 +292,15 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "packageDefintionRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:66:1: packageDefintionRule : PACKAGE ID ( DOT ID )* SC ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:66:1: packageDefintionRule : PACKAGE ID ( DOT ID )* SC ;
 	public final void packageDefintionRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:67:2: ( PACKAGE ID ( DOT ID )* SC )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:68:3: PACKAGE ID ( DOT ID )* SC
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:2: ( PACKAGE ID ( DOT ID )* SC )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:3: PACKAGE ID ( DOT ID )* SC
 			{
 			match(input,PACKAGE,FOLLOW_PACKAGE_in_packageDefintionRule129); 
 			match(input,ID,FOLLOW_ID_in_packageDefintionRule131); 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:68:14: ( DOT ID )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:14: ( DOT ID )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -311,7 +311,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt3) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:68:15: DOT ID
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:15: DOT ID
 					{
 					match(input,DOT,FOLLOW_DOT_in_packageDefintionRule134); 
 					match(input,ID,FOLLOW_ID_in_packageDefintionRule136); 
@@ -340,15 +340,15 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "importRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:71:1: importRule : IMPORT ID ( importSubRule )? SC ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:71:1: importRule : IMPORT ID ( importSubRule )? SC ;
 	public final void importRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:72:2: ( IMPORT ID ( importSubRule )? SC )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:73:3: IMPORT ID ( importSubRule )? SC
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:72:2: ( IMPORT ID ( importSubRule )? SC )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:73:3: IMPORT ID ( importSubRule )? SC
 			{
 			match(input,IMPORT,FOLLOW_IMPORT_in_importRule154); 
 			match(input,ID,FOLLOW_ID_in_importRule156); 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:73:13: ( importSubRule )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:73:13: ( importSubRule )?
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0==DOT) ) {
@@ -356,7 +356,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt4) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:73:13: importSubRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:73:13: importSubRule
 					{
 					pushFollow(FOLLOW_importSubRule_in_importRule158);
 					importSubRule();
@@ -384,14 +384,14 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "importSubRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:75:1: importSubRule : DOT ( STAR | ID ( importSubRule )? ) ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:75:1: importSubRule : DOT ( STAR | ID ( importSubRule )? ) ;
 	public final void importSubRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:76:2: ( DOT ( STAR | ID ( importSubRule )? ) )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:77:3: DOT ( STAR | ID ( importSubRule )? )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:76:2: ( DOT ( STAR | ID ( importSubRule )? ) )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:77:3: DOT ( STAR | ID ( importSubRule )? )
 			{
 			match(input,DOT,FOLLOW_DOT_in_importSubRule174); 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:77:7: ( STAR | ID ( importSubRule )? )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:77:7: ( STAR | ID ( importSubRule )? )
 			int alt6=2;
 			int LA6_0 = input.LA(1);
 			if ( (LA6_0==STAR) ) {
@@ -409,16 +409,16 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			switch (alt6) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:77:9: STAR
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:77:9: STAR
 					{
 					match(input,STAR,FOLLOW_STAR_in_importSubRule178); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:78:7: ID ( importSubRule )?
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:78:7: ID ( importSubRule )?
 					{
 					match(input,ID,FOLLOW_ID_in_importSubRule186); 
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:78:10: ( importSubRule )?
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:78:10: ( importSubRule )?
 					int alt5=2;
 					int LA5_0 = input.LA(1);
 					if ( (LA5_0==DOT) ) {
@@ -426,7 +426,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 					}
 					switch (alt5) {
 						case 1 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:78:10: importSubRule
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:78:10: importSubRule
 							{
 							pushFollow(FOLLOW_importSubRule_in_importSubRule188);
 							importSubRule();
@@ -458,11 +458,11 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "classDefinitionRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:82:1: classDefinitionRule : modifiersRule CLASS ID ( extendsRule )? ( implementsRule )? LBR ( methodDefinitionRule | propertyDefinitionRule )* RBR ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:82:1: classDefinitionRule : modifiersRule CLASS ID ( extendsRule )? ( implementsRule )? LBR ( methodDefinitionRule | propertyDefinitionRule )* RBR ;
 	public final void classDefinitionRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:83:2: ( modifiersRule CLASS ID ( extendsRule )? ( implementsRule )? LBR ( methodDefinitionRule | propertyDefinitionRule )* RBR )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:84:3: modifiersRule CLASS ID ( extendsRule )? ( implementsRule )? LBR ( methodDefinitionRule | propertyDefinitionRule )* RBR
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:83:2: ( modifiersRule CLASS ID ( extendsRule )? ( implementsRule )? LBR ( methodDefinitionRule | propertyDefinitionRule )* RBR )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:84:3: modifiersRule CLASS ID ( extendsRule )? ( implementsRule )? LBR ( methodDefinitionRule | propertyDefinitionRule )* RBR
 			{
 			pushFollow(FOLLOW_modifiersRule_in_classDefinitionRule209);
 			modifiersRule();
@@ -470,7 +470,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			match(input,CLASS,FOLLOW_CLASS_in_classDefinitionRule211); 
 			match(input,ID,FOLLOW_ID_in_classDefinitionRule213); 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:84:26: ( extendsRule )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:84:26: ( extendsRule )?
 			int alt7=2;
 			int LA7_0 = input.LA(1);
 			if ( (LA7_0==EXTENDS) ) {
@@ -478,7 +478,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt7) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:84:26: extendsRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:84:26: extendsRule
 					{
 					pushFollow(FOLLOW_extendsRule_in_classDefinitionRule215);
 					extendsRule();
@@ -489,7 +489,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:84:39: ( implementsRule )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:84:39: ( implementsRule )?
 			int alt8=2;
 			int LA8_0 = input.LA(1);
 			if ( (LA8_0==IMPLEMENTS) ) {
@@ -497,7 +497,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt8) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:84:39: implementsRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:84:39: implementsRule
 					{
 					pushFollow(FOLLOW_implementsRule_in_classDefinitionRule218);
 					implementsRule();
@@ -509,7 +509,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 
 			match(input,LBR,FOLLOW_LBR_in_classDefinitionRule225); 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:86:5: ( methodDefinitionRule | propertyDefinitionRule )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:86:5: ( methodDefinitionRule | propertyDefinitionRule )*
 			loop9:
 			while (true) {
 				int alt9=3;
@@ -523,7 +523,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt9) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:86:7: methodDefinitionRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:86:7: methodDefinitionRule
 					{
 					pushFollow(FOLLOW_methodDefinitionRule_in_classDefinitionRule234);
 					methodDefinitionRule();
@@ -532,7 +532,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:87:7: propertyDefinitionRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:87:7: propertyDefinitionRule
 					{
 					pushFollow(FOLLOW_propertyDefinitionRule_in_classDefinitionRule242);
 					propertyDefinitionRule();
@@ -563,13 +563,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "modifiersRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:91:1: modifiersRule : ( PUBLIC )? ( ABSTRACT | FINAL )? ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:91:1: modifiersRule : ( PUBLIC )? ( ABSTRACT | FINAL )? ;
 	public final void modifiersRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:92:2: ( ( PUBLIC )? ( ABSTRACT | FINAL )? )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:93:4: ( PUBLIC )? ( ABSTRACT | FINAL )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:92:2: ( ( PUBLIC )? ( ABSTRACT | FINAL )? )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:93:4: ( PUBLIC )? ( ABSTRACT | FINAL )?
 			{
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:93:4: ( PUBLIC )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:93:4: ( PUBLIC )?
 			int alt10=2;
 			int LA10_0 = input.LA(1);
 			if ( (LA10_0==PUBLIC) ) {
@@ -577,7 +577,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt10) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:93:4: PUBLIC
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:93:4: PUBLIC
 					{
 					match(input,PUBLIC,FOLLOW_PUBLIC_in_modifiersRule266); 
 					}
@@ -585,7 +585,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:94:3: ( ABSTRACT | FINAL )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:94:3: ( ABSTRACT | FINAL )?
 			int alt11=2;
 			int LA11_0 = input.LA(1);
 			if ( (LA11_0==ABSTRACT||LA11_0==FINAL) ) {
@@ -593,7 +593,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt11) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:
 					{
 					if ( input.LA(1)==ABSTRACT||input.LA(1)==FINAL ) {
 						input.consume();
@@ -624,14 +624,14 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "idDotIdRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:98:1: idDotIdRule : ID ( DOT ID )* ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:98:1: idDotIdRule : ID ( DOT ID )* ;
 	public final void idDotIdRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:99:2: ( ID ( DOT ID )* )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:100:3: ID ( DOT ID )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:99:2: ( ID ( DOT ID )* )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:100:3: ID ( DOT ID )*
 			{
 			match(input,ID,FOLLOW_ID_in_idDotIdRule296); 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:100:6: ( DOT ID )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:100:6: ( DOT ID )*
 			loop12:
 			while (true) {
 				int alt12=2;
@@ -642,7 +642,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt12) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:100:7: DOT ID
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:100:7: DOT ID
 					{
 					match(input,DOT,FOLLOW_DOT_in_idDotIdRule299); 
 					match(input,ID,FOLLOW_ID_in_idDotIdRule301); 
@@ -670,11 +670,11 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "extendsRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:103:1: extendsRule : EXTENDS idDotIdRule ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:103:1: extendsRule : EXTENDS idDotIdRule ;
 	public final void extendsRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:104:2: ( EXTENDS idDotIdRule )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:105:3: EXTENDS idDotIdRule
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:104:2: ( EXTENDS idDotIdRule )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:105:3: EXTENDS idDotIdRule
 			{
 			match(input,EXTENDS,FOLLOW_EXTENDS_in_extendsRule316); 
 			pushFollow(FOLLOW_idDotIdRule_in_extendsRule318);
@@ -697,18 +697,18 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "implementsRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:108:1: implementsRule : IMPLEMENTS idDotIdRule ( CM idDotIdRule )* ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:108:1: implementsRule : IMPLEMENTS idDotIdRule ( CM idDotIdRule )* ;
 	public final void implementsRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:109:2: ( IMPLEMENTS idDotIdRule ( CM idDotIdRule )* )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:110:3: IMPLEMENTS idDotIdRule ( CM idDotIdRule )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:109:2: ( IMPLEMENTS idDotIdRule ( CM idDotIdRule )* )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:110:3: IMPLEMENTS idDotIdRule ( CM idDotIdRule )*
 			{
 			match(input,IMPLEMENTS,FOLLOW_IMPLEMENTS_in_implementsRule332); 
 			pushFollow(FOLLOW_idDotIdRule_in_implementsRule334);
 			idDotIdRule();
 			state._fsp--;
 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:110:26: ( CM idDotIdRule )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:110:26: ( CM idDotIdRule )*
 			loop13:
 			while (true) {
 				int alt13=2;
@@ -719,7 +719,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt13) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:110:27: CM idDotIdRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:110:27: CM idDotIdRule
 					{
 					match(input,CM,FOLLOW_CM_in_implementsRule337); 
 					pushFollow(FOLLOW_idDotIdRule_in_implementsRule339);
@@ -750,16 +750,16 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "methodDefinitionRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:114:1: methodDefinitionRule : VOID ID LP ( parameterRule ( CM parameterRule )* )? RP LBR ( instructionRule )* RBR ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:114:1: methodDefinitionRule : VOID ID LP ( parameterRule ( CM parameterRule )* )? RP LBR ( instructionRule )* RBR ;
 	public final void methodDefinitionRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:115:2: ( VOID ID LP ( parameterRule ( CM parameterRule )* )? RP LBR ( instructionRule )* RBR )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:116:3: VOID ID LP ( parameterRule ( CM parameterRule )* )? RP LBR ( instructionRule )* RBR
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:115:2: ( VOID ID LP ( parameterRule ( CM parameterRule )* )? RP LBR ( instructionRule )* RBR )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:116:3: VOID ID LP ( parameterRule ( CM parameterRule )* )? RP LBR ( instructionRule )* RBR
 			{
 			match(input,VOID,FOLLOW_VOID_in_methodDefinitionRule358); 
 			match(input,ID,FOLLOW_ID_in_methodDefinitionRule360); 
 			match(input,LP,FOLLOW_LP_in_methodDefinitionRule363); 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:116:15: ( parameterRule ( CM parameterRule )* )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:116:15: ( parameterRule ( CM parameterRule )* )?
 			int alt15=2;
 			int LA15_0 = input.LA(1);
 			if ( (LA15_0==BASIC_TYPE) ) {
@@ -767,13 +767,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt15) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:116:16: parameterRule ( CM parameterRule )*
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:116:16: parameterRule ( CM parameterRule )*
 					{
 					pushFollow(FOLLOW_parameterRule_in_methodDefinitionRule366);
 					parameterRule();
 					state._fsp--;
 
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:116:30: ( CM parameterRule )*
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:116:30: ( CM parameterRule )*
 					loop14:
 					while (true) {
 						int alt14=2;
@@ -784,7 +784,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 						switch (alt14) {
 						case 1 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:116:32: CM parameterRule
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:116:32: CM parameterRule
 							{
 							match(input,CM,FOLLOW_CM_in_methodDefinitionRule370); 
 							pushFollow(FOLLOW_parameterRule_in_methodDefinitionRule372);
@@ -806,7 +806,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			match(input,RP,FOLLOW_RP_in_methodDefinitionRule378); 
 			match(input,LBR,FOLLOW_LBR_in_methodDefinitionRule384); 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:118:5: ( instructionRule )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:118:5: ( instructionRule )*
 			loop16:
 			while (true) {
 				int alt16=2;
@@ -817,7 +817,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt16) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:118:5: instructionRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:118:5: instructionRule
 					{
 					pushFollow(FOLLOW_instructionRule_in_methodDefinitionRule391);
 					instructionRule();
@@ -848,11 +848,11 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "parameterRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:123:1: parameterRule : BASIC_TYPE ID ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:123:1: parameterRule : BASIC_TYPE ID ;
 	public final void parameterRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:124:2: ( BASIC_TYPE ID )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:125:3: BASIC_TYPE ID
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:124:2: ( BASIC_TYPE ID )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:125:3: BASIC_TYPE ID
 			{
 			match(input,BASIC_TYPE,FOLLOW_BASIC_TYPE_in_parameterRule411); 
 			match(input,ID,FOLLOW_ID_in_parameterRule413); 
@@ -872,15 +872,15 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "testRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:130:1: testRule[String caller] : TEST ( blockRule )+ ( ifStatementRule )? ( whileCycleRule )? ( forCycleRule )? SC ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:130:1: testRule[String caller] : TEST ( blockRule )+ ( ifStatementRule )? ( whileCycleRule )? ( forCycleRule )? SC ;
 	public final void testRule(String caller) throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:130:25: ( TEST ( blockRule )+ ( ifStatementRule )? ( whileCycleRule )? ( forCycleRule )? SC )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:131:2: TEST ( blockRule )+ ( ifStatementRule )? ( whileCycleRule )? ( forCycleRule )? SC
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:130:25: ( TEST ( blockRule )+ ( ifStatementRule )? ( whileCycleRule )? ( forCycleRule )? SC )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:131:2: TEST ( blockRule )+ ( ifStatementRule )? ( whileCycleRule )? ( forCycleRule )? SC
 			{
 			match(input,TEST,FOLLOW_TEST_in_testRule428); 
 			 int c=0; 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:132:3: ( blockRule )+
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:132:3: ( blockRule )+
 			int cnt17=0;
 			loop17:
 			while (true) {
@@ -892,7 +892,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt17) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:132:5: blockRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:132:5: blockRule
 					{
 					pushFollow(FOLLOW_blockRule_in_testRule436);
 					blockRule();
@@ -913,7 +913,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			 if (c!=5)
 						System.err.println("Errore sul numero dei blocchi: " +c);
 			 boolean flag=false;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:137:3: ( ifStatementRule )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:137:3: ( ifStatementRule )?
 			int alt18=2;
 			int LA18_0 = input.LA(1);
 			if ( (LA18_0==IF) ) {
@@ -921,7 +921,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt18) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:137:4: ifStatementRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:137:4: ifStatementRule
 					{
 					pushFollow(FOLLOW_ifStatementRule_in_testRule456);
 					ifStatementRule();
@@ -933,7 +933,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:138:3: ( whileCycleRule )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:138:3: ( whileCycleRule )?
 			int alt19=2;
 			int LA19_0 = input.LA(1);
 			if ( (LA19_0==WHILE) ) {
@@ -941,7 +941,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt19) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:138:4: whileCycleRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:138:4: whileCycleRule
 					{
 					pushFollow(FOLLOW_whileCycleRule_in_testRule465);
 					whileCycleRule();
@@ -953,7 +953,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:139:3: ( forCycleRule )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:139:3: ( forCycleRule )?
 			int alt20=2;
 			int LA20_0 = input.LA(1);
 			if ( (LA20_0==FOR) ) {
@@ -961,7 +961,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt20) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:139:4: forCycleRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:139:4: forCycleRule
 					{
 					pushFollow(FOLLOW_forCycleRule_in_testRule475);
 					forCycleRule();
@@ -991,16 +991,16 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "instructionRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:147:1: instructionRule : ( SC | testRule[caller] | blockRule | ifStatementRule | forCycleRule | whileCycleRule | propertyDefinitionRule |n= ID (v= assignRule SC | methodCallRule SC ) ) ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:147:1: instructionRule : ( SC | testRule[caller] | blockRule | ifStatementRule | forCycleRule | whileCycleRule | propertyDefinitionRule |n= ID (v= assignRule SC | methodCallRule SC ) ) ;
 	public final void instructionRule() throws RecognitionException {
 		Token n=null;
 		float v =0.0f;
 
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:148:2: ( ( SC | testRule[caller] | blockRule | ifStatementRule | forCycleRule | whileCycleRule | propertyDefinitionRule |n= ID (v= assignRule SC | methodCallRule SC ) ) )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:149:3: ( SC | testRule[caller] | blockRule | ifStatementRule | forCycleRule | whileCycleRule | propertyDefinitionRule |n= ID (v= assignRule SC | methodCallRule SC ) )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:148:2: ( ( SC | testRule[caller] | blockRule | ifStatementRule | forCycleRule | whileCycleRule | propertyDefinitionRule |n= ID (v= assignRule SC | methodCallRule SC ) ) )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:149:3: ( SC | testRule[caller] | blockRule | ifStatementRule | forCycleRule | whileCycleRule | propertyDefinitionRule |n= ID (v= assignRule SC | methodCallRule SC ) )
 			{
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:149:3: ( SC | testRule[caller] | blockRule | ifStatementRule | forCycleRule | whileCycleRule | propertyDefinitionRule |n= ID (v= assignRule SC | methodCallRule SC ) )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:149:3: ( SC | testRule[caller] | blockRule | ifStatementRule | forCycleRule | whileCycleRule | propertyDefinitionRule |n= ID (v= assignRule SC | methodCallRule SC ) )
 			int alt22=8;
 			switch ( input.LA(1) ) {
 			case SC:
@@ -1050,13 +1050,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt22) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:149:5: SC
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:149:5: SC
 					{
 					match(input,SC,FOLLOW_SC_in_instructionRule511); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:150:5: testRule[caller]
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:150:5: testRule[caller]
 					{
 					pushFollow(FOLLOW_testRule_in_instructionRule517);
 					testRule(caller);
@@ -1065,7 +1065,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 					}
 					break;
 				case 3 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:151:5: blockRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:151:5: blockRule
 					{
 					pushFollow(FOLLOW_blockRule_in_instructionRule525);
 					blockRule();
@@ -1074,7 +1074,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 					}
 					break;
 				case 4 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:152:5: ifStatementRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:152:5: ifStatementRule
 					{
 					pushFollow(FOLLOW_ifStatementRule_in_instructionRule531);
 					ifStatementRule();
@@ -1083,7 +1083,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 					}
 					break;
 				case 5 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:153:5: forCycleRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:153:5: forCycleRule
 					{
 					pushFollow(FOLLOW_forCycleRule_in_instructionRule537);
 					forCycleRule();
@@ -1092,7 +1092,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 					}
 					break;
 				case 6 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:154:5: whileCycleRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:5: whileCycleRule
 					{
 					pushFollow(FOLLOW_whileCycleRule_in_instructionRule543);
 					whileCycleRule();
@@ -1101,7 +1101,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 					}
 					break;
 				case 7 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:155:5: propertyDefinitionRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:5: propertyDefinitionRule
 					{
 					pushFollow(FOLLOW_propertyDefinitionRule_in_instructionRule555);
 					propertyDefinitionRule();
@@ -1110,10 +1110,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 					}
 					break;
 				case 8 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:156:5: n= ID (v= assignRule SC | methodCallRule SC )
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:156:5: n= ID (v= assignRule SC | methodCallRule SC )
 					{
 					n=(Token)match(input,ID,FOLLOW_ID_in_instructionRule565); 
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:156:11: (v= assignRule SC | methodCallRule SC )
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:156:11: (v= assignRule SC | methodCallRule SC )
 					int alt21=2;
 					int LA21_0 = input.LA(1);
 					if ( (LA21_0==ASSIGN) ) {
@@ -1131,7 +1131,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 					switch (alt21) {
 						case 1 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:156:13: v= assignRule SC
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:156:13: v= assignRule SC
 							{
 							pushFollow(FOLLOW_assignRule_in_instructionRule572);
 							v=assignRule();
@@ -1142,7 +1142,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 							}
 							break;
 						case 2 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:157:9: methodCallRule SC
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:157:9: methodCallRule SC
 							{
 							pushFollow(FOLLOW_methodCallRule_in_instructionRule591);
 							methodCallRule();
@@ -1175,11 +1175,11 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "forCycleRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:162:1: forCycleRule : FOR LP forInitVarRule SC conditionRule SC stepRule RP instructionRule ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:162:1: forCycleRule : FOR LP forInitVarRule SC conditionRule SC stepRule RP instructionRule ;
 	public final void forCycleRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:163:2: ( FOR LP forInitVarRule SC conditionRule SC stepRule RP instructionRule )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:164:3: FOR LP forInitVarRule SC conditionRule SC stepRule RP instructionRule
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:163:2: ( FOR LP forInitVarRule SC conditionRule SC stepRule RP instructionRule )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:164:3: FOR LP forInitVarRule SC conditionRule SC stepRule RP instructionRule
 			{
 			match(input,FOR,FOLLOW_FOR_in_forCycleRule615); 
 			match(input,LP,FOLLOW_LP_in_forCycleRule617); 
@@ -1218,13 +1218,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "forInitVarRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:168:1: forInitVarRule : ( BASIC_TYPE )? ID ASSIGN exprRule ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:168:1: forInitVarRule : ( BASIC_TYPE )? ID ASSIGN exprRule ;
 	public final void forInitVarRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:169:2: ( ( BASIC_TYPE )? ID ASSIGN exprRule )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:170:3: ( BASIC_TYPE )? ID ASSIGN exprRule
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:169:2: ( ( BASIC_TYPE )? ID ASSIGN exprRule )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:170:3: ( BASIC_TYPE )? ID ASSIGN exprRule
 			{
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:170:3: ( BASIC_TYPE )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:170:3: ( BASIC_TYPE )?
 			int alt23=2;
 			int LA23_0 = input.LA(1);
 			if ( (LA23_0==BASIC_TYPE) ) {
@@ -1232,7 +1232,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt23) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:170:3: BASIC_TYPE
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:170:3: BASIC_TYPE
 					{
 					match(input,BASIC_TYPE,FOLLOW_BASIC_TYPE_in_forInitVarRule647); 
 					}
@@ -1262,17 +1262,17 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "stepRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:174:1: stepRule : (o1= incDecRule )? i= ID (o2= incDecRule )? ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:174:1: stepRule : (o1= incDecRule )? i= ID (o2= incDecRule )? ;
 	public final void stepRule() throws RecognitionException {
 		Token i=null;
 		Token o1 =null;
 		Token o2 =null;
 
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:175:2: ( (o1= incDecRule )? i= ID (o2= incDecRule )? )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:176:3: (o1= incDecRule )? i= ID (o2= incDecRule )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:175:2: ( (o1= incDecRule )? i= ID (o2= incDecRule )? )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:176:3: (o1= incDecRule )? i= ID (o2= incDecRule )?
 			{
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:176:3: (o1= incDecRule )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:176:3: (o1= incDecRule )?
 			int alt24=2;
 			int LA24_0 = input.LA(1);
 			if ( (LA24_0==DEC||LA24_0==INC) ) {
@@ -1280,7 +1280,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt24) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:176:4: o1= incDecRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:176:4: o1= incDecRule
 					{
 					pushFollow(FOLLOW_incDecRule_in_stepRule671);
 					o1=incDecRule();
@@ -1293,7 +1293,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			i=(Token)match(input,ID,FOLLOW_ID_in_stepRule680); 
 			h.checkReference (i);
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:178:3: (o2= incDecRule )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:178:3: (o2= incDecRule )?
 			int alt25=2;
 			int LA25_0 = input.LA(1);
 			if ( (LA25_0==DEC||LA25_0==INC) ) {
@@ -1301,7 +1301,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt25) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:178:4: o2= incDecRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:178:4: o2= incDecRule
 					{
 					pushFollow(FOLLOW_incDecRule_in_stepRule689);
 					o2=incDecRule();
@@ -1329,7 +1329,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "incDecRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:181:1: incDecRule returns [Token tk] : (o1= DEC |o2= INC );
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:181:1: incDecRule returns [Token tk] : (o1= DEC |o2= INC );
 	public final Token incDecRule() throws RecognitionException {
 		Token tk = null;
 
@@ -1338,7 +1338,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 		Token o2=null;
 
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:182:2: (o1= DEC |o2= INC )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:182:2: (o1= DEC |o2= INC )
 			int alt26=2;
 			int LA26_0 = input.LA(1);
 			if ( (LA26_0==DEC) ) {
@@ -1356,14 +1356,14 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			switch (alt26) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:183:3: o1= DEC
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:183:3: o1= DEC
 					{
 					o1=(Token)match(input,DEC,FOLLOW_DEC_in_incDecRule713); 
 					tk = o1;
 					}
 					break;
 				case 2 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:184:4: o2= INC
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:184:4: o2= INC
 					{
 					o2=(Token)match(input,INC,FOLLOW_INC_in_incDecRule724); 
 					tk = o2;
@@ -1386,11 +1386,11 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "whileCycleRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:188:1: whileCycleRule : WHILE LP conditionRule RP instructionRule ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:188:1: whileCycleRule : WHILE LP conditionRule RP instructionRule ;
 	public final void whileCycleRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:189:2: ( WHILE LP conditionRule RP instructionRule )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:190:3: WHILE LP conditionRule RP instructionRule
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:189:2: ( WHILE LP conditionRule RP instructionRule )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:190:3: WHILE LP conditionRule RP instructionRule
 			{
 			match(input,WHILE,FOLLOW_WHILE_in_whileCycleRule742); 
 			match(input,LP,FOLLOW_LP_in_whileCycleRule744); 
@@ -1419,18 +1419,18 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "methodCallRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:195:1: methodCallRule : LP exprRule ( CM exprRule )* RP ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:195:1: methodCallRule : LP exprRule ( CM exprRule )* RP ;
 	public final void methodCallRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:196:2: ( LP exprRule ( CM exprRule )* RP )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:197:3: LP exprRule ( CM exprRule )* RP
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:196:2: ( LP exprRule ( CM exprRule )* RP )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:197:3: LP exprRule ( CM exprRule )* RP
 			{
 			match(input,LP,FOLLOW_LP_in_methodCallRule767); 
 			pushFollow(FOLLOW_exprRule_in_methodCallRule769);
 			exprRule();
 			state._fsp--;
 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:197:15: ( CM exprRule )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:197:15: ( CM exprRule )*
 			loop27:
 			while (true) {
 				int alt27=2;
@@ -1441,7 +1441,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt27) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:197:16: CM exprRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:197:16: CM exprRule
 					{
 					match(input,CM,FOLLOW_CM_in_methodCallRule772); 
 					pushFollow(FOLLOW_exprRule_in_methodCallRule774);
@@ -1473,11 +1473,11 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "ifStatementRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:201:1: ifStatementRule : IF LP conditionRule RP instructionRule ( ELSE instructionRule )? ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:201:1: ifStatementRule : IF LP conditionRule RP instructionRule ( ELSE instructionRule )? ;
 	public final void ifStatementRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:202:2: ( IF LP conditionRule RP instructionRule ( ELSE instructionRule )? )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:203:3: IF LP conditionRule RP instructionRule ( ELSE instructionRule )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:202:2: ( IF LP conditionRule RP instructionRule ( ELSE instructionRule )? )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:203:3: IF LP conditionRule RP instructionRule ( ELSE instructionRule )?
 			{
 			match(input,IF,FOLLOW_IF_in_ifStatementRule792); 
 			match(input,LP,FOLLOW_LP_in_ifStatementRule794); 
@@ -1490,7 +1490,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			instructionRule();
 			state._fsp--;
 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:207:3: ( ELSE instructionRule )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:207:3: ( ELSE instructionRule )?
 			int alt28=2;
 			int LA28_0 = input.LA(1);
 			if ( (LA28_0==ELSE) ) {
@@ -1498,7 +1498,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt28) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:207:5: ELSE instructionRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:207:5: ELSE instructionRule
 					{
 					match(input,ELSE,FOLLOW_ELSE_in_ifStatementRule816); 
 					pushFollow(FOLLOW_instructionRule_in_ifStatementRule818);
@@ -1526,11 +1526,11 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "conditionRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:211:1: conditionRule : exprRule comparatorRule exprRule ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:211:1: conditionRule : exprRule comparatorRule exprRule ;
 	public final void conditionRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:212:2: ( exprRule comparatorRule exprRule )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:213:3: exprRule comparatorRule exprRule
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:212:2: ( exprRule comparatorRule exprRule )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:213:3: exprRule comparatorRule exprRule
 			{
 			pushFollow(FOLLOW_exprRule_in_conditionRule839);
 			exprRule();
@@ -1560,11 +1560,11 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "comparatorRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:216:1: comparatorRule : ( EQ | NEQ | LT | LE | GT | GE ) ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:216:1: comparatorRule : ( EQ | NEQ | LT | LE | GT | GE ) ;
 	public final void comparatorRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:217:2: ( ( EQ | NEQ | LT | LE | GT | GE ) )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:217:2: ( ( EQ | NEQ | LT | LE | GT | GE ) )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:
 			{
 			if ( input.LA(1)==EQ||(input.LA(1) >= GE && input.LA(1) <= GT)||input.LA(1)==LE||input.LA(1)==LT||input.LA(1)==NEQ ) {
 				input.consume();
@@ -1590,14 +1590,14 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "blockRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:221:1: blockRule : LBR ( instructionRule )* RBR ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:221:1: blockRule : LBR ( instructionRule )* RBR ;
 	public final void blockRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:222:2: ( LBR ( instructionRule )* RBR )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:223:3: LBR ( instructionRule )* RBR
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:222:2: ( LBR ( instructionRule )* RBR )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:223:3: LBR ( instructionRule )* RBR
 			{
 			match(input,LBR,FOLLOW_LBR_in_blockRule895); 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:223:7: ( instructionRule )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:223:7: ( instructionRule )*
 			loop29:
 			while (true) {
 				int alt29=2;
@@ -1608,7 +1608,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt29) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:223:7: instructionRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:223:7: instructionRule
 					{
 					pushFollow(FOLLOW_instructionRule_in_blockRule897);
 					instructionRule();
@@ -1639,20 +1639,20 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "propertyDefinitionRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:227:1: propertyDefinitionRule : t= BASIC_TYPE n= ID (v= assignRule )? SC ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:227:1: propertyDefinitionRule : t= BASIC_TYPE n= ID (v= assignRule )? SC ;
 	public final void propertyDefinitionRule() throws RecognitionException {
 		Token t=null;
 		Token n=null;
 		float v =0.0f;
 
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:228:2: (t= BASIC_TYPE n= ID (v= assignRule )? SC )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:229:3: t= BASIC_TYPE n= ID (v= assignRule )? SC
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:228:2: (t= BASIC_TYPE n= ID (v= assignRule )? SC )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:229:3: t= BASIC_TYPE n= ID (v= assignRule )? SC
 			{
 			t=(Token)match(input,BASIC_TYPE,FOLLOW_BASIC_TYPE_in_propertyDefinitionRule918); 
 			n=(Token)match(input,ID,FOLLOW_ID_in_propertyDefinitionRule922); 
 				h.declareVar(t, n);	
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:230:3: (v= assignRule )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:230:3: (v= assignRule )?
 			int alt30=2;
 			int LA30_0 = input.LA(1);
 			if ( (LA30_0==ASSIGN) ) {
@@ -1660,7 +1660,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt30) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:230:5: v= assignRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:230:5: v= assignRule
 					{
 					pushFollow(FOLLOW_assignRule_in_propertyDefinitionRule934);
 					v=assignRule();
@@ -1689,7 +1689,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "assignRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:235:1: assignRule returns [float v] : ASSIGN e= exprRule ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:235:1: assignRule returns [float v] : ASSIGN e= exprRule ;
 	public final float assignRule() throws RecognitionException {
 		float v = 0.0f;
 
@@ -1697,8 +1697,8 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 		float e =0.0f;
 
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:236:2: ( ASSIGN e= exprRule )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:236:4: ASSIGN e= exprRule
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:236:2: ( ASSIGN e= exprRule )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:236:4: ASSIGN e= exprRule
 			{
 			match(input,ASSIGN,FOLLOW_ASSIGN_in_assignRule965); 
 			pushFollow(FOLLOW_exprRule_in_assignRule969);
@@ -1723,7 +1723,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "exprRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:240:1: exprRule returns [float v] : t1= termRule ( (op= ADD |op= SUB ) t2= termRule )* ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:240:1: exprRule returns [float v] : t1= termRule ( (op= ADD |op= SUB ) t2= termRule )* ;
 	public final float exprRule() throws RecognitionException {
 		float v = 0.0f;
 
@@ -1733,15 +1733,15 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 		float t2 =0.0f;
 
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:241:2: (t1= termRule ( (op= ADD |op= SUB ) t2= termRule )* )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:242:3: t1= termRule ( (op= ADD |op= SUB ) t2= termRule )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:241:2: (t1= termRule ( (op= ADD |op= SUB ) t2= termRule )* )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:242:3: t1= termRule ( (op= ADD |op= SUB ) t2= termRule )*
 			{
 			pushFollow(FOLLOW_termRule_in_exprRule992);
 			t1=termRule();
 			state._fsp--;
 
 			 v = t1;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:243:3: ( (op= ADD |op= SUB ) t2= termRule )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:243:3: ( (op= ADD |op= SUB ) t2= termRule )*
 			loop32:
 			while (true) {
 				int alt32=2;
@@ -1752,9 +1752,9 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt32) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:243:4: (op= ADD |op= SUB ) t2= termRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:243:4: (op= ADD |op= SUB ) t2= termRule
 					{
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:243:4: (op= ADD |op= SUB )
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:243:4: (op= ADD |op= SUB )
 					int alt31=2;
 					int LA31_0 = input.LA(1);
 					if ( (LA31_0==ADD) ) {
@@ -1772,13 +1772,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 					switch (alt31) {
 						case 1 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:243:5: op= ADD
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:243:5: op= ADD
 							{
 							op=(Token)match(input,ADD,FOLLOW_ADD_in_exprRule1002); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:243:14: op= SUB
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:243:14: op= SUB
 							{
 							op=(Token)match(input,SUB,FOLLOW_SUB_in_exprRule1008); 
 							}
@@ -1816,7 +1816,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "termRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:246:1: termRule returns [float v] : f1= factorRule ( (op= STAR |op= DIV ) f2= factorRule )* ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:246:1: termRule returns [float v] : f1= factorRule ( (op= STAR |op= DIV ) f2= factorRule )* ;
 	public final float termRule() throws RecognitionException {
 		float v = 0.0f;
 
@@ -1826,15 +1826,15 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 		float f2 =0.0f;
 
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:247:2: (f1= factorRule ( (op= STAR |op= DIV ) f2= factorRule )* )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:248:3: f1= factorRule ( (op= STAR |op= DIV ) f2= factorRule )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:247:2: (f1= factorRule ( (op= STAR |op= DIV ) f2= factorRule )* )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:248:3: f1= factorRule ( (op= STAR |op= DIV ) f2= factorRule )*
 			{
 			pushFollow(FOLLOW_factorRule_in_termRule1042);
 			f1=factorRule();
 			state._fsp--;
 
 			 v = f1;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:249:3: ( (op= STAR |op= DIV ) f2= factorRule )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:249:3: ( (op= STAR |op= DIV ) f2= factorRule )*
 			loop34:
 			while (true) {
 				int alt34=2;
@@ -1845,9 +1845,9 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt34) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:249:5: (op= STAR |op= DIV ) f2= factorRule
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:249:5: (op= STAR |op= DIV ) f2= factorRule
 					{
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:249:5: (op= STAR |op= DIV )
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:249:5: (op= STAR |op= DIV )
 					int alt33=2;
 					int LA33_0 = input.LA(1);
 					if ( (LA33_0==STAR) ) {
@@ -1865,13 +1865,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 					switch (alt33) {
 						case 1 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:249:6: op= STAR
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:249:6: op= STAR
 							{
 							op=(Token)match(input,STAR,FOLLOW_STAR_in_termRule1054); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:249:16: op= DIV
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:249:16: op= DIV
 							{
 							op=(Token)match(input,DIV,FOLLOW_DIV_in_termRule1060); 
 							}
@@ -1909,7 +1909,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "factorRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:253:1: factorRule returns [float v] : (x= ID |i= INTEGER |f= FLOAT | LP e= exprRule RP );
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:253:1: factorRule returns [float v] : (x= ID |i= INTEGER |f= FLOAT | LP e= exprRule RP );
 	public final float factorRule() throws RecognitionException {
 		float v = 0.0f;
 
@@ -1920,7 +1920,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 		float e =0.0f;
 
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:254:2: (x= ID |i= INTEGER |f= FLOAT | LP e= exprRule RP )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:254:2: (x= ID |i= INTEGER |f= FLOAT | LP e= exprRule RP )
 			int alt35=4;
 			switch ( input.LA(1) ) {
 			case ID:
@@ -1950,28 +1950,28 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt35) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:255:4: x= ID
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:255:4: x= ID
 					{
 					x=(Token)match(input,ID,FOLLOW_ID_in_factorRule1094); 
 					 v=h.getVarValue(x);
 					}
 					break;
 				case 2 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:256:5: i= INTEGER
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:256:5: i= INTEGER
 					{
 					i=(Token)match(input,INTEGER,FOLLOW_INTEGER_in_factorRule1110); 
 					 v=h.convertToFloat(i);
 					}
 					break;
 				case 3 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:257:5: f= FLOAT
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:257:5: f= FLOAT
 					{
 					f=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_factorRule1123); 
 					 v=h.convertToFloat(f);
 					}
 					break;
 				case 4 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQCompiler\\JavaScriptToJQueryConverter.g:258:5: LP e= exprRule RP
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:258:5: LP e= exprRule RP
 					{
 					match(input,LP,FOLLOW_LP_in_factorRule1135); 
 					pushFollow(FOLLOW_exprRule_in_factorRule1139);
