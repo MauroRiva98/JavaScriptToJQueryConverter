@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g 2023-05-23 17:37:46
+// $ANTLR 3.5.1 C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g 2023-05-23 18:31:14
 
 	package JS2JQConverter;
 
@@ -40,69 +40,71 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 	public static final int EQ=30;
 	public static final int ERROR_TK=31;
 	public static final int ESC_SEQ=32;
-	public static final int EXPONENT=33;
-	public static final int EXPORT=34;
-	public static final int EXTENDS=35;
-	public static final int FALSE=36;
-	public static final int FINALLY=37;
-	public static final int FLOAT=38;
-	public static final int FOR=39;
-	public static final int FUNCTION=40;
-	public static final int GE=41;
-	public static final int GT=42;
-	public static final int HEX_DIGIT=43;
-	public static final int ID=44;
-	public static final int IF=45;
-	public static final int IMPLEMENTS=46;
-	public static final int IMPORT=47;
-	public static final int IN=48;
-	public static final int INC=49;
-	public static final int INSTANCEOF=50;
-	public static final int INTEGER=51;
-	public static final int INTERFACE=52;
-	public static final int LB=53;
-	public static final int LBR=54;
-	public static final int LE=55;
-	public static final int LET=56;
-	public static final int LETTER=57;
-	public static final int LP=58;
-	public static final int LT=59;
-	public static final int MOD=60;
-	public static final int NEQ=61;
-	public static final int NEW=62;
-	public static final int NOT=63;
-	public static final int NULL=64;
-	public static final int OCTAL_ESC=65;
-	public static final int OR=66;
-	public static final int OR_BIT=67;
-	public static final int PACKAGE=68;
-	public static final int PRIVATE=69;
-	public static final int PROTECTED=70;
-	public static final int PUBLIC=71;
-	public static final int RB=72;
-	public static final int RBR=73;
-	public static final int RETURN=74;
-	public static final int RP=75;
-	public static final int SC=76;
-	public static final int STAR=77;
-	public static final int STATIC=78;
-	public static final int STRING=79;
-	public static final int SUB=80;
-	public static final int SUPER=81;
-	public static final int SWITCH=82;
-	public static final int THIS=83;
-	public static final int THROW=84;
-	public static final int TRUE=85;
-	public static final int TRY=86;
-	public static final int TYPEOF=87;
-	public static final int UNICODE_ESC=88;
-	public static final int VAR=89;
-	public static final int VOID=90;
-	public static final int WHILE=91;
-	public static final int WITH=92;
-	public static final int WS=93;
-	public static final int XOR=94;
-	public static final int YIELD=95;
+	public static final int EXP=33;
+	public static final int EXPONENT=34;
+	public static final int EXPORT=35;
+	public static final int EXTENDS=36;
+	public static final int FALSE=37;
+	public static final int FINALLY=38;
+	public static final int FLOAT=39;
+	public static final int FOR=40;
+	public static final int FUNCTION=41;
+	public static final int GE=42;
+	public static final int GT=43;
+	public static final int HEX_DIGIT=44;
+	public static final int ID=45;
+	public static final int IF=46;
+	public static final int IMPLEMENTS=47;
+	public static final int IMPORT=48;
+	public static final int IN=49;
+	public static final int INC=50;
+	public static final int INSTANCEOF=51;
+	public static final int INTEGER=52;
+	public static final int INTERFACE=53;
+	public static final int LB=54;
+	public static final int LBR=55;
+	public static final int LE=56;
+	public static final int LET=57;
+	public static final int LETTER=58;
+	public static final int LP=59;
+	public static final int LT=60;
+	public static final int MOD=61;
+	public static final int NEQ=62;
+	public static final int NEW=63;
+	public static final int NOT=64;
+	public static final int NULL=65;
+	public static final int OCTAL_ESC=66;
+	public static final int OR=67;
+	public static final int OR_BIT=68;
+	public static final int PACKAGE=69;
+	public static final int PRIVATE=70;
+	public static final int PROTECTED=71;
+	public static final int PUBLIC=72;
+	public static final int RB=73;
+	public static final int RBR=74;
+	public static final int RETURN=75;
+	public static final int RP=76;
+	public static final int SC=77;
+	public static final int STAR=78;
+	public static final int STATIC=79;
+	public static final int STRING=80;
+	public static final int SUB=81;
+	public static final int SUPER=82;
+	public static final int SWITCH=83;
+	public static final int TEQ=84;
+	public static final int THIS=85;
+	public static final int THROW=86;
+	public static final int TRUE=87;
+	public static final int TRY=88;
+	public static final int TYPEOF=89;
+	public static final int UNICODE_ESC=90;
+	public static final int VAR=91;
+	public static final int VOID=92;
+	public static final int WHILE=93;
+	public static final int WITH=94;
+	public static final int WS=95;
+	public static final int XOR=96;
+	public static final int YIELD=97;
 
 	// delegates
 	// delegators
@@ -122,8 +124,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 	// $ANTLR start "EXPONENT"
 	public final void mEXPONENT() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:64:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:64:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:75:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:75:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
 			{
 			if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
 				input.consume();
@@ -133,7 +135,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:64:22: ( '+' | '-' )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:75:22: ( '+' | '-' )?
 			int alt1=2;
 			int LA1_0 = input.LA(1);
 			if ( (LA1_0=='+'||LA1_0=='-') ) {
@@ -156,7 +158,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 
 			}
 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:64:33: ( '0' .. '9' )+
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:75:33: ( '0' .. '9' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -201,7 +203,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 	// $ANTLR start "HEX_DIGIT"
 	public final void mHEX_DIGIT() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:78:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:
 			{
 			if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'F')||(input.LA(1) >= 'a' && input.LA(1) <= 'f') ) {
@@ -224,7 +226,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 	// $ANTLR start "ESC_SEQ"
 	public final void mESC_SEQ() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:71:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:82:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
 			int alt3=3;
 			int LA3_0 = input.LA(1);
 			if ( (LA3_0=='\\') ) {
@@ -279,7 +281,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 
 			switch (alt3) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:71:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:82:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
 					{
 					match('\\'); 
 					if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -293,14 +295,14 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:72:9: UNICODE_ESC
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:83:9: UNICODE_ESC
 					{
 					mUNICODE_ESC(); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:73:9: OCTAL_ESC
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:84:9: OCTAL_ESC
 					{
 					mOCTAL_ESC(); 
 
@@ -318,7 +320,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 	// $ANTLR start "OCTAL_ESC"
 	public final void mOCTAL_ESC() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:78:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:89:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
 			int alt4=3;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0=='\\') ) {
@@ -376,7 +378,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 
 			switch (alt4) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:78:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:89:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
 					{
 					match('\\'); 
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '3') ) {
@@ -406,7 +408,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:79:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:90:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
 					{
 					match('\\'); 
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
@@ -428,7 +430,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 					}
 					break;
 				case 3 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:80:9: '\\\\' ( '0' .. '7' )
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:91:9: '\\\\' ( '0' .. '7' )
 					{
 					match('\\'); 
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
@@ -453,8 +455,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 	// $ANTLR start "UNICODE_ESC"
 	public final void mUNICODE_ESC() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:85:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:85:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:96:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:96:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
 			{
 			match('\\'); 
 			match('u'); 
@@ -478,7 +480,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 	// $ANTLR start "LETTER"
 	public final void mLETTER() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:89:8: ( 'a' .. 'z' | 'A' .. 'Z' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:100:8: ( 'a' .. 'z' | 'A' .. 'Z' )
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
@@ -501,7 +503,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 	// $ANTLR start "DIGIT"
 	public final void mDIGIT() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:91:7: ( '0' .. '9' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:102:7: ( '0' .. '9' )
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:
 			{
 			if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
@@ -526,8 +528,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = DOCUMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:93:2: ( 'document' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:93:3: 'document'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:104:2: ( 'document' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:104:3: 'document'
 			{
 			match("document"); 
 
@@ -547,8 +549,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = ASSIGN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:95:8: ( '=' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:95:10: '='
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:106:8: ( '=' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:106:10: '='
 			{
 			match('='); 
 			}
@@ -567,8 +569,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = EQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:97:5: ( '==' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:97:7: '=='
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:108:5: ( '==' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:108:7: '=='
 			{
 			match("=="); 
 
@@ -583,13 +585,34 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 	}
 	// $ANTLR end "EQ"
 
+	// $ANTLR start "TEQ"
+	public final void mTEQ() throws RecognitionException {
+		try {
+			int _type = TEQ;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:109:5: ( '===' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:109:7: '==='
+			{
+			match("==="); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "TEQ"
+
 	// $ANTLR start "NEQ"
 	public final void mNEQ() throws RecognitionException {
 		try {
 			int _type = NEQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:98:6: ( '!=' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:98:8: '!='
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:110:6: ( '!=' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:110:8: '!='
 			{
 			match("!="); 
 
@@ -609,8 +632,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = GT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:99:5: ( '>' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:99:7: '>'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:111:5: ( '>' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:111:7: '>'
 			{
 			match('>'); 
 			}
@@ -629,8 +652,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = GE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:100:4: ( '>=' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:100:6: '>='
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:112:4: ( '>=' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:112:6: '>='
 			{
 			match(">="); 
 
@@ -650,8 +673,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = LT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:101:5: ( '<' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:101:7: '<'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:113:5: ( '<' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:113:7: '<'
 			{
 			match('<'); 
 			}
@@ -670,8 +693,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = LE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:102:5: ( '<=' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:102:7: '<='
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:114:5: ( '<=' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:114:7: '<='
 			{
 			match("<="); 
 
@@ -691,8 +714,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = AT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:105:4: ( '@' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:105:6: '@'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:117:4: ( '@' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:117:6: '@'
 			{
 			match('@'); 
 			}
@@ -711,8 +734,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = CL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:106:5: ( ':' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:106:7: ':'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:118:5: ( ':' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:118:7: ':'
 			{
 			match(':'); 
 			}
@@ -731,8 +754,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = CM;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:107:5: ( ',' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:107:7: ','
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:119:5: ( ',' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:119:7: ','
 			{
 			match(','); 
 			}
@@ -751,8 +774,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = DOT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:108:6: ( '.' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:108:8: '.'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:120:6: ( '.' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:120:8: '.'
 			{
 			match('.'); 
 			}
@@ -771,8 +794,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = SC;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:109:5: ( ';' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:109:7: ';'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:121:5: ( ';' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:121:7: ';'
 			{
 			match(';'); 
 			}
@@ -791,8 +814,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = LP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:112:5: ( '(' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:112:7: '('
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:124:5: ( '(' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:124:7: '('
 			{
 			match('('); 
 			}
@@ -811,8 +834,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = RP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:113:5: ( ')' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:113:7: ')'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:125:5: ( ')' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:125:7: ')'
 			{
 			match(')'); 
 			}
@@ -831,8 +854,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = LB;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:114:4: ( '[' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:114:6: '['
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:126:4: ( '[' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:126:6: '['
 			{
 			match('['); 
 			}
@@ -851,8 +874,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = RB;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:115:4: ( ']' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:115:6: ']'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:127:4: ( ']' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:127:6: ']'
 			{
 			match(']'); 
 			}
@@ -871,8 +894,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = LBR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:116:5: ( '{' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:116:7: '{'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:128:5: ( '{' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:128:7: '{'
 			{
 			match('{'); 
 			}
@@ -891,8 +914,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = RBR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:117:5: ( '}' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:117:7: '}'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:129:5: ( '}' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:129:7: '}'
 			{
 			match('}'); 
 			}
@@ -911,8 +934,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = ADD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:120:6: ( '+' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:120:8: '+'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:132:6: ( '+' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:132:8: '+'
 			{
 			match('+'); 
 			}
@@ -931,8 +954,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = SUB;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:121:6: ( '-' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:121:8: '-'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:133:6: ( '-' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:133:8: '-'
 			{
 			match('-'); 
 			}
@@ -951,8 +974,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = STAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:122:7: ( '*' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:122:9: '*'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:134:7: ( '*' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:134:9: '*'
 			{
 			match('*'); 
 			}
@@ -971,8 +994,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = DIV;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:123:6: ( '/' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:123:8: '/'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:135:6: ( '/' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:135:8: '/'
 			{
 			match('/'); 
 			}
@@ -991,8 +1014,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = MOD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:124:6: ( '%' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:124:8: '%'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:136:6: ( '%' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:136:8: '%'
 			{
 			match('%'); 
 			}
@@ -1011,8 +1034,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = INC;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:125:6: ( '++' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:125:8: '++'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:137:6: ( '++' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:137:8: '++'
 			{
 			match("++"); 
 
@@ -1032,8 +1055,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = DEC;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:126:6: ( '--' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:126:8: '--'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:138:6: ( '--' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:138:8: '--'
 			{
 			match("--"); 
 
@@ -1048,13 +1071,34 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 	}
 	// $ANTLR end "DEC"
 
+	// $ANTLR start "EXP"
+	public final void mEXP() throws RecognitionException {
+		try {
+			int _type = EXP;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:139:6: ( '**' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:139:8: '**'
+			{
+			match("**"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "EXP"
+
 	// $ANTLR start "NOT"
 	public final void mNOT() throws RecognitionException {
 		try {
 			int _type = NOT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:129:6: ( '!' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:129:8: '!'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:143:6: ( '!' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:143:8: '!'
 			{
 			match('!'); 
 			}
@@ -1073,8 +1117,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = AND;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:130:6: ( '&&' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:130:8: '&&'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:144:6: ( '&&' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:144:8: '&&'
 			{
 			match("&&"); 
 
@@ -1094,8 +1138,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = OR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:131:5: ( '||' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:131:7: '||'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:145:5: ( '||' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:145:7: '||'
 			{
 			match("||"); 
 
@@ -1115,8 +1159,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = XOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:132:6: ( '^' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:132:8: '^'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:146:6: ( '^' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:146:8: '^'
 			{
 			match('^'); 
 			}
@@ -1135,8 +1179,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = AND_BIT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:133:10: ( '&' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:133:11: '&'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:147:10: ( '&' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:147:11: '&'
 			{
 			match('&'); 
 			}
@@ -1155,8 +1199,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = OR_BIT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:134:10: ( '|' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:134:11: '|'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:148:10: ( '|' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:148:11: '|'
 			{
 			match('|'); 
 			}
@@ -1175,8 +1219,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = AWAIT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:138:8: ( 'await' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:138:9: 'await'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:152:8: ( 'await' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:152:9: 'await'
 			{
 			match("await"); 
 
@@ -1196,8 +1240,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = BREAK;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:139:8: ( 'break' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:139:9: 'break'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:153:8: ( 'break' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:153:9: 'break'
 			{
 			match("break"); 
 
@@ -1217,8 +1261,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = CASE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:140:7: ( 'case' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:140:8: 'case'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:7: ( 'case' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:8: 'case'
 			{
 			match("case"); 
 
@@ -1238,8 +1282,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = CATCH;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:141:8: ( 'catch' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:141:9: 'catch'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:8: ( 'catch' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:9: 'catch'
 			{
 			match("catch"); 
 
@@ -1259,8 +1303,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = CLASS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:142:8: ( 'class' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:142:9: 'class'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:156:8: ( 'class' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:156:9: 'class'
 			{
 			match("class"); 
 
@@ -1280,8 +1324,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = CONST;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:143:8: ( 'const' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:143:9: 'const'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:157:8: ( 'const' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:157:9: 'const'
 			{
 			match("const"); 
 
@@ -1301,8 +1345,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = CONTINUE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:144:10: ( 'continue' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:144:11: 'continue'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:158:10: ( 'continue' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:158:11: 'continue'
 			{
 			match("continue"); 
 
@@ -1322,8 +1366,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = DEBUGGER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:145:10: ( 'debugger' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:145:11: 'debugger'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:159:10: ( 'debugger' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:159:11: 'debugger'
 			{
 			match("debugger"); 
 
@@ -1343,8 +1387,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = DEFAULT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:146:10: ( 'default' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:146:11: 'default'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:160:10: ( 'default' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:160:11: 'default'
 			{
 			match("default"); 
 
@@ -1364,8 +1408,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = DELETE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:147:9: ( 'delete' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:147:10: 'delete'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:161:9: ( 'delete' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:161:10: 'delete'
 			{
 			match("delete"); 
 
@@ -1385,8 +1429,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = DO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:148:5: ( 'do' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:148:6: 'do'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:162:5: ( 'do' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:162:6: 'do'
 			{
 			match("do"); 
 
@@ -1406,8 +1450,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = ELSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:149:7: ( 'else' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:149:8: 'else'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:163:7: ( 'else' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:163:8: 'else'
 			{
 			match("else"); 
 
@@ -1427,8 +1471,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = ENUM;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:150:7: ( 'enum' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:150:8: 'enum'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:164:7: ( 'enum' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:164:8: 'enum'
 			{
 			match("enum"); 
 
@@ -1448,8 +1492,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = EXPORT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:151:9: ( 'export' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:151:10: 'export'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:165:9: ( 'export' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:165:10: 'export'
 			{
 			match("export"); 
 
@@ -1469,8 +1513,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = EXTENDS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:152:10: ( 'extends' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:152:11: 'extends'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:166:10: ( 'extends' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:166:11: 'extends'
 			{
 			match("extends"); 
 
@@ -1490,8 +1534,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = FALSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:153:8: ( 'false' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:153:9: 'false'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:167:8: ( 'false' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:167:9: 'false'
 			{
 			match("false"); 
 
@@ -1511,8 +1555,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = FINALLY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:10: ( 'finally' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:11: 'finally'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:168:10: ( 'finally' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:168:11: 'finally'
 			{
 			match("finally"); 
 
@@ -1532,8 +1576,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = FOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:6: ( 'for' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:7: 'for'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:169:6: ( 'for' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:169:7: 'for'
 			{
 			match("for"); 
 
@@ -1553,8 +1597,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = FUNCTION;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:156:10: ( 'function' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:156:11: 'function'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:170:10: ( 'function' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:170:11: 'function'
 			{
 			match("function"); 
 
@@ -1574,8 +1618,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = IF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:157:5: ( 'if' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:157:6: 'if'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:171:5: ( 'if' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:171:6: 'if'
 			{
 			match("if"); 
 
@@ -1595,8 +1639,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = IMPLEMENTS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:158:12: ( 'implements' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:158:13: 'implements'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:172:12: ( 'implements' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:172:13: 'implements'
 			{
 			match("implements"); 
 
@@ -1616,8 +1660,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = IMPORT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:159:9: ( 'import' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:159:10: 'import'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:173:9: ( 'import' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:173:10: 'import'
 			{
 			match("import"); 
 
@@ -1637,8 +1681,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = IN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:160:6: ( 'in' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:160:7: 'in'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:174:6: ( 'in' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:174:7: 'in'
 			{
 			match("in"); 
 
@@ -1658,8 +1702,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = INSTANCEOF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:161:12: ( 'instanceof' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:161:13: 'instanceof'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:175:12: ( 'instanceof' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:175:13: 'instanceof'
 			{
 			match("instanceof"); 
 
@@ -1679,8 +1723,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = INTERFACE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:162:11: ( 'interface' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:162:12: 'interface'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:176:11: ( 'interface' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:176:12: 'interface'
 			{
 			match("interface"); 
 
@@ -1700,8 +1744,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = LET;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:163:6: ( 'let' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:163:7: 'let'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:177:6: ( 'let' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:177:7: 'let'
 			{
 			match("let"); 
 
@@ -1721,8 +1765,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = NEW;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:164:6: ( 'new' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:164:7: 'new'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:178:6: ( 'new' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:178:7: 'new'
 			{
 			match("new"); 
 
@@ -1742,8 +1786,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = NULL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:165:7: ( 'null' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:165:8: 'null'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:179:7: ( 'null' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:179:8: 'null'
 			{
 			match("null"); 
 
@@ -1763,8 +1807,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = PACKAGE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:166:10: ( 'package' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:166:11: 'package'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:180:10: ( 'package' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:180:11: 'package'
 			{
 			match("package"); 
 
@@ -1784,8 +1828,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = PRIVATE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:167:10: ( 'private' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:167:11: 'private'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:181:10: ( 'private' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:181:11: 'private'
 			{
 			match("private"); 
 
@@ -1805,8 +1849,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = PROTECTED;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:168:11: ( 'protected' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:168:12: 'protected'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:182:11: ( 'protected' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:182:12: 'protected'
 			{
 			match("protected"); 
 
@@ -1826,8 +1870,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = PUBLIC;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:169:9: ( 'public' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:169:10: 'public'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:183:9: ( 'public' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:183:10: 'public'
 			{
 			match("public"); 
 
@@ -1847,8 +1891,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = RETURN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:170:9: ( 'return' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:170:10: 'return'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:184:9: ( 'return' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:184:10: 'return'
 			{
 			match("return"); 
 
@@ -1868,8 +1912,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = STATIC;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:171:9: ( 'static' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:171:10: 'static'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:185:9: ( 'static' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:185:10: 'static'
 			{
 			match("static"); 
 
@@ -1889,8 +1933,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = SUPER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:172:8: ( 'super' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:172:9: 'super'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:186:8: ( 'super' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:186:9: 'super'
 			{
 			match("super"); 
 
@@ -1910,8 +1954,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = SWITCH;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:173:9: ( 'switch' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:173:10: 'switch'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:187:9: ( 'switch' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:187:10: 'switch'
 			{
 			match("switch"); 
 
@@ -1931,8 +1975,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = THIS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:174:7: ( 'this' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:174:8: 'this'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:188:7: ( 'this' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:188:8: 'this'
 			{
 			match("this"); 
 
@@ -1952,8 +1996,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = THROW;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:175:8: ( 'throw' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:175:9: 'throw'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:189:8: ( 'throw' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:189:9: 'throw'
 			{
 			match("throw"); 
 
@@ -1973,8 +2017,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = TRY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:176:6: ( 'try' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:176:7: 'try'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:190:6: ( 'try' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:190:7: 'try'
 			{
 			match("try"); 
 
@@ -1994,8 +2038,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = TRUE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:177:7: ( 'true' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:177:8: 'true'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:191:7: ( 'true' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:191:8: 'true'
 			{
 			match("true"); 
 
@@ -2015,8 +2059,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = TYPEOF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:178:9: ( 'typeof' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:178:10: 'typeof'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:192:9: ( 'typeof' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:192:10: 'typeof'
 			{
 			match("typeof"); 
 
@@ -2036,8 +2080,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:179:6: ( 'var' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:179:7: 'var'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:193:6: ( 'var' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:193:7: 'var'
 			{
 			match("var"); 
 
@@ -2057,8 +2101,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = VOID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:180:7: ( 'void' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:180:8: 'void'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:194:7: ( 'void' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:194:8: 'void'
 			{
 			match("void"); 
 
@@ -2078,8 +2122,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = WHILE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:181:8: ( 'while' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:181:9: 'while'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:195:8: ( 'while' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:195:9: 'while'
 			{
 			match("while"); 
 
@@ -2099,8 +2143,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = WITH;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:182:7: ( 'with' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:182:8: 'with'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:196:7: ( 'with' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:196:8: 'with'
 			{
 			match("with"); 
 
@@ -2120,8 +2164,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = YIELD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:183:8: ( 'yield' )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:183:9: 'yield'
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:197:8: ( 'yield' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:197:9: 'yield'
 			{
 			match("yield"); 
 
@@ -2141,10 +2185,10 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:186:6: ( ( LETTER | '_' ) ( LETTER | DIGIT | '_' )* )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:187:2: ( LETTER | '_' ) ( LETTER | DIGIT | '_' )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:200:6: ( ( LETTER | '_' | '$' ) ( LETTER | DIGIT | '_' | '$' )* )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:201:2: ( LETTER | '_' | '$' ) ( LETTER | DIGIT | '_' | '$' )*
 			{
-			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+			if ( input.LA(1)=='$'||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
 			}
 			else {
@@ -2152,12 +2196,12 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:187:16: ( LETTER | DIGIT | '_' )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:201:22: ( LETTER | DIGIT | '_' | '$' )*
 			loop5:
 			while (true) {
 				int alt5=2;
 				int LA5_0 = input.LA(1);
-				if ( ((LA5_0 >= '0' && LA5_0 <= '9')||(LA5_0 >= 'A' && LA5_0 <= 'Z')||LA5_0=='_'||(LA5_0 >= 'a' && LA5_0 <= 'z')) ) {
+				if ( (LA5_0=='$'||(LA5_0 >= '0' && LA5_0 <= '9')||(LA5_0 >= 'A' && LA5_0 <= 'Z')||LA5_0=='_'||(LA5_0 >= 'a' && LA5_0 <= 'z')) ) {
 					alt5=1;
 				}
 
@@ -2165,7 +2209,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:
 					{
-					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+					if ( input.LA(1)=='$'||(input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
 					}
 					else {
@@ -2197,10 +2241,10 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = INTEGER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:191:9: ( ( DIGIT )+ )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:191:11: ( DIGIT )+
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:205:9: ( ( DIGIT )+ )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:205:11: ( DIGIT )+
 			{
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:191:11: ( DIGIT )+
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:205:11: ( DIGIT )+
 			int cnt6=0;
 			loop6:
 			while (true) {
@@ -2249,14 +2293,14 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = FLOAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:195:5: ( ( DIGIT )+ '.' ( DIGIT )* ( EXPONENT )? | '.' ( DIGIT )+ ( EXPONENT )? | ( DIGIT )+ EXPONENT )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:209:5: ( ( DIGIT )+ '.' ( DIGIT )* ( EXPONENT )? | '.' ( DIGIT )+ ( EXPONENT )? | ( DIGIT )+ EXPONENT )
 			int alt13=3;
 			alt13 = dfa13.predict(input);
 			switch (alt13) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:195:9: ( DIGIT )+ '.' ( DIGIT )* ( EXPONENT )?
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:209:9: ( DIGIT )+ '.' ( DIGIT )* ( EXPONENT )?
 					{
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:195:9: ( DIGIT )+
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:209:9: ( DIGIT )+
 					int cnt7=0;
 					loop7:
 					while (true) {
@@ -2290,7 +2334,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 					}
 
 					match('.'); 
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:195:20: ( DIGIT )*
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:209:20: ( DIGIT )*
 					loop8:
 					while (true) {
 						int alt8=2;
@@ -2319,7 +2363,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 						}
 					}
 
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:195:27: ( EXPONENT )?
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:209:27: ( EXPONENT )?
 					int alt9=2;
 					int LA9_0 = input.LA(1);
 					if ( (LA9_0=='E'||LA9_0=='e') ) {
@@ -2327,7 +2371,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 					}
 					switch (alt9) {
 						case 1 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:195:27: EXPONENT
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:209:27: EXPONENT
 							{
 							mEXPONENT(); 
 
@@ -2339,10 +2383,10 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:196:9: '.' ( DIGIT )+ ( EXPONENT )?
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:210:9: '.' ( DIGIT )+ ( EXPONENT )?
 					{
 					match('.'); 
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:196:13: ( DIGIT )+
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:210:13: ( DIGIT )+
 					int cnt10=0;
 					loop10:
 					while (true) {
@@ -2375,7 +2419,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 						cnt10++;
 					}
 
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:196:20: ( EXPONENT )?
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:210:20: ( EXPONENT )?
 					int alt11=2;
 					int LA11_0 = input.LA(1);
 					if ( (LA11_0=='E'||LA11_0=='e') ) {
@@ -2383,7 +2427,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 					}
 					switch (alt11) {
 						case 1 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:196:20: EXPONENT
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:210:20: EXPONENT
 							{
 							mEXPONENT(); 
 
@@ -2395,9 +2439,9 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 					}
 					break;
 				case 3 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:197:9: ( DIGIT )+ EXPONENT
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:211:9: ( DIGIT )+ EXPONENT
 					{
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:197:9: ( DIGIT )+
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:211:9: ( DIGIT )+
 					int cnt12=0;
 					loop12:
 					while (true) {
@@ -2450,10 +2494,10 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:201:5: ( ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' ) )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:201:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:215:5: ( ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' ) )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:215:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
 			{
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:201:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:215:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
 			int alt17=2;
 			int LA17_0 = input.LA(1);
 			if ( (LA17_0=='/') ) {
@@ -2487,11 +2531,11 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 
 			switch (alt17) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:201:10: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:215:10: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 					{
 					match("//"); 
 
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:201:15: (~ ( '\\n' | '\\r' ) )*
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:215:15: (~ ( '\\n' | '\\r' ) )*
 					loop14:
 					while (true) {
 						int alt14=2;
@@ -2520,7 +2564,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 						}
 					}
 
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:201:29: ( '\\r' )?
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:215:29: ( '\\r' )?
 					int alt15=2;
 					int LA15_0 = input.LA(1);
 					if ( (LA15_0=='\r') ) {
@@ -2528,7 +2572,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 					}
 					switch (alt15) {
 						case 1 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:201:29: '\\r'
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:215:29: '\\r'
 							{
 							match('\r'); 
 							}
@@ -2540,11 +2584,11 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:202:9: '/*' ( options {greedy=false; } : . )* '*/'
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:216:9: '/*' ( options {greedy=false; } : . )* '*/'
 					{
 					match("/*"); 
 
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:202:14: ( options {greedy=false; } : . )*
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:216:14: ( options {greedy=false; } : . )*
 					loop16:
 					while (true) {
 						int alt16=2;
@@ -2565,7 +2609,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 
 						switch (alt16) {
 						case 1 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:202:42: .
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:216:42: .
 							{
 							matchAny(); 
 							}
@@ -2599,10 +2643,10 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:205:5: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:205:9: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:219:5: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:219:9: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			{
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:205:9: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:219:9: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			int cnt18=0;
 			loop18:
 			while (true) {
@@ -2652,7 +2696,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = STRING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:212:8: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' | '\\'' ( ESC_SEQ |~ ( '\\\\' | '\\'' ) )* '\\'' )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:226:8: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' | '\\'' ( ESC_SEQ |~ ( '\\\\' | '\\'' ) )* '\\'' )
 			int alt21=2;
 			int LA21_0 = input.LA(1);
 			if ( (LA21_0=='\"') ) {
@@ -2670,10 +2714,10 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 
 			switch (alt21) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:212:11: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:226:11: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
 					{
 					match('\"'); 
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:212:15: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:226:15: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
 					loop19:
 					while (true) {
 						int alt19=3;
@@ -2687,14 +2731,14 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 
 						switch (alt19) {
 						case 1 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:212:17: ESC_SEQ
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:226:17: ESC_SEQ
 							{
 							mESC_SEQ(); 
 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:212:27: ~ ( '\\\\' | '\"' )
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:226:27: ~ ( '\\\\' | '\"' )
 							{
 							if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
 								input.consume();
@@ -2716,10 +2760,10 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:213:5: '\\'' ( ESC_SEQ |~ ( '\\\\' | '\\'' ) )* '\\''
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:227:5: '\\'' ( ESC_SEQ |~ ( '\\\\' | '\\'' ) )* '\\''
 					{
 					match('\''); 
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:213:10: ( ESC_SEQ |~ ( '\\\\' | '\\'' ) )*
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:227:10: ( ESC_SEQ |~ ( '\\\\' | '\\'' ) )*
 					loop20:
 					while (true) {
 						int alt20=3;
@@ -2733,14 +2777,14 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 
 						switch (alt20) {
 						case 1 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:213:12: ESC_SEQ
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:227:12: ESC_SEQ
 							{
 							mESC_SEQ(); 
 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:213:22: ~ ( '\\\\' | '\\'' )
+							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:227:22: ~ ( '\\\\' | '\\'' )
 							{
 							if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '&')||(input.LA(1) >= '(' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
 								input.consume();
@@ -2777,8 +2821,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		try {
 			int _type = ERROR_TK;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:216:11: ( . )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:216:13: .
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:230:10: ( . )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:230:12: .
 			{
 			matchAny(); 
 			}
@@ -2794,8 +2838,8 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:8: ( DOCUMENT | ASSIGN | EQ | NEQ | GT | GE | LT | LE | AT | CL | CM | DOT | SC | LP | RP | LB | RB | LBR | RBR | ADD | SUB | STAR | DIV | MOD | INC | DEC | NOT | AND | OR | XOR | AND_BIT | OR_BIT | AWAIT | BREAK | CASE | CATCH | CLASS | CONST | CONTINUE | DEBUGGER | DEFAULT | DELETE | DO | ELSE | ENUM | EXPORT | EXTENDS | FALSE | FINALLY | FOR | FUNCTION | IF | IMPLEMENTS | IMPORT | IN | INSTANCEOF | INTERFACE | LET | NEW | NULL | PACKAGE | PRIVATE | PROTECTED | PUBLIC | RETURN | STATIC | SUPER | SWITCH | THIS | THROW | TRY | TRUE | TYPEOF | VAR | VOID | WHILE | WITH | YIELD | ID | INTEGER | FLOAT | COMMENT | WS | STRING | ERROR_TK )
-		int alt22=85;
+		// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:8: ( DOCUMENT | ASSIGN | EQ | TEQ | NEQ | GT | GE | LT | LE | AT | CL | CM | DOT | SC | LP | RP | LB | RB | LBR | RBR | ADD | SUB | STAR | DIV | MOD | INC | DEC | EXP | NOT | AND | OR | XOR | AND_BIT | OR_BIT | AWAIT | BREAK | CASE | CATCH | CLASS | CONST | CONTINUE | DEBUGGER | DEFAULT | DELETE | DO | ELSE | ENUM | EXPORT | EXTENDS | FALSE | FINALLY | FOR | FUNCTION | IF | IMPLEMENTS | IMPORT | IN | INSTANCEOF | INTERFACE | LET | NEW | NULL | PACKAGE | PRIVATE | PROTECTED | PUBLIC | RETURN | STATIC | SUPER | SWITCH | THIS | THROW | TRY | TRUE | TYPEOF | VAR | VOID | WHILE | WITH | YIELD | ID | INTEGER | FLOAT | COMMENT | WS | STRING | ERROR_TK )
+		int alt22=87;
 		alt22 = dfa22.predict(input);
 		switch (alt22) {
 			case 1 :
@@ -2820,574 +2864,588 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 				}
 				break;
 			case 4 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:29: NEQ
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:29: TEQ
+				{
+				mTEQ(); 
+
+				}
+				break;
+			case 5 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:33: NEQ
 				{
 				mNEQ(); 
 
 				}
 				break;
-			case 5 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:33: GT
+			case 6 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:37: GT
 				{
 				mGT(); 
 
 				}
 				break;
-			case 6 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:36: GE
+			case 7 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:40: GE
 				{
 				mGE(); 
 
 				}
 				break;
-			case 7 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:39: LT
+			case 8 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:43: LT
 				{
 				mLT(); 
 
 				}
 				break;
-			case 8 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:42: LE
+			case 9 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:46: LE
 				{
 				mLE(); 
 
 				}
 				break;
-			case 9 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:45: AT
+			case 10 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:49: AT
 				{
 				mAT(); 
 
 				}
 				break;
-			case 10 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:48: CL
+			case 11 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:52: CL
 				{
 				mCL(); 
 
 				}
 				break;
-			case 11 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:51: CM
+			case 12 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:55: CM
 				{
 				mCM(); 
 
 				}
 				break;
-			case 12 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:54: DOT
+			case 13 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:58: DOT
 				{
 				mDOT(); 
 
 				}
 				break;
-			case 13 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:58: SC
+			case 14 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:62: SC
 				{
 				mSC(); 
 
 				}
 				break;
-			case 14 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:61: LP
+			case 15 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:65: LP
 				{
 				mLP(); 
 
 				}
 				break;
-			case 15 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:64: RP
+			case 16 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:68: RP
 				{
 				mRP(); 
 
 				}
 				break;
-			case 16 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:67: LB
+			case 17 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:71: LB
 				{
 				mLB(); 
 
 				}
 				break;
-			case 17 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:70: RB
+			case 18 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:74: RB
 				{
 				mRB(); 
 
 				}
 				break;
-			case 18 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:73: LBR
+			case 19 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:77: LBR
 				{
 				mLBR(); 
 
 				}
 				break;
-			case 19 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:77: RBR
+			case 20 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:81: RBR
 				{
 				mRBR(); 
 
 				}
 				break;
-			case 20 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:81: ADD
+			case 21 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:85: ADD
 				{
 				mADD(); 
 
 				}
 				break;
-			case 21 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:85: SUB
+			case 22 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:89: SUB
 				{
 				mSUB(); 
 
 				}
 				break;
-			case 22 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:89: STAR
+			case 23 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:93: STAR
 				{
 				mSTAR(); 
 
 				}
 				break;
-			case 23 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:94: DIV
+			case 24 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:98: DIV
 				{
 				mDIV(); 
 
 				}
 				break;
-			case 24 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:98: MOD
+			case 25 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:102: MOD
 				{
 				mMOD(); 
 
 				}
 				break;
-			case 25 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:102: INC
+			case 26 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:106: INC
 				{
 				mINC(); 
 
 				}
 				break;
-			case 26 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:106: DEC
+			case 27 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:110: DEC
 				{
 				mDEC(); 
 
 				}
 				break;
-			case 27 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:110: NOT
+			case 28 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:114: EXP
+				{
+				mEXP(); 
+
+				}
+				break;
+			case 29 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:118: NOT
 				{
 				mNOT(); 
 
 				}
 				break;
-			case 28 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:114: AND
+			case 30 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:122: AND
 				{
 				mAND(); 
 
 				}
 				break;
-			case 29 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:118: OR
+			case 31 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:126: OR
 				{
 				mOR(); 
 
 				}
 				break;
-			case 30 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:121: XOR
+			case 32 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:129: XOR
 				{
 				mXOR(); 
 
 				}
 				break;
-			case 31 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:125: AND_BIT
+			case 33 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:133: AND_BIT
 				{
 				mAND_BIT(); 
 
 				}
 				break;
-			case 32 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:133: OR_BIT
+			case 34 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:141: OR_BIT
 				{
 				mOR_BIT(); 
 
 				}
 				break;
-			case 33 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:140: AWAIT
+			case 35 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:148: AWAIT
 				{
 				mAWAIT(); 
 
 				}
 				break;
-			case 34 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:146: BREAK
+			case 36 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:154: BREAK
 				{
 				mBREAK(); 
 
 				}
 				break;
-			case 35 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:152: CASE
+			case 37 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:160: CASE
 				{
 				mCASE(); 
 
 				}
 				break;
-			case 36 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:157: CATCH
+			case 38 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:165: CATCH
 				{
 				mCATCH(); 
 
 				}
 				break;
-			case 37 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:163: CLASS
+			case 39 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:171: CLASS
 				{
 				mCLASS(); 
 
 				}
 				break;
-			case 38 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:169: CONST
+			case 40 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:177: CONST
 				{
 				mCONST(); 
 
 				}
 				break;
-			case 39 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:175: CONTINUE
+			case 41 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:183: CONTINUE
 				{
 				mCONTINUE(); 
 
 				}
 				break;
-			case 40 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:184: DEBUGGER
+			case 42 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:192: DEBUGGER
 				{
 				mDEBUGGER(); 
 
 				}
 				break;
-			case 41 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:193: DEFAULT
+			case 43 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:201: DEFAULT
 				{
 				mDEFAULT(); 
 
 				}
 				break;
-			case 42 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:201: DELETE
+			case 44 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:209: DELETE
 				{
 				mDELETE(); 
 
 				}
 				break;
-			case 43 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:208: DO
+			case 45 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:216: DO
 				{
 				mDO(); 
 
 				}
 				break;
-			case 44 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:211: ELSE
+			case 46 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:219: ELSE
 				{
 				mELSE(); 
 
 				}
 				break;
-			case 45 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:216: ENUM
+			case 47 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:224: ENUM
 				{
 				mENUM(); 
 
 				}
 				break;
-			case 46 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:221: EXPORT
+			case 48 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:229: EXPORT
 				{
 				mEXPORT(); 
 
 				}
 				break;
-			case 47 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:228: EXTENDS
+			case 49 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:236: EXTENDS
 				{
 				mEXTENDS(); 
 
 				}
 				break;
-			case 48 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:236: FALSE
+			case 50 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:244: FALSE
 				{
 				mFALSE(); 
 
 				}
 				break;
-			case 49 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:242: FINALLY
+			case 51 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:250: FINALLY
 				{
 				mFINALLY(); 
 
 				}
 				break;
-			case 50 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:250: FOR
+			case 52 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:258: FOR
 				{
 				mFOR(); 
 
 				}
 				break;
-			case 51 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:254: FUNCTION
+			case 53 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:262: FUNCTION
 				{
 				mFUNCTION(); 
 
 				}
 				break;
-			case 52 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:263: IF
+			case 54 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:271: IF
 				{
 				mIF(); 
 
 				}
 				break;
-			case 53 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:266: IMPLEMENTS
+			case 55 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:274: IMPLEMENTS
 				{
 				mIMPLEMENTS(); 
 
 				}
 				break;
-			case 54 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:277: IMPORT
+			case 56 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:285: IMPORT
 				{
 				mIMPORT(); 
 
 				}
 				break;
-			case 55 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:284: IN
+			case 57 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:292: IN
 				{
 				mIN(); 
 
 				}
 				break;
-			case 56 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:287: INSTANCEOF
+			case 58 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:295: INSTANCEOF
 				{
 				mINSTANCEOF(); 
 
 				}
 				break;
-			case 57 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:298: INTERFACE
+			case 59 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:306: INTERFACE
 				{
 				mINTERFACE(); 
 
 				}
 				break;
-			case 58 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:308: LET
+			case 60 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:316: LET
 				{
 				mLET(); 
 
 				}
 				break;
-			case 59 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:312: NEW
+			case 61 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:320: NEW
 				{
 				mNEW(); 
 
 				}
 				break;
-			case 60 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:316: NULL
+			case 62 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:324: NULL
 				{
 				mNULL(); 
 
 				}
 				break;
-			case 61 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:321: PACKAGE
+			case 63 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:329: PACKAGE
 				{
 				mPACKAGE(); 
 
 				}
 				break;
-			case 62 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:329: PRIVATE
+			case 64 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:337: PRIVATE
 				{
 				mPRIVATE(); 
 
 				}
 				break;
-			case 63 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:337: PROTECTED
+			case 65 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:345: PROTECTED
 				{
 				mPROTECTED(); 
 
 				}
 				break;
-			case 64 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:347: PUBLIC
+			case 66 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:355: PUBLIC
 				{
 				mPUBLIC(); 
 
 				}
 				break;
-			case 65 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:354: RETURN
+			case 67 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:362: RETURN
 				{
 				mRETURN(); 
 
 				}
 				break;
-			case 66 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:361: STATIC
+			case 68 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:369: STATIC
 				{
 				mSTATIC(); 
 
 				}
 				break;
-			case 67 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:368: SUPER
+			case 69 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:376: SUPER
 				{
 				mSUPER(); 
 
 				}
 				break;
-			case 68 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:374: SWITCH
+			case 70 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:382: SWITCH
 				{
 				mSWITCH(); 
 
 				}
 				break;
-			case 69 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:381: THIS
+			case 71 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:389: THIS
 				{
 				mTHIS(); 
 
 				}
 				break;
-			case 70 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:386: THROW
+			case 72 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:394: THROW
 				{
 				mTHROW(); 
 
 				}
 				break;
-			case 71 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:392: TRY
+			case 73 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:400: TRY
 				{
 				mTRY(); 
 
 				}
 				break;
-			case 72 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:396: TRUE
+			case 74 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:404: TRUE
 				{
 				mTRUE(); 
 
 				}
 				break;
-			case 73 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:401: TYPEOF
+			case 75 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:409: TYPEOF
 				{
 				mTYPEOF(); 
 
 				}
 				break;
-			case 74 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:408: VAR
+			case 76 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:416: VAR
 				{
 				mVAR(); 
 
 				}
 				break;
-			case 75 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:412: VOID
+			case 77 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:420: VOID
 				{
 				mVOID(); 
 
 				}
 				break;
-			case 76 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:417: WHILE
+			case 78 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:425: WHILE
 				{
 				mWHILE(); 
 
 				}
 				break;
-			case 77 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:423: WITH
+			case 79 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:431: WITH
 				{
 				mWITH(); 
 
 				}
 				break;
-			case 78 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:428: YIELD
+			case 80 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:436: YIELD
 				{
 				mYIELD(); 
 
 				}
 				break;
-			case 79 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:434: ID
+			case 81 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:442: ID
 				{
 				mID(); 
 
 				}
 				break;
-			case 80 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:437: INTEGER
+			case 82 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:445: INTEGER
 				{
 				mINTEGER(); 
 
 				}
 				break;
-			case 81 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:445: FLOAT
+			case 83 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:453: FLOAT
 				{
 				mFLOAT(); 
 
 				}
 				break;
-			case 82 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:451: COMMENT
+			case 84 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:459: COMMENT
 				{
 				mCOMMENT(); 
 
 				}
 				break;
-			case 83 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:459: WS
+			case 85 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:467: WS
 				{
 				mWS(); 
 
 				}
 				break;
-			case 84 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:462: STRING
+			case 86 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:470: STRING
 				{
 				mSTRING(); 
 
 				}
 				break;
-			case 85 :
-				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:469: ERROR_TK
+			case 87 :
+				// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:1:477: ERROR_TK
 				{
 				mERROR_TK(); 
 
@@ -3451,93 +3509,95 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "194:1: FLOAT : ( ( DIGIT )+ '.' ( DIGIT )* ( EXPONENT )? | '.' ( DIGIT )+ ( EXPONENT )? | ( DIGIT )+ EXPONENT );";
+			return "208:1: FLOAT : ( ( DIGIT )+ '.' ( DIGIT )* ( EXPONENT )? | '.' ( DIGIT )+ ( EXPONENT )? | ( DIGIT )+ EXPONENT );";
 		}
 	}
 
 	static final String DFA22_eotS =
-		"\1\uffff\1\60\1\62\1\64\1\66\1\70\3\uffff\1\74\7\uffff\1\106\1\110\1\uffff"+
-		"\1\113\1\uffff\1\116\1\120\1\uffff\17\60\1\uffff\1\163\1\uffff\2\55\1"+
-		"\uffff\1\170\1\60\42\uffff\14\60\1\u008a\1\60\1\u008e\22\60\1\uffff\1"+
-		"\163\2\uffff\1\60\1\uffff\17\60\1\u00b5\1\60\1\uffff\3\60\1\uffff\1\u00bb"+
-		"\1\u00bc\13\60\1\u00c8\2\60\1\u00cb\12\60\1\u00d6\4\60\1\u00db\1\u00dc"+
-		"\4\60\1\uffff\5\60\2\uffff\1\u00e6\10\60\1\u00ef\1\60\1\uffff\1\u00f1"+
-		"\1\60\1\uffff\1\u00f3\1\60\1\u00f5\5\60\1\u00fb\1\u00fc\1\uffff\1\u00fd"+
-		"\1\u00fe\1\u00ff\1\60\2\uffff\2\60\1\u0103\6\60\1\uffff\6\60\1\u0110\1"+
-		"\60\1\uffff\1\u0112\1\uffff\1\60\1\uffff\1\u0114\1\uffff\1\u0115\3\60"+
-		"\1\u0119\5\uffff\1\60\1\u011b\1\60\1\uffff\3\60\1\u0120\5\60\1\u0126\1"+
-		"\u0127\1\u0128\1\uffff\1\u0129\1\uffff\1\u012a\2\uffff\2\60\1\u012d\1"+
-		"\uffff\1\60\1\uffff\1\u012f\1\u0130\2\60\1\uffff\2\60\1\u0135\1\u0136"+
-		"\1\60\5\uffff\1\u0138\1\u0139\1\uffff\1\u013a\2\uffff\1\u013b\3\60\2\uffff"+
-		"\1\60\4\uffff\2\60\1\u0142\1\u0143\1\u0144\1\u0145\4\uffff";
+		"\1\uffff\1\60\1\62\1\64\1\66\1\70\3\uffff\1\74\7\uffff\1\106\1\110\1\112"+
+		"\1\114\1\uffff\1\117\1\121\1\uffff\17\60\1\uffff\1\164\1\uffff\2\55\1"+
+		"\uffff\1\171\1\60\1\uffff\1\176\41\uffff\14\60\1\u008d\1\60\1\u0091\22"+
+		"\60\1\uffff\1\164\2\uffff\1\60\1\uffff\3\60\2\uffff\14\60\1\u00b8\1\60"+
+		"\1\uffff\3\60\1\uffff\1\u00be\1\u00bf\13\60\1\u00cb\2\60\1\u00ce\12\60"+
+		"\1\u00d9\4\60\1\u00de\1\u00df\4\60\1\uffff\5\60\2\uffff\1\u00e9\10\60"+
+		"\1\u00f2\1\60\1\uffff\1\u00f4\1\60\1\uffff\1\u00f6\1\60\1\u00f8\5\60\1"+
+		"\u00fe\1\u00ff\1\uffff\1\u0100\1\u0101\1\u0102\1\60\2\uffff\2\60\1\u0106"+
+		"\6\60\1\uffff\6\60\1\u0113\1\60\1\uffff\1\u0115\1\uffff\1\60\1\uffff\1"+
+		"\u0117\1\uffff\1\u0118\3\60\1\u011c\5\uffff\1\60\1\u011e\1\60\1\uffff"+
+		"\3\60\1\u0123\5\60\1\u0129\1\u012a\1\u012b\1\uffff\1\u012c\1\uffff\1\u012d"+
+		"\2\uffff\2\60\1\u0130\1\uffff\1\60\1\uffff\1\u0132\1\u0133\2\60\1\uffff"+
+		"\2\60\1\u0138\1\u0139\1\60\5\uffff\1\u013b\1\u013c\1\uffff\1\u013d\2\uffff"+
+		"\1\u013e\3\60\2\uffff\1\60\4\uffff\2\60\1\u0145\1\u0146\1\u0147\1\u0148"+
+		"\4\uffff";
 	static final String DFA22_eofS =
-		"\u0146\uffff";
+		"\u0149\uffff";
 	static final String DFA22_minS =
-		"\1\0\1\145\4\75\3\uffff\1\60\7\uffff\1\53\1\55\1\uffff\1\52\1\uffff\1"+
-		"\46\1\174\1\uffff\1\167\1\162\1\141\1\154\1\141\1\146\2\145\1\141\1\145"+
-		"\1\164\1\150\1\141\1\150\1\151\1\uffff\1\56\1\uffff\2\0\1\uffff\1\60\1"+
-		"\142\42\uffff\1\141\1\145\1\163\1\141\1\156\1\163\1\165\1\160\1\154\1"+
-		"\156\1\162\1\156\1\60\1\160\1\60\1\164\1\167\1\154\1\143\1\151\1\142\1"+
+		"\1\0\1\145\4\75\3\uffff\1\60\7\uffff\1\53\1\55\2\52\1\uffff\1\46\1\174"+
+		"\1\uffff\1\167\1\162\1\141\1\154\1\141\1\146\2\145\1\141\1\145\1\164\1"+
+		"\150\1\141\1\150\1\151\1\uffff\1\56\1\uffff\2\0\1\uffff\1\44\1\142\1\uffff"+
+		"\1\75\41\uffff\1\141\1\145\1\163\1\141\1\156\1\163\1\165\1\160\1\154\1"+
+		"\156\1\162\1\156\1\44\1\160\1\44\1\164\1\167\1\154\1\143\1\151\1\142\1"+
 		"\164\1\141\1\160\2\151\1\165\1\160\1\162\2\151\1\164\1\145\1\uffff\1\56"+
-		"\2\uffff\1\165\1\uffff\1\165\1\141\1\145\1\151\1\141\1\145\1\143\2\163"+
-		"\1\145\1\155\1\157\1\145\1\163\1\141\1\60\1\143\1\uffff\1\154\1\164\1"+
-		"\145\1\uffff\2\60\1\154\1\153\1\166\1\164\1\154\1\165\1\164\1\145\1\164"+
-		"\1\163\1\157\1\60\2\145\1\60\1\144\1\154\1\150\1\154\1\155\1\147\1\165"+
-		"\2\164\1\153\1\60\1\150\1\163\1\164\1\151\2\60\1\162\1\156\1\145\1\154"+
-		"\1\uffff\1\164\1\145\1\162\1\141\1\162\2\uffff\1\60\2\141\1\145\1\151"+
-		"\1\162\1\151\1\162\1\143\1\60\1\167\1\uffff\1\60\1\157\1\uffff\1\60\1"+
-		"\145\1\60\1\144\1\145\1\147\1\154\1\145\2\60\1\uffff\3\60\1\156\2\uffff"+
-		"\1\164\1\144\1\60\1\154\1\151\1\155\1\164\1\156\1\146\1\uffff\1\147\1"+
-		"\164\2\143\1\156\1\143\1\60\1\150\1\uffff\1\60\1\uffff\1\146\1\uffff\1"+
-		"\60\1\uffff\1\60\1\156\1\145\1\164\1\60\5\uffff\1\165\1\60\1\163\1\uffff"+
-		"\1\171\1\157\1\145\1\60\1\143\1\141\2\145\1\164\3\60\1\uffff\1\60\1\uffff"+
-		"\1\60\2\uffff\1\164\1\162\1\60\1\uffff\1\145\1\uffff\2\60\2\156\1\uffff"+
-		"\1\145\1\143\2\60\1\145\5\uffff\2\60\1\uffff\1\60\2\uffff\1\60\1\164\1"+
-		"\157\1\145\2\uffff\1\144\4\uffff\1\163\1\146\4\60\4\uffff";
+		"\2\uffff\1\165\1\uffff\1\165\1\141\1\145\2\uffff\1\151\1\141\1\145\1\143"+
+		"\2\163\1\145\1\155\1\157\1\145\1\163\1\141\1\44\1\143\1\uffff\1\154\1"+
+		"\164\1\145\1\uffff\2\44\1\154\1\153\1\166\1\164\1\154\1\165\1\164\1\145"+
+		"\1\164\1\163\1\157\1\44\2\145\1\44\1\144\1\154\1\150\1\154\1\155\1\147"+
+		"\1\165\2\164\1\153\1\44\1\150\1\163\1\164\1\151\2\44\1\162\1\156\1\145"+
+		"\1\154\1\uffff\1\164\1\145\1\162\1\141\1\162\2\uffff\1\44\2\141\1\145"+
+		"\1\151\1\162\1\151\1\162\1\143\1\44\1\167\1\uffff\1\44\1\157\1\uffff\1"+
+		"\44\1\145\1\44\1\144\1\145\1\147\1\154\1\145\2\44\1\uffff\3\44\1\156\2"+
+		"\uffff\1\164\1\144\1\44\1\154\1\151\1\155\1\164\1\156\1\146\1\uffff\1"+
+		"\147\1\164\2\143\1\156\1\143\1\44\1\150\1\uffff\1\44\1\uffff\1\146\1\uffff"+
+		"\1\44\1\uffff\1\44\1\156\1\145\1\164\1\44\5\uffff\1\165\1\44\1\163\1\uffff"+
+		"\1\171\1\157\1\145\1\44\1\143\1\141\2\145\1\164\3\44\1\uffff\1\44\1\uffff"+
+		"\1\44\2\uffff\1\164\1\162\1\44\1\uffff\1\145\1\uffff\2\44\2\156\1\uffff"+
+		"\1\145\1\143\2\44\1\145\5\uffff\2\44\1\uffff\1\44\2\uffff\1\44\1\164\1"+
+		"\157\1\145\2\uffff\1\144\4\uffff\1\163\1\146\4\44\4\uffff";
 	static final String DFA22_maxS =
-		"\1\uffff\1\157\4\75\3\uffff\1\71\7\uffff\1\53\1\55\1\uffff\1\57\1\uffff"+
-		"\1\46\1\174\1\uffff\1\167\1\162\1\157\1\170\1\165\1\156\1\145\2\165\1"+
-		"\145\1\167\1\171\1\157\2\151\1\uffff\1\145\1\uffff\2\uffff\1\uffff\1\172"+
-		"\1\154\42\uffff\1\141\1\145\1\164\1\141\1\156\1\163\1\165\1\164\1\154"+
-		"\1\156\1\162\1\156\1\172\1\160\1\172\1\164\1\167\1\154\1\143\1\157\1\142"+
-		"\1\164\1\141\1\160\1\151\1\162\1\171\1\160\1\162\2\151\1\164\1\145\1\uffff"+
-		"\1\145\2\uffff\1\165\1\uffff\1\165\1\141\1\145\1\151\1\141\1\145\1\143"+
-		"\1\163\1\164\1\145\1\155\1\157\1\145\1\163\1\141\1\172\1\143\1\uffff\1"+
-		"\157\1\164\1\145\1\uffff\2\172\1\154\1\153\1\166\1\164\1\154\1\165\1\164"+
-		"\1\145\1\164\1\163\1\157\1\172\2\145\1\172\1\144\1\154\1\150\1\154\1\155"+
-		"\1\147\1\165\2\164\1\153\1\172\1\150\1\163\1\164\1\151\2\172\1\162\1\156"+
-		"\1\145\1\154\1\uffff\1\164\1\145\1\162\1\141\1\162\2\uffff\1\172\2\141"+
-		"\1\145\1\151\1\162\1\151\1\162\1\143\1\172\1\167\1\uffff\1\172\1\157\1"+
-		"\uffff\1\172\1\145\1\172\1\144\1\145\1\147\1\154\1\145\2\172\1\uffff\3"+
-		"\172\1\156\2\uffff\1\164\1\144\1\172\1\154\1\151\1\155\1\164\1\156\1\146"+
-		"\1\uffff\1\147\1\164\2\143\1\156\1\143\1\172\1\150\1\uffff\1\172\1\uffff"+
-		"\1\146\1\uffff\1\172\1\uffff\1\172\1\156\1\145\1\164\1\172\5\uffff\1\165"+
-		"\1\172\1\163\1\uffff\1\171\1\157\1\145\1\172\1\143\1\141\2\145\1\164\3"+
-		"\172\1\uffff\1\172\1\uffff\1\172\2\uffff\1\164\1\162\1\172\1\uffff\1\145"+
-		"\1\uffff\2\172\2\156\1\uffff\1\145\1\143\2\172\1\145\5\uffff\2\172\1\uffff"+
-		"\1\172\2\uffff\1\172\1\164\1\157\1\145\2\uffff\1\144\4\uffff\1\163\1\146"+
-		"\4\172\4\uffff";
+		"\1\uffff\1\157\4\75\3\uffff\1\71\7\uffff\1\53\1\55\1\52\1\57\1\uffff\1"+
+		"\46\1\174\1\uffff\1\167\1\162\1\157\1\170\1\165\1\156\1\145\2\165\1\145"+
+		"\1\167\1\171\1\157\2\151\1\uffff\1\145\1\uffff\2\uffff\1\uffff\1\172\1"+
+		"\154\1\uffff\1\75\41\uffff\1\141\1\145\1\164\1\141\1\156\1\163\1\165\1"+
+		"\164\1\154\1\156\1\162\1\156\1\172\1\160\1\172\1\164\1\167\1\154\1\143"+
+		"\1\157\1\142\1\164\1\141\1\160\1\151\1\162\1\171\1\160\1\162\2\151\1\164"+
+		"\1\145\1\uffff\1\145\2\uffff\1\165\1\uffff\1\165\1\141\1\145\2\uffff\1"+
+		"\151\1\141\1\145\1\143\1\163\1\164\1\145\1\155\1\157\1\145\1\163\1\141"+
+		"\1\172\1\143\1\uffff\1\157\1\164\1\145\1\uffff\2\172\1\154\1\153\1\166"+
+		"\1\164\1\154\1\165\1\164\1\145\1\164\1\163\1\157\1\172\2\145\1\172\1\144"+
+		"\1\154\1\150\1\154\1\155\1\147\1\165\2\164\1\153\1\172\1\150\1\163\1\164"+
+		"\1\151\2\172\1\162\1\156\1\145\1\154\1\uffff\1\164\1\145\1\162\1\141\1"+
+		"\162\2\uffff\1\172\2\141\1\145\1\151\1\162\1\151\1\162\1\143\1\172\1\167"+
+		"\1\uffff\1\172\1\157\1\uffff\1\172\1\145\1\172\1\144\1\145\1\147\1\154"+
+		"\1\145\2\172\1\uffff\3\172\1\156\2\uffff\1\164\1\144\1\172\1\154\1\151"+
+		"\1\155\1\164\1\156\1\146\1\uffff\1\147\1\164\2\143\1\156\1\143\1\172\1"+
+		"\150\1\uffff\1\172\1\uffff\1\146\1\uffff\1\172\1\uffff\1\172\1\156\1\145"+
+		"\1\164\1\172\5\uffff\1\165\1\172\1\163\1\uffff\1\171\1\157\1\145\1\172"+
+		"\1\143\1\141\2\145\1\164\3\172\1\uffff\1\172\1\uffff\1\172\2\uffff\1\164"+
+		"\1\162\1\172\1\uffff\1\145\1\uffff\2\172\2\156\1\uffff\1\145\1\143\2\172"+
+		"\1\145\5\uffff\2\172\1\uffff\1\172\2\uffff\1\172\1\164\1\157\1\145\2\uffff"+
+		"\1\144\4\uffff\1\163\1\146\4\172\4\uffff";
 	static final String DFA22_acceptS =
-		"\6\uffff\1\11\1\12\1\13\1\uffff\1\15\1\16\1\17\1\20\1\21\1\22\1\23\2\uffff"+
-		"\1\26\1\uffff\1\30\2\uffff\1\36\17\uffff\1\117\1\uffff\1\123\2\uffff\1"+
-		"\125\2\uffff\1\117\1\3\1\2\1\4\1\33\1\6\1\5\1\10\1\7\1\11\1\12\1\13\1"+
-		"\14\1\121\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\31\1\24\1\32\1\25\1\26"+
-		"\1\122\1\27\1\30\1\34\1\37\1\35\1\40\1\36\41\uffff\1\120\1\uffff\1\123"+
-		"\1\124\1\uffff\1\53\21\uffff\1\64\3\uffff\1\67\46\uffff\1\62\5\uffff\1"+
-		"\72\1\73\13\uffff\1\107\2\uffff\1\112\12\uffff\1\43\4\uffff\1\54\1\55"+
-		"\11\uffff\1\74\10\uffff\1\105\1\uffff\1\110\1\uffff\1\113\1\uffff\1\115"+
-		"\5\uffff\1\41\1\42\1\44\1\45\1\46\3\uffff\1\60\14\uffff\1\103\1\uffff"+
-		"\1\106\1\uffff\1\114\1\116\3\uffff\1\52\1\uffff\1\56\4\uffff\1\66\5\uffff"+
-		"\1\100\1\101\1\102\1\104\1\111\2\uffff\1\51\1\uffff\1\57\1\61\4\uffff"+
-		"\1\75\1\76\1\uffff\1\1\1\50\1\47\1\63\6\uffff\1\71\1\77\1\65\1\70";
+		"\6\uffff\1\12\1\13\1\14\1\uffff\1\16\1\17\1\20\1\21\1\22\1\23\1\24\4\uffff"+
+		"\1\31\2\uffff\1\40\17\uffff\1\121\1\uffff\1\125\2\uffff\1\127\2\uffff"+
+		"\1\121\1\uffff\1\2\1\5\1\35\1\7\1\6\1\11\1\10\1\12\1\13\1\14\1\15\1\123"+
+		"\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\32\1\25\1\33\1\26\1\34\1\27\1\124"+
+		"\1\30\1\31\1\36\1\41\1\37\1\42\1\40\41\uffff\1\122\1\uffff\1\125\1\126"+
+		"\1\uffff\1\55\3\uffff\1\4\1\3\16\uffff\1\66\3\uffff\1\71\46\uffff\1\64"+
+		"\5\uffff\1\74\1\75\13\uffff\1\111\2\uffff\1\114\12\uffff\1\45\4\uffff"+
+		"\1\56\1\57\11\uffff\1\76\10\uffff\1\107\1\uffff\1\112\1\uffff\1\115\1"+
+		"\uffff\1\117\5\uffff\1\43\1\44\1\46\1\47\1\50\3\uffff\1\62\14\uffff\1"+
+		"\105\1\uffff\1\110\1\uffff\1\116\1\120\3\uffff\1\54\1\uffff\1\60\4\uffff"+
+		"\1\70\5\uffff\1\102\1\103\1\104\1\106\1\113\2\uffff\1\53\1\uffff\1\61"+
+		"\1\63\4\uffff\1\77\1\100\1\uffff\1\1\1\52\1\51\1\65\6\uffff\1\73\1\101"+
+		"\1\67\1\72";
 	static final String DFA22_specialS =
-		"\1\2\52\uffff\1\0\1\1\u0119\uffff}>";
+		"\1\2\52\uffff\1\0\1\1\u011c\uffff}>";
 	static final String[] DFA22_transitionS = {
-			"\11\55\2\52\2\55\1\52\22\55\1\52\1\3\1\53\2\55\1\25\1\26\1\54\1\13\1"+
-			"\14\1\23\1\21\1\10\1\22\1\11\1\24\12\51\1\7\1\12\1\5\1\2\1\4\1\55\1\6"+
-			"\32\50\1\15\1\55\1\16\1\30\1\50\1\55\1\31\1\32\1\33\1\1\1\34\1\35\2\50"+
-			"\1\36\2\50\1\37\1\50\1\40\1\50\1\41\1\50\1\42\1\43\1\44\1\50\1\45\1\46"+
-			"\1\50\1\47\1\50\1\17\1\27\1\20\uff82\55",
+			"\11\55\2\52\2\55\1\52\22\55\1\52\1\3\1\53\1\55\1\50\1\25\1\26\1\54\1"+
+			"\13\1\14\1\23\1\21\1\10\1\22\1\11\1\24\12\51\1\7\1\12\1\5\1\2\1\4\1\55"+
+			"\1\6\32\50\1\15\1\55\1\16\1\30\1\50\1\55\1\31\1\32\1\33\1\1\1\34\1\35"+
+			"\2\50\1\36\2\50\1\37\1\50\1\40\1\50\1\41\1\50\1\42\1\43\1\44\1\50\1\45"+
+			"\1\46\1\50\1\47\1\50\1\17\1\27\1\20\uff82\55",
 			"\1\57\11\uffff\1\56",
 			"\1\61",
 			"\1\63",
@@ -3556,135 +3616,137 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 			"",
 			"\1\105",
 			"\1\107",
+			"\1\111",
+			"\1\113\4\uffff\1\113",
 			"",
-			"\1\112\4\uffff\1\112",
+			"\1\116",
+			"\1\120",
 			"",
-			"\1\115",
-			"\1\117",
-			"",
-			"\1\122",
 			"\1\123",
-			"\1\124\12\uffff\1\125\2\uffff\1\126",
-			"\1\127\1\uffff\1\130\11\uffff\1\131",
-			"\1\132\7\uffff\1\133\5\uffff\1\134\5\uffff\1\135",
-			"\1\136\6\uffff\1\137\1\140",
-			"\1\141",
-			"\1\142\17\uffff\1\143",
-			"\1\144\20\uffff\1\145\2\uffff\1\146",
-			"\1\147",
-			"\1\150\1\151\1\uffff\1\152",
-			"\1\153\11\uffff\1\154\6\uffff\1\155",
-			"\1\156\15\uffff\1\157",
-			"\1\160\1\161",
-			"\1\162",
+			"\1\124",
+			"\1\125\12\uffff\1\126\2\uffff\1\127",
+			"\1\130\1\uffff\1\131\11\uffff\1\132",
+			"\1\133\7\uffff\1\134\5\uffff\1\135\5\uffff\1\136",
+			"\1\137\6\uffff\1\140\1\141",
+			"\1\142",
+			"\1\143\17\uffff\1\144",
+			"\1\145\20\uffff\1\146\2\uffff\1\147",
+			"\1\150",
+			"\1\151\1\152\1\uffff\1\153",
+			"\1\154\11\uffff\1\155\6\uffff\1\156",
+			"\1\157\15\uffff\1\160",
+			"\1\161\1\162",
+			"\1\163",
 			"",
-			"\1\75\1\uffff\12\164\13\uffff\1\75\37\uffff\1\75",
+			"\1\75\1\uffff\12\165\13\uffff\1\75\37\uffff\1\75",
 			"",
-			"\0\166",
-			"\0\166",
+			"\0\167",
+			"\0\167",
 			"",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\2\60\1\167\27\60",
-			"\1\171\3\uffff\1\172\5\uffff\1\173",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\2\60\1\170\27"+
+			"\60",
+			"\1\172\3\uffff\1\173\5\uffff\1\174",
 			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"\1\174",
 			"\1\175",
-			"\1\176\1\177",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"\1\177",
 			"\1\u0080",
-			"\1\u0081",
-			"\1\u0082",
+			"\1\u0081\1\u0082",
 			"\1\u0083",
-			"\1\u0084\3\uffff\1\u0085",
+			"\1\u0084",
+			"\1\u0085",
 			"\1\u0086",
-			"\1\u0087",
-			"\1\u0088",
+			"\1\u0087\3\uffff\1\u0088",
 			"\1\u0089",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u008a",
 			"\1\u008b",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\22\60\1\u008c\1\u008d\6\60",
-			"\1\u008f",
-			"\1\u0090",
-			"\1\u0091",
+			"\1\u008c",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u008e",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\22\60\1\u008f"+
+			"\1\u0090\6\60",
 			"\1\u0092",
-			"\1\u0093\5\uffff\1\u0094",
+			"\1\u0093",
+			"\1\u0094",
 			"\1\u0095",
-			"\1\u0096",
-			"\1\u0097",
+			"\1\u0096\5\uffff\1\u0097",
 			"\1\u0098",
 			"\1\u0099",
-			"\1\u009a\10\uffff\1\u009b",
-			"\1\u009d\3\uffff\1\u009c",
-			"\1\u009e",
-			"\1\u009f",
-			"\1\u00a0",
+			"\1\u009a",
+			"\1\u009b",
+			"\1\u009c",
+			"\1\u009d\10\uffff\1\u009e",
+			"\1\u00a0\3\uffff\1\u009f",
 			"\1\u00a1",
 			"\1\u00a2",
 			"\1\u00a3",
-			"",
-			"\1\75\1\uffff\12\164\13\uffff\1\75\37\uffff\1\75",
-			"",
-			"",
 			"\1\u00a4",
-			"",
 			"\1\u00a5",
 			"\1\u00a6",
+			"",
+			"\1\75\1\uffff\12\165\13\uffff\1\75\37\uffff\1\75",
+			"",
+			"",
 			"\1\u00a7",
+			"",
 			"\1\u00a8",
 			"\1\u00a9",
 			"\1\u00aa",
+			"",
+			"",
 			"\1\u00ab",
 			"\1\u00ac",
-			"\1\u00ad\1\u00ae",
+			"\1\u00ad",
+			"\1\u00ae",
 			"\1\u00af",
-			"\1\u00b0",
-			"\1\u00b1",
+			"\1\u00b0\1\u00b1",
 			"\1\u00b2",
 			"\1\u00b3",
 			"\1\u00b4",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u00b5",
 			"\1\u00b6",
-			"",
-			"\1\u00b7\2\uffff\1\u00b8",
+			"\1\u00b7",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u00b9",
-			"\1\u00ba",
 			"",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u00ba\2\uffff\1\u00bb",
+			"\1\u00bc",
 			"\1\u00bd",
-			"\1\u00be",
-			"\1\u00bf",
+			"",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u00c0",
 			"\1\u00c1",
 			"\1\u00c2",
@@ -3693,13 +3755,13 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 			"\1\u00c5",
 			"\1\u00c6",
 			"\1\u00c7",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u00c8",
 			"\1\u00c9",
 			"\1\u00ca",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u00cc",
 			"\1\u00cd",
-			"\1\u00ce",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u00cf",
 			"\1\u00d0",
 			"\1\u00d1",
@@ -3707,158 +3769,161 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 			"\1\u00d3",
 			"\1\u00d4",
 			"\1\u00d5",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u00d6",
 			"\1\u00d7",
 			"\1\u00d8",
-			"\1\u00d9",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u00da",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u00db",
+			"\1\u00dc",
 			"\1\u00dd",
-			"\1\u00de",
-			"\1\u00df",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u00e0",
-			"",
 			"\1\u00e1",
 			"\1\u00e2",
 			"\1\u00e3",
+			"",
 			"\1\u00e4",
 			"\1\u00e5",
-			"",
-			"",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u00e6",
 			"\1\u00e7",
 			"\1\u00e8",
-			"\1\u00e9",
+			"",
+			"",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u00ea",
 			"\1\u00eb",
 			"\1\u00ec",
 			"\1\u00ed",
 			"\1\u00ee",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u00ef",
 			"\1\u00f0",
+			"\1\u00f1",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u00f3",
 			"",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\1\u00f2",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u00f5",
 			"",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\1\u00f4",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\1\u00f6",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u00f7",
-			"\1\u00f8",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u00f9",
 			"\1\u00fa",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u00fb",
+			"\1\u00fc",
+			"\1\u00fd",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\1\u0100",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u0103",
 			"",
 			"",
-			"\1\u0101",
-			"\1\u0102",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u0104",
 			"\1\u0105",
-			"\1\u0106",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u0107",
 			"\1\u0108",
 			"\1\u0109",
-			"",
 			"\1\u010a",
 			"\1\u010b",
 			"\1\u010c",
+			"",
 			"\1\u010d",
 			"\1\u010e",
 			"\1\u010f",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u0110",
 			"\1\u0111",
+			"\1\u0112",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u0114",
 			"",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"",
-			"\1\u0113",
-			"",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u0116",
-			"\1\u0117",
-			"\1\u0118",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"",
-			"",
-			"",
-			"",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u0119",
 			"\1\u011a",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\1\u011c",
+			"\1\u011b",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"",
+			"",
+			"",
+			"",
 			"",
 			"\1\u011d",
-			"\1\u011e",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u011f",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"",
+			"\1\u0120",
 			"\1\u0121",
 			"\1\u0122",
-			"\1\u0123",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u0124",
 			"\1\u0125",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u0126",
+			"\1\u0127",
+			"\1\u0128",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"",
-			"",
-			"\1\u012b",
-			"\1\u012c",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"",
 			"\1\u012e",
+			"\1\u012f",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u0131",
-			"\1\u0132",
 			"",
-			"\1\u0133",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u0134",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u0135",
+			"",
+			"\1\u0136",
 			"\1\u0137",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\u013a",
 			"",
 			"",
 			"",
 			"",
 			"",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"",
-			"",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\1\u013c",
-			"\1\u013d",
-			"\1\u013e",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"",
 			"",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"\1\u013f",
-			"",
-			"",
-			"",
-			"",
 			"\1\u0140",
 			"\1\u0141",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
-			"\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"",
+			"",
+			"\1\u0142",
+			"",
+			"",
+			"",
+			"",
+			"\1\u0143",
+			"\1\u0144",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
+			"\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32\60",
 			"",
 			"",
 			"",
@@ -3896,7 +3961,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "1:1: Tokens : ( DOCUMENT | ASSIGN | EQ | NEQ | GT | GE | LT | LE | AT | CL | CM | DOT | SC | LP | RP | LB | RB | LBR | RBR | ADD | SUB | STAR | DIV | MOD | INC | DEC | NOT | AND | OR | XOR | AND_BIT | OR_BIT | AWAIT | BREAK | CASE | CATCH | CLASS | CONST | CONTINUE | DEBUGGER | DEFAULT | DELETE | DO | ELSE | ENUM | EXPORT | EXTENDS | FALSE | FINALLY | FOR | FUNCTION | IF | IMPLEMENTS | IMPORT | IN | INSTANCEOF | INTERFACE | LET | NEW | NULL | PACKAGE | PRIVATE | PROTECTED | PUBLIC | RETURN | STATIC | SUPER | SWITCH | THIS | THROW | TRY | TRUE | TYPEOF | VAR | VOID | WHILE | WITH | YIELD | ID | INTEGER | FLOAT | COMMENT | WS | STRING | ERROR_TK );";
+			return "1:1: Tokens : ( DOCUMENT | ASSIGN | EQ | TEQ | NEQ | GT | GE | LT | LE | AT | CL | CM | DOT | SC | LP | RP | LB | RB | LBR | RBR | ADD | SUB | STAR | DIV | MOD | INC | DEC | EXP | NOT | AND | OR | XOR | AND_BIT | OR_BIT | AWAIT | BREAK | CASE | CATCH | CLASS | CONST | CONTINUE | DEBUGGER | DEFAULT | DELETE | DO | ELSE | ENUM | EXPORT | EXTENDS | FALSE | FINALLY | FOR | FUNCTION | IF | IMPLEMENTS | IMPORT | IN | INSTANCEOF | INTERFACE | LET | NEW | NULL | PACKAGE | PRIVATE | PROTECTED | PUBLIC | RETURN | STATIC | SUPER | SWITCH | THIS | THROW | TRY | TRUE | TYPEOF | VAR | VOID | WHILE | WITH | YIELD | ID | INTEGER | FLOAT | COMMENT | WS | STRING | ERROR_TK );";
 		}
 		@Override
 		public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
@@ -3906,7 +3971,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 					case 0 : 
 						int LA22_43 = input.LA(1);
 						s = -1;
-						if ( ((LA22_43 >= '\u0000' && LA22_43 <= '\uFFFF')) ) {s = 118;}
+						if ( ((LA22_43 >= '\u0000' && LA22_43 <= '\uFFFF')) ) {s = 119;}
 						else s = 45;
 						if ( s>=0 ) return s;
 						break;
@@ -3914,7 +3979,7 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 					case 1 : 
 						int LA22_44 = input.LA(1);
 						s = -1;
-						if ( ((LA22_44 >= '\u0000' && LA22_44 <= '\uFFFF')) ) {s = 118;}
+						if ( ((LA22_44 >= '\u0000' && LA22_44 <= '\uFFFF')) ) {s = 119;}
 						else s = 45;
 						if ( s>=0 ) return s;
 						break;
@@ -3961,12 +4026,12 @@ public class JavaScriptToJQueryConverterLexer extends Lexer {
 						else if ( (LA22_0=='v') ) {s = 37;}
 						else if ( (LA22_0=='w') ) {s = 38;}
 						else if ( (LA22_0=='y') ) {s = 39;}
-						else if ( ((LA22_0 >= 'A' && LA22_0 <= 'Z')||LA22_0=='_'||(LA22_0 >= 'g' && LA22_0 <= 'h')||(LA22_0 >= 'j' && LA22_0 <= 'k')||LA22_0=='m'||LA22_0=='o'||LA22_0=='q'||LA22_0=='u'||LA22_0=='x'||LA22_0=='z') ) {s = 40;}
+						else if ( (LA22_0=='$'||(LA22_0 >= 'A' && LA22_0 <= 'Z')||LA22_0=='_'||(LA22_0 >= 'g' && LA22_0 <= 'h')||(LA22_0 >= 'j' && LA22_0 <= 'k')||LA22_0=='m'||LA22_0=='o'||LA22_0=='q'||LA22_0=='u'||LA22_0=='x'||LA22_0=='z') ) {s = 40;}
 						else if ( ((LA22_0 >= '0' && LA22_0 <= '9')) ) {s = 41;}
 						else if ( ((LA22_0 >= '\t' && LA22_0 <= '\n')||LA22_0=='\r'||LA22_0==' ') ) {s = 42;}
 						else if ( (LA22_0=='\"') ) {s = 43;}
 						else if ( (LA22_0=='\'') ) {s = 44;}
-						else if ( ((LA22_0 >= '\u0000' && LA22_0 <= '\b')||(LA22_0 >= '\u000B' && LA22_0 <= '\f')||(LA22_0 >= '\u000E' && LA22_0 <= '\u001F')||(LA22_0 >= '#' && LA22_0 <= '$')||LA22_0=='?'||LA22_0=='\\'||LA22_0=='`'||(LA22_0 >= '~' && LA22_0 <= '\uFFFF')) ) {s = 45;}
+						else if ( ((LA22_0 >= '\u0000' && LA22_0 <= '\b')||(LA22_0 >= '\u000B' && LA22_0 <= '\f')||(LA22_0 >= '\u000E' && LA22_0 <= '\u001F')||LA22_0=='#'||LA22_0=='?'||LA22_0=='\\'||LA22_0=='`'||(LA22_0 >= '~' && LA22_0 <= '\uFFFF')) ) {s = 45;}
 						if ( s>=0 ) return s;
 						break;
 			}
