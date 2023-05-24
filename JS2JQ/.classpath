@@ -6,6 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="G:/Altri computer/Il mio MacBook Pro/Desktop/Jacopo/Università/Magistrale/II Anno/Primo_Semestre/Linguaggi_formali_compilatori/Lab_LFC/software/antlr-3.4-complete.jar"/>
+	<classpathentry kind="lib" path="resources/antlr-3.4-complete.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

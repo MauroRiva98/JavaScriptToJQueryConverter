@@ -57,6 +57,17 @@ idDotIdRule
 	:
 		ID (DOT ID)*
 	;
+	
+varDeclarationRule
+	:
+		(VAR | LET | CONST)? ID SC?
+	;
+
+varAssignmentRule
+	:	
+		(VAR | LET | CONST)? ID ASSIGN     SC? //TODO
+	;
+	
 
 
 fragment
@@ -95,6 +106,7 @@ DOCUMENT
 ASSIGN	: '=';
 // comparatori
 EQ 	: '==';
+TEQ	: '===';
 NEQ 	: '!=';
 GT 	: '>';
 GE	: '>=';
@@ -124,6 +136,8 @@ DIV		: '/';
 MOD		: '%';
 INC		: '++';
 DEC		: '--';
+EXP		: '**';
+//controllare += e -= e varianti
 
 // operatori logici
 NOT		: '!';
@@ -184,7 +198,7 @@ YIELD		:'yield';
 
 		
 ID  	:	
-	( LETTER |'_')( LETTER |DIGIT |'_')* 
+	( LETTER |'_' | '$')( LETTER |DIGIT |'_' | '$')* 
 	;
 
 
@@ -213,5 +227,5 @@ STRING	:  '"' ( ESC_SEQ | ~('\\'|'"') )* '"'
 	|  '\'' ( ESC_SEQ | ~('\\'|'\'') )* '\''
 	;
 
-ERROR_TK		: . ; 
+ERROR_TK	: . ; 
 
