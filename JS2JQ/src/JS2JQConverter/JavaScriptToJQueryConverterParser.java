@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g 2023-05-23 18:31:13
+// $ANTLR 3.5.1 C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g 2023-05-25 12:15:32
 
 	package JS2JQConverter;
 
@@ -169,19 +169,47 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "parseJava"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:46:1: parseJava : getRule ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:46:1: parseJava : ( getRule | varDeclarationRule );
 	public final void parseJava() throws RecognitionException {
 		initParser();
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:48:2: ( getRule )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:49:3: getRule
-			{
-			pushFollow(FOLLOW_getRule_in_parseJava62);
-			getRule();
-			state._fsp--;
-
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:48:2: ( getRule | varDeclarationRule )
+			int alt1=2;
+			int LA1_0 = input.LA(1);
+			if ( (LA1_0==DOCUMENT) ) {
+				alt1=1;
+			}
+			else if ( (LA1_0==CONST||LA1_0==ID||LA1_0==LET||LA1_0==VAR) ) {
+				alt1=2;
 			}
 
+			else {
+				NoViableAltException nvae =
+					new NoViableAltException("", 1, 0, input);
+				throw nvae;
+			}
+
+			switch (alt1) {
+				case 1 :
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:49:3: getRule
+					{
+					pushFollow(FOLLOW_getRule_in_parseJava62);
+					getRule();
+					state._fsp--;
+
+					}
+					break;
+				case 2 :
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:50:4: varDeclarationRule
+					{
+					pushFollow(FOLLOW_varDeclarationRule_in_parseJava68);
+					varDeclarationRule();
+					state._fsp--;
+
+					}
+					break;
+
+			}
 		}
 		catch (RecognitionException re) {
 			reportError(re);
@@ -196,24 +224,45 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "getRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:51:1: getRule : DOCUMENT DOT get= ID LP i= STRING RP SC ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:52:1: getRule : DOCUMENT DOT get= ID x= ( LP i= STRING RP ) ( SC )? ;
 	public final void getRule() throws RecognitionException {
 		Token get=null;
 		Token i=null;
+		Token x=null;
 
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:52:2: ( DOCUMENT DOT get= ID LP i= STRING RP SC )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:53:3: DOCUMENT DOT get= ID LP i= STRING RP SC
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:53:2: ( DOCUMENT DOT get= ID x= ( LP i= STRING RP ) ( SC )? )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:54:3: DOCUMENT DOT get= ID x= ( LP i= STRING RP ) ( SC )?
 			{
-			match(input,DOCUMENT,FOLLOW_DOCUMENT_in_getRule74); 
+			match(input,DOCUMENT,FOLLOW_DOCUMENT_in_getRule81); 
 			System.out.println("Ho riconosciuto DOCUMENT");
-			match(input,DOT,FOLLOW_DOT_in_getRule78); 
-			get=(Token)match(input,ID,FOLLOW_ID_in_getRule82); 
-			match(input,LP,FOLLOW_LP_in_getRule84); 
-			i=(Token)match(input,STRING,FOLLOW_STRING_in_getRule88); 
-			match(input,RP,FOLLOW_RP_in_getRule90); 
-			match(input,SC,FOLLOW_SC_in_getRule92); 
-			h.translate(get, i);
+			match(input,DOT,FOLLOW_DOT_in_getRule85); 
+			get=(Token)match(input,ID,FOLLOW_ID_in_getRule89); 
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:54:75: ( LP i= STRING RP )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:54:76: LP i= STRING RP
+			{
+			x=(Token)match(input,LP,FOLLOW_LP_in_getRule94); 
+			i=(Token)match(input,STRING,FOLLOW_STRING_in_getRule98); 
+			x=(Token)match(input,RP,FOLLOW_RP_in_getRule100); 
+			}
+
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:54:92: ( SC )?
+			int alt2=2;
+			int LA2_0 = input.LA(1);
+			if ( (LA2_0==SC) ) {
+				alt2=1;
+			}
+			switch (alt2) {
+				case 1 :
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:54:92: SC
+					{
+					match(input,SC,FOLLOW_SC_in_getRule103); 
+					}
+					break;
+
+			}
+
+			h.test(get, x);
 			}
 
 		}
@@ -230,33 +279,33 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "idDotIdRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:56:1: idDotIdRule : ID ( DOT ID )* ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:57:1: idDotIdRule : ID ( DOT ID )* ;
 	public final void idDotIdRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:57:2: ( ID ( DOT ID )* )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:58:3: ID ( DOT ID )*
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:58:2: ( ID ( DOT ID )* )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:59:3: ID ( DOT ID )*
 			{
-			match(input,ID,FOLLOW_ID_in_idDotIdRule108); 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:58:6: ( DOT ID )*
-			loop1:
+			match(input,ID,FOLLOW_ID_in_idDotIdRule120); 
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:59:6: ( DOT ID )*
+			loop3:
 			while (true) {
-				int alt1=2;
-				int LA1_0 = input.LA(1);
-				if ( (LA1_0==DOT) ) {
-					alt1=1;
+				int alt3=2;
+				int LA3_0 = input.LA(1);
+				if ( (LA3_0==DOT) ) {
+					alt3=1;
 				}
 
-				switch (alt1) {
+				switch (alt3) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:58:7: DOT ID
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:59:7: DOT ID
 					{
-					match(input,DOT,FOLLOW_DOT_in_idDotIdRule111); 
-					match(input,ID,FOLLOW_ID_in_idDotIdRule113); 
+					match(input,DOT,FOLLOW_DOT_in_idDotIdRule123); 
+					match(input,ID,FOLLOW_ID_in_idDotIdRule125); 
 					}
 					break;
 
 				default :
-					break loop1;
+					break loop3;
 				}
 			}
 
@@ -276,75 +325,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "varDeclarationRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:61:1: varDeclarationRule : ( VAR | LET | CONST )? ID ( SC )? ;
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:62:1: varDeclarationRule : ( VAR | LET | CONST )? ID ( SC )? ;
 	public final void varDeclarationRule() throws RecognitionException {
 		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:62:2: ( ( VAR | LET | CONST )? ID ( SC )? )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:63:3: ( VAR | LET | CONST )? ID ( SC )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:63:2: ( ( VAR | LET | CONST )? ID ( SC )? )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:64:3: ( VAR | LET | CONST )? ID ( SC )?
 			{
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:63:3: ( VAR | LET | CONST )?
-			int alt2=2;
-			int LA2_0 = input.LA(1);
-			if ( (LA2_0==CONST||LA2_0==LET||LA2_0==VAR) ) {
-				alt2=1;
-			}
-			switch (alt2) {
-				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:
-					{
-					if ( input.LA(1)==CONST||input.LA(1)==LET||input.LA(1)==VAR ) {
-						input.consume();
-						state.errorRecovery=false;
-					}
-					else {
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						throw mse;
-					}
-					}
-					break;
-
-			}
-
-			match(input,ID,FOLLOW_ID_in_varDeclarationRule142); 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:63:27: ( SC )?
-			int alt3=2;
-			int LA3_0 = input.LA(1);
-			if ( (LA3_0==SC) ) {
-				alt3=1;
-			}
-			switch (alt3) {
-				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:63:27: SC
-					{
-					match(input,SC,FOLLOW_SC_in_varDeclarationRule144); 
-					}
-					break;
-
-			}
-
-			}
-
-		}
-		catch (RecognitionException re) {
-			reportError(re);
-			recover(input,re);
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "varDeclarationRule"
-
-
-
-	// $ANTLR start "varAssignmentRule"
-	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:66:1: varAssignmentRule : ( VAR | LET | CONST )? ID ASSIGN ( SC )? ;
-	public final void varAssignmentRule() throws RecognitionException {
-		try {
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:2: ( ( VAR | LET | CONST )? ID ASSIGN ( SC )? )
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:3: ( VAR | LET | CONST )? ID ASSIGN ( SC )?
-			{
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:3: ( VAR | LET | CONST )?
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:64:3: ( VAR | LET | CONST )?
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0==CONST||LA4_0==LET||LA4_0==VAR) ) {
@@ -367,9 +354,8 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			match(input,ID,FOLLOW_ID_in_varAssignmentRule172); 
-			match(input,ASSIGN,FOLLOW_ASSIGN_in_varAssignmentRule174); 
-			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:38: ( SC )?
+			match(input,ID,FOLLOW_ID_in_varDeclarationRule154); 
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:64:27: ( SC )?
 			int alt5=2;
 			int LA5_0 = input.LA(1);
 			if ( (LA5_0==SC) ) {
@@ -377,9 +363,72 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt5) {
 				case 1 :
-					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:38: SC
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:64:27: SC
 					{
-					match(input,SC,FOLLOW_SC_in_varAssignmentRule180); 
+					match(input,SC,FOLLOW_SC_in_varDeclarationRule156); 
+					}
+					break;
+
+			}
+
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "varDeclarationRule"
+
+
+
+	// $ANTLR start "varAssignmentRule"
+	// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:1: varAssignmentRule : ( VAR | LET | CONST )? ID ASSIGN ( SC )? ;
+	public final void varAssignmentRule() throws RecognitionException {
+		try {
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:2: ( ( VAR | LET | CONST )? ID ASSIGN ( SC )? )
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:69:3: ( VAR | LET | CONST )? ID ASSIGN ( SC )?
+			{
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:69:3: ( VAR | LET | CONST )?
+			int alt6=2;
+			int LA6_0 = input.LA(1);
+			if ( (LA6_0==CONST||LA6_0==LET||LA6_0==VAR) ) {
+				alt6=1;
+			}
+			switch (alt6) {
+				case 1 :
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:
+					{
+					if ( input.LA(1)==CONST||input.LA(1)==LET||input.LA(1)==VAR ) {
+						input.consume();
+						state.errorRecovery=false;
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						throw mse;
+					}
+					}
+					break;
+
+			}
+
+			match(input,ID,FOLLOW_ID_in_varAssignmentRule184); 
+			match(input,ASSIGN,FOLLOW_ASSIGN_in_varAssignmentRule186); 
+			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:69:38: ( SC )?
+			int alt7=2;
+			int LA7_0 = input.LA(1);
+			if ( (LA7_0==SC) ) {
+				alt7=1;
+			}
+			switch (alt7) {
+				case 1 :
+					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:69:38: SC
+					{
+					match(input,SC,FOLLOW_SC_in_varAssignmentRule192); 
 					}
 					break;
 
@@ -403,19 +452,20 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	public static final BitSet FOLLOW_getRule_in_parseJava62 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DOCUMENT_in_getRule74 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_DOT_in_getRule78 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_ID_in_getRule82 = new BitSet(new long[]{0x0800000000000000L});
-	public static final BitSet FOLLOW_LP_in_getRule84 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-	public static final BitSet FOLLOW_STRING_in_getRule88 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
-	public static final BitSet FOLLOW_RP_in_getRule90 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-	public static final BitSet FOLLOW_SC_in_getRule92 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_idDotIdRule108 = new BitSet(new long[]{0x0000000008000002L});
-	public static final BitSet FOLLOW_DOT_in_idDotIdRule111 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_ID_in_idDotIdRule113 = new BitSet(new long[]{0x0000000008000002L});
-	public static final BitSet FOLLOW_ID_in_varDeclarationRule142 = new BitSet(new long[]{0x0000000000000002L,0x0000000000002000L});
-	public static final BitSet FOLLOW_SC_in_varDeclarationRule144 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_varAssignmentRule172 = new BitSet(new long[]{0x0000000000000080L});
-	public static final BitSet FOLLOW_ASSIGN_in_varAssignmentRule174 = new BitSet(new long[]{0x0000000000000002L,0x0000000000002000L});
-	public static final BitSet FOLLOW_SC_in_varAssignmentRule180 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_varDeclarationRule_in_parseJava68 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DOCUMENT_in_getRule81 = new BitSet(new long[]{0x0000000008000000L});
+	public static final BitSet FOLLOW_DOT_in_getRule85 = new BitSet(new long[]{0x0000200000000000L});
+	public static final BitSet FOLLOW_ID_in_getRule89 = new BitSet(new long[]{0x0800000000000000L});
+	public static final BitSet FOLLOW_LP_in_getRule94 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+	public static final BitSet FOLLOW_STRING_in_getRule98 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
+	public static final BitSet FOLLOW_RP_in_getRule100 = new BitSet(new long[]{0x0000000000000002L,0x0000000000002000L});
+	public static final BitSet FOLLOW_SC_in_getRule103 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_idDotIdRule120 = new BitSet(new long[]{0x0000000008000002L});
+	public static final BitSet FOLLOW_DOT_in_idDotIdRule123 = new BitSet(new long[]{0x0000200000000000L});
+	public static final BitSet FOLLOW_ID_in_idDotIdRule125 = new BitSet(new long[]{0x0000000008000002L});
+	public static final BitSet FOLLOW_ID_in_varDeclarationRule154 = new BitSet(new long[]{0x0000000000000002L,0x0000000000002000L});
+	public static final BitSet FOLLOW_SC_in_varDeclarationRule156 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_varAssignmentRule184 = new BitSet(new long[]{0x0000000000000080L});
+	public static final BitSet FOLLOW_ASSIGN_in_varAssignmentRule186 = new BitSet(new long[]{0x0000000000000002L,0x0000000000002000L});
+	public static final BitSet FOLLOW_SC_in_varAssignmentRule192 = new BitSet(new long[]{0x0000000000000002L});
 }

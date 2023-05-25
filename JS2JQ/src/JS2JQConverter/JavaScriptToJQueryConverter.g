@@ -46,11 +46,12 @@ options {
 parseJava 
 @init {initParser();}
 	: 
-		getRule
+		getRule 
+		|varDeclarationRule 
 	;
 getRule
 	:
-		DOCUMENT {System.out.println("Ho riconosciuto DOCUMENT");} DOT get=ID LP i=STRING RP SC {h.translate($get, $i);}
+		DOCUMENT {System.out.println("Ho riconosciuto DOCUMENT");} DOT get=ID x=(LP i=STRING RP) SC? {h.test($get, $x);}
 	;
 	
 idDotIdRule
@@ -213,7 +214,7 @@ FLOAT
 
 COMMENT
     :   ('//' ~('\n'|'\r')* '\r'? '\n' 	
-    |   '/*' ( options {greedy=false;} : . )* '*/')
+    |   '/*' ( options {greedy=false;} : . )* '*/') {$channel=HIDDEN;}
     ;
 
 WS  :   ( ' '
@@ -228,4 +229,6 @@ STRING	:  '"' ( ESC_SEQ | ~('\\'|'"') )* '"'
 	;
 
 ERROR_TK	: . ; 
+
+
 
