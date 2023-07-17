@@ -51,7 +51,7 @@ parseJava
 	;
 getRule
 	:
-		DOCUMENT {System.out.println("Ho riconosciuto DOCUMENT");} DOT get=ID x=(LP i=STRING RP) SC? {h.test($get, $x);}
+		DOCUMENT {System.out.println("Ho riconosciuto DOCUMENT");} DOT get=ID x=LP i=STRING RP SC? {h.test($getRule.text, $start);}
 	;
 	
 idDotIdRule

@@ -81,9 +81,10 @@ public class Handler {
 		errorList.add(errMsg);
 	}
 	
-	public void test(Token get, Token i) {
+	public void test(String rule, Token start) {
 		//System.out.println("$(\"#" + i.getText().substring(1, i.getText().length()-1) + "\");");
-		System.out.println(i.toString());
+		int index = start.getTokenIndex();
+		System.out.println(input.get(index-1).getText());
 	}
 	
 	/*

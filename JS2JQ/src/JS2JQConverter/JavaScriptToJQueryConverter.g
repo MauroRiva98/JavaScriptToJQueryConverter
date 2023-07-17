@@ -51,7 +51,7 @@ parseJava
 	;
 getRule
 	:
-		DOCUMENT {System.out.println("Ho riconosciuto DOCUMENT");} DOT get=ID x=(LP i=STRING RP) SC? {h.test($get, $x);}
+		DOCUMENT {System.out.println("Ho riconosciuto DOCUMENT");} DOT get=ID x=LP i=STRING RP SC? {h.test($getRule.text, $start);}
 	;
 	
 idDotIdRule
@@ -59,14 +59,57 @@ idDotIdRule
 		ID (DOT ID)*
 	;
 	
+expressionRule
+	:
+	//TODO
+	SC
+	;
+	
+functionDeclarationRule
+	:
+		FUNCTION ID LP (ID ((CM ID)*))? RP
+	;
+	
+arrayRule
+	:
+		LB
+			(
+			(STRING | INTEGER | FLOAT | TRUE | FALSE | objectRule | arrayRule | NULL | expressionRule | UNDEFINED)
+			(CM (STRING | INTEGER | FLOAT | TRUE | FALSE | objectRule | arrayRule | NULL | expressionRule | UNDEFINED))*
+			)?
+		RB
+	;
+	
+objectRule
+	:
+		LBR
+			(
+			(ID | STRING) 
+			CL 
+			(STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED)
+			(
+			CM
+			(ID | STRING) 
+			CL 
+			(STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED)
+			)*
+			)?
+		RBR
+	;
+	
 varDeclarationRule
 	:
-		(VAR | LET | CONST)? ID SC?
+		(VAR | LET | CONST) idDotIdRule (CM idDotIdRule)* SC?
 	;
 
+assignRule
+	:
+		ID | INTEGER | FLOAT | STRING | //TODO
+	;
+	
 varAssignmentRule
 	:	
-		(VAR | LET | CONST)? ID ASSIGN     SC? //TODO
+		(VAR | LET | CONST)? idDotIdRule ASSIGN () SC? //TODO
 	;
 	
 
@@ -197,6 +240,8 @@ WHILE		:'while';
 WITH		:'with';
 YIELD		:'yield';
 
+UNDEFINED	: 'undefined';
+
 		
 ID  	:	
 	( LETTER |'_' | '$')( LETTER |DIGIT |'_' | '$')* 
@@ -211,7 +256,7 @@ FLOAT
     |   '.' DIGIT+ EXPONENT?
     |   DIGIT+ EXPONENT
     ;
-
+    
 COMMENT
     :   ('//' ~('\n'|'\r')* '\r'? '\n' 	
     |   '/*' ( options {greedy=false;} : . )* '*/') {$channel=HIDDEN;}
