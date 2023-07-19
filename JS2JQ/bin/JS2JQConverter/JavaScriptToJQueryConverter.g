@@ -44,10 +44,12 @@ options {
 
 
 parseJava 
-@init {initParser();}
+@init {initParser();} //TODO
 	: 
 		getRule 
-		|varDeclarationRule 
+		|variableDefinitionRule
+		|objectRule
+		//|functionCallRule problema con variableDefinitionRule
 	;
 getRule
 	:
@@ -59,17 +61,104 @@ idDotIdRule
 		ID (DOT ID)*
 	;
 	
-varDeclarationRule
+idDotArrayRule //TOFIX
 	:
-		(VAR | LET | CONST)? ID SC?
-	;
-
-varAssignmentRule
-	:	
-		(VAR | LET | CONST)? ID ASSIGN     SC? //TODO
+		idDotIdRule ((LB (INTEGER | ID | STRING) RB)+ (DOT ID)*)*
 	;
 	
+expressionRule //TODO
+	:
+		SUB
+	;
+	
+istructionRule //TODO
+	:
+	SC
+	;
+	
+functionDeclarationRule //Controllare che l'ID ci sia se non siamo in un oggetto
+	:
+		FUNCTION ID? LP (ID ((CM ID)*))? RP
+	;
+	
+functionDefinitionRule
+	:
+		functionDeclarationRule
+		LBR
+			istructionRule*
+		RBR
+	;
+	
+functionCallRule
+	:
+		idDotArrayRule LP ((STRING | INTEGER | FLOAT | TRUE | FALSE | objectRule | arrayRule | NULL | expressionRule | UNDEFINED | idDotArrayRule) ((CM ID | STRING | INTEGER | FLOAT | TRUE | FALSE | objectRule | arrayRule | NULL | expressionRule | UNDEFINED | idDotArrayRule)*))? RP SC?
+		{System.out.println("Ho riconosciuto una chiamata a funzione");}
+	;
+	
+arrayRule //Problema virgola finale
+	:
+		LB
+			(
+			assignTypologyRule
+			(CM assignTypologyRule)*
+			)?
+		RB
+	;
+	
+objectRule //Problema virgola finale
+	:
+		LBR
+			(
+			(ID | STRING) 
+			CL 
+			assignTypologyRule
+			(
+			CM
+			(ID | STRING) 
+			CL 
+			assignTypologyRule
+			)*
+			)?
+		RBR
+		{System.out.println("Ho riconosciuto JSON");}
+	;
+	
+varDeclarationRule //Confluita in variableDefinitionRule
+	:
+		(VAR | LET | CONST) ID (CM ID)* SC?
+	;
+	
+varAssignmentRule //Confluita in variableDefinitionRule
+	:	
+		(VAR | LET | CONST)? idDotArrayRule ASSIGN assignTypologyRule SC?
+	;
+	
+variableDefinitionRule //Ci sarebbe da fare il controllo, in dichiarazione può essere solo ID e non idDotId (e dovrebbe avere let,const o var)
+	:
+		(VAR | LET | CONST)?
+		idDotArrayRule
+		(ASSIGN assignTypologyRule)?
+		SC?
+		{System.out.println($text);}
+	;
 
+assignTypologyRule
+	:
+		(STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED | functionDefinitionRule | expressionRule | (idDotArrayRule (LP assignTypologyRule (CM assignTypologyRule)* RP)?))
+	;
+	
+arithmeticOperatorsRule //TODO
+	:
+		(ADD
+		|SUB
+		|STAR
+		|DIV
+		|MOD
+		|INC
+		|DEC
+		|EXP)
+	;
+	
 
 fragment
 EXPONENT : ('e'|'E') ('+'|'-')? ('0'..'9')+ ;
@@ -109,10 +198,12 @@ ASSIGN	: '=';
 EQ 	: '==';
 TEQ	: '===';
 NEQ 	: '!=';
+NTEQ 	: '!==';
 GT 	: '>';
 GE	: '>=';
 LT 	: '<';
 LE 	: '<=';
+QUEST 	: '?';
 
 // punteggiatura
 AT	: '@';
@@ -138,7 +229,12 @@ MOD		: '%';
 INC		: '++';
 DEC		: '--';
 EXP		: '**';
-//controllare += e -= e varianti
+PLUSEQ		: '+=';
+MINUSEQ		: '-=';
+STAREQ		: '*=';
+DIVEQ		: '/=';
+MODEQ		: '%=';
+EXPEQ		: '**=';
 
 // operatori logici
 NOT		: '!';
@@ -147,8 +243,10 @@ OR		: '||';
 XOR		: '^';
 AND_BIT 	:'&';
 OR_BIT 		:'|';
-
-							
+LSHIFT		: '<<';
+RSHIFT		: '>>';
+URSHIFT		: '>>>';
+						
 // keywords
 AWAIT		:'await';
 BREAK		:'break';
@@ -197,6 +295,8 @@ WHILE		:'while';
 WITH		:'with';
 YIELD		:'yield';
 
+UNDEFINED	: 'undefined';
+
 		
 ID  	:	
 	( LETTER |'_' | '$')( LETTER |DIGIT |'_' | '$')* 
@@ -211,7 +311,7 @@ FLOAT
     |   '.' DIGIT+ EXPONENT?
     |   DIGIT+ EXPONENT
     ;
-
+    
 COMMENT
     :   ('//' ~('\n'|'\r')* '\r'? '\n' 	
     |   '/*' ( options {greedy=false;} : . )* '*/') {$channel=HIDDEN;}

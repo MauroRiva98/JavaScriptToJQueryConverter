@@ -1,2 +1,1 @@
-//Prova
-document./*ciao*/getElementById("ID");
+let x = prova(4,5);
