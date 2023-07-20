@@ -63,7 +63,7 @@ idDotIdRule
 	
 idDotArrayRule //TOFIX
 	:
-		idDotIdRule ((LB (INTEGER | ID | STRING) RB)+ (DOT ID)*)*
+		(idDotIdRule | (THIS (DOT ID)*) ) ((LB (INTEGER | (idDotArrayRule (LP assignTypologyRule (CM assignTypologyRule)* RP)?) | STRING) RB)+ (DOT ID)*)*
 	;
 	
 expressionRule //TODO
@@ -76,6 +76,11 @@ istructionRule //TODO
 	SC
 	;
 	
+returnRule
+	:
+		RETURN assignTypologyRule SC?
+	;
+	
 functionDeclarationRule //Controllare che l'ID ci sia se non siamo in un oggetto
 	:
 		FUNCTION ID? LP (ID ((CM ID)*))? RP
@@ -86,12 +91,13 @@ functionDefinitionRule
 		functionDeclarationRule
 		LBR
 			istructionRule*
+			returnRule?
 		RBR
 	;
 	
 functionCallRule
 	:
-		idDotArrayRule LP ((STRING | INTEGER | FLOAT | TRUE | FALSE | objectRule | arrayRule | NULL | expressionRule | UNDEFINED | idDotArrayRule) ((CM ID | STRING | INTEGER | FLOAT | TRUE | FALSE | objectRule | arrayRule | NULL | expressionRule | UNDEFINED | idDotArrayRule)*))? RP SC?
+		idDotArrayRule LP (assignTypologyRule (CM assignTypologyRule)*)? RP SC?
 		{System.out.println("Ho riconosciuto una chiamata a funzione");}
 	;
 	
@@ -144,7 +150,12 @@ variableDefinitionRule //Ci sarebbe da fare il controllo, in dichiarazione può e
 
 assignTypologyRule
 	:
-		(STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED | functionDefinitionRule | expressionRule | (idDotArrayRule (LP assignTypologyRule (CM assignTypologyRule)* RP)?))
+		(STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED | functionDefinitionRule | expressionRule | newRule | (idDotArrayRule (LP assignTypologyRule (CM assignTypologyRule)* RP)?))
+	;
+	
+newRule
+	:
+		NEW ID LP (assignTypologyRule (CM assignTypologyRule)*)? RP
 	;
 	
 arithmeticOperatorsRule //TODO
@@ -303,7 +314,7 @@ ID  	:
 	;
 
 
-INTEGER :	DIGIT+ 
+INTEGER :	DIGIT+ ('n')?
 	;
 
 FLOAT
