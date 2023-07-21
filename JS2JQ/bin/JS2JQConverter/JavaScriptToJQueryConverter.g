@@ -2,7 +2,7 @@ grammar JavaScriptToJQueryConverter;
 
 options {
 	language = Java;
-	k =1;
+	k = 1;
 }
 
 @header {
@@ -49,6 +49,7 @@ parseJava
 		getRule 
 		|variableDefinitionRule
 		|objectRule
+		|ifStatementRule
 		//|functionCallRule problema con variableDefinitionRule
 	;
 getRule
@@ -63,7 +64,7 @@ idDotIdRule
 	
 idDotArrayRule //TOFIX
 	:
-		idDotIdRule ((LB (INTEGER | ID | STRING) RB)+ (DOT ID)*)*
+		(idDotIdRule | (THIS (DOT ID)*) ) ((LB (INTEGER | (idDotArrayRule (LP assignTypologyRule (CM assignTypologyRule)* RP)?) | STRING) RB)+ (DOT ID)*)*
 	;
 	
 expressionRule //TODO
@@ -71,9 +72,14 @@ expressionRule //TODO
 		SUB
 	;
 	
-istructionRule //TODO
+instructionRule //TODO
 	:
 	SC
+	;
+	
+returnRule
+	:
+		RETURN assignTypologyRule SC?
 	;
 	
 functionDeclarationRule //Controllare che l'ID ci sia se non siamo in un oggetto
@@ -85,13 +91,14 @@ functionDefinitionRule
 	:
 		functionDeclarationRule
 		LBR
-			istructionRule*
+			instructionRule*
+			returnRule?
 		RBR
 	;
 	
 functionCallRule
 	:
-		idDotArrayRule LP ((STRING | INTEGER | FLOAT | TRUE | FALSE | objectRule | arrayRule | NULL | expressionRule | UNDEFINED | idDotArrayRule) ((CM ID | STRING | INTEGER | FLOAT | TRUE | FALSE | objectRule | arrayRule | NULL | expressionRule | UNDEFINED | idDotArrayRule)*))? RP SC?
+		idDotArrayRule LP (assignTypologyRule (CM assignTypologyRule)*)? RP SC?
 		{System.out.println("Ho riconosciuto una chiamata a funzione");}
 	;
 	
@@ -144,7 +151,12 @@ variableDefinitionRule //Ci sarebbe da fare il controllo, in dichiarazione può e
 
 assignTypologyRule
 	:
-		(STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED | functionDefinitionRule | expressionRule | (idDotArrayRule (LP assignTypologyRule (CM assignTypologyRule)* RP)?))
+		(STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED | functionDefinitionRule | expressionRule | newRule | (idDotArrayRule (LP assignTypologyRule (CM assignTypologyRule)* RP)?))
+	;
+	
+newRule
+	:
+		NEW ID LP (assignTypologyRule (CM assignTypologyRule)*)? RP
 	;
 	
 arithmeticOperatorsRule //TODO
@@ -158,7 +170,28 @@ arithmeticOperatorsRule //TODO
 		|DEC
 		|EXP)
 	;
+
+comparatorRule
+	:
+		( EQ | NEQ | LT | LE | GT | GE | TEQ | NTEQ)
+	;
 	
+conditionRule //TODO
+	:
+	SC
+	;
+
+blockRule
+	:
+		LBR instructionRule* RBR
+	;
+	
+ifStatementRule
+	:
+		IF LP conditionRule RP 
+			(blockRule | instructionRule)
+		(ELSE (IF LP conditionRule RP)? (blockRule | instructionRule))*		
+	;
 
 fragment
 EXPONENT : ('e'|'E') ('+'|'-')? ('0'..'9')+ ;
@@ -303,7 +336,7 @@ ID  	:
 	;
 
 
-INTEGER :	DIGIT+ 
+INTEGER :	DIGIT+ ('n')?
 	;
 
 FLOAT

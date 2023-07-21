@@ -2,7 +2,7 @@ grammar JavaScriptToJQueryConverter;
 
 options {
 	language = Java;
-	k =1;
+	k = 1;
 }
 
 @header {
@@ -49,6 +49,7 @@ parseJava
 		getRule 
 		|variableDefinitionRule
 		|objectRule
+		|ifStatementRule
 		//|functionCallRule problema con variableDefinitionRule
 	;
 getRule
@@ -71,7 +72,7 @@ expressionRule //TODO
 		SUB
 	;
 	
-istructionRule //TODO
+instructionRule //TODO
 	:
 	SC
 	;
@@ -90,7 +91,7 @@ functionDefinitionRule
 	:
 		functionDeclarationRule
 		LBR
-			istructionRule*
+			instructionRule*
 			returnRule?
 		RBR
 	;
@@ -169,7 +170,28 @@ arithmeticOperatorsRule //TODO
 		|DEC
 		|EXP)
 	;
+
+comparatorRule
+	:
+		( EQ | NEQ | LT | LE | GT | GE | TEQ | NTEQ)
+	;
 	
+conditionRule //TODO
+	:
+	SC
+	;
+
+blockRule
+	:
+		LBR instructionRule* RBR
+	;
+	
+ifStatementRule
+	:
+		IF LP conditionRule RP 
+			(blockRule | instructionRule)
+		(ELSE (IF LP conditionRule RP)? (blockRule | instructionRule))*		
+	;
 
 fragment
 EXPONENT : ('e'|'E') ('+'|'-')? ('0'..'9')+ ;
