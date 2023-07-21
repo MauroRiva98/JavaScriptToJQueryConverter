@@ -50,6 +50,7 @@ parseJava
 		|variableDefinitionRule
 		|objectRule
 		|ifStatementRule
+		|switchCaseRule
 		//|functionCallRule problema con variableDefinitionRule
 	;
 getRule
@@ -62,7 +63,7 @@ idDotIdRule
 		ID (DOT ID)*
 	;
 	
-idDotArrayRule //TOFIX
+idDotArrayRule //TOFIX, inoltre new Date().getDay() non lo riconosce
 	:
 		(idDotIdRule | (THIS (DOT ID)*) ) ((LB (INTEGER | (idDotArrayRule (LP assignTypologyRule (CM assignTypologyRule)* RP)?) | STRING) RB)+ (DOT ID)*)*
 	;
@@ -186,11 +187,25 @@ blockRule
 		LBR instructionRule* RBR
 	;
 	
-ifStatementRule
+ifStatementRule //In teoria ci potrebbe essere solo un else
 	:
 		IF LP conditionRule RP 
 			(blockRule | instructionRule)
 		(ELSE (IF LP conditionRule RP)? (blockRule | instructionRule))*		
+	;
+	
+switchCaseRule //In teoria il default non deve trovarsi per forza in ultima posizione (e può avere il break)
+	:
+		SWITCH LP assignTypologyRule RP
+		LBR
+			(CASE assignTypologyRule CL
+				instructionRule*
+				BREAK? SC?
+			)+
+			(DEFAULT CL
+				instructionRule*
+			)?
+		RBR
 	;
 
 fragment

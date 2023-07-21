@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g 2023-07-21 12:16:37
+// $ANTLR 3.5.1 C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g 2023-07-21 15:07:04
 
 	package JS2JQConverter;
 
@@ -183,12 +183,12 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "parseJava"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:46:1: parseJava : ( getRule | variableDefinitionRule | objectRule | ifStatementRule );
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:46:1: parseJava : ( getRule | variableDefinitionRule | objectRule | ifStatementRule | switchCaseRule );
 	public final void parseJava() throws RecognitionException {
 		initParser();
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:48:2: ( getRule | variableDefinitionRule | objectRule | ifStatementRule )
-			int alt1=4;
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:48:2: ( getRule | variableDefinitionRule | objectRule | ifStatementRule | switchCaseRule )
+			int alt1=5;
 			switch ( input.LA(1) ) {
 			case DOCUMENT:
 				{
@@ -212,6 +212,11 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			case IF:
 				{
 				alt1=4;
+				}
+				break;
+			case SWITCH:
+				{
+				alt1=5;
 				}
 				break;
 			default:
@@ -256,6 +261,15 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 					}
 					break;
+				case 5 :
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:53:4: switchCaseRule
+					{
+					pushFollow(FOLLOW_switchCaseRule_in_parseJava85);
+					switchCaseRule();
+					state._fsp--;
+
+					}
+					break;
 
 			}
 		}
@@ -275,7 +289,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "getRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:55:1: getRule : DOCUMENT DOT get= ID x= LP i= STRING RP ( SC )? ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:56:1: getRule : DOCUMENT DOT get= ID x= LP i= STRING RP ( SC )? ;
 	public final JavaScriptToJQueryConverterParser.getRule_return getRule() throws RecognitionException {
 		JavaScriptToJQueryConverterParser.getRule_return retval = new JavaScriptToJQueryConverterParser.getRule_return();
 		retval.start = input.LT(1);
@@ -285,17 +299,17 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 		Token i=null;
 
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:56:2: ( DOCUMENT DOT get= ID x= LP i= STRING RP ( SC )? )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:57:3: DOCUMENT DOT get= ID x= LP i= STRING RP ( SC )?
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:57:2: ( DOCUMENT DOT get= ID x= LP i= STRING RP ( SC )? )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:58:3: DOCUMENT DOT get= ID x= LP i= STRING RP ( SC )?
 			{
-			match(input,DOCUMENT,FOLLOW_DOCUMENT_in_getRule95); 
+			match(input,DOCUMENT,FOLLOW_DOCUMENT_in_getRule100); 
 			System.out.println("Ho riconosciuto DOCUMENT");
-			match(input,DOT,FOLLOW_DOT_in_getRule99); 
-			get=(Token)match(input,ID,FOLLOW_ID_in_getRule103); 
-			x=(Token)match(input,LP,FOLLOW_LP_in_getRule107); 
-			i=(Token)match(input,STRING,FOLLOW_STRING_in_getRule111); 
-			match(input,RP,FOLLOW_RP_in_getRule113); 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:57:90: ( SC )?
+			match(input,DOT,FOLLOW_DOT_in_getRule104); 
+			get=(Token)match(input,ID,FOLLOW_ID_in_getRule108); 
+			x=(Token)match(input,LP,FOLLOW_LP_in_getRule112); 
+			i=(Token)match(input,STRING,FOLLOW_STRING_in_getRule116); 
+			match(input,RP,FOLLOW_RP_in_getRule118); 
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:58:90: ( SC )?
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( (LA2_0==SC) ) {
@@ -303,9 +317,9 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt2) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:57:90: SC
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:58:90: SC
 					{
-					match(input,SC,FOLLOW_SC_in_getRule115); 
+					match(input,SC,FOLLOW_SC_in_getRule120); 
 					}
 					break;
 
@@ -331,14 +345,14 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "idDotIdRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:60:1: idDotIdRule : ID ( DOT ID )* ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:61:1: idDotIdRule : ID ( DOT ID )* ;
 	public final void idDotIdRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:61:2: ( ID ( DOT ID )* )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:62:3: ID ( DOT ID )*
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:62:2: ( ID ( DOT ID )* )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:63:3: ID ( DOT ID )*
 			{
-			match(input,ID,FOLLOW_ID_in_idDotIdRule132); 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:62:6: ( DOT ID )*
+			match(input,ID,FOLLOW_ID_in_idDotIdRule137); 
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:63:6: ( DOT ID )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -349,10 +363,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt3) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:62:7: DOT ID
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:63:7: DOT ID
 					{
-					match(input,DOT,FOLLOW_DOT_in_idDotIdRule135); 
-					match(input,ID,FOLLOW_ID_in_idDotIdRule137); 
+					match(input,DOT,FOLLOW_DOT_in_idDotIdRule140); 
+					match(input,ID,FOLLOW_ID_in_idDotIdRule142); 
 					}
 					break;
 
@@ -377,13 +391,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "idDotArrayRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:65:1: idDotArrayRule : ( idDotIdRule | ( THIS ( DOT ID )* ) ) ( ( LB ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING ) RB )+ ( DOT ID )* )* ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:66:1: idDotArrayRule : ( idDotIdRule | ( THIS ( DOT ID )* ) ) ( ( LB ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING ) RB )+ ( DOT ID )* )* ;
 	public final void idDotArrayRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:66:2: ( ( idDotIdRule | ( THIS ( DOT ID )* ) ) ( ( LB ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING ) RB )+ ( DOT ID )* )* )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:3: ( idDotIdRule | ( THIS ( DOT ID )* ) ) ( ( LB ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING ) RB )+ ( DOT ID )* )*
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:2: ( ( idDotIdRule | ( THIS ( DOT ID )* ) ) ( ( LB ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING ) RB )+ ( DOT ID )* )* )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:3: ( idDotIdRule | ( THIS ( DOT ID )* ) ) ( ( LB ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING ) RB )+ ( DOT ID )* )*
 			{
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:3: ( idDotIdRule | ( THIS ( DOT ID )* ) )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:3: ( idDotIdRule | ( THIS ( DOT ID )* ) )
 			int alt5=2;
 			int LA5_0 = input.LA(1);
 			if ( (LA5_0==ID) ) {
@@ -401,22 +415,22 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			switch (alt5) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:4: idDotIdRule
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:4: idDotIdRule
 					{
-					pushFollow(FOLLOW_idDotIdRule_in_idDotArrayRule155);
+					pushFollow(FOLLOW_idDotIdRule_in_idDotArrayRule160);
 					idDotIdRule();
 					state._fsp--;
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:18: ( THIS ( DOT ID )* )
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:18: ( THIS ( DOT ID )* )
 					{
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:18: ( THIS ( DOT ID )* )
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:19: THIS ( DOT ID )*
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:18: ( THIS ( DOT ID )* )
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:19: THIS ( DOT ID )*
 					{
-					match(input,THIS,FOLLOW_THIS_in_idDotArrayRule160); 
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:24: ( DOT ID )*
+					match(input,THIS,FOLLOW_THIS_in_idDotArrayRule165); 
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:24: ( DOT ID )*
 					loop4:
 					while (true) {
 						int alt4=2;
@@ -427,10 +441,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 						switch (alt4) {
 						case 1 :
-							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:25: DOT ID
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:25: DOT ID
 							{
-							match(input,DOT,FOLLOW_DOT_in_idDotArrayRule163); 
-							match(input,ID,FOLLOW_ID_in_idDotArrayRule165); 
+							match(input,DOT,FOLLOW_DOT_in_idDotArrayRule168); 
+							match(input,ID,FOLLOW_ID_in_idDotArrayRule170); 
 							}
 							break;
 
@@ -446,7 +460,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:37: ( ( LB ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING ) RB )+ ( DOT ID )* )*
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:37: ( ( LB ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING ) RB )+ ( DOT ID )* )*
 			loop11:
 			while (true) {
 				int alt11=2;
@@ -457,9 +471,9 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt11) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:38: ( LB ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING ) RB )+ ( DOT ID )*
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:38: ( LB ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING ) RB )+ ( DOT ID )*
 					{
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:38: ( LB ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING ) RB )+
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:38: ( LB ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING ) RB )+
 					int cnt9=0;
 					loop9:
 					while (true) {
@@ -471,10 +485,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 						switch (alt9) {
 						case 1 :
-							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:39: LB ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING ) RB
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:39: LB ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING ) RB
 							{
-							match(input,LB,FOLLOW_LB_in_idDotArrayRule174); 
-							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:42: ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING )
+							match(input,LB,FOLLOW_LB_in_idDotArrayRule179); 
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:42: ( INTEGER | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) | STRING )
 							int alt8=3;
 							switch ( input.LA(1) ) {
 							case INTEGER:
@@ -500,22 +514,22 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 							}
 							switch (alt8) {
 								case 1 :
-									// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:43: INTEGER
+									// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:43: INTEGER
 									{
-									match(input,INTEGER,FOLLOW_INTEGER_in_idDotArrayRule177); 
+									match(input,INTEGER,FOLLOW_INTEGER_in_idDotArrayRule182); 
 									}
 									break;
 								case 2 :
-									// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:53: ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? )
+									// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:53: ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? )
 									{
-									// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:53: ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? )
-									// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:54: idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )?
+									// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:53: ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? )
+									// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:54: idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )?
 									{
-									pushFollow(FOLLOW_idDotArrayRule_in_idDotArrayRule182);
+									pushFollow(FOLLOW_idDotArrayRule_in_idDotArrayRule187);
 									idDotArrayRule();
 									state._fsp--;
 
-									// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:69: ( LP assignTypologyRule ( CM assignTypologyRule )* RP )?
+									// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:69: ( LP assignTypologyRule ( CM assignTypologyRule )* RP )?
 									int alt7=2;
 									int LA7_0 = input.LA(1);
 									if ( (LA7_0==LP) ) {
@@ -523,14 +537,14 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 									}
 									switch (alt7) {
 										case 1 :
-											// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:70: LP assignTypologyRule ( CM assignTypologyRule )* RP
+											// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:70: LP assignTypologyRule ( CM assignTypologyRule )* RP
 											{
-											match(input,LP,FOLLOW_LP_in_idDotArrayRule185); 
-											pushFollow(FOLLOW_assignTypologyRule_in_idDotArrayRule187);
+											match(input,LP,FOLLOW_LP_in_idDotArrayRule190); 
+											pushFollow(FOLLOW_assignTypologyRule_in_idDotArrayRule192);
 											assignTypologyRule();
 											state._fsp--;
 
-											// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:92: ( CM assignTypologyRule )*
+											// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:92: ( CM assignTypologyRule )*
 											loop6:
 											while (true) {
 												int alt6=2;
@@ -541,10 +555,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 												switch (alt6) {
 												case 1 :
-													// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:93: CM assignTypologyRule
+													// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:93: CM assignTypologyRule
 													{
-													match(input,CM,FOLLOW_CM_in_idDotArrayRule190); 
-													pushFollow(FOLLOW_assignTypologyRule_in_idDotArrayRule192);
+													match(input,CM,FOLLOW_CM_in_idDotArrayRule195); 
+													pushFollow(FOLLOW_assignTypologyRule_in_idDotArrayRule197);
 													assignTypologyRule();
 													state._fsp--;
 
@@ -556,7 +570,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 												}
 											}
 
-											match(input,RP,FOLLOW_RP_in_idDotArrayRule196); 
+											match(input,RP,FOLLOW_RP_in_idDotArrayRule201); 
 											}
 											break;
 
@@ -567,15 +581,15 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 									}
 									break;
 								case 3 :
-									// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:125: STRING
+									// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:125: STRING
 									{
-									match(input,STRING,FOLLOW_STRING_in_idDotArrayRule203); 
+									match(input,STRING,FOLLOW_STRING_in_idDotArrayRule208); 
 									}
 									break;
 
 							}
 
-							match(input,RB,FOLLOW_RB_in_idDotArrayRule206); 
+							match(input,RB,FOLLOW_RB_in_idDotArrayRule211); 
 							}
 							break;
 
@@ -587,7 +601,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 						cnt9++;
 					}
 
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:138: ( DOT ID )*
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:138: ( DOT ID )*
 					loop10:
 					while (true) {
 						int alt10=2;
@@ -598,10 +612,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 						switch (alt10) {
 						case 1 :
-							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:67:139: DOT ID
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:68:139: DOT ID
 							{
-							match(input,DOT,FOLLOW_DOT_in_idDotArrayRule211); 
-							match(input,ID,FOLLOW_ID_in_idDotArrayRule213); 
+							match(input,DOT,FOLLOW_DOT_in_idDotArrayRule216); 
+							match(input,ID,FOLLOW_ID_in_idDotArrayRule218); 
 							}
 							break;
 
@@ -634,13 +648,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "expressionRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:70:1: expressionRule : SUB ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:71:1: expressionRule : SUB ;
 	public final void expressionRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:71:2: ( SUB )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:72:3: SUB
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:72:2: ( SUB )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:73:3: SUB
 			{
-			match(input,SUB,FOLLOW_SUB_in_expressionRule232); 
+			match(input,SUB,FOLLOW_SUB_in_expressionRule237); 
 			}
 
 		}
@@ -657,13 +671,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "instructionRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:75:1: instructionRule : SC ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:76:1: instructionRule : SC ;
 	public final void instructionRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:76:2: ( SC )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:77:2: SC
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:77:2: ( SC )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:78:2: SC
 			{
-			match(input,SC,FOLLOW_SC_in_instructionRule246); 
+			match(input,SC,FOLLOW_SC_in_instructionRule251); 
 			}
 
 		}
@@ -680,18 +694,18 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "returnRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:80:1: returnRule : RETURN assignTypologyRule ( SC )? ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:81:1: returnRule : RETURN assignTypologyRule ( SC )? ;
 	public final void returnRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:81:2: ( RETURN assignTypologyRule ( SC )? )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:82:3: RETURN assignTypologyRule ( SC )?
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:82:2: ( RETURN assignTypologyRule ( SC )? )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:83:3: RETURN assignTypologyRule ( SC )?
 			{
-			match(input,RETURN,FOLLOW_RETURN_in_returnRule260); 
-			pushFollow(FOLLOW_assignTypologyRule_in_returnRule262);
+			match(input,RETURN,FOLLOW_RETURN_in_returnRule265); 
+			pushFollow(FOLLOW_assignTypologyRule_in_returnRule267);
 			assignTypologyRule();
 			state._fsp--;
 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:82:29: ( SC )?
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:83:29: ( SC )?
 			int alt12=2;
 			int LA12_0 = input.LA(1);
 			if ( (LA12_0==SC) ) {
@@ -699,9 +713,9 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt12) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:82:29: SC
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:83:29: SC
 					{
-					match(input,SC,FOLLOW_SC_in_returnRule264); 
+					match(input,SC,FOLLOW_SC_in_returnRule269); 
 					}
 					break;
 
@@ -723,14 +737,14 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "functionDeclarationRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:85:1: functionDeclarationRule : FUNCTION ( ID )? LP ( ID ( ( CM ID )* ) )? RP ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:86:1: functionDeclarationRule : FUNCTION ( ID )? LP ( ID ( ( CM ID )* ) )? RP ;
 	public final void functionDeclarationRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:86:2: ( FUNCTION ( ID )? LP ( ID ( ( CM ID )* ) )? RP )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:87:3: FUNCTION ( ID )? LP ( ID ( ( CM ID )* ) )? RP
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:87:2: ( FUNCTION ( ID )? LP ( ID ( ( CM ID )* ) )? RP )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:88:3: FUNCTION ( ID )? LP ( ID ( ( CM ID )* ) )? RP
 			{
-			match(input,FUNCTION,FOLLOW_FUNCTION_in_functionDeclarationRule280); 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:87:12: ( ID )?
+			match(input,FUNCTION,FOLLOW_FUNCTION_in_functionDeclarationRule285); 
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:88:12: ( ID )?
 			int alt13=2;
 			int LA13_0 = input.LA(1);
 			if ( (LA13_0==ID) ) {
@@ -738,16 +752,16 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt13) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:87:12: ID
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:88:12: ID
 					{
-					match(input,ID,FOLLOW_ID_in_functionDeclarationRule282); 
+					match(input,ID,FOLLOW_ID_in_functionDeclarationRule287); 
 					}
 					break;
 
 			}
 
-			match(input,LP,FOLLOW_LP_in_functionDeclarationRule285); 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:87:19: ( ID ( ( CM ID )* ) )?
+			match(input,LP,FOLLOW_LP_in_functionDeclarationRule290); 
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:88:19: ( ID ( ( CM ID )* ) )?
 			int alt15=2;
 			int LA15_0 = input.LA(1);
 			if ( (LA15_0==ID) ) {
@@ -755,13 +769,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt15) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:87:20: ID ( ( CM ID )* )
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:88:20: ID ( ( CM ID )* )
 					{
-					match(input,ID,FOLLOW_ID_in_functionDeclarationRule288); 
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:87:23: ( ( CM ID )* )
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:87:24: ( CM ID )*
+					match(input,ID,FOLLOW_ID_in_functionDeclarationRule293); 
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:88:23: ( ( CM ID )* )
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:88:24: ( CM ID )*
 					{
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:87:24: ( CM ID )*
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:88:24: ( CM ID )*
 					loop14:
 					while (true) {
 						int alt14=2;
@@ -772,10 +786,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 						switch (alt14) {
 						case 1 :
-							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:87:25: CM ID
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:88:25: CM ID
 							{
-							match(input,CM,FOLLOW_CM_in_functionDeclarationRule292); 
-							match(input,ID,FOLLOW_ID_in_functionDeclarationRule294); 
+							match(input,CM,FOLLOW_CM_in_functionDeclarationRule297); 
+							match(input,ID,FOLLOW_ID_in_functionDeclarationRule299); 
 							}
 							break;
 
@@ -791,7 +805,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			match(input,RP,FOLLOW_RP_in_functionDeclarationRule301); 
+			match(input,RP,FOLLOW_RP_in_functionDeclarationRule306); 
 			}
 
 		}
@@ -808,18 +822,18 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "functionDefinitionRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:90:1: functionDefinitionRule : functionDeclarationRule LBR ( instructionRule )* ( returnRule )? RBR ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:91:1: functionDefinitionRule : functionDeclarationRule LBR ( instructionRule )* ( returnRule )? RBR ;
 	public final void functionDefinitionRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:91:2: ( functionDeclarationRule LBR ( instructionRule )* ( returnRule )? RBR )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:92:3: functionDeclarationRule LBR ( instructionRule )* ( returnRule )? RBR
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:92:2: ( functionDeclarationRule LBR ( instructionRule )* ( returnRule )? RBR )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:93:3: functionDeclarationRule LBR ( instructionRule )* ( returnRule )? RBR
 			{
-			pushFollow(FOLLOW_functionDeclarationRule_in_functionDefinitionRule315);
+			pushFollow(FOLLOW_functionDeclarationRule_in_functionDefinitionRule320);
 			functionDeclarationRule();
 			state._fsp--;
 
-			match(input,LBR,FOLLOW_LBR_in_functionDefinitionRule319); 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:94:4: ( instructionRule )*
+			match(input,LBR,FOLLOW_LBR_in_functionDefinitionRule324); 
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:95:4: ( instructionRule )*
 			loop16:
 			while (true) {
 				int alt16=2;
@@ -830,9 +844,9 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt16) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:94:4: instructionRule
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:95:4: instructionRule
 					{
-					pushFollow(FOLLOW_instructionRule_in_functionDefinitionRule324);
+					pushFollow(FOLLOW_instructionRule_in_functionDefinitionRule329);
 					instructionRule();
 					state._fsp--;
 
@@ -844,7 +858,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				}
 			}
 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:95:4: ( returnRule )?
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:96:4: ( returnRule )?
 			int alt17=2;
 			int LA17_0 = input.LA(1);
 			if ( (LA17_0==RETURN) ) {
@@ -852,9 +866,9 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt17) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:95:4: returnRule
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:96:4: returnRule
 					{
-					pushFollow(FOLLOW_returnRule_in_functionDefinitionRule330);
+					pushFollow(FOLLOW_returnRule_in_functionDefinitionRule335);
 					returnRule();
 					state._fsp--;
 
@@ -863,7 +877,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			match(input,RBR,FOLLOW_RBR_in_functionDefinitionRule335); 
+			match(input,RBR,FOLLOW_RBR_in_functionDefinitionRule340); 
 			}
 
 		}
@@ -880,18 +894,18 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "functionCallRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:99:1: functionCallRule : idDotArrayRule LP ( assignTypologyRule ( CM assignTypologyRule )* )? RP ( SC )? ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:100:1: functionCallRule : idDotArrayRule LP ( assignTypologyRule ( CM assignTypologyRule )* )? RP ( SC )? ;
 	public final void functionCallRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:100:2: ( idDotArrayRule LP ( assignTypologyRule ( CM assignTypologyRule )* )? RP ( SC )? )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:101:3: idDotArrayRule LP ( assignTypologyRule ( CM assignTypologyRule )* )? RP ( SC )?
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:101:2: ( idDotArrayRule LP ( assignTypologyRule ( CM assignTypologyRule )* )? RP ( SC )? )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:102:3: idDotArrayRule LP ( assignTypologyRule ( CM assignTypologyRule )* )? RP ( SC )?
 			{
-			pushFollow(FOLLOW_idDotArrayRule_in_functionCallRule349);
+			pushFollow(FOLLOW_idDotArrayRule_in_functionCallRule354);
 			idDotArrayRule();
 			state._fsp--;
 
-			match(input,LP,FOLLOW_LP_in_functionCallRule351); 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:101:21: ( assignTypologyRule ( CM assignTypologyRule )* )?
+			match(input,LP,FOLLOW_LP_in_functionCallRule356); 
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:102:21: ( assignTypologyRule ( CM assignTypologyRule )* )?
 			int alt19=2;
 			int LA19_0 = input.LA(1);
 			if ( (LA19_0==FALSE||LA19_0==FLOAT||LA19_0==FUNCTION||LA19_0==ID||LA19_0==INTEGER||(LA19_0 >= LB && LA19_0 <= LBR)||LA19_0==NEW||LA19_0==NULL||(LA19_0 >= STRING && LA19_0 <= SUB)||LA19_0==THIS||LA19_0==TRUE||LA19_0==UNDEFINED) ) {
@@ -899,13 +913,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt19) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:101:22: assignTypologyRule ( CM assignTypologyRule )*
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:102:22: assignTypologyRule ( CM assignTypologyRule )*
 					{
-					pushFollow(FOLLOW_assignTypologyRule_in_functionCallRule354);
+					pushFollow(FOLLOW_assignTypologyRule_in_functionCallRule359);
 					assignTypologyRule();
 					state._fsp--;
 
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:101:41: ( CM assignTypologyRule )*
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:102:41: ( CM assignTypologyRule )*
 					loop18:
 					while (true) {
 						int alt18=2;
@@ -916,10 +930,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 						switch (alt18) {
 						case 1 :
-							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:101:42: CM assignTypologyRule
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:102:42: CM assignTypologyRule
 							{
-							match(input,CM,FOLLOW_CM_in_functionCallRule357); 
-							pushFollow(FOLLOW_assignTypologyRule_in_functionCallRule359);
+							match(input,CM,FOLLOW_CM_in_functionCallRule362); 
+							pushFollow(FOLLOW_assignTypologyRule_in_functionCallRule364);
 							assignTypologyRule();
 							state._fsp--;
 
@@ -936,8 +950,8 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			match(input,RP,FOLLOW_RP_in_functionCallRule365); 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:101:71: ( SC )?
+			match(input,RP,FOLLOW_RP_in_functionCallRule370); 
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:102:71: ( SC )?
 			int alt20=2;
 			int LA20_0 = input.LA(1);
 			if ( (LA20_0==SC) ) {
@@ -945,9 +959,9 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt20) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:101:71: SC
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:102:71: SC
 					{
-					match(input,SC,FOLLOW_SC_in_functionCallRule367); 
+					match(input,SC,FOLLOW_SC_in_functionCallRule372); 
 					}
 					break;
 
@@ -970,14 +984,14 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "arrayRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:105:1: arrayRule : LB ( assignTypologyRule ( CM assignTypologyRule )* )? RB ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:106:1: arrayRule : LB ( assignTypologyRule ( CM assignTypologyRule )* )? RB ;
 	public final void arrayRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:106:2: ( LB ( assignTypologyRule ( CM assignTypologyRule )* )? RB )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:107:3: LB ( assignTypologyRule ( CM assignTypologyRule )* )? RB
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:107:2: ( LB ( assignTypologyRule ( CM assignTypologyRule )* )? RB )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:108:3: LB ( assignTypologyRule ( CM assignTypologyRule )* )? RB
 			{
-			match(input,LB,FOLLOW_LB_in_arrayRule387); 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:108:4: ( assignTypologyRule ( CM assignTypologyRule )* )?
+			match(input,LB,FOLLOW_LB_in_arrayRule392); 
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:109:4: ( assignTypologyRule ( CM assignTypologyRule )* )?
 			int alt22=2;
 			int LA22_0 = input.LA(1);
 			if ( (LA22_0==FALSE||LA22_0==FLOAT||LA22_0==FUNCTION||LA22_0==ID||LA22_0==INTEGER||(LA22_0 >= LB && LA22_0 <= LBR)||LA22_0==NEW||LA22_0==NULL||(LA22_0 >= STRING && LA22_0 <= SUB)||LA22_0==THIS||LA22_0==TRUE||LA22_0==UNDEFINED) ) {
@@ -985,13 +999,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt22) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:109:4: assignTypologyRule ( CM assignTypologyRule )*
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:110:4: assignTypologyRule ( CM assignTypologyRule )*
 					{
-					pushFollow(FOLLOW_assignTypologyRule_in_arrayRule397);
+					pushFollow(FOLLOW_assignTypologyRule_in_arrayRule402);
 					assignTypologyRule();
 					state._fsp--;
 
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:110:4: ( CM assignTypologyRule )*
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:111:4: ( CM assignTypologyRule )*
 					loop21:
 					while (true) {
 						int alt21=2;
@@ -1002,10 +1016,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 						switch (alt21) {
 						case 1 :
-							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:110:5: CM assignTypologyRule
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:111:5: CM assignTypologyRule
 							{
-							match(input,CM,FOLLOW_CM_in_arrayRule403); 
-							pushFollow(FOLLOW_assignTypologyRule_in_arrayRule405);
+							match(input,CM,FOLLOW_CM_in_arrayRule408); 
+							pushFollow(FOLLOW_assignTypologyRule_in_arrayRule410);
 							assignTypologyRule();
 							state._fsp--;
 
@@ -1022,7 +1036,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			match(input,RB,FOLLOW_RB_in_arrayRule417); 
+			match(input,RB,FOLLOW_RB_in_arrayRule422); 
 			}
 
 		}
@@ -1039,14 +1053,14 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "objectRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:115:1: objectRule : LBR ( ( ID | STRING ) CL assignTypologyRule ( CM ( ID | STRING ) CL assignTypologyRule )* )? RBR ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:116:1: objectRule : LBR ( ( ID | STRING ) CL assignTypologyRule ( CM ( ID | STRING ) CL assignTypologyRule )* )? RBR ;
 	public final void objectRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:116:2: ( LBR ( ( ID | STRING ) CL assignTypologyRule ( CM ( ID | STRING ) CL assignTypologyRule )* )? RBR )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:117:3: LBR ( ( ID | STRING ) CL assignTypologyRule ( CM ( ID | STRING ) CL assignTypologyRule )* )? RBR
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:117:2: ( LBR ( ( ID | STRING ) CL assignTypologyRule ( CM ( ID | STRING ) CL assignTypologyRule )* )? RBR )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:118:3: LBR ( ( ID | STRING ) CL assignTypologyRule ( CM ( ID | STRING ) CL assignTypologyRule )* )? RBR
 			{
-			match(input,LBR,FOLLOW_LBR_in_objectRule432); 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:118:4: ( ( ID | STRING ) CL assignTypologyRule ( CM ( ID | STRING ) CL assignTypologyRule )* )?
+			match(input,LBR,FOLLOW_LBR_in_objectRule437); 
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:119:4: ( ( ID | STRING ) CL assignTypologyRule ( CM ( ID | STRING ) CL assignTypologyRule )* )?
 			int alt24=2;
 			int LA24_0 = input.LA(1);
 			if ( (LA24_0==ID||LA24_0==STRING) ) {
@@ -1054,7 +1068,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt24) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:119:4: ( ID | STRING ) CL assignTypologyRule ( CM ( ID | STRING ) CL assignTypologyRule )*
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:120:4: ( ID | STRING ) CL assignTypologyRule ( CM ( ID | STRING ) CL assignTypologyRule )*
 					{
 					if ( input.LA(1)==ID||input.LA(1)==STRING ) {
 						input.consume();
@@ -1064,12 +1078,12 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 						MismatchedSetException mse = new MismatchedSetException(null,input);
 						throw mse;
 					}
-					match(input,CL,FOLLOW_CL_in_objectRule454); 
-					pushFollow(FOLLOW_assignTypologyRule_in_objectRule460);
+					match(input,CL,FOLLOW_CL_in_objectRule459); 
+					pushFollow(FOLLOW_assignTypologyRule_in_objectRule465);
 					assignTypologyRule();
 					state._fsp--;
 
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:122:4: ( CM ( ID | STRING ) CL assignTypologyRule )*
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:123:4: ( CM ( ID | STRING ) CL assignTypologyRule )*
 					loop23:
 					while (true) {
 						int alt23=2;
@@ -1080,9 +1094,9 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 						switch (alt23) {
 						case 1 :
-							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:123:4: CM ( ID | STRING ) CL assignTypologyRule
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:124:4: CM ( ID | STRING ) CL assignTypologyRule
 							{
-							match(input,CM,FOLLOW_CM_in_objectRule470); 
+							match(input,CM,FOLLOW_CM_in_objectRule475); 
 							if ( input.LA(1)==ID||input.LA(1)==STRING ) {
 								input.consume();
 								state.errorRecovery=false;
@@ -1091,8 +1105,8 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 								MismatchedSetException mse = new MismatchedSetException(null,input);
 								throw mse;
 							}
-							match(input,CL,FOLLOW_CL_in_objectRule487); 
-							pushFollow(FOLLOW_assignTypologyRule_in_objectRule493);
+							match(input,CL,FOLLOW_CL_in_objectRule492); 
+							pushFollow(FOLLOW_assignTypologyRule_in_objectRule498);
 							assignTypologyRule();
 							state._fsp--;
 
@@ -1109,7 +1123,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			match(input,RBR,FOLLOW_RBR_in_objectRule509); 
+			match(input,RBR,FOLLOW_RBR_in_objectRule514); 
 			System.out.println("Ho riconosciuto JSON");
 			}
 
@@ -1127,11 +1141,11 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "varDeclarationRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:133:1: varDeclarationRule : ( VAR | LET | CONST ) ID ( CM ID )* ( SC )? ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:134:1: varDeclarationRule : ( VAR | LET | CONST ) ID ( CM ID )* ( SC )? ;
 	public final void varDeclarationRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:134:2: ( ( VAR | LET | CONST ) ID ( CM ID )* ( SC )? )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:135:3: ( VAR | LET | CONST ) ID ( CM ID )* ( SC )?
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:135:2: ( ( VAR | LET | CONST ) ID ( CM ID )* ( SC )? )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:136:3: ( VAR | LET | CONST ) ID ( CM ID )* ( SC )?
 			{
 			if ( input.LA(1)==CONST||input.LA(1)==LET||input.LA(1)==VAR ) {
 				input.consume();
@@ -1141,8 +1155,8 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				MismatchedSetException mse = new MismatchedSetException(null,input);
 				throw mse;
 			}
-			match(input,ID,FOLLOW_ID_in_varDeclarationRule540); 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:135:26: ( CM ID )*
+			match(input,ID,FOLLOW_ID_in_varDeclarationRule545); 
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:136:26: ( CM ID )*
 			loop25:
 			while (true) {
 				int alt25=2;
@@ -1153,10 +1167,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt25) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:135:27: CM ID
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:136:27: CM ID
 					{
-					match(input,CM,FOLLOW_CM_in_varDeclarationRule543); 
-					match(input,ID,FOLLOW_ID_in_varDeclarationRule545); 
+					match(input,CM,FOLLOW_CM_in_varDeclarationRule548); 
+					match(input,ID,FOLLOW_ID_in_varDeclarationRule550); 
 					}
 					break;
 
@@ -1165,7 +1179,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				}
 			}
 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:135:35: ( SC )?
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:136:35: ( SC )?
 			int alt26=2;
 			int LA26_0 = input.LA(1);
 			if ( (LA26_0==SC) ) {
@@ -1173,9 +1187,9 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt26) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:135:35: SC
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:136:35: SC
 					{
-					match(input,SC,FOLLOW_SC_in_varDeclarationRule549); 
+					match(input,SC,FOLLOW_SC_in_varDeclarationRule554); 
 					}
 					break;
 
@@ -1197,13 +1211,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "varAssignmentRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:138:1: varAssignmentRule : ( VAR | LET | CONST )? idDotArrayRule ASSIGN assignTypologyRule ( SC )? ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:139:1: varAssignmentRule : ( VAR | LET | CONST )? idDotArrayRule ASSIGN assignTypologyRule ( SC )? ;
 	public final void varAssignmentRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:139:2: ( ( VAR | LET | CONST )? idDotArrayRule ASSIGN assignTypologyRule ( SC )? )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:140:3: ( VAR | LET | CONST )? idDotArrayRule ASSIGN assignTypologyRule ( SC )?
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:140:2: ( ( VAR | LET | CONST )? idDotArrayRule ASSIGN assignTypologyRule ( SC )? )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:141:3: ( VAR | LET | CONST )? idDotArrayRule ASSIGN assignTypologyRule ( SC )?
 			{
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:140:3: ( VAR | LET | CONST )?
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:141:3: ( VAR | LET | CONST )?
 			int alt27=2;
 			int LA27_0 = input.LA(1);
 			if ( (LA27_0==CONST||LA27_0==LET||LA27_0==VAR) ) {
@@ -1226,16 +1240,16 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			pushFollow(FOLLOW_idDotArrayRule_in_varAssignmentRule579);
+			pushFollow(FOLLOW_idDotArrayRule_in_varAssignmentRule584);
 			idDotArrayRule();
 			state._fsp--;
 
-			match(input,ASSIGN,FOLLOW_ASSIGN_in_varAssignmentRule581); 
-			pushFollow(FOLLOW_assignTypologyRule_in_varAssignmentRule583);
+			match(input,ASSIGN,FOLLOW_ASSIGN_in_varAssignmentRule586); 
+			pushFollow(FOLLOW_assignTypologyRule_in_varAssignmentRule588);
 			assignTypologyRule();
 			state._fsp--;
 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:140:65: ( SC )?
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:141:65: ( SC )?
 			int alt28=2;
 			int LA28_0 = input.LA(1);
 			if ( (LA28_0==SC) ) {
@@ -1243,9 +1257,9 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt28) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:140:65: SC
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:141:65: SC
 					{
-					match(input,SC,FOLLOW_SC_in_varAssignmentRule585); 
+					match(input,SC,FOLLOW_SC_in_varAssignmentRule590); 
 					}
 					break;
 
@@ -1270,16 +1284,16 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "variableDefinitionRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:143:1: variableDefinitionRule : ( VAR | LET | CONST )? idDotArrayRule ( ASSIGN assignTypologyRule )? ( SC )? ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:144:1: variableDefinitionRule : ( VAR | LET | CONST )? idDotArrayRule ( ASSIGN assignTypologyRule )? ( SC )? ;
 	public final JavaScriptToJQueryConverterParser.variableDefinitionRule_return variableDefinitionRule() throws RecognitionException {
 		JavaScriptToJQueryConverterParser.variableDefinitionRule_return retval = new JavaScriptToJQueryConverterParser.variableDefinitionRule_return();
 		retval.start = input.LT(1);
 
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:144:2: ( ( VAR | LET | CONST )? idDotArrayRule ( ASSIGN assignTypologyRule )? ( SC )? )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:145:3: ( VAR | LET | CONST )? idDotArrayRule ( ASSIGN assignTypologyRule )? ( SC )?
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:145:2: ( ( VAR | LET | CONST )? idDotArrayRule ( ASSIGN assignTypologyRule )? ( SC )? )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:146:3: ( VAR | LET | CONST )? idDotArrayRule ( ASSIGN assignTypologyRule )? ( SC )?
 			{
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:145:3: ( VAR | LET | CONST )?
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:146:3: ( VAR | LET | CONST )?
 			int alt29=2;
 			int LA29_0 = input.LA(1);
 			if ( (LA29_0==CONST||LA29_0==LET||LA29_0==VAR) ) {
@@ -1302,11 +1316,11 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			pushFollow(FOLLOW_idDotArrayRule_in_variableDefinitionRule616);
+			pushFollow(FOLLOW_idDotArrayRule_in_variableDefinitionRule621);
 			idDotArrayRule();
 			state._fsp--;
 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:147:3: ( ASSIGN assignTypologyRule )?
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:148:3: ( ASSIGN assignTypologyRule )?
 			int alt30=2;
 			int LA30_0 = input.LA(1);
 			if ( (LA30_0==ASSIGN) ) {
@@ -1314,10 +1328,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt30) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:147:4: ASSIGN assignTypologyRule
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:148:4: ASSIGN assignTypologyRule
 					{
-					match(input,ASSIGN,FOLLOW_ASSIGN_in_variableDefinitionRule621); 
-					pushFollow(FOLLOW_assignTypologyRule_in_variableDefinitionRule623);
+					match(input,ASSIGN,FOLLOW_ASSIGN_in_variableDefinitionRule626); 
+					pushFollow(FOLLOW_assignTypologyRule_in_variableDefinitionRule628);
 					assignTypologyRule();
 					state._fsp--;
 
@@ -1326,7 +1340,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:148:3: ( SC )?
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:149:3: ( SC )?
 			int alt31=2;
 			int LA31_0 = input.LA(1);
 			if ( (LA31_0==SC) ) {
@@ -1334,9 +1348,9 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt31) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:148:3: SC
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:149:3: SC
 					{
-					match(input,SC,FOLLOW_SC_in_variableDefinitionRule629); 
+					match(input,SC,FOLLOW_SC_in_variableDefinitionRule634); 
 					}
 					break;
 
@@ -1362,13 +1376,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "assignTypologyRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:152:1: assignTypologyRule : ( STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED | functionDefinitionRule | expressionRule | newRule | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) ) ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:153:1: assignTypologyRule : ( STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED | functionDefinitionRule | expressionRule | newRule | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) ) ;
 	public final void assignTypologyRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:153:2: ( ( STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED | functionDefinitionRule | expressionRule | newRule | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) ) )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:3: ( STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED | functionDefinitionRule | expressionRule | newRule | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:2: ( ( STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED | functionDefinitionRule | expressionRule | newRule | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) ) )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:3: ( STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED | functionDefinitionRule | expressionRule | newRule | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) )
 			{
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:3: ( STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED | functionDefinitionRule | expressionRule | newRule | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:3: ( STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED | functionDefinitionRule | expressionRule | newRule | ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? ) )
 			int alt34=13;
 			switch ( input.LA(1) ) {
 			case STRING:
@@ -1444,103 +1458,103 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt34) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:4: STRING
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:4: STRING
 					{
-					match(input,STRING,FOLLOW_STRING_in_assignTypologyRule648); 
+					match(input,STRING,FOLLOW_STRING_in_assignTypologyRule653); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:13: INTEGER
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:13: INTEGER
 					{
-					match(input,INTEGER,FOLLOW_INTEGER_in_assignTypologyRule652); 
+					match(input,INTEGER,FOLLOW_INTEGER_in_assignTypologyRule657); 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:23: FLOAT
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:23: FLOAT
 					{
-					match(input,FLOAT,FOLLOW_FLOAT_in_assignTypologyRule656); 
+					match(input,FLOAT,FOLLOW_FLOAT_in_assignTypologyRule661); 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:31: objectRule
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:31: objectRule
 					{
-					pushFollow(FOLLOW_objectRule_in_assignTypologyRule660);
+					pushFollow(FOLLOW_objectRule_in_assignTypologyRule665);
 					objectRule();
 					state._fsp--;
 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:44: arrayRule
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:44: arrayRule
 					{
-					pushFollow(FOLLOW_arrayRule_in_assignTypologyRule664);
+					pushFollow(FOLLOW_arrayRule_in_assignTypologyRule669);
 					arrayRule();
 					state._fsp--;
 
 					}
 					break;
 				case 6 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:56: TRUE
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:56: TRUE
 					{
-					match(input,TRUE,FOLLOW_TRUE_in_assignTypologyRule668); 
+					match(input,TRUE,FOLLOW_TRUE_in_assignTypologyRule673); 
 					}
 					break;
 				case 7 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:63: FALSE
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:63: FALSE
 					{
-					match(input,FALSE,FOLLOW_FALSE_in_assignTypologyRule672); 
+					match(input,FALSE,FOLLOW_FALSE_in_assignTypologyRule677); 
 					}
 					break;
 				case 8 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:71: NULL
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:71: NULL
 					{
-					match(input,NULL,FOLLOW_NULL_in_assignTypologyRule676); 
+					match(input,NULL,FOLLOW_NULL_in_assignTypologyRule681); 
 					}
 					break;
 				case 9 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:78: UNDEFINED
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:78: UNDEFINED
 					{
-					match(input,UNDEFINED,FOLLOW_UNDEFINED_in_assignTypologyRule680); 
+					match(input,UNDEFINED,FOLLOW_UNDEFINED_in_assignTypologyRule685); 
 					}
 					break;
 				case 10 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:90: functionDefinitionRule
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:90: functionDefinitionRule
 					{
-					pushFollow(FOLLOW_functionDefinitionRule_in_assignTypologyRule684);
+					pushFollow(FOLLOW_functionDefinitionRule_in_assignTypologyRule689);
 					functionDefinitionRule();
 					state._fsp--;
 
 					}
 					break;
 				case 11 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:115: expressionRule
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:115: expressionRule
 					{
-					pushFollow(FOLLOW_expressionRule_in_assignTypologyRule688);
+					pushFollow(FOLLOW_expressionRule_in_assignTypologyRule693);
 					expressionRule();
 					state._fsp--;
 
 					}
 					break;
 				case 12 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:132: newRule
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:132: newRule
 					{
-					pushFollow(FOLLOW_newRule_in_assignTypologyRule692);
+					pushFollow(FOLLOW_newRule_in_assignTypologyRule697);
 					newRule();
 					state._fsp--;
 
 					}
 					break;
 				case 13 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:142: ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? )
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:142: ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? )
 					{
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:142: ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? )
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:143: idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )?
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:142: ( idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )? )
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:143: idDotArrayRule ( LP assignTypologyRule ( CM assignTypologyRule )* RP )?
 					{
-					pushFollow(FOLLOW_idDotArrayRule_in_assignTypologyRule697);
+					pushFollow(FOLLOW_idDotArrayRule_in_assignTypologyRule702);
 					idDotArrayRule();
 					state._fsp--;
 
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:158: ( LP assignTypologyRule ( CM assignTypologyRule )* RP )?
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:158: ( LP assignTypologyRule ( CM assignTypologyRule )* RP )?
 					int alt33=2;
 					int LA33_0 = input.LA(1);
 					if ( (LA33_0==LP) ) {
@@ -1548,14 +1562,14 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 					}
 					switch (alt33) {
 						case 1 :
-							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:159: LP assignTypologyRule ( CM assignTypologyRule )* RP
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:159: LP assignTypologyRule ( CM assignTypologyRule )* RP
 							{
-							match(input,LP,FOLLOW_LP_in_assignTypologyRule700); 
-							pushFollow(FOLLOW_assignTypologyRule_in_assignTypologyRule702);
+							match(input,LP,FOLLOW_LP_in_assignTypologyRule705); 
+							pushFollow(FOLLOW_assignTypologyRule_in_assignTypologyRule707);
 							assignTypologyRule();
 							state._fsp--;
 
-							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:181: ( CM assignTypologyRule )*
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:181: ( CM assignTypologyRule )*
 							loop32:
 							while (true) {
 								int alt32=2;
@@ -1566,10 +1580,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 								switch (alt32) {
 								case 1 :
-									// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:154:182: CM assignTypologyRule
+									// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:155:182: CM assignTypologyRule
 									{
-									match(input,CM,FOLLOW_CM_in_assignTypologyRule705); 
-									pushFollow(FOLLOW_assignTypologyRule_in_assignTypologyRule707);
+									match(input,CM,FOLLOW_CM_in_assignTypologyRule710); 
+									pushFollow(FOLLOW_assignTypologyRule_in_assignTypologyRule712);
 									assignTypologyRule();
 									state._fsp--;
 
@@ -1581,7 +1595,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 								}
 							}
 
-							match(input,RP,FOLLOW_RP_in_assignTypologyRule711); 
+							match(input,RP,FOLLOW_RP_in_assignTypologyRule716); 
 							}
 							break;
 
@@ -1610,16 +1624,16 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "newRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:157:1: newRule : NEW ID LP ( assignTypologyRule ( CM assignTypologyRule )* )? RP ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:158:1: newRule : NEW ID LP ( assignTypologyRule ( CM assignTypologyRule )* )? RP ;
 	public final void newRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:158:2: ( NEW ID LP ( assignTypologyRule ( CM assignTypologyRule )* )? RP )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:159:3: NEW ID LP ( assignTypologyRule ( CM assignTypologyRule )* )? RP
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:159:2: ( NEW ID LP ( assignTypologyRule ( CM assignTypologyRule )* )? RP )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:160:3: NEW ID LP ( assignTypologyRule ( CM assignTypologyRule )* )? RP
 			{
-			match(input,NEW,FOLLOW_NEW_in_newRule729); 
-			match(input,ID,FOLLOW_ID_in_newRule731); 
-			match(input,LP,FOLLOW_LP_in_newRule733); 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:159:13: ( assignTypologyRule ( CM assignTypologyRule )* )?
+			match(input,NEW,FOLLOW_NEW_in_newRule734); 
+			match(input,ID,FOLLOW_ID_in_newRule736); 
+			match(input,LP,FOLLOW_LP_in_newRule738); 
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:160:13: ( assignTypologyRule ( CM assignTypologyRule )* )?
 			int alt36=2;
 			int LA36_0 = input.LA(1);
 			if ( (LA36_0==FALSE||LA36_0==FLOAT||LA36_0==FUNCTION||LA36_0==ID||LA36_0==INTEGER||(LA36_0 >= LB && LA36_0 <= LBR)||LA36_0==NEW||LA36_0==NULL||(LA36_0 >= STRING && LA36_0 <= SUB)||LA36_0==THIS||LA36_0==TRUE||LA36_0==UNDEFINED) ) {
@@ -1627,13 +1641,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			}
 			switch (alt36) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:159:14: assignTypologyRule ( CM assignTypologyRule )*
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:160:14: assignTypologyRule ( CM assignTypologyRule )*
 					{
-					pushFollow(FOLLOW_assignTypologyRule_in_newRule736);
+					pushFollow(FOLLOW_assignTypologyRule_in_newRule741);
 					assignTypologyRule();
 					state._fsp--;
 
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:159:33: ( CM assignTypologyRule )*
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:160:33: ( CM assignTypologyRule )*
 					loop35:
 					while (true) {
 						int alt35=2;
@@ -1644,10 +1658,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 						switch (alt35) {
 						case 1 :
-							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:159:34: CM assignTypologyRule
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:160:34: CM assignTypologyRule
 							{
-							match(input,CM,FOLLOW_CM_in_newRule739); 
-							pushFollow(FOLLOW_assignTypologyRule_in_newRule741);
+							match(input,CM,FOLLOW_CM_in_newRule744); 
+							pushFollow(FOLLOW_assignTypologyRule_in_newRule746);
 							assignTypologyRule();
 							state._fsp--;
 
@@ -1664,7 +1678,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			match(input,RP,FOLLOW_RP_in_newRule747); 
+			match(input,RP,FOLLOW_RP_in_newRule752); 
 			}
 
 		}
@@ -1681,10 +1695,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "arithmeticOperatorsRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:162:1: arithmeticOperatorsRule : ( ADD | SUB | STAR | DIV | MOD | INC | DEC | EXP ) ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:163:1: arithmeticOperatorsRule : ( ADD | SUB | STAR | DIV | MOD | INC | DEC | EXP ) ;
 	public final void arithmeticOperatorsRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:163:2: ( ( ADD | SUB | STAR | DIV | MOD | INC | DEC | EXP ) )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:164:2: ( ( ADD | SUB | STAR | DIV | MOD | INC | DEC | EXP ) )
 			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:
 			{
 			if ( input.LA(1)==ADD||input.LA(1)==DEC||input.LA(1)==DIV||input.LA(1)==EXP||input.LA(1)==INC||input.LA(1)==MOD||input.LA(1)==STAR||input.LA(1)==SUB ) {
@@ -1711,10 +1725,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "comparatorRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:174:1: comparatorRule : ( EQ | NEQ | LT | LE | GT | GE | TEQ | NTEQ ) ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:175:1: comparatorRule : ( EQ | NEQ | LT | LE | GT | GE | TEQ | NTEQ ) ;
 	public final void comparatorRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:175:2: ( ( EQ | NEQ | LT | LE | GT | GE | TEQ | NTEQ ) )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:176:2: ( ( EQ | NEQ | LT | LE | GT | GE | TEQ | NTEQ ) )
 			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:
 			{
 			if ( input.LA(1)==EQ||(input.LA(1) >= GE && input.LA(1) <= GT)||input.LA(1)==LE||input.LA(1)==LT||input.LA(1)==NEQ||input.LA(1)==NTEQ||input.LA(1)==TEQ ) {
@@ -1741,13 +1755,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "conditionRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:179:1: conditionRule : SC ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:180:1: conditionRule : SC ;
 	public final void conditionRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:180:2: ( SC )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:181:2: SC
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:181:2: ( SC )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:182:2: SC
 			{
-			match(input,SC,FOLLOW_SC_in_conditionRule857); 
+			match(input,SC,FOLLOW_SC_in_conditionRule862); 
 			}
 
 		}
@@ -1764,14 +1778,14 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "blockRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:184:1: blockRule : LBR ( instructionRule )* RBR ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:185:1: blockRule : LBR ( instructionRule )* RBR ;
 	public final void blockRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:185:2: ( LBR ( instructionRule )* RBR )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:186:3: LBR ( instructionRule )* RBR
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:186:2: ( LBR ( instructionRule )* RBR )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:187:3: LBR ( instructionRule )* RBR
 			{
-			match(input,LBR,FOLLOW_LBR_in_blockRule870); 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:186:7: ( instructionRule )*
+			match(input,LBR,FOLLOW_LBR_in_blockRule875); 
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:187:7: ( instructionRule )*
 			loop37:
 			while (true) {
 				int alt37=2;
@@ -1782,9 +1796,9 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt37) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:186:7: instructionRule
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:187:7: instructionRule
 					{
-					pushFollow(FOLLOW_instructionRule_in_blockRule872);
+					pushFollow(FOLLOW_instructionRule_in_blockRule877);
 					instructionRule();
 					state._fsp--;
 
@@ -1796,7 +1810,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				}
 			}
 
-			match(input,RBR,FOLLOW_RBR_in_blockRule875); 
+			match(input,RBR,FOLLOW_RBR_in_blockRule880); 
 			}
 
 		}
@@ -1813,20 +1827,20 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 
 	// $ANTLR start "ifStatementRule"
-	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:189:1: ifStatementRule : IF LP conditionRule RP ( blockRule | instructionRule ) ( ELSE ( IF LP conditionRule RP )? ( blockRule | instructionRule ) )* ;
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:190:1: ifStatementRule : IF LP conditionRule RP ( blockRule | instructionRule ) ( ELSE ( IF LP conditionRule RP )? ( blockRule | instructionRule ) )* ;
 	public final void ifStatementRule() throws RecognitionException {
 		try {
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:190:2: ( IF LP conditionRule RP ( blockRule | instructionRule ) ( ELSE ( IF LP conditionRule RP )? ( blockRule | instructionRule ) )* )
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:191:3: IF LP conditionRule RP ( blockRule | instructionRule ) ( ELSE ( IF LP conditionRule RP )? ( blockRule | instructionRule ) )*
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:191:2: ( IF LP conditionRule RP ( blockRule | instructionRule ) ( ELSE ( IF LP conditionRule RP )? ( blockRule | instructionRule ) )* )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:192:3: IF LP conditionRule RP ( blockRule | instructionRule ) ( ELSE ( IF LP conditionRule RP )? ( blockRule | instructionRule ) )*
 			{
-			match(input,IF,FOLLOW_IF_in_ifStatementRule889); 
-			match(input,LP,FOLLOW_LP_in_ifStatementRule891); 
-			pushFollow(FOLLOW_conditionRule_in_ifStatementRule893);
+			match(input,IF,FOLLOW_IF_in_ifStatementRule895); 
+			match(input,LP,FOLLOW_LP_in_ifStatementRule897); 
+			pushFollow(FOLLOW_conditionRule_in_ifStatementRule899);
 			conditionRule();
 			state._fsp--;
 
-			match(input,RP,FOLLOW_RP_in_ifStatementRule895); 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:192:4: ( blockRule | instructionRule )
+			match(input,RP,FOLLOW_RP_in_ifStatementRule901); 
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:193:4: ( blockRule | instructionRule )
 			int alt38=2;
 			int LA38_0 = input.LA(1);
 			if ( (LA38_0==LBR) ) {
@@ -1844,18 +1858,18 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			switch (alt38) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:192:5: blockRule
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:193:5: blockRule
 					{
-					pushFollow(FOLLOW_blockRule_in_ifStatementRule902);
+					pushFollow(FOLLOW_blockRule_in_ifStatementRule908);
 					blockRule();
 					state._fsp--;
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:192:17: instructionRule
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:193:17: instructionRule
 					{
-					pushFollow(FOLLOW_instructionRule_in_ifStatementRule906);
+					pushFollow(FOLLOW_instructionRule_in_ifStatementRule912);
 					instructionRule();
 					state._fsp--;
 
@@ -1864,7 +1878,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:193:3: ( ELSE ( IF LP conditionRule RP )? ( blockRule | instructionRule ) )*
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:194:3: ( ELSE ( IF LP conditionRule RP )? ( blockRule | instructionRule ) )*
 			loop41:
 			while (true) {
 				int alt41=2;
@@ -1875,10 +1889,10 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 				switch (alt41) {
 				case 1 :
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:193:4: ELSE ( IF LP conditionRule RP )? ( blockRule | instructionRule )
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:194:4: ELSE ( IF LP conditionRule RP )? ( blockRule | instructionRule )
 					{
-					match(input,ELSE,FOLLOW_ELSE_in_ifStatementRule912); 
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:193:9: ( IF LP conditionRule RP )?
+					match(input,ELSE,FOLLOW_ELSE_in_ifStatementRule918); 
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:194:9: ( IF LP conditionRule RP )?
 					int alt39=2;
 					int LA39_0 = input.LA(1);
 					if ( (LA39_0==IF) ) {
@@ -1886,21 +1900,21 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 					}
 					switch (alt39) {
 						case 1 :
-							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:193:10: IF LP conditionRule RP
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:194:10: IF LP conditionRule RP
 							{
-							match(input,IF,FOLLOW_IF_in_ifStatementRule915); 
-							match(input,LP,FOLLOW_LP_in_ifStatementRule917); 
-							pushFollow(FOLLOW_conditionRule_in_ifStatementRule919);
+							match(input,IF,FOLLOW_IF_in_ifStatementRule921); 
+							match(input,LP,FOLLOW_LP_in_ifStatementRule923); 
+							pushFollow(FOLLOW_conditionRule_in_ifStatementRule925);
 							conditionRule();
 							state._fsp--;
 
-							match(input,RP,FOLLOW_RP_in_ifStatementRule921); 
+							match(input,RP,FOLLOW_RP_in_ifStatementRule927); 
 							}
 							break;
 
 					}
 
-					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:193:35: ( blockRule | instructionRule )
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:194:35: ( blockRule | instructionRule )
 					int alt40=2;
 					int LA40_0 = input.LA(1);
 					if ( (LA40_0==LBR) ) {
@@ -1918,18 +1932,18 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 					switch (alt40) {
 						case 1 :
-							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:193:36: blockRule
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:194:36: blockRule
 							{
-							pushFollow(FOLLOW_blockRule_in_ifStatementRule926);
+							pushFollow(FOLLOW_blockRule_in_ifStatementRule932);
 							blockRule();
 							state._fsp--;
 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:193:48: instructionRule
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:194:48: instructionRule
 							{
-							pushFollow(FOLLOW_instructionRule_in_ifStatementRule930);
+							pushFollow(FOLLOW_instructionRule_in_ifStatementRule936);
 							instructionRule();
 							state._fsp--;
 
@@ -1959,6 +1973,190 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 	}
 	// $ANTLR end "ifStatementRule"
 
+
+
+	// $ANTLR start "switchCaseRule"
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:197:1: switchCaseRule : SWITCH LP assignTypologyRule RP LBR ( CASE assignTypologyRule CL ( instructionRule )* ( BREAK )? ( SC )? )+ ( DEFAULT CL ( instructionRule )* )? RBR ;
+	public final void switchCaseRule() throws RecognitionException {
+		try {
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:198:2: ( SWITCH LP assignTypologyRule RP LBR ( CASE assignTypologyRule CL ( instructionRule )* ( BREAK )? ( SC )? )+ ( DEFAULT CL ( instructionRule )* )? RBR )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:199:3: SWITCH LP assignTypologyRule RP LBR ( CASE assignTypologyRule CL ( instructionRule )* ( BREAK )? ( SC )? )+ ( DEFAULT CL ( instructionRule )* )? RBR
+			{
+			match(input,SWITCH,FOLLOW_SWITCH_in_switchCaseRule956); 
+			match(input,LP,FOLLOW_LP_in_switchCaseRule958); 
+			pushFollow(FOLLOW_assignTypologyRule_in_switchCaseRule960);
+			assignTypologyRule();
+			state._fsp--;
+
+			match(input,RP,FOLLOW_RP_in_switchCaseRule962); 
+			match(input,LBR,FOLLOW_LBR_in_switchCaseRule966); 
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:201:4: ( CASE assignTypologyRule CL ( instructionRule )* ( BREAK )? ( SC )? )+
+			int cnt45=0;
+			loop45:
+			while (true) {
+				int alt45=2;
+				int LA45_0 = input.LA(1);
+				if ( (LA45_0==CASE) ) {
+					alt45=1;
+				}
+
+				switch (alt45) {
+				case 1 :
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:201:5: CASE assignTypologyRule CL ( instructionRule )* ( BREAK )? ( SC )?
+					{
+					match(input,CASE,FOLLOW_CASE_in_switchCaseRule972); 
+					pushFollow(FOLLOW_assignTypologyRule_in_switchCaseRule974);
+					assignTypologyRule();
+					state._fsp--;
+
+					match(input,CL,FOLLOW_CL_in_switchCaseRule976); 
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:202:5: ( instructionRule )*
+					loop42:
+					while (true) {
+						int alt42=2;
+						int LA42_0 = input.LA(1);
+						if ( (LA42_0==SC) ) {
+							alt42=1;
+						}
+
+						switch (alt42) {
+						case 1 :
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:202:5: instructionRule
+							{
+							pushFollow(FOLLOW_instructionRule_in_switchCaseRule982);
+							instructionRule();
+							state._fsp--;
+
+							}
+							break;
+
+						default :
+							break loop42;
+						}
+					}
+
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:203:5: ( BREAK )?
+					int alt43=2;
+					int LA43_0 = input.LA(1);
+					if ( (LA43_0==BREAK) ) {
+						alt43=1;
+					}
+					switch (alt43) {
+						case 1 :
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:203:5: BREAK
+							{
+							match(input,BREAK,FOLLOW_BREAK_in_switchCaseRule989); 
+							}
+							break;
+
+					}
+
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:203:12: ( SC )?
+					int alt44=2;
+					int LA44_0 = input.LA(1);
+					if ( (LA44_0==SC) ) {
+						alt44=1;
+					}
+					switch (alt44) {
+						case 1 :
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:203:12: SC
+							{
+							match(input,SC,FOLLOW_SC_in_switchCaseRule992); 
+							}
+							break;
+
+					}
+
+					}
+					break;
+
+				default :
+					if ( cnt45 >= 1 ) break loop45;
+					EarlyExitException eee = new EarlyExitException(45, input);
+					throw eee;
+				}
+				cnt45++;
+			}
+
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:205:4: ( DEFAULT CL ( instructionRule )* )?
+			int alt47=2;
+			int LA47_0 = input.LA(1);
+			if ( (LA47_0==DEFAULT) ) {
+				alt47=1;
+			}
+			switch (alt47) {
+				case 1 :
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:205:5: DEFAULT CL ( instructionRule )*
+					{
+					match(input,DEFAULT,FOLLOW_DEFAULT_in_switchCaseRule1005); 
+					match(input,CL,FOLLOW_CL_in_switchCaseRule1007); 
+					// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:206:5: ( instructionRule )*
+					loop46:
+					while (true) {
+						int alt46=2;
+						int LA46_0 = input.LA(1);
+						if ( (LA46_0==SC) ) {
+							alt46=1;
+						}
+
+						switch (alt46) {
+						case 1 :
+							// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:206:5: instructionRule
+							{
+							pushFollow(FOLLOW_instructionRule_in_switchCaseRule1013);
+							instructionRule();
+							state._fsp--;
+
+							}
+							break;
+
+						default :
+							break loop46;
+						}
+					}
+
+					}
+					break;
+
+			}
+
+			match(input,RBR,FOLLOW_RBR_in_switchCaseRule1024); 
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "switchCaseRule"
+
+
+
+	// $ANTLR start "forRule"
+	// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:211:1: forRule : FOR ;
+	public final void forRule() throws RecognitionException {
+		try {
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:212:2: ( FOR )
+			// C:\\Users\\mauro\\Desktop\\Eclipse\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:213:3: FOR
+			{
+			match(input,FOR,FOLLOW_FOR_in_forRule1039); 
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "forRule"
+
 	// Delegated rules
 
 
@@ -1967,123 +2165,140 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 	public static final BitSet FOLLOW_variableDefinitionRule_in_parseJava70 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_objectRule_in_parseJava75 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_ifStatementRule_in_parseJava80 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DOCUMENT_in_getRule95 = new BitSet(new long[]{0x0000000010000000L});
-	public static final BitSet FOLLOW_DOT_in_getRule99 = new BitSet(new long[]{0x0000800000000000L});
-	public static final BitSet FOLLOW_ID_in_getRule103 = new BitSet(new long[]{0x2000000000000000L});
-	public static final BitSet FOLLOW_LP_in_getRule107 = new BitSet(new long[]{0x0000000000000000L,0x0000000004000000L});
-	public static final BitSet FOLLOW_STRING_in_getRule111 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_RP_in_getRule113 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
-	public static final BitSet FOLLOW_SC_in_getRule115 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_idDotIdRule132 = new BitSet(new long[]{0x0000000010000002L});
-	public static final BitSet FOLLOW_DOT_in_idDotIdRule135 = new BitSet(new long[]{0x0000800000000000L});
+	public static final BitSet FOLLOW_switchCaseRule_in_parseJava85 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DOCUMENT_in_getRule100 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_DOT_in_getRule104 = new BitSet(new long[]{0x0000800000000000L});
+	public static final BitSet FOLLOW_ID_in_getRule108 = new BitSet(new long[]{0x2000000000000000L});
+	public static final BitSet FOLLOW_LP_in_getRule112 = new BitSet(new long[]{0x0000000000000000L,0x0000000004000000L});
+	public static final BitSet FOLLOW_STRING_in_getRule116 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_getRule118 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_getRule120 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_ID_in_idDotIdRule137 = new BitSet(new long[]{0x0000000010000002L});
-	public static final BitSet FOLLOW_idDotIdRule_in_idDotArrayRule155 = new BitSet(new long[]{0x0100000000000002L});
-	public static final BitSet FOLLOW_THIS_in_idDotArrayRule160 = new BitSet(new long[]{0x0100000010000002L});
-	public static final BitSet FOLLOW_DOT_in_idDotArrayRule163 = new BitSet(new long[]{0x0000800000000000L});
-	public static final BitSet FOLLOW_ID_in_idDotArrayRule165 = new BitSet(new long[]{0x0100000010000002L});
-	public static final BitSet FOLLOW_LB_in_idDotArrayRule174 = new BitSet(new long[]{0x0040800000000000L,0x0000000084000000L});
-	public static final BitSet FOLLOW_INTEGER_in_idDotArrayRule177 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-	public static final BitSet FOLLOW_idDotArrayRule_in_idDotArrayRule182 = new BitSet(new long[]{0x2000000000000000L,0x0000000000020000L});
-	public static final BitSet FOLLOW_LP_in_idDotArrayRule185 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
-	public static final BitSet FOLLOW_assignTypologyRule_in_idDotArrayRule187 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_CM_in_idDotArrayRule190 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_DOT_in_idDotIdRule140 = new BitSet(new long[]{0x0000800000000000L});
+	public static final BitSet FOLLOW_ID_in_idDotIdRule142 = new BitSet(new long[]{0x0000000010000002L});
+	public static final BitSet FOLLOW_idDotIdRule_in_idDotArrayRule160 = new BitSet(new long[]{0x0100000000000002L});
+	public static final BitSet FOLLOW_THIS_in_idDotArrayRule165 = new BitSet(new long[]{0x0100000010000002L});
+	public static final BitSet FOLLOW_DOT_in_idDotArrayRule168 = new BitSet(new long[]{0x0000800000000000L});
+	public static final BitSet FOLLOW_ID_in_idDotArrayRule170 = new BitSet(new long[]{0x0100000010000002L});
+	public static final BitSet FOLLOW_LB_in_idDotArrayRule179 = new BitSet(new long[]{0x0040800000000000L,0x0000000084000000L});
+	public static final BitSet FOLLOW_INTEGER_in_idDotArrayRule182 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+	public static final BitSet FOLLOW_idDotArrayRule_in_idDotArrayRule187 = new BitSet(new long[]{0x2000000000000000L,0x0000000000020000L});
+	public static final BitSet FOLLOW_LP_in_idDotArrayRule190 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
 	public static final BitSet FOLLOW_assignTypologyRule_in_idDotArrayRule192 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_RP_in_idDotArrayRule196 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-	public static final BitSet FOLLOW_STRING_in_idDotArrayRule203 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-	public static final BitSet FOLLOW_RB_in_idDotArrayRule206 = new BitSet(new long[]{0x0100000010000002L});
-	public static final BitSet FOLLOW_DOT_in_idDotArrayRule211 = new BitSet(new long[]{0x0000800000000000L});
-	public static final BitSet FOLLOW_ID_in_idDotArrayRule213 = new BitSet(new long[]{0x0100000010000002L});
-	public static final BitSet FOLLOW_SUB_in_expressionRule232 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_SC_in_instructionRule246 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_RETURN_in_returnRule260 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
-	public static final BitSet FOLLOW_assignTypologyRule_in_returnRule262 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
-	public static final BitSet FOLLOW_SC_in_returnRule264 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FUNCTION_in_functionDeclarationRule280 = new BitSet(new long[]{0x2000800000000000L});
-	public static final BitSet FOLLOW_ID_in_functionDeclarationRule282 = new BitSet(new long[]{0x2000000000000000L});
-	public static final BitSet FOLLOW_LP_in_functionDeclarationRule285 = new BitSet(new long[]{0x0000800000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_ID_in_functionDeclarationRule288 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_CM_in_functionDeclarationRule292 = new BitSet(new long[]{0x0000800000000000L});
-	public static final BitSet FOLLOW_ID_in_functionDeclarationRule294 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_RP_in_functionDeclarationRule301 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_functionDeclarationRule_in_functionDefinitionRule315 = new BitSet(new long[]{0x0200000000000000L});
-	public static final BitSet FOLLOW_LBR_in_functionDefinitionRule319 = new BitSet(new long[]{0x0000000000000000L,0x00000000004C0000L});
-	public static final BitSet FOLLOW_instructionRule_in_functionDefinitionRule324 = new BitSet(new long[]{0x0000000000000000L,0x00000000004C0000L});
-	public static final BitSet FOLLOW_returnRule_in_functionDefinitionRule330 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RBR_in_functionDefinitionRule335 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_idDotArrayRule_in_functionCallRule349 = new BitSet(new long[]{0x2000000000000000L});
-	public static final BitSet FOLLOW_LP_in_functionCallRule351 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C100090L});
-	public static final BitSet FOLLOW_assignTypologyRule_in_functionCallRule354 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_CM_in_functionCallRule357 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_CM_in_idDotArrayRule195 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_idDotArrayRule197 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_idDotArrayRule201 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+	public static final BitSet FOLLOW_STRING_in_idDotArrayRule208 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+	public static final BitSet FOLLOW_RB_in_idDotArrayRule211 = new BitSet(new long[]{0x0100000010000002L});
+	public static final BitSet FOLLOW_DOT_in_idDotArrayRule216 = new BitSet(new long[]{0x0000800000000000L});
+	public static final BitSet FOLLOW_ID_in_idDotArrayRule218 = new BitSet(new long[]{0x0100000010000002L});
+	public static final BitSet FOLLOW_SUB_in_expressionRule237 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_SC_in_instructionRule251 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_RETURN_in_returnRule265 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_returnRule267 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_returnRule269 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FUNCTION_in_functionDeclarationRule285 = new BitSet(new long[]{0x2000800000000000L});
+	public static final BitSet FOLLOW_ID_in_functionDeclarationRule287 = new BitSet(new long[]{0x2000000000000000L});
+	public static final BitSet FOLLOW_LP_in_functionDeclarationRule290 = new BitSet(new long[]{0x0000800000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_ID_in_functionDeclarationRule293 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_CM_in_functionDeclarationRule297 = new BitSet(new long[]{0x0000800000000000L});
+	public static final BitSet FOLLOW_ID_in_functionDeclarationRule299 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_functionDeclarationRule306 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_functionDeclarationRule_in_functionDefinitionRule320 = new BitSet(new long[]{0x0200000000000000L});
+	public static final BitSet FOLLOW_LBR_in_functionDefinitionRule324 = new BitSet(new long[]{0x0000000000000000L,0x00000000004C0000L});
+	public static final BitSet FOLLOW_instructionRule_in_functionDefinitionRule329 = new BitSet(new long[]{0x0000000000000000L,0x00000000004C0000L});
+	public static final BitSet FOLLOW_returnRule_in_functionDefinitionRule335 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
+	public static final BitSet FOLLOW_RBR_in_functionDefinitionRule340 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_idDotArrayRule_in_functionCallRule354 = new BitSet(new long[]{0x2000000000000000L});
+	public static final BitSet FOLLOW_LP_in_functionCallRule356 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C100090L});
 	public static final BitSet FOLLOW_assignTypologyRule_in_functionCallRule359 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_RP_in_functionCallRule365 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
-	public static final BitSet FOLLOW_SC_in_functionCallRule367 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LB_in_arrayRule387 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C020090L});
-	public static final BitSet FOLLOW_assignTypologyRule_in_arrayRule397 = new BitSet(new long[]{0x0000000000008000L,0x0000000000020000L});
-	public static final BitSet FOLLOW_CM_in_arrayRule403 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
-	public static final BitSet FOLLOW_assignTypologyRule_in_arrayRule405 = new BitSet(new long[]{0x0000000000008000L,0x0000000000020000L});
-	public static final BitSet FOLLOW_RB_in_arrayRule417 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LBR_in_objectRule432 = new BitSet(new long[]{0x0000800000000000L,0x0000000004040000L});
-	public static final BitSet FOLLOW_set_in_objectRule442 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_CL_in_objectRule454 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
-	public static final BitSet FOLLOW_assignTypologyRule_in_objectRule460 = new BitSet(new long[]{0x0000000000008000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_CM_in_objectRule470 = new BitSet(new long[]{0x0000800000000000L,0x0000000004000000L});
-	public static final BitSet FOLLOW_set_in_objectRule475 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_CL_in_objectRule487 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
-	public static final BitSet FOLLOW_assignTypologyRule_in_objectRule493 = new BitSet(new long[]{0x0000000000008000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RBR_in_objectRule509 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_set_in_varDeclarationRule528 = new BitSet(new long[]{0x0000800000000000L});
-	public static final BitSet FOLLOW_ID_in_varDeclarationRule540 = new BitSet(new long[]{0x0000000000008002L,0x0000000000400000L});
-	public static final BitSet FOLLOW_CM_in_varDeclarationRule543 = new BitSet(new long[]{0x0000800000000000L});
+	public static final BitSet FOLLOW_CM_in_functionCallRule362 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_functionCallRule364 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_functionCallRule370 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_functionCallRule372 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LB_in_arrayRule392 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C020090L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_arrayRule402 = new BitSet(new long[]{0x0000000000008000L,0x0000000000020000L});
+	public static final BitSet FOLLOW_CM_in_arrayRule408 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_arrayRule410 = new BitSet(new long[]{0x0000000000008000L,0x0000000000020000L});
+	public static final BitSet FOLLOW_RB_in_arrayRule422 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LBR_in_objectRule437 = new BitSet(new long[]{0x0000800000000000L,0x0000000004040000L});
+	public static final BitSet FOLLOW_set_in_objectRule447 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_CL_in_objectRule459 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_objectRule465 = new BitSet(new long[]{0x0000000000008000L,0x0000000000040000L});
+	public static final BitSet FOLLOW_CM_in_objectRule475 = new BitSet(new long[]{0x0000800000000000L,0x0000000004000000L});
+	public static final BitSet FOLLOW_set_in_objectRule480 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_CL_in_objectRule492 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_objectRule498 = new BitSet(new long[]{0x0000000000008000L,0x0000000000040000L});
+	public static final BitSet FOLLOW_RBR_in_objectRule514 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_set_in_varDeclarationRule533 = new BitSet(new long[]{0x0000800000000000L});
 	public static final BitSet FOLLOW_ID_in_varDeclarationRule545 = new BitSet(new long[]{0x0000000000008002L,0x0000000000400000L});
-	public static final BitSet FOLLOW_SC_in_varDeclarationRule549 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_idDotArrayRule_in_varAssignmentRule579 = new BitSet(new long[]{0x0000000000000080L});
-	public static final BitSet FOLLOW_ASSIGN_in_varAssignmentRule581 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
-	public static final BitSet FOLLOW_assignTypologyRule_in_varAssignmentRule583 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
-	public static final BitSet FOLLOW_SC_in_varAssignmentRule585 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_idDotArrayRule_in_variableDefinitionRule616 = new BitSet(new long[]{0x0000000000000082L,0x0000000000400000L});
-	public static final BitSet FOLLOW_ASSIGN_in_variableDefinitionRule621 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
-	public static final BitSet FOLLOW_assignTypologyRule_in_variableDefinitionRule623 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
-	public static final BitSet FOLLOW_SC_in_variableDefinitionRule629 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_STRING_in_assignTypologyRule648 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INTEGER_in_assignTypologyRule652 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FLOAT_in_assignTypologyRule656 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_objectRule_in_assignTypologyRule660 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_arrayRule_in_assignTypologyRule664 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TRUE_in_assignTypologyRule668 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FALSE_in_assignTypologyRule672 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_NULL_in_assignTypologyRule676 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_UNDEFINED_in_assignTypologyRule680 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_functionDefinitionRule_in_assignTypologyRule684 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expressionRule_in_assignTypologyRule688 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_newRule_in_assignTypologyRule692 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_idDotArrayRule_in_assignTypologyRule697 = new BitSet(new long[]{0x2000000000000002L});
-	public static final BitSet FOLLOW_LP_in_assignTypologyRule700 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
-	public static final BitSet FOLLOW_assignTypologyRule_in_assignTypologyRule702 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_CM_in_assignTypologyRule705 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_CM_in_varDeclarationRule548 = new BitSet(new long[]{0x0000800000000000L});
+	public static final BitSet FOLLOW_ID_in_varDeclarationRule550 = new BitSet(new long[]{0x0000000000008002L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_varDeclarationRule554 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_idDotArrayRule_in_varAssignmentRule584 = new BitSet(new long[]{0x0000000000000080L});
+	public static final BitSet FOLLOW_ASSIGN_in_varAssignmentRule586 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_varAssignmentRule588 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_varAssignmentRule590 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_idDotArrayRule_in_variableDefinitionRule621 = new BitSet(new long[]{0x0000000000000082L,0x0000000000400000L});
+	public static final BitSet FOLLOW_ASSIGN_in_variableDefinitionRule626 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_variableDefinitionRule628 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_variableDefinitionRule634 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_STRING_in_assignTypologyRule653 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INTEGER_in_assignTypologyRule657 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FLOAT_in_assignTypologyRule661 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_objectRule_in_assignTypologyRule665 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_arrayRule_in_assignTypologyRule669 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_TRUE_in_assignTypologyRule673 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FALSE_in_assignTypologyRule677 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_NULL_in_assignTypologyRule681 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_UNDEFINED_in_assignTypologyRule685 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_functionDefinitionRule_in_assignTypologyRule689 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expressionRule_in_assignTypologyRule693 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_newRule_in_assignTypologyRule697 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_idDotArrayRule_in_assignTypologyRule702 = new BitSet(new long[]{0x2000000000000002L});
+	public static final BitSet FOLLOW_LP_in_assignTypologyRule705 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
 	public static final BitSet FOLLOW_assignTypologyRule_in_assignTypologyRule707 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_RP_in_assignTypologyRule711 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_NEW_in_newRule729 = new BitSet(new long[]{0x0000800000000000L});
-	public static final BitSet FOLLOW_ID_in_newRule731 = new BitSet(new long[]{0x2000000000000000L});
-	public static final BitSet FOLLOW_LP_in_newRule733 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C100090L});
-	public static final BitSet FOLLOW_assignTypologyRule_in_newRule736 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_CM_in_newRule739 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_CM_in_assignTypologyRule710 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_assignTypologyRule712 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_assignTypologyRule716 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_NEW_in_newRule734 = new BitSet(new long[]{0x0000800000000000L});
+	public static final BitSet FOLLOW_ID_in_newRule736 = new BitSet(new long[]{0x2000000000000000L});
+	public static final BitSet FOLLOW_LP_in_newRule738 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C100090L});
 	public static final BitSet FOLLOW_assignTypologyRule_in_newRule741 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_RP_in_newRule747 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_SC_in_conditionRule857 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LBR_in_blockRule870 = new BitSet(new long[]{0x0000000000000000L,0x0000000000440000L});
-	public static final BitSet FOLLOW_instructionRule_in_blockRule872 = new BitSet(new long[]{0x0000000000000000L,0x0000000000440000L});
-	public static final BitSet FOLLOW_RBR_in_blockRule875 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_IF_in_ifStatementRule889 = new BitSet(new long[]{0x2000000000000000L});
-	public static final BitSet FOLLOW_LP_in_ifStatementRule891 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-	public static final BitSet FOLLOW_conditionRule_in_ifStatementRule893 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_RP_in_ifStatementRule895 = new BitSet(new long[]{0x0200000000000000L,0x0000000000400000L});
-	public static final BitSet FOLLOW_blockRule_in_ifStatementRule902 = new BitSet(new long[]{0x0000000020000002L});
-	public static final BitSet FOLLOW_instructionRule_in_ifStatementRule906 = new BitSet(new long[]{0x0000000020000002L});
-	public static final BitSet FOLLOW_ELSE_in_ifStatementRule912 = new BitSet(new long[]{0x0201000000000000L,0x0000000000400000L});
-	public static final BitSet FOLLOW_IF_in_ifStatementRule915 = new BitSet(new long[]{0x2000000000000000L});
-	public static final BitSet FOLLOW_LP_in_ifStatementRule917 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-	public static final BitSet FOLLOW_conditionRule_in_ifStatementRule919 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_RP_in_ifStatementRule921 = new BitSet(new long[]{0x0200000000000000L,0x0000000000400000L});
-	public static final BitSet FOLLOW_blockRule_in_ifStatementRule926 = new BitSet(new long[]{0x0000000020000002L});
-	public static final BitSet FOLLOW_instructionRule_in_ifStatementRule930 = new BitSet(new long[]{0x0000000020000002L});
+	public static final BitSet FOLLOW_CM_in_newRule744 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_newRule746 = new BitSet(new long[]{0x0000000000008000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_newRule752 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_SC_in_conditionRule862 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LBR_in_blockRule875 = new BitSet(new long[]{0x0000000000000000L,0x0000000000440000L});
+	public static final BitSet FOLLOW_instructionRule_in_blockRule877 = new BitSet(new long[]{0x0000000000000000L,0x0000000000440000L});
+	public static final BitSet FOLLOW_RBR_in_blockRule880 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_IF_in_ifStatementRule895 = new BitSet(new long[]{0x2000000000000000L});
+	public static final BitSet FOLLOW_LP_in_ifStatementRule897 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_conditionRule_in_ifStatementRule899 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_ifStatementRule901 = new BitSet(new long[]{0x0200000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_blockRule_in_ifStatementRule908 = new BitSet(new long[]{0x0000000020000002L});
+	public static final BitSet FOLLOW_instructionRule_in_ifStatementRule912 = new BitSet(new long[]{0x0000000020000002L});
+	public static final BitSet FOLLOW_ELSE_in_ifStatementRule918 = new BitSet(new long[]{0x0201000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_IF_in_ifStatementRule921 = new BitSet(new long[]{0x2000000000000000L});
+	public static final BitSet FOLLOW_LP_in_ifStatementRule923 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_conditionRule_in_ifStatementRule925 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_ifStatementRule927 = new BitSet(new long[]{0x0200000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_blockRule_in_ifStatementRule932 = new BitSet(new long[]{0x0000000020000002L});
+	public static final BitSet FOLLOW_instructionRule_in_ifStatementRule936 = new BitSet(new long[]{0x0000000020000002L});
+	public static final BitSet FOLLOW_SWITCH_in_switchCaseRule956 = new BitSet(new long[]{0x2000000000000000L});
+	public static final BitSet FOLLOW_LP_in_switchCaseRule958 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_switchCaseRule960 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_switchCaseRule962 = new BitSet(new long[]{0x0200000000000000L});
+	public static final BitSet FOLLOW_LBR_in_switchCaseRule966 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_CASE_in_switchCaseRule972 = new BitSet(new long[]{0x03408A8000000000L,0x000000128C000090L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_switchCaseRule974 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_CL_in_switchCaseRule976 = new BitSet(new long[]{0x0000000000200C00L,0x0000000000440000L});
+	public static final BitSet FOLLOW_instructionRule_in_switchCaseRule982 = new BitSet(new long[]{0x0000000000200C00L,0x0000000000440000L});
+	public static final BitSet FOLLOW_BREAK_in_switchCaseRule989 = new BitSet(new long[]{0x0000000000200800L,0x0000000000440000L});
+	public static final BitSet FOLLOW_SC_in_switchCaseRule992 = new BitSet(new long[]{0x0000000000200800L,0x0000000000040000L});
+	public static final BitSet FOLLOW_DEFAULT_in_switchCaseRule1005 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_CL_in_switchCaseRule1007 = new BitSet(new long[]{0x0000000000000000L,0x0000000000440000L});
+	public static final BitSet FOLLOW_instructionRule_in_switchCaseRule1013 = new BitSet(new long[]{0x0000000000000000L,0x0000000000440000L});
+	public static final BitSet FOLLOW_RBR_in_switchCaseRule1024 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FOR_in_forRule1039 = new BitSet(new long[]{0x0000000000000002L});
 }
