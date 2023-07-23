@@ -67,7 +67,7 @@ idDotArrayRule //TOFIX, inoltre new Date().getDay() non lo riconosce
 	:
 		(idDotIdRule | (THIS (DOT ID)*) ) ((LB (INTEGER | (idDotArrayRule (LP assignTypologyRule (CM assignTypologyRule)* RP)?) | STRING) RB)+ (DOT ID)*)*
 	;
-	
+
 expressionRule //TODO
 	:
 		SUB
@@ -174,17 +174,17 @@ arithmeticOperatorsRule //TODO
 
 comparatorRule
 	:
-		( EQ | NEQ | LT | LE | GT | GE | TEQ | NTEQ)
+		(EQ | NEQ | LT | LE | GT | GE | TEQ | NTEQ)
 	;
 	
 conditionRule //TODO
 	:
-	SC
+	TRUE
 	;
 
 blockRule
 	:
-		LBR instructionRule* RBR
+		LBR instructionRule* (BREAK | CONTINUE) instructionRule* RBR
 	;
 	
 ifStatementRule //In teoria ci potrebbe essere solo un else
@@ -208,11 +208,44 @@ switchCaseRule //In teoria il default non deve trovarsi per forza in ultima posi
 		RBR
 	;
 	
-forRule //TODO
+forRule //TODO, ci sarebbe anche il for in e il for of
 	:
-		FOR
+		FOR LP forInitVarRule? SC conditionRule? SC stepRule? RP
+			(blockRule | instructionRule)
 	;
 
+forInitVarRule
+	:
+		(VAR | LET)? idDotArrayRule ASSIGN assignTypologyRule
+	;
+		
+stepRule //Copia-incolla, i metodi non ci sono nell'Handler
+	:
+		(o1=incDecRule)? 
+		i=ID {h.checkReference ($i);}
+		(o2=incDecRule)?
+		{ h.checkIncDec(o1, o2, $i); }
+	;
+	
+incDecRule returns[Token tk] //Copia-incolla
+	:
+		o1=DEC  {tk = $o1;} 
+	|	o2=INC	{tk = $o2;}
+	;
+	
+whileRule 
+	:
+		WHILE LP conditionRule RP
+			(blockRule | instructionRule)
+	;
+
+doWhileRule
+	:
+		DO
+			(blockRule | instructionRule)
+		WHILE LP conditionRule RP SC?
+	;
+	
 fragment
 EXPONENT : ('e'|'E') ('+'|'-')? ('0'..'9')+ ;
 

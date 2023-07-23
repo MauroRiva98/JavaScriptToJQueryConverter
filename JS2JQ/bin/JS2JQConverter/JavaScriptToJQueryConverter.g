@@ -67,7 +67,7 @@ idDotArrayRule //TOFIX, inoltre new Date().getDay() non lo riconosce
 	:
 		(idDotIdRule | (THIS (DOT ID)*) ) ((LB (INTEGER | (idDotArrayRule (LP assignTypologyRule (CM assignTypologyRule)* RP)?) | STRING) RB)+ (DOT ID)*)*
 	;
-	
+
 expressionRule //TODO
 	:
 		SUB
@@ -206,6 +206,11 @@ switchCaseRule //In teoria il default non deve trovarsi per forza in ultima posi
 				instructionRule*
 			)?
 		RBR
+	;
+	
+forRule //TODO
+	:
+		FOR
 	;
 
 fragment
