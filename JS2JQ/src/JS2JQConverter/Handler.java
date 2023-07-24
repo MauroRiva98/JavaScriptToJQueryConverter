@@ -112,8 +112,8 @@ public class Handler {
 
 
 	// ****
-	/*
-	public boolean checkReference(Token var) {
+	
+	/*public boolean checkReference(Token var) {
 		if (var!=null) {
 			String name = var.getText();
 			if (!symbolTable.containsKey(name))

@@ -1,11 +1,19 @@
-switch (prova) {
-  case 4:
-  case 5:
-    ;
-    break
-  case 0:
+if(true){
+	 var x instanceOf String;
+	 let y = 6;
+}
+
+for (let i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}
+
+switch (pippo) {
   case 6:
+    text = "Today is Saturday";
+    break;
+  case 0:
+    text = "Today is Sunday";
     break;
   default:
-    ;
+    text = "Looking forward to the Weekend";
 }

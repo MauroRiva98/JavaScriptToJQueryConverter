@@ -44,18 +44,14 @@ options {
 
 
 parseJava 
-@init {initParser();} //TODO
+@init {initParser();}
 	: 
-		getRule 
-		|variableDefinitionRule
-		|objectRule
-		|ifStatementRule
-		|switchCaseRule
-		//|functionCallRule problema con variableDefinitionRule
+		(instructionRule
+		| classRule)*
 	;
-getRule
+getRule //FIX
 	:
-		DOCUMENT {System.out.println("Ho riconosciuto DOCUMENT");} DOT get=ID x=LP i=STRING RP SC? {h.test($getRule.text, $start);}
+		DOCUMENT {System.out.println("Ho riconosciuto DOCUMENT");} DOT get=ID x=LP STRING RP SC? {h.test($getRule.text, $start);}
 	;
 	
 idDotIdRule
@@ -63,24 +59,64 @@ idDotIdRule
 		ID (DOT ID)*
 	;
 	
-idDotArrayRule //TOFIX, inoltre new Date().getDay() non lo riconosce
+factorTypologyRule
 	:
-		(idDotIdRule | (THIS (DOT ID)*) ) ((LB (INTEGER | (idDotArrayRule (LP assignTypologyRule (CM assignTypologyRule)* RP)?) | STRING) RB)+ (DOT ID)*)*
-	;
-
-expressionRule //TODO
-	:
-		SUB
+		(STRING | INTEGER | FLOAT | TRUE | FALSE | (idDotArrayRule (LP expressionRule (CM expressionRule)* RP)?))
 	;
 	
+assignTypologyRule
+	:
+		(objectRule | arrayRule | NULL | UNDEFINED | functionDefinitionRule | newRule)
+	;
+
+idDotArrayRule //TOFIX, inoltre new Date().getDay() non lo riconosce
+	:
+		(idDotIdRule | (THIS (DOT ID)*) ) ((LB (INTEGER | (idDotArrayRule (LP (assignTypologyRule|expressionRule) (CM (assignTypologyRule|expressionRule))* RP)?) | STRING) RB)+ (DOT ID)*)*
+	;
+
+expressionRule
+	:
+		termRule ((ADD | SUB | MOD) termRule)* {System.out.println($text);}
+	;
+termRule
+	:
+		factorRule ((STAR | DIV | EXP | XOR | AND_BIT | OR_BIT | LSHIFT | RSHIFT | URSHIFT) factorRule)* 
+	;
+
+factorRule //controllo lato eclipse ??
+	:
+		(INC|DEC)? factorTypologyRule (INC|DEC)?
+		| LP expressionRule RP
+	;
+
 instructionRule //TODO
 	:
-	SC
+		(BREAK | CONTINUE | tryCatchRule | functionDefinitionRule | blockRule | ifStatementRule | switchCaseRule | forRule | whileRule | doWhileRule | throwRule | typeOfRule | idStartingRule) 
+		SC?
+	;
+	
+throwRule
+	:
+		THROW (STRING | TRUE | FALSE | INTEGER | FLOAT | idDotArrayRule)
+	;
+	
+typeOfRule
+	:	
+		TYPEOF assignTypologyRule
+	;
+
+
+	
+tryCatchRule //TODO
+	:	
+		TRY blockRule 
+		CATCH LP ID RP blockRule 
+		(FINALLY blockRule)?
 	;
 	
 returnRule
 	:
-		RETURN assignTypologyRule SC?
+		RETURN (expressionRule|assignTypologyRule) SC?
 	;
 	
 functionDeclarationRule //Controllare che l'ID ci sia se non siamo in un oggetto
@@ -99,7 +135,7 @@ functionDefinitionRule
 	
 functionCallRule
 	:
-		idDotArrayRule LP (assignTypologyRule (CM assignTypologyRule)*)? RP SC?
+		idDotArrayRule LP ((expressionRule|assignTypologyRule) (CM (expressionRule|assignTypologyRule))*)? RP SC?
 		{System.out.println("Ho riconosciuto una chiamata a funzione");}
 	;
 	
@@ -107,8 +143,8 @@ arrayRule //Problema virgola finale
 	:
 		LB
 			(
-			assignTypologyRule
-			(CM assignTypologyRule)*
+			(expressionRule|assignTypologyRule)
+			(CM (expressionRule|assignTypologyRule))*
 			)?
 		RB
 	;
@@ -119,45 +155,37 @@ objectRule //Problema virgola finale
 			(
 			(ID | STRING) 
 			CL 
-			assignTypologyRule
+			(expressionRule|assignTypologyRule)
 			(
 			CM
 			(ID | STRING) 
 			CL 
-			assignTypologyRule
+			(expressionRule|assignTypologyRule)
 			)*
 			)?
 		RBR
 		{System.out.println("Ho riconosciuto JSON");}
 	;
 	
-varDeclarationRule //Confluita in variableDefinitionRule
-	:
-		(VAR | LET | CONST) ID (CM ID)* SC?
-	;
-	
-varAssignmentRule //Confluita in variableDefinitionRule
-	:	
-		(VAR | LET | CONST)? idDotArrayRule ASSIGN assignTypologyRule SC?
-	;
 	
 variableDefinitionRule //Ci sarebbe da fare il controllo, in dichiarazione può essere solo ID e non idDotId (e dovrebbe avere let,const o var)
 	:
 		(VAR | LET | CONST)?
 		idDotArrayRule
-		(ASSIGN assignTypologyRule)?
-		SC?
+		((ASSIGN|PLUSEQ|MINUSEQ|STAREQ|DIVEQ|MODEQ|EXPEQ) (expressionRule|assignTypologyRule))?
 		{System.out.println($text);}
 	;
 
-assignTypologyRule
+idStartingRule 
 	:
-		(STRING | INTEGER | FLOAT | objectRule | arrayRule | TRUE | FALSE | NULL | UNDEFINED | functionDefinitionRule | expressionRule | newRule | (idDotArrayRule (LP assignTypologyRule (CM assignTypologyRule)* RP)?))
+		(VAR | LET | CONST)?
+		idDotArrayRule ( ((ASSIGN|PLUSEQ|MINUSEQ|STAREQ|DIVEQ|MODEQ|EXPEQ) (expressionRule|assignTypologyRule))? | INSTANCEOF ID)
 	;
+
 	
 newRule
 	:
-		NEW ID LP (assignTypologyRule (CM assignTypologyRule)*)? RP
+		NEW ID LP ((expressionRule|assignTypologyRule) (CM (expressionRule|assignTypologyRule))*)? RP
 	;
 	
 arithmeticOperatorsRule //TODO
@@ -177,35 +205,36 @@ comparatorRule
 		(EQ | NEQ | LT | LE | GT | GE | TEQ | NTEQ)
 	;
 	
-conditionRule //TODO
+conditionRule
 	:
-	TRUE
+		NOT? expressionRule (comparatorRule NOT? expressionRule)?
+		((AND|OR) conditionRule)* 
 	;
 
 blockRule
 	:
-		LBR instructionRule* (BREAK | CONTINUE) instructionRule* RBR
+		LBR instructionRule* RBR
 	;
 	
 ifStatementRule //In teoria ci potrebbe essere solo un else
 	:
 		IF LP conditionRule RP 
 			(blockRule | instructionRule)
-		(ELSE (IF LP conditionRule RP)? (blockRule | instructionRule))*		
+		(ELSE (IF LP conditionRule RP)? (blockRule | instructionRule))*	{System.out.println($text);}
 	;
 	
 switchCaseRule //In teoria il default non deve trovarsi per forza in ultima posizione (e può avere il break)
 	:
-		SWITCH LP assignTypologyRule RP
+		SWITCH LP (expressionRule|assignTypologyRule) RP
 		LBR
-			(CASE assignTypologyRule CL
+			(CASE (expressionRule|assignTypologyRule) CL
 				instructionRule*
-				BREAK? SC?
 			)+
 			(DEFAULT CL
 				instructionRule*
 			)?
 		RBR
+		{System.out.println($text);}
 	;
 	
 forRule //TODO, ci sarebbe anche il for in e il for of
@@ -216,15 +245,14 @@ forRule //TODO, ci sarebbe anche il for in e il for of
 
 forInitVarRule
 	:
-		(VAR | LET)? idDotArrayRule ASSIGN assignTypologyRule
+		(VAR | LET)? idDotArrayRule ASSIGN (expressionRule|assignTypologyRule)
 	;
 		
 stepRule //Copia-incolla, i metodi non ci sono nell'Handler
 	:
 		(o1=incDecRule)? 
-		i=ID {h.checkReference ($i);}
+		i=ID 
 		(o2=incDecRule)?
-		{ h.checkIncDec(o1, o2, $i); }
 	;
 	
 incDecRule returns[Token tk] //Copia-incolla
@@ -244,6 +272,14 @@ doWhileRule
 		DO
 			(blockRule | instructionRule)
 		WHILE LP conditionRule RP SC?
+	;
+	
+classRule
+	:
+		CLASS ID 
+		LBR 
+			functionDefinitionRule*
+		RBR
 	;
 	
 fragment
