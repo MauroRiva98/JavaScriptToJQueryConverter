@@ -17,6 +17,7 @@ public class Handler {
 	public static int INC_ERROR = 4;
 	public static int MISS_INC_ERROR = 5;
 	public static int DIV_BY_ZERO_ERROR	= 6;
+	public static int FUNCTION_NAME_ERROR = 7;
 	
 	//Hashtable<String, VarDescriptor> symbolTable;
 	// ******
@@ -77,6 +78,8 @@ public class Handler {
 			errMsg += "Missing '++' or '--' before or after the variable '" + tk.getText() + "'";
 		else if (code == DIV_BY_ZERO_ERROR)
 			errMsg += "Division by 0";
+		else if (code == FUNCTION_NAME_ERROR)
+			errMsg += "The function declaration must have a name in this context";
 
 		errorList.add(errMsg);
 	}
@@ -84,7 +87,25 @@ public class Handler {
 	public void test(String rule, Token start) {
 		//System.out.println("$(\"#" + i.getText().substring(1, i.getText().length()-1) + "\");");
 		int index = start.getTokenIndex();
-		System.out.println(input.get(index-1).getText());
+		System.out.println(input.get(index).getText());
+	}
+	
+	public void checkFunctionName (Token name, Token func) {
+		if (name == null) {
+			int index = func.getTokenIndex();
+			if(index == 0)
+				myErrorHandler(FUNCTION_NAME_ERROR, func);
+			while(index > 0) {
+				index--;
+				if(input.get(index).getChannel() != JavaScriptToJQueryConverterLexer.HIDDEN) {
+					int prec = input.get(index).getType();
+					if(prec != 7 && prec != 13)
+						myErrorHandler(FUNCTION_NAME_ERROR, func);
+					break;
+				}
+			}
+		}
+		
 	}
 	
 	/*

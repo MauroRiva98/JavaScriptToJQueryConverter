@@ -61,7 +61,7 @@ idDotIdRule
 	
 factorTypologyRule
 	:
-		(STRING | INTEGER | FLOAT | TRUE | FALSE | (idDotArrayRule (LP expressionRule (CM expressionRule)* RP)?))
+		(STRING | INTEGER | FLOAT | TRUE | FALSE | idDotArrayRule)
 	;
 	
 assignTypologyRule
@@ -69,9 +69,20 @@ assignTypologyRule
 		(objectRule | arrayRule | NULL | UNDEFINED | functionDefinitionRule | newRule)
 	;
 
-idDotArrayRule //TOFIX, inoltre new Date().getDay() non lo riconosce
+idDotArrayRule
 	:
 		(idDotIdRule | (THIS (DOT ID)*) ) ((LB (INTEGER | (idDotArrayRule (LP (assignTypologyRule|expressionRule) (CM (assignTypologyRule|expressionRule))* RP)?) | STRING) RB)+ (DOT ID)*)*
+	;
+
+	
+idDotSubRule
+	:
+		idDotIdRule ((LB expressionRule RB)+ (LP ((assignTypologyRule|expressionRule) (CM (assignTypologyRule|expressionRule))*)? RP)? | (LP ((assignTypologyRule|expressionRule) (CM (assignTypologyRule|expressionRule))*)?RP) (LB expressionRule RB)*)
+	;
+	
+idDotArrayRuleNew
+	:
+		(THIS DOT)? idDotSubRule+
 	;
 
 expressionRule
@@ -89,7 +100,7 @@ factorRule //controllo lato eclipse ??
 		| LP expressionRule RP
 	;
 
-instructionRule //TODO
+instructionRule
 	:
 		(BREAK | CONTINUE | tryCatchRule | functionDefinitionRule | blockRule | ifStatementRule | switchCaseRule | forRule | whileRule | doWhileRule | throwRule | typeOfRule | idStartingRule) 
 		SC?
@@ -107,7 +118,7 @@ typeOfRule
 
 
 	
-tryCatchRule //TODO
+tryCatchRule
 	:	
 		TRY blockRule 
 		CATCH LP ID RP blockRule 
@@ -119,9 +130,9 @@ returnRule
 		RETURN (expressionRule|assignTypologyRule) SC?
 	;
 	
-functionDeclarationRule //Controllare che l'ID ci sia se non siamo in un oggetto
+functionDeclarationRule
 	:
-		FUNCTION ID? LP (ID ((CM ID)*))? RP
+		func =FUNCTION name = ID? {h.checkFunctionName($name, $func);} LP ((assignTypologyRule|expressionRule) ((CM (assignTypologyRule|expressionRule))*))? RP 
 	;
 	
 functionDefinitionRule
@@ -133,18 +144,18 @@ functionDefinitionRule
 		RBR
 	;
 	
-functionCallRule
+/*functionCallRule
 	:
 		idDotArrayRule LP ((expressionRule|assignTypologyRule) (CM (expressionRule|assignTypologyRule))*)? RP SC?
 		{System.out.println("Ho riconosciuto una chiamata a funzione");}
 	;
-	
-arrayRule //Problema virgola finale
+*/
+arrayRule
 	:
 		LB
 			(
 			(expressionRule|assignTypologyRule)
-			(CM (expressionRule|assignTypologyRule))*
+			(CM (expressionRule|assignTypologyRule)?)*
 			)?
 		RB
 	;
