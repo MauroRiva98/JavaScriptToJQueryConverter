@@ -139,19 +139,19 @@ var i;
    
    function muovi(t){
    		var div_nave = document.getElementById("nave");
-         if(t==37 && parseInt(div_nave.style.left)>14){
+         if(t==37 && (parseInt(div_nave.style.left)>14)){
              div_nave.style.left = parseInt(div_nave.style.left) -25 +"px";
              document.getElementById("spost").play();
          }
-         else if(t==39 && parseInt(div_nave.style.left)<1736){
+         else if(t==39 && (parseInt(div_nave.style.left)<1736)){
              div_nave.style.left = parseInt(div_nave.style.left) +25 +"px";
              document.getElementById("spost").play();
          }
-         else if(t==38 && parseInt(div_nave.style.top)>12){
+         else if(t==38 && (parseInt(div_nave.style.top)>12)){
              div_nave.style.top = parseInt(div_nave.style.top) -25 +"px";
              document.getElementById("spost").play();
          }
-         else if(t==40 && parseInt(div_nave.style.top)<752){
+         else if(t==40 && (parseInt(div_nave.style.top)<752)){
              div_nave.style.top = parseInt(div_nave.style.top) +25 +"px";
              document.getElementById("spost").play();
          }

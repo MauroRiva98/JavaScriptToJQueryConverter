@@ -109,7 +109,7 @@ public class Handler {
 				index--;
 				if(input.get(index).getChannel() != JavaScriptToJQueryConverterLexer.HIDDEN) {
 					int prec = input.get(index).getType();
-					if(prec != 7 && prec != 13)
+					if(prec != 7 && prec != 13 && prec != 61)
 						myErrorHandler(FUNCTION_NAME_ERROR, func);
 					break;
 				}

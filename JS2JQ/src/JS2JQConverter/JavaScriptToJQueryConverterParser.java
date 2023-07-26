@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g 2023-07-26 16:43:58
+// $ANTLR 3.5.1 C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g 2023-07-26 17:42:23
 
 	package JS2JQConverter;
 
@@ -3190,7 +3190,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:230:2: ( LBR ( instructionRule | blockRule )* RBR )
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:231:3: LBR ( instructionRule | blockRule )* RBR
 			{
-			match(input,LBR,FOLLOW_LBR_in_blockRule1288); 
+			match(input,LBR,FOLLOW_LBR_in_blockRule1287); 
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:231:7: ( instructionRule | blockRule )*
 			loop72:
 			while (true) {
@@ -3207,7 +3207,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:231:8: instructionRule
 					{
-					pushFollow(FOLLOW_instructionRule_in_blockRule1291);
+					pushFollow(FOLLOW_instructionRule_in_blockRule1290);
 					instructionRule();
 					state._fsp--;
 
@@ -3216,7 +3216,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 2 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:231:24: blockRule
 					{
-					pushFollow(FOLLOW_blockRule_in_blockRule1293);
+					pushFollow(FOLLOW_blockRule_in_blockRule1292);
 					blockRule();
 					state._fsp--;
 
@@ -3228,7 +3228,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				}
 			}
 
-			match(input,RBR,FOLLOW_RBR_in_blockRule1297); 
+			match(input,RBR,FOLLOW_RBR_in_blockRule1296); 
 			}
 
 		}
@@ -3251,13 +3251,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:235:2: ( IF LP conditionRule RP ( blockRule | instructionRule ) ( ELSE ( IF LP conditionRule RP )? ( blockRule | instructionRule ) )* )
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:236:3: IF LP conditionRule RP ( blockRule | instructionRule ) ( ELSE ( IF LP conditionRule RP )? ( blockRule | instructionRule ) )*
 			{
-			match(input,IF,FOLLOW_IF_in_ifStatementRule1312); 
-			match(input,LP,FOLLOW_LP_in_ifStatementRule1314); 
-			pushFollow(FOLLOW_conditionRule_in_ifStatementRule1316);
+			match(input,IF,FOLLOW_IF_in_ifStatementRule1311); 
+			match(input,LP,FOLLOW_LP_in_ifStatementRule1313); 
+			pushFollow(FOLLOW_conditionRule_in_ifStatementRule1315);
 			conditionRule();
 			state._fsp--;
 
-			match(input,RP,FOLLOW_RP_in_ifStatementRule1318); 
+			match(input,RP,FOLLOW_RP_in_ifStatementRule1317); 
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:237:4: ( blockRule | instructionRule )
 			int alt73=2;
 			int LA73_0 = input.LA(1);
@@ -3278,7 +3278,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:237:5: blockRule
 					{
-					pushFollow(FOLLOW_blockRule_in_ifStatementRule1325);
+					pushFollow(FOLLOW_blockRule_in_ifStatementRule1324);
 					blockRule();
 					state._fsp--;
 
@@ -3287,7 +3287,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 2 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:237:17: instructionRule
 					{
-					pushFollow(FOLLOW_instructionRule_in_ifStatementRule1329);
+					pushFollow(FOLLOW_instructionRule_in_ifStatementRule1328);
 					instructionRule();
 					state._fsp--;
 
@@ -3309,7 +3309,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:238:4: ELSE ( IF LP conditionRule RP )? ( blockRule | instructionRule )
 					{
-					match(input,ELSE,FOLLOW_ELSE_in_ifStatementRule1335); 
+					match(input,ELSE,FOLLOW_ELSE_in_ifStatementRule1334); 
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:238:9: ( IF LP conditionRule RP )?
 					int alt74=2;
 					int LA74_0 = input.LA(1);
@@ -3320,13 +3320,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 						case 1 :
 							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:238:10: IF LP conditionRule RP
 							{
-							match(input,IF,FOLLOW_IF_in_ifStatementRule1338); 
-							match(input,LP,FOLLOW_LP_in_ifStatementRule1340); 
-							pushFollow(FOLLOW_conditionRule_in_ifStatementRule1342);
+							match(input,IF,FOLLOW_IF_in_ifStatementRule1337); 
+							match(input,LP,FOLLOW_LP_in_ifStatementRule1339); 
+							pushFollow(FOLLOW_conditionRule_in_ifStatementRule1341);
 							conditionRule();
 							state._fsp--;
 
-							match(input,RP,FOLLOW_RP_in_ifStatementRule1344); 
+							match(input,RP,FOLLOW_RP_in_ifStatementRule1343); 
 							}
 							break;
 
@@ -3352,7 +3352,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 						case 1 :
 							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:238:36: blockRule
 							{
-							pushFollow(FOLLOW_blockRule_in_ifStatementRule1349);
+							pushFollow(FOLLOW_blockRule_in_ifStatementRule1348);
 							blockRule();
 							state._fsp--;
 
@@ -3361,7 +3361,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 						case 2 :
 							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:238:48: instructionRule
 							{
-							pushFollow(FOLLOW_instructionRule_in_ifStatementRule1353);
+							pushFollow(FOLLOW_instructionRule_in_ifStatementRule1352);
 							instructionRule();
 							state._fsp--;
 
@@ -3400,8 +3400,8 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:242:2: ( SWITCH LP ( expressionRule | assignTypologyRule ) RP LBR ( CASE ( expressionRule | assignTypologyRule ) CL ( instructionRule )* )* ( DEFAULT CL ( instructionRule )* )? ( CASE ( expressionRule | assignTypologyRule ) CL ( instructionRule )* )* RBR )
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:243:3: SWITCH LP ( expressionRule | assignTypologyRule ) RP LBR ( CASE ( expressionRule | assignTypologyRule ) CL ( instructionRule )* )* ( DEFAULT CL ( instructionRule )* )? ( CASE ( expressionRule | assignTypologyRule ) CL ( instructionRule )* )* RBR
 			{
-			match(input,SWITCH,FOLLOW_SWITCH_in_switchCaseRule1371); 
-			match(input,LP,FOLLOW_LP_in_switchCaseRule1373); 
+			match(input,SWITCH,FOLLOW_SWITCH_in_switchCaseRule1370); 
+			match(input,LP,FOLLOW_LP_in_switchCaseRule1372); 
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:243:13: ( expressionRule | assignTypologyRule )
 			int alt77=2;
 			int LA77_0 = input.LA(1);
@@ -3422,7 +3422,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:243:14: expressionRule
 					{
-					pushFollow(FOLLOW_expressionRule_in_switchCaseRule1376);
+					pushFollow(FOLLOW_expressionRule_in_switchCaseRule1375);
 					expressionRule();
 					state._fsp--;
 
@@ -3431,7 +3431,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 2 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:243:29: assignTypologyRule
 					{
-					pushFollow(FOLLOW_assignTypologyRule_in_switchCaseRule1378);
+					pushFollow(FOLLOW_assignTypologyRule_in_switchCaseRule1377);
 					assignTypologyRule();
 					state._fsp--;
 
@@ -3440,8 +3440,8 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			match(input,RP,FOLLOW_RP_in_switchCaseRule1381); 
-			match(input,LBR,FOLLOW_LBR_in_switchCaseRule1385); 
+			match(input,RP,FOLLOW_RP_in_switchCaseRule1380); 
+			match(input,LBR,FOLLOW_LBR_in_switchCaseRule1384); 
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:245:4: ( CASE ( expressionRule | assignTypologyRule ) CL ( instructionRule )* )*
 			loop80:
 			while (true) {
@@ -3455,7 +3455,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:245:5: CASE ( expressionRule | assignTypologyRule ) CL ( instructionRule )*
 					{
-					match(input,CASE,FOLLOW_CASE_in_switchCaseRule1391); 
+					match(input,CASE,FOLLOW_CASE_in_switchCaseRule1390); 
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:245:10: ( expressionRule | assignTypologyRule )
 					int alt78=2;
 					int LA78_0 = input.LA(1);
@@ -3476,7 +3476,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 						case 1 :
 							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:245:11: expressionRule
 							{
-							pushFollow(FOLLOW_expressionRule_in_switchCaseRule1394);
+							pushFollow(FOLLOW_expressionRule_in_switchCaseRule1393);
 							expressionRule();
 							state._fsp--;
 
@@ -3485,7 +3485,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 						case 2 :
 							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:245:26: assignTypologyRule
 							{
-							pushFollow(FOLLOW_assignTypologyRule_in_switchCaseRule1396);
+							pushFollow(FOLLOW_assignTypologyRule_in_switchCaseRule1395);
 							assignTypologyRule();
 							state._fsp--;
 
@@ -3494,7 +3494,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 					}
 
-					match(input,CL,FOLLOW_CL_in_switchCaseRule1399); 
+					match(input,CL,FOLLOW_CL_in_switchCaseRule1398); 
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:246:5: ( instructionRule )*
 					loop79:
 					while (true) {
@@ -3508,7 +3508,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 						case 1 :
 							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:246:5: instructionRule
 							{
-							pushFollow(FOLLOW_instructionRule_in_switchCaseRule1405);
+							pushFollow(FOLLOW_instructionRule_in_switchCaseRule1404);
 							instructionRule();
 							state._fsp--;
 
@@ -3538,8 +3538,8 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:248:5: DEFAULT CL ( instructionRule )*
 					{
-					match(input,DEFAULT,FOLLOW_DEFAULT_in_switchCaseRule1418); 
-					match(input,CL,FOLLOW_CL_in_switchCaseRule1420); 
+					match(input,DEFAULT,FOLLOW_DEFAULT_in_switchCaseRule1417); 
+					match(input,CL,FOLLOW_CL_in_switchCaseRule1419); 
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:249:5: ( instructionRule )*
 					loop81:
 					while (true) {
@@ -3553,7 +3553,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 						case 1 :
 							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:249:5: instructionRule
 							{
-							pushFollow(FOLLOW_instructionRule_in_switchCaseRule1426);
+							pushFollow(FOLLOW_instructionRule_in_switchCaseRule1425);
 							instructionRule();
 							state._fsp--;
 
@@ -3583,7 +3583,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:251:5: CASE ( expressionRule | assignTypologyRule ) CL ( instructionRule )*
 					{
-					match(input,CASE,FOLLOW_CASE_in_switchCaseRule1439); 
+					match(input,CASE,FOLLOW_CASE_in_switchCaseRule1438); 
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:251:10: ( expressionRule | assignTypologyRule )
 					int alt83=2;
 					int LA83_0 = input.LA(1);
@@ -3604,7 +3604,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 						case 1 :
 							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:251:11: expressionRule
 							{
-							pushFollow(FOLLOW_expressionRule_in_switchCaseRule1442);
+							pushFollow(FOLLOW_expressionRule_in_switchCaseRule1441);
 							expressionRule();
 							state._fsp--;
 
@@ -3613,7 +3613,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 						case 2 :
 							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:251:26: assignTypologyRule
 							{
-							pushFollow(FOLLOW_assignTypologyRule_in_switchCaseRule1444);
+							pushFollow(FOLLOW_assignTypologyRule_in_switchCaseRule1443);
 							assignTypologyRule();
 							state._fsp--;
 
@@ -3622,7 +3622,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 					}
 
-					match(input,CL,FOLLOW_CL_in_switchCaseRule1447); 
+					match(input,CL,FOLLOW_CL_in_switchCaseRule1446); 
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:252:5: ( instructionRule )*
 					loop84:
 					while (true) {
@@ -3636,7 +3636,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 						case 1 :
 							// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:252:5: instructionRule
 							{
-							pushFollow(FOLLOW_instructionRule_in_switchCaseRule1453);
+							pushFollow(FOLLOW_instructionRule_in_switchCaseRule1452);
 							instructionRule();
 							state._fsp--;
 
@@ -3656,7 +3656,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				}
 			}
 
-			match(input,RBR,FOLLOW_RBR_in_switchCaseRule1464); 
+			match(input,RBR,FOLLOW_RBR_in_switchCaseRule1463); 
 			}
 
 		}
@@ -3679,8 +3679,8 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:259:2: ( FOR LP ( forInitVarRule )? SC ( conditionRule )? SC ( stepRule )? RP ( blockRule | instructionRule ) )
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:260:3: FOR LP ( forInitVarRule )? SC ( conditionRule )? SC ( stepRule )? RP ( blockRule | instructionRule )
 			{
-			match(input,FOR,FOLLOW_FOR_in_forRule1482); 
-			match(input,LP,FOLLOW_LP_in_forRule1484); 
+			match(input,FOR,FOLLOW_FOR_in_forRule1481); 
+			match(input,LP,FOLLOW_LP_in_forRule1483); 
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:260:10: ( forInitVarRule )?
 			int alt86=2;
 			int LA86_0 = input.LA(1);
@@ -3691,7 +3691,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:260:10: forInitVarRule
 					{
-					pushFollow(FOLLOW_forInitVarRule_in_forRule1486);
+					pushFollow(FOLLOW_forInitVarRule_in_forRule1485);
 					forInitVarRule();
 					state._fsp--;
 
@@ -3700,7 +3700,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			match(input,SC,FOLLOW_SC_in_forRule1489); 
+			match(input,SC,FOLLOW_SC_in_forRule1488); 
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:260:29: ( conditionRule )?
 			int alt87=2;
 			int LA87_0 = input.LA(1);
@@ -3711,7 +3711,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:260:29: conditionRule
 					{
-					pushFollow(FOLLOW_conditionRule_in_forRule1491);
+					pushFollow(FOLLOW_conditionRule_in_forRule1490);
 					conditionRule();
 					state._fsp--;
 
@@ -3720,7 +3720,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			match(input,SC,FOLLOW_SC_in_forRule1494); 
+			match(input,SC,FOLLOW_SC_in_forRule1493); 
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:260:47: ( stepRule )?
 			int alt88=2;
 			int LA88_0 = input.LA(1);
@@ -3731,7 +3731,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:260:47: stepRule
 					{
-					pushFollow(FOLLOW_stepRule_in_forRule1496);
+					pushFollow(FOLLOW_stepRule_in_forRule1495);
 					stepRule();
 					state._fsp--;
 
@@ -3740,7 +3740,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			match(input,RP,FOLLOW_RP_in_forRule1499); 
+			match(input,RP,FOLLOW_RP_in_forRule1498); 
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:261:4: ( blockRule | instructionRule )
 			int alt89=2;
 			int LA89_0 = input.LA(1);
@@ -3761,7 +3761,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:261:5: blockRule
 					{
-					pushFollow(FOLLOW_blockRule_in_forRule1505);
+					pushFollow(FOLLOW_blockRule_in_forRule1504);
 					blockRule();
 					state._fsp--;
 
@@ -3770,7 +3770,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 2 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:261:17: instructionRule
 					{
-					pushFollow(FOLLOW_instructionRule_in_forRule1509);
+					pushFollow(FOLLOW_instructionRule_in_forRule1508);
 					instructionRule();
 					state._fsp--;
 
@@ -3824,11 +3824,11 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			pushFollow(FOLLOW_idDotArrayRule_in_forInitVarRule1533);
+			pushFollow(FOLLOW_idDotArrayRule_in_forInitVarRule1532);
 			idDotArrayRule();
 			state._fsp--;
 
-			match(input,ASSIGN,FOLLOW_ASSIGN_in_forInitVarRule1535); 
+			match(input,ASSIGN,FOLLOW_ASSIGN_in_forInitVarRule1534); 
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:266:38: ( expressionRule | assignTypologyRule )
 			int alt91=2;
 			int LA91_0 = input.LA(1);
@@ -3849,7 +3849,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:266:39: expressionRule
 					{
-					pushFollow(FOLLOW_expressionRule_in_forInitVarRule1538);
+					pushFollow(FOLLOW_expressionRule_in_forInitVarRule1537);
 					expressionRule();
 					state._fsp--;
 
@@ -3858,7 +3858,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 2 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:266:54: assignTypologyRule
 					{
-					pushFollow(FOLLOW_assignTypologyRule_in_forInitVarRule1540);
+					pushFollow(FOLLOW_assignTypologyRule_in_forInitVarRule1539);
 					assignTypologyRule();
 					state._fsp--;
 
@@ -3903,7 +3903,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:271:4: o1= incDecRule
 					{
-					pushFollow(FOLLOW_incDecRule_in_stepRule1560);
+					pushFollow(FOLLOW_incDecRule_in_stepRule1559);
 					o1=incDecRule();
 					state._fsp--;
 
@@ -3912,7 +3912,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			i=(Token)match(input,ID,FOLLOW_ID_in_stepRule1569); 
+			i=(Token)match(input,ID,FOLLOW_ID_in_stepRule1568); 
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:273:3: (o2= incDecRule )?
 			int alt93=2;
 			int LA93_0 = input.LA(1);
@@ -3923,7 +3923,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:273:4: o2= incDecRule
 					{
-					pushFollow(FOLLOW_incDecRule_in_stepRule1577);
+					pushFollow(FOLLOW_incDecRule_in_stepRule1576);
 					o2=incDecRule();
 					state._fsp--;
 
@@ -3977,14 +3977,14 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:278:3: o1= DEC
 					{
-					o1=(Token)match(input,DEC,FOLLOW_DEC_in_incDecRule1599); 
+					o1=(Token)match(input,DEC,FOLLOW_DEC_in_incDecRule1598); 
 					tk = o1;
 					}
 					break;
 				case 2 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:279:4: o2= INC
 					{
-					o2=(Token)match(input,INC,FOLLOW_INC_in_incDecRule1610); 
+					o2=(Token)match(input,INC,FOLLOW_INC_in_incDecRule1609); 
 					tk = o2;
 					}
 					break;
@@ -4011,13 +4011,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:283:2: ( WHILE LP conditionRule RP ( blockRule | instructionRule ) )
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:284:3: WHILE LP conditionRule RP ( blockRule | instructionRule )
 			{
-			match(input,WHILE,FOLLOW_WHILE_in_whileRule1627); 
-			match(input,LP,FOLLOW_LP_in_whileRule1629); 
-			pushFollow(FOLLOW_conditionRule_in_whileRule1631);
+			match(input,WHILE,FOLLOW_WHILE_in_whileRule1626); 
+			match(input,LP,FOLLOW_LP_in_whileRule1628); 
+			pushFollow(FOLLOW_conditionRule_in_whileRule1630);
 			conditionRule();
 			state._fsp--;
 
-			match(input,RP,FOLLOW_RP_in_whileRule1633); 
+			match(input,RP,FOLLOW_RP_in_whileRule1632); 
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:285:4: ( blockRule | instructionRule )
 			int alt95=2;
 			int LA95_0 = input.LA(1);
@@ -4038,7 +4038,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:285:5: blockRule
 					{
-					pushFollow(FOLLOW_blockRule_in_whileRule1639);
+					pushFollow(FOLLOW_blockRule_in_whileRule1638);
 					blockRule();
 					state._fsp--;
 
@@ -4047,7 +4047,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 2 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:285:17: instructionRule
 					{
-					pushFollow(FOLLOW_instructionRule_in_whileRule1643);
+					pushFollow(FOLLOW_instructionRule_in_whileRule1642);
 					instructionRule();
 					state._fsp--;
 
@@ -4078,7 +4078,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:289:2: ( DO ( blockRule | instructionRule ) WHILE LP conditionRule RP ( SC )? )
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:290:3: DO ( blockRule | instructionRule ) WHILE LP conditionRule RP ( SC )?
 			{
-			match(input,DO,FOLLOW_DO_in_doWhileRule1657); 
+			match(input,DO,FOLLOW_DO_in_doWhileRule1656); 
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:291:4: ( blockRule | instructionRule )
 			int alt96=2;
 			int LA96_0 = input.LA(1);
@@ -4099,7 +4099,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:291:5: blockRule
 					{
-					pushFollow(FOLLOW_blockRule_in_doWhileRule1663);
+					pushFollow(FOLLOW_blockRule_in_doWhileRule1662);
 					blockRule();
 					state._fsp--;
 
@@ -4108,7 +4108,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 2 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:291:17: instructionRule
 					{
-					pushFollow(FOLLOW_instructionRule_in_doWhileRule1667);
+					pushFollow(FOLLOW_instructionRule_in_doWhileRule1666);
 					instructionRule();
 					state._fsp--;
 
@@ -4117,13 +4117,13 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 
 			}
 
-			match(input,WHILE,FOLLOW_WHILE_in_doWhileRule1672); 
-			match(input,LP,FOLLOW_LP_in_doWhileRule1674); 
-			pushFollow(FOLLOW_conditionRule_in_doWhileRule1676);
+			match(input,WHILE,FOLLOW_WHILE_in_doWhileRule1671); 
+			match(input,LP,FOLLOW_LP_in_doWhileRule1673); 
+			pushFollow(FOLLOW_conditionRule_in_doWhileRule1675);
 			conditionRule();
 			state._fsp--;
 
-			match(input,RP,FOLLOW_RP_in_doWhileRule1678); 
+			match(input,RP,FOLLOW_RP_in_doWhileRule1677); 
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:292:29: ( SC )?
 			int alt97=2;
 			int LA97_0 = input.LA(1);
@@ -4134,7 +4134,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:292:29: SC
 					{
-					match(input,SC,FOLLOW_SC_in_doWhileRule1680); 
+					match(input,SC,FOLLOW_SC_in_doWhileRule1679); 
 					}
 					break;
 
@@ -4162,9 +4162,9 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:296:2: ( CLASS ID LBR ( functionDefinitionRule )* RBR )
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:297:3: CLASS ID LBR ( functionDefinitionRule )* RBR
 			{
-			match(input,CLASS,FOLLOW_CLASS_in_classRule1695); 
-			match(input,ID,FOLLOW_ID_in_classRule1697); 
-			match(input,LBR,FOLLOW_LBR_in_classRule1702); 
+			match(input,CLASS,FOLLOW_CLASS_in_classRule1694); 
+			match(input,ID,FOLLOW_ID_in_classRule1696); 
+			match(input,LBR,FOLLOW_LBR_in_classRule1701); 
 			// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:299:4: ( functionDefinitionRule )*
 			loop98:
 			while (true) {
@@ -4178,7 +4178,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				case 1 :
 					// C:\\Users\\boffe\\Desktop\\Progetto_LFC\\JavaScriptToJQueryConverter\\JS2JQ\\src\\JS2JQConverter\\JavaScriptToJQueryConverter.g:299:4: functionDefinitionRule
 					{
-					pushFollow(FOLLOW_functionDefinitionRule_in_classRule1708);
+					pushFollow(FOLLOW_functionDefinitionRule_in_classRule1707);
 					functionDefinitionRule();
 					state._fsp--;
 
@@ -4190,7 +4190,7 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 				}
 			}
 
-			match(input,RBR,FOLLOW_RBR_in_classRule1713); 
+			match(input,RBR,FOLLOW_RBR_in_classRule1712); 
 			}
 
 		}
@@ -4381,79 +4381,79 @@ public class JavaScriptToJQueryConverterParser extends Parser {
 	public static final BitSet FOLLOW_expressionRule_in_conditionRule1259 = new BitSet(new long[]{0x0000000000000022L,0x0000000000000200L});
 	public static final BitSet FOLLOW_set_in_conditionRule1266 = new BitSet(new long[]{0x2050828008100000L,0x0000000284000020L});
 	public static final BitSet FOLLOW_conditionRule_in_conditionRule1272 = new BitSet(new long[]{0x0000000000000022L,0x0000000000000200L});
-	public static final BitSet FOLLOW_LBR_in_blockRule1288 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0040000L});
-	public static final BitSet FOLLOW_instructionRule_in_blockRule1291 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0040000L});
-	public static final BitSet FOLLOW_blockRule_in_blockRule1293 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0040000L});
-	public static final BitSet FOLLOW_RBR_in_blockRule1297 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_IF_in_ifStatementRule1312 = new BitSet(new long[]{0x2000000000000000L});
-	public static final BitSet FOLLOW_LP_in_ifStatementRule1314 = new BitSet(new long[]{0x2050828008100000L,0x0000000284000020L});
-	public static final BitSet FOLLOW_conditionRule_in_ifStatementRule1316 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_RP_in_ifStatementRule1318 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0000000L});
-	public static final BitSet FOLLOW_blockRule_in_ifStatementRule1325 = new BitSet(new long[]{0x0000000020000002L});
-	public static final BitSet FOLLOW_instructionRule_in_ifStatementRule1329 = new BitSet(new long[]{0x0000000020000002L});
-	public static final BitSet FOLLOW_ELSE_in_ifStatementRule1335 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0000000L});
-	public static final BitSet FOLLOW_IF_in_ifStatementRule1338 = new BitSet(new long[]{0x2000000000000000L});
-	public static final BitSet FOLLOW_LP_in_ifStatementRule1340 = new BitSet(new long[]{0x2050828008100000L,0x0000000284000020L});
-	public static final BitSet FOLLOW_conditionRule_in_ifStatementRule1342 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_RP_in_ifStatementRule1344 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0000000L});
-	public static final BitSet FOLLOW_blockRule_in_ifStatementRule1349 = new BitSet(new long[]{0x0000000020000002L});
-	public static final BitSet FOLLOW_instructionRule_in_ifStatementRule1353 = new BitSet(new long[]{0x0000000020000002L});
-	public static final BitSet FOLLOW_SWITCH_in_switchCaseRule1371 = new BitSet(new long[]{0x2000000000000000L});
-	public static final BitSet FOLLOW_LP_in_switchCaseRule1373 = new BitSet(new long[]{0x23508A8008100000L,0x0000001284000090L});
-	public static final BitSet FOLLOW_expressionRule_in_switchCaseRule1376 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_assignTypologyRule_in_switchCaseRule1378 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_RP_in_switchCaseRule1381 = new BitSet(new long[]{0x0200000000000000L});
-	public static final BitSet FOLLOW_LBR_in_switchCaseRule1385 = new BitSet(new long[]{0x0000000000200800L,0x0000000000040000L});
-	public static final BitSet FOLLOW_CASE_in_switchCaseRule1391 = new BitSet(new long[]{0x23508A8008100000L,0x0000001284000090L});
-	public static final BitSet FOLLOW_expressionRule_in_switchCaseRule1394 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_assignTypologyRule_in_switchCaseRule1396 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_CL_in_switchCaseRule1399 = new BitSet(new long[]{0x08018C000C260C00L,0x0000028DA0040000L});
-	public static final BitSet FOLLOW_instructionRule_in_switchCaseRule1405 = new BitSet(new long[]{0x08018C000C260C00L,0x0000028DA0040000L});
-	public static final BitSet FOLLOW_DEFAULT_in_switchCaseRule1418 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_CL_in_switchCaseRule1420 = new BitSet(new long[]{0x08018C000C060C00L,0x0000028DA0040000L});
-	public static final BitSet FOLLOW_instructionRule_in_switchCaseRule1426 = new BitSet(new long[]{0x08018C000C060C00L,0x0000028DA0040000L});
-	public static final BitSet FOLLOW_CASE_in_switchCaseRule1439 = new BitSet(new long[]{0x23508A8008100000L,0x0000001284000090L});
-	public static final BitSet FOLLOW_expressionRule_in_switchCaseRule1442 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_assignTypologyRule_in_switchCaseRule1444 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_CL_in_switchCaseRule1447 = new BitSet(new long[]{0x08018C000C060C00L,0x0000028DA0040000L});
-	public static final BitSet FOLLOW_instructionRule_in_switchCaseRule1453 = new BitSet(new long[]{0x08018C000C060C00L,0x0000028DA0040000L});
-	public static final BitSet FOLLOW_RBR_in_switchCaseRule1464 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FOR_in_forRule1482 = new BitSet(new long[]{0x2000000000000000L});
-	public static final BitSet FOLLOW_LP_in_forRule1484 = new BitSet(new long[]{0x0800800000000000L,0x0000008080400000L});
-	public static final BitSet FOLLOW_forInitVarRule_in_forRule1486 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-	public static final BitSet FOLLOW_SC_in_forRule1489 = new BitSet(new long[]{0x2050828008100000L,0x0000000284400020L});
-	public static final BitSet FOLLOW_conditionRule_in_forRule1491 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-	public static final BitSet FOLLOW_SC_in_forRule1494 = new BitSet(new long[]{0x0010800000100000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_stepRule_in_forRule1496 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_RP_in_forRule1499 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0000000L});
-	public static final BitSet FOLLOW_blockRule_in_forRule1505 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_instructionRule_in_forRule1509 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_idDotArrayRule_in_forInitVarRule1533 = new BitSet(new long[]{0x0000000000000080L});
-	public static final BitSet FOLLOW_ASSIGN_in_forInitVarRule1535 = new BitSet(new long[]{0x23508A8008100000L,0x0000001284000090L});
-	public static final BitSet FOLLOW_expressionRule_in_forInitVarRule1538 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_assignTypologyRule_in_forInitVarRule1540 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_incDecRule_in_stepRule1560 = new BitSet(new long[]{0x0000800000000000L});
-	public static final BitSet FOLLOW_ID_in_stepRule1569 = new BitSet(new long[]{0x0010000000100002L});
-	public static final BitSet FOLLOW_incDecRule_in_stepRule1577 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DEC_in_incDecRule1599 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INC_in_incDecRule1610 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_WHILE_in_whileRule1627 = new BitSet(new long[]{0x2000000000000000L});
-	public static final BitSet FOLLOW_LP_in_whileRule1629 = new BitSet(new long[]{0x2050828008100000L,0x0000000284000020L});
-	public static final BitSet FOLLOW_conditionRule_in_whileRule1631 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_RP_in_whileRule1633 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0000000L});
-	public static final BitSet FOLLOW_blockRule_in_whileRule1639 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_instructionRule_in_whileRule1643 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DO_in_doWhileRule1657 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0000000L});
-	public static final BitSet FOLLOW_blockRule_in_doWhileRule1663 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
-	public static final BitSet FOLLOW_instructionRule_in_doWhileRule1667 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
-	public static final BitSet FOLLOW_WHILE_in_doWhileRule1672 = new BitSet(new long[]{0x2000000000000000L});
-	public static final BitSet FOLLOW_LP_in_doWhileRule1674 = new BitSet(new long[]{0x2050828008100000L,0x0000000284000020L});
-	public static final BitSet FOLLOW_conditionRule_in_doWhileRule1676 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-	public static final BitSet FOLLOW_RP_in_doWhileRule1678 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
-	public static final BitSet FOLLOW_SC_in_doWhileRule1680 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CLASS_in_classRule1695 = new BitSet(new long[]{0x0000800000000000L});
-	public static final BitSet FOLLOW_ID_in_classRule1697 = new BitSet(new long[]{0x0200000000000000L});
-	public static final BitSet FOLLOW_LBR_in_classRule1702 = new BitSet(new long[]{0x0000080000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_functionDefinitionRule_in_classRule1708 = new BitSet(new long[]{0x0000080000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_RBR_in_classRule1713 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LBR_in_blockRule1287 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0040000L});
+	public static final BitSet FOLLOW_instructionRule_in_blockRule1290 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0040000L});
+	public static final BitSet FOLLOW_blockRule_in_blockRule1292 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0040000L});
+	public static final BitSet FOLLOW_RBR_in_blockRule1296 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_IF_in_ifStatementRule1311 = new BitSet(new long[]{0x2000000000000000L});
+	public static final BitSet FOLLOW_LP_in_ifStatementRule1313 = new BitSet(new long[]{0x2050828008100000L,0x0000000284000020L});
+	public static final BitSet FOLLOW_conditionRule_in_ifStatementRule1315 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_ifStatementRule1317 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0000000L});
+	public static final BitSet FOLLOW_blockRule_in_ifStatementRule1324 = new BitSet(new long[]{0x0000000020000002L});
+	public static final BitSet FOLLOW_instructionRule_in_ifStatementRule1328 = new BitSet(new long[]{0x0000000020000002L});
+	public static final BitSet FOLLOW_ELSE_in_ifStatementRule1334 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0000000L});
+	public static final BitSet FOLLOW_IF_in_ifStatementRule1337 = new BitSet(new long[]{0x2000000000000000L});
+	public static final BitSet FOLLOW_LP_in_ifStatementRule1339 = new BitSet(new long[]{0x2050828008100000L,0x0000000284000020L});
+	public static final BitSet FOLLOW_conditionRule_in_ifStatementRule1341 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_ifStatementRule1343 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0000000L});
+	public static final BitSet FOLLOW_blockRule_in_ifStatementRule1348 = new BitSet(new long[]{0x0000000020000002L});
+	public static final BitSet FOLLOW_instructionRule_in_ifStatementRule1352 = new BitSet(new long[]{0x0000000020000002L});
+	public static final BitSet FOLLOW_SWITCH_in_switchCaseRule1370 = new BitSet(new long[]{0x2000000000000000L});
+	public static final BitSet FOLLOW_LP_in_switchCaseRule1372 = new BitSet(new long[]{0x23508A8008100000L,0x0000001284000090L});
+	public static final BitSet FOLLOW_expressionRule_in_switchCaseRule1375 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_switchCaseRule1377 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_switchCaseRule1380 = new BitSet(new long[]{0x0200000000000000L});
+	public static final BitSet FOLLOW_LBR_in_switchCaseRule1384 = new BitSet(new long[]{0x0000000000200800L,0x0000000000040000L});
+	public static final BitSet FOLLOW_CASE_in_switchCaseRule1390 = new BitSet(new long[]{0x23508A8008100000L,0x0000001284000090L});
+	public static final BitSet FOLLOW_expressionRule_in_switchCaseRule1393 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_switchCaseRule1395 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_CL_in_switchCaseRule1398 = new BitSet(new long[]{0x08018C000C260C00L,0x0000028DA0040000L});
+	public static final BitSet FOLLOW_instructionRule_in_switchCaseRule1404 = new BitSet(new long[]{0x08018C000C260C00L,0x0000028DA0040000L});
+	public static final BitSet FOLLOW_DEFAULT_in_switchCaseRule1417 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_CL_in_switchCaseRule1419 = new BitSet(new long[]{0x08018C000C060C00L,0x0000028DA0040000L});
+	public static final BitSet FOLLOW_instructionRule_in_switchCaseRule1425 = new BitSet(new long[]{0x08018C000C060C00L,0x0000028DA0040000L});
+	public static final BitSet FOLLOW_CASE_in_switchCaseRule1438 = new BitSet(new long[]{0x23508A8008100000L,0x0000001284000090L});
+	public static final BitSet FOLLOW_expressionRule_in_switchCaseRule1441 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_switchCaseRule1443 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_CL_in_switchCaseRule1446 = new BitSet(new long[]{0x08018C000C060C00L,0x0000028DA0040000L});
+	public static final BitSet FOLLOW_instructionRule_in_switchCaseRule1452 = new BitSet(new long[]{0x08018C000C060C00L,0x0000028DA0040000L});
+	public static final BitSet FOLLOW_RBR_in_switchCaseRule1463 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FOR_in_forRule1481 = new BitSet(new long[]{0x2000000000000000L});
+	public static final BitSet FOLLOW_LP_in_forRule1483 = new BitSet(new long[]{0x0800800000000000L,0x0000008080400000L});
+	public static final BitSet FOLLOW_forInitVarRule_in_forRule1485 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_forRule1488 = new BitSet(new long[]{0x2050828008100000L,0x0000000284400020L});
+	public static final BitSet FOLLOW_conditionRule_in_forRule1490 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_forRule1493 = new BitSet(new long[]{0x0010800000100000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_stepRule_in_forRule1495 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_forRule1498 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0000000L});
+	public static final BitSet FOLLOW_blockRule_in_forRule1504 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_instructionRule_in_forRule1508 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_idDotArrayRule_in_forInitVarRule1532 = new BitSet(new long[]{0x0000000000000080L});
+	public static final BitSet FOLLOW_ASSIGN_in_forInitVarRule1534 = new BitSet(new long[]{0x23508A8008100000L,0x0000001284000090L});
+	public static final BitSet FOLLOW_expressionRule_in_forInitVarRule1537 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_assignTypologyRule_in_forInitVarRule1539 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_incDecRule_in_stepRule1559 = new BitSet(new long[]{0x0000800000000000L});
+	public static final BitSet FOLLOW_ID_in_stepRule1568 = new BitSet(new long[]{0x0010000000100002L});
+	public static final BitSet FOLLOW_incDecRule_in_stepRule1576 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DEC_in_incDecRule1598 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INC_in_incDecRule1609 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_WHILE_in_whileRule1626 = new BitSet(new long[]{0x2000000000000000L});
+	public static final BitSet FOLLOW_LP_in_whileRule1628 = new BitSet(new long[]{0x2050828008100000L,0x0000000284000020L});
+	public static final BitSet FOLLOW_conditionRule_in_whileRule1630 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_whileRule1632 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0000000L});
+	public static final BitSet FOLLOW_blockRule_in_whileRule1638 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_instructionRule_in_whileRule1642 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DO_in_doWhileRule1656 = new BitSet(new long[]{0x0A018C000C060400L,0x0000028DA0000000L});
+	public static final BitSet FOLLOW_blockRule_in_doWhileRule1662 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+	public static final BitSet FOLLOW_instructionRule_in_doWhileRule1666 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+	public static final BitSet FOLLOW_WHILE_in_doWhileRule1671 = new BitSet(new long[]{0x2000000000000000L});
+	public static final BitSet FOLLOW_LP_in_doWhileRule1673 = new BitSet(new long[]{0x2050828008100000L,0x0000000284000020L});
+	public static final BitSet FOLLOW_conditionRule_in_doWhileRule1675 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+	public static final BitSet FOLLOW_RP_in_doWhileRule1677 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
+	public static final BitSet FOLLOW_SC_in_doWhileRule1679 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CLASS_in_classRule1694 = new BitSet(new long[]{0x0000800000000000L});
+	public static final BitSet FOLLOW_ID_in_classRule1696 = new BitSet(new long[]{0x0200000000000000L});
+	public static final BitSet FOLLOW_LBR_in_classRule1701 = new BitSet(new long[]{0x0000080000000000L,0x0000000000040000L});
+	public static final BitSet FOLLOW_functionDefinitionRule_in_classRule1707 = new BitSet(new long[]{0x0000080000000000L,0x0000000000040000L});
+	public static final BitSet FOLLOW_RBR_in_classRule1712 = new BitSet(new long[]{0x0000000000000002L});
 }
