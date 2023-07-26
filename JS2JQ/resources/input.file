@@ -1,3 +1,4 @@
-function prova(){
-	console.log[2+"string"](test);
+for(x=1;x<2;x++){
+	prova = 1
+	ciao = 2
 }

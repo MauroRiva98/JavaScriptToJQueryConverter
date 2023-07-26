@@ -4,6 +4,7 @@ import java.io.FileReader;
 
 import org.antlr.runtime.ANTLRReaderStream;
 import org.antlr.runtime.CommonTokenStream;
+import org.antlr.runtime.TokenRewriteStream;
 
 import JS2JQConverter.JavaScriptToJQueryConverterLexer;
 import JS2JQConverter.JavaScriptToJQueryConverterParser;
@@ -16,7 +17,7 @@ public class ParserTester {
 	static JavaScriptToJQueryConverterParser parser;
   
 	public static void main(String[] args) {
-		CommonTokenStream tokens;
+		TokenRewriteStream tokens;
 	  	String fileIn = ".\\resources\\input.file";
 
 		try {
@@ -29,7 +30,7 @@ public class ParserTester {
 												new FileReader(fileIn))); 
 
 			// 2.Creo uno stream (canale) di token per la comunicazione tra lexer e parser
-		    tokens = new CommonTokenStream(lexer);
+		    tokens = new TokenRewriteStream(lexer);
 
 		    // 3.Istanzio il parser
 			parser = new JavaScriptToJQueryConverterParser(tokens);
@@ -39,8 +40,10 @@ public class ParserTester {
 		
 			// 5.controllo i risultati
 			Handler h = parser.getHandler();
-			if (h.getErrorList().size() == 0)
+			if (h.getErrorList().size() == 0) {
+				System.out.println(tokens.toString());
 				System.out.println ("Parsing terminato con successo");
+			}
 			else
 				for (int i=0; i<h.getErrorList().size(); i++)
 					System.err.println ("Errore " + (i+1) + 

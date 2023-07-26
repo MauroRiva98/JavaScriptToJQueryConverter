@@ -47,6 +47,7 @@ parseJava
 @init {initParser();}
 	: 
 		(instructionRule
+		| blockRule
 		| classRule)*
 	;
 getRule //FIX
@@ -69,9 +70,25 @@ assignTypologyRule
 		(objectRule | arrayRule | NULL | UNDEFINED | functionDefinitionRule | newRule)
 	;
 
-idDotArrayRule
+idDotArrayRuleOld
 	:
-		(idDotIdRule | (THIS (DOT ID)*) ) ((LB (INTEGER | (idDotArrayRule (LP (assignTypologyRule|expressionRule) (CM (assignTypologyRule|expressionRule))* RP)?) | STRING) RB)+ (DOT ID)*)*
+		(idDotIdRule | (THIS (DOT ID)*))
+		((LB (INTEGER | (idDotArrayRule (LP (assignTypologyRule|expressionRule) (CM (assignTypologyRule|expressionRule))* RP)?) | STRING) RB)+ (DOT ID)*)*
+	;
+
+idDotArrayRule //controllo semantico del punto facoltativo
+@after {h.checkLastDot($stop);}
+	:
+		(THIS DOT)? 
+		(idDotIdRule
+			(LB expressionRule RB)* DOT?
+			(LP parametersRule? RP DOT?)? 
+		)+
+	;
+	
+parametersRule
+	:
+		(assignTypologyRule | expressionRule)(CM (assignTypologyRule | expressionRule))*
 	;
 
 /*
@@ -92,14 +109,14 @@ idDotArrayRule
 */
 expressionRule
 	:
-		termRule ((ADD | SUB | MOD) termRule)* {System.out.println($text);}
+		termRule ((ADD | SUB | MOD) termRule)* 
 	;
 termRule
 	:
 		factorRule ((STAR | DIV | EXP | XOR | AND_BIT | OR_BIT | LSHIFT | RSHIFT | URSHIFT) factorRule)* 
 	;
 
-factorRule //controllo lato eclipse ??
+factorRule //TODO controllo lato eclipse
 	:
 		(INC|DEC)? factorTypologyRule (INC|DEC)?
 		| LP expressionRule RP
@@ -107,8 +124,18 @@ factorRule //controllo lato eclipse ??
 
 instructionRule
 	:
-		(BREAK | CONTINUE | tryCatchRule | functionDefinitionRule | blockRule | ifStatementRule | switchCaseRule | forRule | whileRule | doWhileRule | throwRule | typeOfRule | idStartingRule) 
-		SC?
+		(BREAK 
+		| CONTINUE 
+		| tryCatchRule 
+		| functionDefinitionRule  
+		| ifStatementRule 
+		| switchCaseRule 
+		| forRule 
+		| whileRule 
+		| doWhileRule 
+		| throwRule 
+		| typeOfRule 
+		| idStartingRule)SC?
 	;
 	
 throwRule
@@ -189,7 +216,7 @@ variableDefinitionRule //Ci sarebbe da fare il controllo, in dichiarazione può e
 		(VAR | LET | CONST)?
 		idDotArrayRule
 		((ASSIGN|PLUSEQ|MINUSEQ|STAREQ|DIVEQ|MODEQ|EXPEQ) (expressionRule|assignTypologyRule))?
-		{System.out.println($text);}
+		
 	;
 
 idStartingRule 
@@ -229,7 +256,7 @@ conditionRule
 
 blockRule
 	:
-		LBR instructionRule* RBR
+		LBR (instructionRule|blockRule)* RBR
 	;
 	
 ifStatementRule //In teoria ci potrebbe essere solo un else
@@ -250,14 +277,16 @@ switchCaseRule //In teoria il default non deve trovarsi per forza in ultima posi
 				instructionRule*
 			)?
 		RBR
-		{System.out.println($text);}
+		
 	;
 	
 forRule //TODO, ci sarebbe anche il for in e il for of
+@after{h.prova($start);}	
 	:
 		FOR LP forInitVarRule? SC conditionRule? SC stepRule? RP
 			(blockRule | instructionRule)
 	;
+	
 
 forInitVarRule
 	:

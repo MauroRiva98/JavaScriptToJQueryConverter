@@ -5,6 +5,7 @@ import java.util.Hashtable;
 import java.util.List;
 
 import org.antlr.runtime.Token;
+import org.antlr.runtime.TokenRewriteStream;
 import org.antlr.runtime.TokenStream;
 
 import JS2JQConverter.JavaScriptToJQueryConverterLexer;
@@ -18,11 +19,13 @@ public class Handler {
 	public static int MISS_INC_ERROR = 5;
 	public static int DIV_BY_ZERO_ERROR	= 6;
 	public static int FUNCTION_NAME_ERROR = 7;
+	public static int LAST_DOT_ERROR = 8;
 	
 	//Hashtable<String, VarDescriptor> symbolTable;
 	// ******
 	List<String> errorList;
 	TokenStream input;
+	//TokenRewriteStream input;
 	
 	// ******
 	public Handler (TokenStream input) {
@@ -80,7 +83,10 @@ public class Handler {
 			errMsg += "Division by 0";
 		else if (code == FUNCTION_NAME_ERROR)
 			errMsg += "The function declaration must have a name in this context";
+		else if (code == LAST_DOT_ERROR)
+			errMsg += "An instruction cannot ends with a dot";
 
+		
 		errorList.add(errMsg);
 	}
 	
@@ -105,7 +111,16 @@ public class Handler {
 				}
 			}
 		}
-		
+	}
+	
+	public void checkLastDot(Token last) {
+		if (last.getType()==28) {
+			myErrorHandler(LAST_DOT_ERROR, last);
+		}
+	}
+	
+	public void prova(Token first) {
+		((TokenRewriteStream) input).replace(first.getTokenIndex(), "Prova");
 	}
 	
 	/*
