@@ -3,6 +3,7 @@ package JS2JQConverter;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.Vector;
 
 import org.antlr.runtime.Token;
 import org.antlr.runtime.TokenRewriteStream;
@@ -20,6 +21,7 @@ public class Handler {
 	public static int DIV_BY_ZERO_ERROR	= 6;
 	public static int FUNCTION_NAME_ERROR = 7;
 	public static int LAST_DOT_ERROR = 8;
+	public static int GET_ERROR = 9;
 	
 	//Hashtable<String, VarDescriptor> symbolTable;
 	// ******
@@ -85,6 +87,8 @@ public class Handler {
 			errMsg += "The function declaration must have a name in this context";
 		else if (code == LAST_DOT_ERROR)
 			errMsg += "An instruction cannot ends with a dot";
+		else if(code == GET_ERROR)
+			errMsg += "Document get Type not recognized";
 
 		
 		errorList.add(errMsg);
@@ -121,6 +125,55 @@ public class Handler {
 	
 	public void prova(Token first) {
 		((TokenRewriteStream) input).replace(first.getTokenIndex(), "Prova");
+	}
+	
+	public void translateGet(Token typeGet, Token start, Token end) {
+		String type = typeGet.getText();
+		String param = "";
+		int index = typeGet.getTokenIndex();
+		index+=2;
+		Vector<Token> parameters = new Vector<Token>();
+		while(input.get(index).getType() != 84 && index < input.size()) {
+			parameters.add(input.get(index));
+			index++;
+		}
+		Boolean endString = false;
+		if(type.equals("getElementById")) 
+			param+="\"#";
+		else if(type.equals("getElementsByClassName"))
+			param+="\".";
+		else if(type.equals("getElementsByName")) {
+			param+="\"[name=";
+			endString = true;
+		}
+		else if (type.equals("getElementsByTagName"))
+			param += "\"";
+		else{
+			myErrorHandler(GET_ERROR, typeGet);
+			return;
+		}
+			
+		if(parameters.get(0).getType() == 90 && parameters.size()==1) {
+			param += parameters.get(0).getText().substring(1, parameters.get(0).getText().length()-1);
+			if(endString)
+				param += "]\"";
+			else
+				param += "\"";
+		}
+		else {
+			if(!param.equals(""))
+				param += "\" + ";
+			for(int i = 0; i<parameters.size();i++) {
+				param += parameters.get(i).getText();
+			}
+			if(endString)
+				param += " + \"]\"";
+		}
+		
+		
+		String output = "$(" + param + ")";
+		((TokenRewriteStream) input).replace(start.getTokenIndex(),end.getTokenIndex(), output);
+		
 	}
 	
 	/*

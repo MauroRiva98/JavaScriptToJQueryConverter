@@ -1,4 +1,7 @@
-for(x=1;x<2;x++){
-	prova = 1
-	ciao = 2
+var y = 1;
+var i;
+document.getElementById("pippo").getAttribute();
+for (i = 1; i <=4; i++) {
+	y = document.getElementsByName("pippo").getAttribute();
 }
+

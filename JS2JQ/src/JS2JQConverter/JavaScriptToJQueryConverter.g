@@ -50,9 +50,9 @@ parseJava
 		| blockRule
 		| classRule)*
 	;
-getRule //FIX
+getRule
 	:
-		DOCUMENT {System.out.println("Ho riconosciuto DOCUMENT");} DOT get=ID x=LP STRING RP SC? {h.test($getRule.text, $start);}
+		DOCUMENT DOT get=ID LP ((idDotArrayRule|STRING) (ADD (idDotArrayRule | STRING))*) end=RP (DOT idDotArrayRule)? {h.translateGet($get, $start, $end);}
 	;
 	
 idDotIdRule
@@ -62,7 +62,7 @@ idDotIdRule
 	
 factorTypologyRule
 	:
-		(STRING | INTEGER | FLOAT | TRUE | FALSE | idDotArrayRule)
+		(STRING | INTEGER | FLOAT | TRUE | FALSE | idDotArrayRule | getRule)
 	;
 	
 assignTypologyRule
@@ -76,7 +76,7 @@ idDotArrayRuleOld
 		((LB (INTEGER | (idDotArrayRule (LP (assignTypologyRule|expressionRule) (CM (assignTypologyRule|expressionRule))* RP)?) | STRING) RB)+ (DOT ID)*)*
 	;
 
-idDotArrayRule //controllo semantico del punto facoltativo
+idDotArrayRule
 @after {h.checkLastDot($stop);}
 	:
 		(THIS DOT)? 
@@ -91,22 +91,6 @@ parametersRule
 		(assignTypologyRule | expressionRule)(CM (assignTypologyRule | expressionRule))*
 	;
 
-/*
-idDotSubRule
-	:
-		idDotIdRule ((LB expressionRule RB)+ (LP ((assignTypologyRule|expressionRule) (CM (assignTypologyRule|expressionRule))*)? RP)? | (LP ((assignTypologyRule|expressionRule) (CM (assignTypologyRule|expressionRule))*)?RP) (LB expressionRule RB)*)
-	;
-	
-idTestRule
-	:
-		idDotIdRule
-	;
-	
-idDotArrayRule
-	:
-		(THIS DOT)? idTestRule+
-	;
-*/
 expressionRule
 	:
 		termRule ((ADD | SUB | MOD) termRule)* 
@@ -116,7 +100,7 @@ termRule
 		factorRule ((STAR | DIV | EXP | XOR | AND_BIT | OR_BIT | LSHIFT | RSHIFT | URSHIFT) factorRule)* 
 	;
 
-factorRule //TODO controllo lato eclipse
+factorRule //TODO controllo lato eclipse /J
 	:
 		(INC|DEC)? factorTypologyRule (INC|DEC)?
 		| LP expressionRule RP
@@ -134,6 +118,7 @@ instructionRule
 		| whileRule 
 		| doWhileRule 
 		| throwRule 
+		| documentRule
 		| typeOfRule 
 		| idStartingRule)SC?
 	;
@@ -176,12 +161,6 @@ functionDefinitionRule
 		RBR
 	;
 	
-/*functionCallRule
-	:
-		idDotArrayRule LP ((expressionRule|assignTypologyRule) (CM (expressionRule|assignTypologyRule))*)? RP SC?
-		{System.out.println("Ho riconosciuto una chiamata a funzione");}
-	;
-*/
 arrayRule
 	:
 		LB
@@ -207,7 +186,6 @@ objectRule //Problema virgola finale
 			)*
 			)?
 		RBR
-		{System.out.println("Ho riconosciuto JSON");}
 	;
 	
 	
@@ -217,6 +195,11 @@ variableDefinitionRule //Ci sarebbe da fare il controllo, in dichiarazione può e
 		idDotArrayRule
 		((ASSIGN|PLUSEQ|MINUSEQ|STAREQ|DIVEQ|MODEQ|EXPEQ) (expressionRule|assignTypologyRule))?
 		
+	;
+
+documentRule
+	:
+		getRule ((ASSIGN|PLUSEQ)(expressionRule|assignTypologyRule))?
 	;
 
 idStartingRule 
@@ -231,17 +214,6 @@ newRule
 		NEW ID LP ((expressionRule|assignTypologyRule) (CM (expressionRule|assignTypologyRule))*)? RP
 	;
 	
-arithmeticOperatorsRule //TODO
-	:
-		(ADD
-		|SUB
-		|STAR
-		|DIV
-		|MOD
-		|INC
-		|DEC
-		|EXP)
-	;
 
 comparatorRule
 	:
@@ -259,48 +231,49 @@ blockRule
 		LBR (instructionRule|blockRule)* RBR
 	;
 	
-ifStatementRule //In teoria ci potrebbe essere solo un else
+ifStatementRule //In teoria ci potrebbe essere solo un else /J
 	:
 		IF LP conditionRule RP 
 			(blockRule | instructionRule)
-		(ELSE (IF LP conditionRule RP)? (blockRule | instructionRule))*	{System.out.println($text);}
+		(ELSE (IF LP conditionRule RP)? (blockRule | instructionRule))*	
 	;
 	
-switchCaseRule //In teoria il default non deve trovarsi per forza in ultima posizione (e può avere il break)
+switchCaseRule
 	:
 		SWITCH LP (expressionRule|assignTypologyRule) RP
 		LBR
 			(CASE (expressionRule|assignTypologyRule) CL
 				instructionRule*
-			)+
+			)*
 			(DEFAULT CL
 				instructionRule*
 			)?
+			(CASE (expressionRule|assignTypologyRule) CL
+				instructionRule*
+			)*
 		RBR
 		
 	;
 	
-forRule //TODO, ci sarebbe anche il for in e il for of
-@after{h.prova($start);}	
+forRule //TODO, ci sarebbe anche il for in e il for of	
 	:
 		FOR LP forInitVarRule? SC conditionRule? SC stepRule? RP
 			(blockRule | instructionRule)
 	;
 	
-
 forInitVarRule
 	:
 		(VAR | LET)? idDotArrayRule ASSIGN (expressionRule|assignTypologyRule)
 	;
 		
-stepRule //Copia-incolla, i metodi non ci sono nell'Handler
+stepRule //Copia-incolla, i metodi non ci sono nell'Handler  /J
 	:
 		(o1=incDecRule)? 
 		i=ID 
 		(o2=incDecRule)?
 	;
 	
-incDecRule returns[Token tk] //Copia-incolla
+incDecRule returns[Token tk] //Copia-incolla	/J
 	:
 		o1=DEC  {tk = $o1;} 
 	|	o2=INC	{tk = $o2;}
