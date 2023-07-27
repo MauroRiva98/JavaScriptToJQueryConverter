@@ -50,19 +50,21 @@ parseJava
 		| blockRule
 		| classRule)*
 	;
-getRule
-	:
-		DOCUMENT DOT get=ID LP ((idDotArrayRule|STRING) (ADD (idDotArrayRule | STRING))*) end=RP (DOT idDotArrayRule)? {h.translateGet($get, $start, $end);}
-	;
 	
 idDotIdRule
 	:
-		ID (DOT ID)*
+		ID (DOT ID)* 
 	;
 	
 factorTypologyRule
 	:
-		(STRING | INTEGER | FLOAT | TRUE | FALSE | idDotArrayRule | getRule)
+		(o1=STRING
+		| o2=INTEGER 
+		| o3=FLOAT  
+		| o4=TRUE 
+		| o5=FALSE  
+		| o6=idDotArrayRule
+		| o7=getRule )
 	;
 	
 assignTypologyRule
@@ -70,20 +72,18 @@ assignTypologyRule
 		(objectRule | arrayRule | NULL | UNDEFINED | functionDefinitionRule | newRule)
 	;
 
-idDotArrayRuleOld
-	:
-		(idDotIdRule | (THIS (DOT ID)*))
-		((LB (INTEGER | (idDotArrayRule (LP (assignTypologyRule|expressionRule) (CM (assignTypologyRule|expressionRule))* RP)?) | STRING) RB)+ (DOT ID)*)*
-	;
 
 idDotArrayRule
-@after {h.checkLastDot($stop);}
+@after {h.checkLastDot($stop);
+	h.translateId($start, $stop);}
 	:
+		o1=incDecRule? 
 		(THIS DOT)? 
 		(idDotIdRule
 			(LB expressionRule RB)* DOT?
 			(LP parametersRule? RP DOT?)? 
 		)+
+		o2=incDecRule? {h.checkDuplicateIncDec(o1, o2, $start);}
 	;
 	
 parametersRule
@@ -100,25 +100,25 @@ termRule
 		factorRule ((STAR | DIV | EXP | XOR | AND_BIT | OR_BIT | LSHIFT | RSHIFT | URSHIFT) factorRule)* 
 	;
 
-factorRule //TODO controllo lato eclipse /J
+factorRule //CONTROLLO AGGIUNTO
 	:
-		(INC|DEC)? factorTypologyRule (INC|DEC)?
+		factorTypologyRule
 		| LP expressionRule RP
 	;
 
-instructionRule
+instructionRule //ho tolto documentRule perche dovevo inserire espressionRule che mancava ma facevano conflitto, ora manca  "| documentRule" --> unica soluzione pensata: raggiungere espressionda documentRule mettendo (ASSIGN|PLUSEQ) opzionali 
 	:
 		(BREAK 
 		| CONTINUE 
 		| tryCatchRule 
-		| functionDefinitionRule  
-		| ifStatementRule 
+		| functionDefinitionRule 
+		| documentRule
+		| ifStatementRule
 		| switchCaseRule 
 		| forRule 
 		| whileRule 
 		| doWhileRule 
-		| throwRule 
-		| documentRule
+		| throwRule
 		| typeOfRule 
 		| idStartingRule)SC?
 	;
@@ -201,8 +201,14 @@ documentRule
 	:
 		getRule ((ASSIGN|PLUSEQ)(expressionRule|assignTypologyRule))?
 	;
+	
+getRule 
+	:
+		DOCUMENT DOT get=ID LP ((idDotArrayRule|STRING) (ADD (idDotArrayRule | STRING))*) end=RP (DOT idDotArrayRule)? {h.translateGet($get, $start, $end);}
+	;
 
 idStartingRule 
+@after{h.translateIdWithAssign($start, $stop);}
 	:
 		(VAR | LET | CONST)?
 		idDotArrayRule ( ((ASSIGN|PLUSEQ|MINUSEQ|STAREQ|DIVEQ|MODEQ|EXPEQ) (expressionRule|assignTypologyRule))? | INSTANCEOF ID)
@@ -231,11 +237,12 @@ blockRule
 		LBR (instructionRule|blockRule)* RBR
 	;
 	
-ifStatementRule //In teoria ci potrebbe essere solo un else /J
+ifStatementRule
 	:
 		IF LP conditionRule RP 
 			(blockRule | instructionRule)
 		(ELSE (IF LP conditionRule RP)? (blockRule | instructionRule))*	
+		
 	;
 	
 switchCaseRule
@@ -255,9 +262,9 @@ switchCaseRule
 		
 	;
 	
-forRule //TODO, ci sarebbe anche il for in e il for of	
+forRule //TODO, ci sarebbe anche il for in e il for of	NB: non ci sono controlli sullo step
 	:
-		FOR LP forInitVarRule? SC conditionRule? SC stepRule? RP
+		FOR LP forInitVarRule? SC conditionRule? SC idDotArrayRule? RP
 			(blockRule | instructionRule)
 	;
 	
@@ -266,17 +273,17 @@ forInitVarRule
 		(VAR | LET)? idDotArrayRule ASSIGN (expressionRule|assignTypologyRule)
 	;
 		
-stepRule //Copia-incolla, i metodi non ci sono nell'Handler  /J
-	:
-		(o1=incDecRule)? 
-		i=ID 
-		(o2=incDecRule)?
-	;
+//stepRule //CONTROLLO AGGIUNTO
+	//:
+	//	(o1=incDecRule)? 
+	//	i=ID 
+	//	(o2=incDecRule)? {h.checkIncDec(o1, o2, $i);}
+	//;
 	
-incDecRule returns[Token tk] //Copia-incolla	/J
+incDecRule returns[Token tk] 
 	:
-		o1=DEC  {tk = $o1;} 
-	|	o2=INC	{tk = $o2;}
+		o1=DEC    {tk = $o1;} 
+		|o2=INC   {tk = $o2;}
 	;
 	
 whileRule 
