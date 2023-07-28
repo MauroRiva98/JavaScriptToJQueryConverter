@@ -194,6 +194,7 @@ public class Handler {
 		while(index <= stop.getTokenIndex()) {
 			if (input.get(index).getType()==47){
 				Token id = input.get(index);
+				
 				int idx = index;
 				Token prec=input.get(index);;
 				Token doublePrec = input.get(index);;
@@ -213,18 +214,21 @@ public class Handler {
 				idx = index;
 				
 				find=0;
-				Token succ= input.get(index);;
-				Token doubleSucc = input.get(index);;
+				Token succ= input.get(index);
+				Token doubleSucc = input.get(index);
+				Token tripleSucc = input.get(index);
 	
-				while(find<2) {
+				while(find<3) {
 					if(idx+1>=input.size())  //controllo oltre alla regola 
 						break;
 					idx++;
 					if(input.get(idx).getChannel()!=JavaScriptToJQueryConverterLexer.HIDDEN) {
 						if(find==0)
 							succ = input.get(idx);
-						else
+						else if (find==1)
 							doubleSucc = input.get(idx);
+						else if (find==2)
+							tripleSucc = input.get(idx);
 						find++;
 					}
 				}
@@ -248,7 +252,7 @@ public class Handler {
 							((TokenRewriteStream) input).replace(index, "text()");
 						}
 					}
-					else if(id.getText().equals("style") && succ.getType()==28 && succ.getType()!=7 && succ.getType()!=76) {
+					else if(id.getText().equals("style") && succ.getType()==28 && tripleSucc.getType()!=7 && tripleSucc.getType()!=76) {
 						Token param = doubleSucc;
 						((TokenRewriteStream) input).replace(index, doubleSucc.getTokenIndex(), "css(\"" + param.getText() + "\")");
 					}
@@ -258,35 +262,103 @@ public class Handler {
 		}
 	}
 	
+	/*TOKENS usati: 
+	 * 28 --> Punto
+	 * 61 --> LP
+	 * 7  --> Assign
+	 * 76 --> PlusEq
+	 * 47 --> ID
+	 * 86 --> SC
+	 * */
 	public void translateIdWithAssign(Token start, Token stop) {
 		int index = start.getTokenIndex();
 		while(index <= stop.getTokenIndex()) {
-			if (input.get(index).getType()==47 && (input.get(index+1).getType()==7 || input.get(index+1).getType()==76)){
-				System.out.println("IF translateIdWithAssign");
-				Token id = input.get(index);
-				Vector<Token> params = new Vector<Token>();
-				String output = "";
-				for(int i = index+1; i<= stop.getTokenIndex(); i++){
-					if(i != stop.getTokenIndex() || input.get(i).getType()!=86) 
-							params.add(input.get(i));
+			
+			int idx = index;
+			Token prec=input.get(index);
+			Boolean find = false;
+			while(!find) {
+				if(idx-1<0) 
+					break;
+				idx--;
+				if(input.get(idx).getChannel()!=JavaScriptToJQueryConverterLexer.HIDDEN) {
+					prec = input.get(idx);
+					find=true;
 				}
-				output = ((TokenRewriteStream) input).toString(params.get(0).getTokenIndex(), params.get(params.size()-1).getTokenIndex());
-				if(index > 0 && input.get(index-1).getType() == 28){
+			}
+			idx = index;
+			
+			int counter=0;
+			Token succ= input.get(index);
+			Token doubleSucc = input.get(index);
+			Token quadSucc = input.get(index);
+
+			while(counter<4) {
+				if(idx+1>=input.size())  //controllo oltre alla regola 
+					break;
+				idx++;
+				if(input.get(idx).getChannel()!=JavaScriptToJQueryConverterLexer.HIDDEN) {
+					if(counter==0)
+						succ = input.get(idx);
+					else if (counter==1)
+						doubleSucc = input.get(idx);
+					else if (counter==3)
+						quadSucc = input.get(idx);
+					counter++;
+				}
+			}
+			idx = index;
+			
+			if (input.get(index).getType()==47 && (succ.getType()==7 || succ.getType()==76)){ 
+				Token id = input.get(index);
+				
+				String output = "";
+				
+				int end = stop.getTokenIndex();
+				if(stop.getType()==86)
+					end--;
+				output = ((TokenRewriteStream) input).toString(doubleSucc.getTokenIndex(), end);
+				String prefix = "";
+				if(succ.getType()==76) {
+					prefix = input.toString(start.getTokenIndex(), prec.getTokenIndex());
+				}
+				if(index > 0 && prec.getType() == 28){
 					if(id.getText().equals("value")) {
-						((TokenRewriteStream) input).replace(index, "val("+ output +")");
+						if(succ.getType()==76) {
+							prefix += "val() + ";
+							output=prefix+output;
+						}
+						((TokenRewriteStream) input).replace(index, end, "val("+ output +")");
 					}
 					else if(id.getText().equals("innerHTML")) {
-						((TokenRewriteStream) input).replace(index, "html(" + output + ")");
+						if(succ.getType()==76) {
+							prefix += "html() + ";
+							output=prefix+output;
+						}
+						((TokenRewriteStream) input).replace(index, end, "html(" + output + ")");
 					}
 					else if(id.getText().equals("textContent")){
-						((TokenRewriteStream) input).replace(index, "text(" + output + ")");
+						if(succ.getType()==76) {
+							prefix += "text() + ";
+							output=prefix+output;
+						}
+						((TokenRewriteStream) input).replace(index, end, "text(" + output + ")");
 					}
 				}
 				
 			}
+			else if(input.get(index).getType()==47 && input.get(index).getText().equals("style") && succ.getType()==28) {
+				String output = "";
+				int end = stop.getTokenIndex();
+				if(stop.getType()==86)
+					end--;
+				output = ((TokenRewriteStream) input).toString(quadSucc.getTokenIndex(), end);
+				((TokenRewriteStream) input).replace(index, end, "css("+ "\"" + doubleSucc.getText() +"\", " + output + ")");
+			}
 			index++;
 		}
 	}
+	
 	
 	/*public void checkIncDec(Token before, Token after, Token id) {
 		System.out.println("CHECKINCDEC FOR");

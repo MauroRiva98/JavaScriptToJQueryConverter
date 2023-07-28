@@ -1,7 +1,17 @@
-var src = document.getElementById('myImg').getAttribute(document.getElementById('myImg').getAttribute('src'));
+/*var src = document.getElementById('myImg').getAttribute(document.getElementById('myImg').getAttribute('src'));
 element.classList.add("mystyle");
 document.getElementById("myText").value 
 s=document.getElementById("myText").innerHTML
 let text = element.textContent
 document.getElementById('image_1').style.top
-document.getElementById("myText").value = "Johnny Bravo";
+let x = 5;
+element.textContent += "Bravo";
+document.getElementById("myText").innerHTML += ciao+y+x;
+document.getElementById("myText").value += "Johnny Bravo";
+document.getElementById('image_1').style.top = "100px"; */
+
+nuovo_laser.innerHTML = "<img src=\""+lase+"\" id=\"las\" style=\"position:relative; width:50px; height:50px;\"\/>";        
+totlaser++;
+document.getElementById("blaster").play();
+nuovo_laser.id = totlaser + "L";
+document.getElementById("myText").value = document.getElementById("cc").value+10;

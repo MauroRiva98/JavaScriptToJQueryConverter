@@ -198,6 +198,7 @@ variableDefinitionRule //Ci sarebbe da fare il controllo, in dichiarazione può e
 	;
 
 documentRule
+@after{h.translateIdWithAssign($start, $stop);}
 	:
 		getRule ((ASSIGN|PLUSEQ)(expressionRule|assignTypologyRule))?
 	;
