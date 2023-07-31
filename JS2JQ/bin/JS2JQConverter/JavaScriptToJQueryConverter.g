@@ -75,7 +75,10 @@ assignTypologyRule
 
 idDotArrayRule
 @after {h.checkLastDot($stop);
-	h.translateId($start, $stop);}
+	h.translateId($start, $stop);
+	h.saveVariable($text, $start, $stop, o1, o2);
+	h.getAjaxMethod($start, $stop);
+	}
 	:
 		o1=incDecRule? 
 		(THIS DOT)? 
@@ -209,10 +212,13 @@ getRule
 	;
 
 idStartingRule 
-@after{h.translateIdWithAssign($start, $stop);}
+@after{h.translateIdWithAssign($start, $stop);
+	h.searchXMLHttpRequest($start, $stop);
+	h.getAjaxAttribute($start, $stop);
+	}
 	:
 		(VAR | LET | CONST)?
-		idDotArrayRule ( ((ASSIGN|PLUSEQ|MINUSEQ|STAREQ|DIVEQ|MODEQ|EXPEQ) (expressionRule|assignTypologyRule))? | INSTANCEOF ID)
+		id=idDotArrayRule ( ((ASSIGN|PLUSEQ|MINUSEQ|STAREQ|DIVEQ|MODEQ|EXPEQ) (expressionRule|assignTypologyRule))? | INSTANCEOF ID)
 	;
 
 	

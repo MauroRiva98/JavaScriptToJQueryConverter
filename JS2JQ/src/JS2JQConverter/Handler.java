@@ -30,10 +30,14 @@ public class Handler {
 	List<String> errorList;
 	TokenStream input;
 	//TokenRewriteStream input;
+	String lastId;
+	
+	Vector<AjaxInformation> ajax;
 	
 	// ******
 	public Handler (TokenStream input) {
 		this.input = input;
+		this.ajax = new Vector<AjaxInformation>();
 		//symbolTable = new Hashtable<String, VarDescriptor>(101);
 		errorList = new ArrayList<String>();
 	}
@@ -359,7 +363,201 @@ public class Handler {
 		}
 	}
 	
+	public void searchXMLHttpRequest(Token start, Token stop) {
+		int index = start.getTokenIndex();
+		Boolean findNew = false;
+		while(index<=stop.getTokenIndex()) {
+			if(input.get(index).getType()==68) { // 68 --> new
+				findNew=true;
+			}
+			if(findNew && input.get(index).getType()==47 && input.get(index).getText().equals("XMLHttpRequest")) { //47 --> ID
+				AjaxInformation x = new AjaxInformation(lastId, start.getTokenIndex(), stop.getTokenIndex());
+				ajax.add(x);
+			}
+			index++;
+		}
+	}
 	
+	public void saveVariable(String text, Token start, Token stop, Token o1, Token o2) {
+		int index = start.getTokenIndex();
+		while(input.get(index).getType()!=47)
+			index++;
+		text = input.get(index).getText();
+		//mancherebbe controllo su ++/-- dopo la variabile
+		if(!text.equals("XMLHttpRequest")) {
+			lastId = text;
+			for(int i=0; i<ajax.size(); i++) {
+				if(lastId.equals(ajax.get(i).getVariableName())) {
+					ajaxCall(ajax.get(i), start, stop);
+					break;
+				}
+			}
+		}
+		
+	}
+	
+	
+	private void ajaxCall(AjaxInformation ajax, Token start, Token stop) {
+		if(ajax.indexAjax[0] == -1)
+			ajax.indexAjax[0] = start.getTokenIndex();
+		ajax.indexAjax[1] = stop.getTokenIndex();
+	}
+
+	
+	public void getAjaxAttribute(Token start, Token stop) {
+		if(start.getType()==47) {
+			int idx=start.getTokenIndex();
+			int counter=0;
+			Token succ= input.get(idx);
+			Token doubleSucc = input.get(idx);
+			Token tripleSucc = input.get(idx);
+			Token quadSucc = input.get(idx);
+
+			while(counter<4) {
+				if(idx+1>=input.size())  //controllo oltre alla regola 
+					break;
+				idx++;
+				if(input.get(idx).getChannel()!=JavaScriptToJQueryConverterLexer.HIDDEN) {
+					if(counter==0)
+						succ = input.get(idx);
+					else if (counter==1)
+						doubleSucc = input.get(idx);
+					else if (counter==2)
+						tripleSucc = input.get(idx);
+					else if (counter==3)
+						quadSucc = input.get(idx);
+					counter++;
+				}
+			}
+			AjaxInformation block = null;
+			for(int i=0; i<ajax.size(); i++) {
+				if(start.getText().equals(ajax.get(i).getVariableName())) {
+					block = ajax.get(i);
+					break;
+				}
+			}
+			if(block==null) return;
+			
+			if(succ.getType()==28 && doubleSucc.getType()==47 && tripleSucc.getType()==7) { //DOT, ID, ASSIGN
+				int end = stop.getTokenIndex();
+				if(stop.getType()==86) { //SC
+					end--;
+				}
+				block.propertyMap.put(doubleSucc.getText(), input.toString(quadSucc.getTokenIndex(), end));
+			}
+		}
+	}
+	
+	public void getAjaxMethod(Token start, Token stop) {
+		if(start.getType()==47) {
+			
+			int idx=start.getTokenIndex();
+			int counter=0;
+			Token succ= input.get(idx);
+			Token doubleSucc = input.get(idx);
+			Token tripleSucc = input.get(idx);
+			Token quadSucc = input.get(idx);
+
+			while(counter<4) {
+				if(idx+1>=input.size())  //controllo oltre alla regola 
+					break;
+				idx++;
+				if(input.get(idx).getChannel()!=JavaScriptToJQueryConverterLexer.HIDDEN) {
+					if(counter==0)
+						succ = input.get(idx);
+					else if (counter==1)
+						doubleSucc = input.get(idx);
+					else if (counter==2)
+						tripleSucc = input.get(idx);
+					else if (counter==3)
+						quadSucc = input.get(idx);
+					counter++;
+				}
+			}
+			
+			AjaxInformation block = null;
+			for(int i=0; i<ajax.size(); i++) {
+				if(start.getText().equals(ajax.get(i).getVariableName())) {
+					block = ajax.get(i);
+					break;
+				}
+			}
+			if(block==null) return;
+			if(succ.getType()==28 && doubleSucc.getType()==47 && tripleSucc.getType()==61) { //DOT, ID, LP
+				int index = quadSucc.getTokenIndex();
+				if(doubleSucc.getText().equals("open")) {
+					int c = 0;
+					while(input.get(index).getType()!=84) { //RP
+						while(input.get(index).getType()==15 || input.get(index).getChannel() == JavaScriptToJQueryConverterLexer.HIDDEN) //CM
+							index++;
+						if(c==0)
+							block.propertyMap.put("method", input.get(index).getText());
+						else if(c==1)
+							block.propertyMap.put("url", input.get(index).getText());
+						else if(c==2)
+							block.propertyMap.put("async", input.get(index).getText());
+						else if(c==3)
+							block.propertyMap.put("user", input.get(index).getText());
+						else if(c==4)
+							block.propertyMap.put("psw", input.get(index).getText());
+						else
+							break;
+						index++;
+						c++;
+					}
+					
+				}
+				else if(doubleSucc.getText().equals("send")){
+					if(quadSucc.getType()!=84) {
+						int i = quadSucc.getTokenIndex();
+						while(input.get(i).getType()!=84)
+							i++;
+						String s = input.toString(quadSucc.getTokenIndex(), i-1);
+						block.propertyMap.put("data", s);
+						translateAjax(block);
+					}
+				}
+			}
+		}
+	}
+	
+	private void translateAjax(AjaxInformation block) {
+		if(block.propertyMap.get("url")==null || block.propertyMap.get("method")==null || (block.propertyMap.get("onload")==null && block.propertyMap.get("onreadystatechange")==null)) {
+			System.err.println("Cannot translate ajax request, missing parameters on variable " + block.getVariableName()) ; //TODO migliorare segnalazione errore
+			return;
+		}
+		String output = "$.ajax({url:" + block.propertyMap.get("url") + ", type: " + block.propertyMap.get("method") + ", success: ";
+		if(block.propertyMap.get("onload")!=null)
+			output += block.propertyMap.get("onload");
+		else 
+			output += block.propertyMap.get("onreadystatechange");
+		
+		if(block.propertyMap.get("user") != null && block.propertyMap.get("psw") != null) {
+			output += ", username: " + block.propertyMap.get("user");
+			output += ", password: " + block.propertyMap.get("psw");
+		}
+		
+		if(block.propertyMap.get("async")!=null) {
+			output += ", async: " + block.propertyMap.get("async");
+		}
+		
+		if(block.propertyMap.get("method").equals("POST") && block.propertyMap.get("data")!=null) {
+			output += ", data: " + block.propertyMap.get("data");
+		}
+		
+		output += "})";
+		
+		if(input.get(block.indexAjax[1]+1).getType()!=86)
+			output += ";";
+		
+		if(input.get(block.indexVariableInizialization[1]+1).getType()==86)
+			block.indexVariableInizialization[1] += 1;
+			
+		((TokenRewriteStream) input).delete(block.indexVariableInizialization[0], block.indexVariableInizialization[1]);
+		((TokenRewriteStream) input).replace(block.indexAjax[0], block.indexAjax[1], output);
+		
+	}
+
 	/*public void checkIncDec(Token before, Token after, Token id) {
 		System.out.println("CHECKINCDEC FOR");
 		if(before != null && after != null)
