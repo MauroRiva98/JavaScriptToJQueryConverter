@@ -245,6 +245,7 @@ blockRule
 	;
 	
 ifStatementRule
+@after{h.searchStatus($start, $stop);}
 	:
 		IF LP conditionRule RP 
 			(blockRule | instructionRule)

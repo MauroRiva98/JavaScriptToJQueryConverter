@@ -5,6 +5,7 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Vector;
 
+import org.antlr.grammar.v3.ANTLRParser.block_return;
 import org.antlr.runtime.Token;
 import org.antlr.runtime.TokenRewriteStream;
 import org.antlr.runtime.TokenStream;
@@ -443,7 +444,16 @@ public class Handler {
 				if(stop.getType()==86) { //SC
 					end--;
 				}
-				block.propertyMap.put(doubleSucc.getText(), input.toString(quadSucc.getTokenIndex(), end));
+				String value = input.toString(quadSucc.getTokenIndex(), end);
+				if(doubleSucc.getText().equals("onload") || doubleSucc.getText().equals("onreadystatechange")) {
+					String[] arrOfStr = value.split("\\(", 2);
+					String in = "(data, textStaus, jqXHR";
+					if(!arrOfStr[1].startsWith(")"))
+						in += ", ";
+					value = value.replaceFirst("\\(", in);
+					value = value.replaceAll(block.getVariableName(), "jqXHR");
+				}
+				block.propertyMap.put(doubleSucc.getText(), value);
 			}
 		}
 	}
@@ -522,42 +532,117 @@ public class Handler {
 	}
 	
 	private void translateAjax(AjaxInformation block) {
+		block.sendReached = true;
 		if(block.propertyMap.get("url")==null || block.propertyMap.get("method")==null || (block.propertyMap.get("onload")==null && block.propertyMap.get("onreadystatechange")==null)) {
-			System.err.println("Cannot translate ajax request, missing parameters on variable " + block.getVariableName()) ; //TODO migliorare segnalazione errore
-			return;
+			block.translateFlag = false;
+			block.errorMessage = "Cannot translate ajax request, missing parameters on variable" + block.getVariableName();  //TODO migliorare segnalazione errore
 		}
-		String output = "$.ajax({url:" + block.propertyMap.get("url") + ", type: " + block.propertyMap.get("method") + ", success: ";
-		if(block.propertyMap.get("onload")!=null)
-			output += block.propertyMap.get("onload");
-		else 
-			output += block.propertyMap.get("onreadystatechange");
-		
-		if(block.propertyMap.get("user") != null && block.propertyMap.get("psw") != null) {
-			output += ", username: " + block.propertyMap.get("user");
-			output += ", password: " + block.propertyMap.get("psw");
-		}
-		
-		if(block.propertyMap.get("async")!=null) {
-			output += ", async: " + block.propertyMap.get("async");
-		}
-		
-		if(block.propertyMap.get("method").equals("POST") && block.propertyMap.get("data")!=null) {
-			output += ", data: " + block.propertyMap.get("data");
-		}
-		
-		output += "})";
-		
-		if(input.get(block.indexAjax[1]+1).getType()!=86)
-			output += ";";
-		
-		if(input.get(block.indexVariableInizialization[1]+1).getType()==86)
-			block.indexVariableInizialization[1] += 1;
+		if(block.translateFlag) {
+			String output = "$.ajax({url:" + block.propertyMap.get("url") + ", type: " + block.propertyMap.get("method") + ", success: ";
+			if(block.propertyMap.get("onload")!=null)
+				output += block.propertyMap.get("onload");
+			else 
+				output += block.propertyMap.get("onreadystatechange");
 			
-		((TokenRewriteStream) input).delete(block.indexVariableInizialization[0], block.indexVariableInizialization[1]);
-		((TokenRewriteStream) input).replace(block.indexAjax[0], block.indexAjax[1], output);
-		
+			if(block.propertyMap.get("user") != null && block.propertyMap.get("psw") != null) {
+				output += ", username: " + block.propertyMap.get("user");
+				output += ", password: " + block.propertyMap.get("psw");
+			}
+			
+			if(block.propertyMap.get("async")!=null) {
+				output += ", async: " + block.propertyMap.get("async");
+			}
+			
+			if(block.propertyMap.get("method").equals("POST") && block.propertyMap.get("data")!=null) {
+				output += ", data: " + block.propertyMap.get("data");
+			}
+			
+			output += "})";
+			
+			if(input.get(block.indexAjax[1]+1).getType()!=86)
+				output += ";";
+			
+			if(input.get(block.indexVariableInizialization[1]+1).getType()==86)
+				block.indexVariableInizialization[1] += 1;
+				
+			((TokenRewriteStream) input).delete(block.indexVariableInizialization[0], block.indexVariableInizialization[1]);
+			((TokenRewriteStream) input).replace(block.indexAjax[0], block.indexAjax[1], output);
+		}
+		else
+			System.err.println(block.errorMessage);
 	}
 
+	public void searchStatus(Token start, Token stop) {
+		int index = start.getTokenIndex();
+		Boolean flagStatus = false;
+		AjaxInformation block = null;
+		for(int i=0; i<ajax.size(); i++) {
+			if(ajax.get(i).indexAjax[0] < start.getTokenIndex() && !ajax.get(i).sendReached)
+				block = ajax.get(i);
+		}
+		if(block == null)
+			return;
+		
+		while(input.get(index).getType()!=95 && index<=stop.getTokenIndex()) { //THIS
+			int idx=start.getTokenIndex();
+			int counter=0;
+			Token succ= input.get(idx);
+			Token doubleSucc = input.get(idx);
+			Token tripleSucc = input.get(idx);
+			Token quadSucc = input.get(idx);
+			Token pentaSucc = input.get(idx);
+
+			while(counter<5) {
+				if(idx+1>=input.size())  //controllo oltre alla regola 
+					break;
+				idx++;
+				if(input.get(idx).getChannel()!=JavaScriptToJQueryConverterLexer.HIDDEN) {
+					if(counter==0)
+						succ = input.get(idx);
+					else if (counter==1)
+						doubleSucc = input.get(idx);
+					else if (counter==2)
+						tripleSucc = input.get(idx);
+					else if (counter==3)
+						quadSucc = input.get(idx);
+					else if(counter==4)
+						pentaSucc = input.get(idx);
+					counter++;
+				}
+			}
+			
+			Token prec=input.get(index);;
+			Token doublePrec = input.get(index);;
+			int find = 0;
+			while(find<1) {
+				if(idx-1<0) 
+					break;
+				idx--;
+				if(input.get(idx).getChannel()!=JavaScriptToJQueryConverterLexer.HIDDEN) {
+					if(find==0)
+						prec = input.get(idx);
+					find++;
+				}
+			}
+			idx = index;
+			
+			if(succ.getType()==28 && doubleSucc.getText().equals("status") && tripleSucc.getType()==94 && tripleSucc.getType()==31 && prec.getType()==61 && quadSucc.getType()==54 && pentaSucc.getType()==84) { //31 --> EQ, 94 --> TEQ, 61--> LP, 54 --> INT, 84 --> RP
+				flagStatus = true;
+				Integer status = Integer.parseInt(quadSucc.getText()); 
+				
+			}
+			else {
+				block.translateFlag = false;
+				block.errorMessage = "intraducibile (if)"; //SISTEMARE MESSAGGIO
+			}
+			if(input.get(index).getType()==29 && succ.getType()!=48 && flagStatus) { //29 --> ELSE, 48 --> IF
+				block.translateFlag = false;
+				block.errorMessage = "Intraducibile (else)"; //SISTEMARE MESSAGGIO
+			}
+			index++;
+		}
+	}
+	
 	/*public void checkIncDec(Token before, Token after, Token id) {
 		System.out.println("CHECKINCDEC FOR");
 		if(before != null && after != null)

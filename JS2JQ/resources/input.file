@@ -1,5 +1,5 @@
 const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
+  xhttp.onload = function(param1, param2) {
     const xmlDoc = xhttp.responseXML;
     const cd = xmlDoc.getElementsByTagName("CD");
     myFunction(cd);
