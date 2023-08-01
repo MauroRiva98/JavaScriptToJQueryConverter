@@ -1,6 +1,7 @@
 package JS2JQConverter;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Vector;
@@ -538,12 +539,23 @@ public class Handler {
 			block.errorMessage = "Cannot translate ajax request, missing parameters on variable" + block.getVariableName();  //TODO migliorare segnalazione errore
 		}
 		if(block.translateFlag) {
-			String output = "$.ajax({url:" + block.propertyMap.get("url") + ", type: " + block.propertyMap.get("method") + ", success: ";
-			if(block.propertyMap.get("onload")!=null)
-				output += block.propertyMap.get("onload");
-			else 
-				output += block.propertyMap.get("onreadystatechange");
-			
+			String output = "$.ajax({url:" + block.propertyMap.get("url") + ", type: " + block.propertyMap.get("method") + ", ";
+			if(block.statusMap.size()==0) {
+				output += "success: ";
+				if(block.propertyMap.get("onload")!=null)
+					output += block.propertyMap.get("onload");
+				else 
+					output += block.propertyMap.get("onreadystatechange");
+			}
+			else {
+				output += "statusCode: {";
+				for(HashMap.Entry<Integer, String> entry: block.statusMap.entrySet()) {
+					output += entry.getKey() + ": function(data, textStatus, jqXHR) {" + entry.getValue() + "}, "; 
+				}
+				output = output.substring(0, output.length()-2);
+				output += "}";
+			}
+				
 			if(block.propertyMap.get("user") != null && block.propertyMap.get("psw") != null) {
 				output += ", username: " + block.propertyMap.get("user");
 				output += ", password: " + block.propertyMap.get("psw");
@@ -567,6 +579,7 @@ public class Handler {
 				
 			((TokenRewriteStream) input).delete(block.indexVariableInizialization[0], block.indexVariableInizialization[1]);
 			((TokenRewriteStream) input).replace(block.indexAjax[0], block.indexAjax[1], output);
+			
 		}
 		else
 			System.err.println(block.errorMessage);
@@ -583,59 +596,50 @@ public class Handler {
 		if(block == null)
 			return;
 		
-		while(input.get(index).getType()!=95 && index<=stop.getTokenIndex()) { //THIS
-			int idx=start.getTokenIndex();
-			int counter=0;
-			Token succ= input.get(idx);
-			Token doubleSucc = input.get(idx);
-			Token tripleSucc = input.get(idx);
-			Token quadSucc = input.get(idx);
-			Token pentaSucc = input.get(idx);
-
-			while(counter<5) {
-				if(idx+1>=input.size())  //controllo oltre alla regola 
-					break;
-				idx++;
-				if(input.get(idx).getChannel()!=JavaScriptToJQueryConverterLexer.HIDDEN) {
-					if(counter==0)
-						succ = input.get(idx);
-					else if (counter==1)
-						doubleSucc = input.get(idx);
-					else if (counter==2)
-						tripleSucc = input.get(idx);
-					else if (counter==3)
-						quadSucc = input.get(idx);
-					else if(counter==4)
-						pentaSucc = input.get(idx);
-					counter++;
+		while(index<=stop.getTokenIndex()) { 
+			TokensNotHidden tnh = new TokensNotHidden(1, 7, index, input);
+			if(input.get(index).getType()==95 && tnh.succ[1].getText().equals("status")) {
+				if(tnh.succ[0].getType()==28 && (tnh.succ[2].getType()==94 || tnh.succ[2].getType()==31) && tnh.prec[0].getType()==61 && tnh.succ[3].getType()==54 && tnh.succ[4].getType()==84) { //31 --> EQ, 94 --> TEQ, 61--> LP, 54 --> INT, 84 --> RP
+					flagStatus = true;
+					Integer status = Integer.parseInt(tnh.succ[3].getText()); 
+					int begin;
+					int end;
+					if(tnh.succ[5].getType()==57) { //LBR
+						begin = tnh.succ[6].getTokenIndex(); 
+						int idx = begin;
+						int lbr = 1;
+						int rbr = 0;
+						while(lbr-rbr!=0) {
+							if(input.get(idx).getType()==57)
+								lbr++;
+							else if(input.get(idx).getType()==82) //RBR
+								rbr++;
+							if(lbr-rbr!=0)
+								idx++;
+						}
+						end = idx-1;
+					}
+					else {
+						begin = tnh.succ[5].getTokenIndex();
+						int idx = begin;
+						while(input.get(idx).getType()!=29 && idx<=stop.getTokenIndex()) {
+							idx++;
+						}
+						end = idx-1;
+					}
+					String code = input.toString(begin, end);
+					if(block.statusMap.get(status)!=null) {
+						block.translateFlag = false;
+						block.errorMessage = "Duplicated status"; //SISTEMARE SEGNALAZIONE ERRORE
+					}else
+						block.statusMap.put(status, code);
+				}
+				else {
+					block.translateFlag = false;
+					block.errorMessage = "intraducibile (if)"; //SISTEMARE MESSAGGIO
 				}
 			}
-			
-			Token prec=input.get(index);;
-			Token doublePrec = input.get(index);;
-			int find = 0;
-			while(find<1) {
-				if(idx-1<0) 
-					break;
-				idx--;
-				if(input.get(idx).getChannel()!=JavaScriptToJQueryConverterLexer.HIDDEN) {
-					if(find==0)
-						prec = input.get(idx);
-					find++;
-				}
-			}
-			idx = index;
-			
-			if(succ.getType()==28 && doubleSucc.getText().equals("status") && tripleSucc.getType()==94 && tripleSucc.getType()==31 && prec.getType()==61 && quadSucc.getType()==54 && pentaSucc.getType()==84) { //31 --> EQ, 94 --> TEQ, 61--> LP, 54 --> INT, 84 --> RP
-				flagStatus = true;
-				Integer status = Integer.parseInt(quadSucc.getText()); 
-				
-			}
-			else {
-				block.translateFlag = false;
-				block.errorMessage = "intraducibile (if)"; //SISTEMARE MESSAGGIO
-			}
-			if(input.get(index).getType()==29 && succ.getType()!=48 && flagStatus) { //29 --> ELSE, 48 --> IF
+			if(input.get(index).getType()==29 && tnh.succ[0].getType()!=48 && flagStatus) { //29 --> ELSE, 48 --> IF
 				block.translateFlag = false;
 				block.errorMessage = "Intraducibile (else)"; //SISTEMARE MESSAGGIO
 			}

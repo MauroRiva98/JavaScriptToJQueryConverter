@@ -1,8 +1,14 @@
+if(true){
+	document.getElementById("myText").value = "Johnny Bravo";
+}
 const xhttp = new XMLHttpRequest();
-  xhttp.onload = function(param1, param2) {
-    const xmlDoc = xhttp.responseXML;
-    const cd = xmlDoc.getElementsByTagName("CD");
-    myFunction(cd);
+  xhttp.onload = function() {
+    if (this.status == 200) {
+            document.getElementById("myText").value = "Johnny Bravo" + "ciao";
+       }
+	if(this.status == 404 && pippo)
+			console.log("error");
+      
   }
   xhttp.open("GET", "https://api.example.com/data", true, "user", "password");
   xhttp.send("stringa");
