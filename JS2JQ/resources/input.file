@@ -4,7 +4,7 @@ if(true){
 const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
     if (this.status == 200) {
-            document.getElementById("myText").value = "Johnny Bravo" + "ciao";
+            document.getElementById("myText").value = "Johnny Bravo" + "ciao"; cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
        }
 	if(this.status == 404 && pippo)
 			console.log("error");
@@ -12,3 +12,7 @@ const xhttp = new XMLHttpRequest();
   }
   xhttp.open("GET", "https://api.example.com/data", true, "user", "password");
   xhttp.send("stringa");
+
+prova copia
+riprova
+ciaoo

@@ -1,6 +1,9 @@
 package JS2JQTester;
 
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.antlr.runtime.ANTLRReaderStream;
 import org.antlr.runtime.CommonTokenStream;
@@ -10,6 +13,7 @@ import JS2JQConverter.JavaScriptToJQueryConverterLexer;
 import JS2JQConverter.JavaScriptToJQueryConverterParser;
 import JS2JQConverter.Handler;
 
+import JS2JQGui.*;
 
 
 public class ParserTester {
@@ -49,6 +53,25 @@ public class ParserTester {
 							":\t" + h.getErrorList().get(i)+"");
 			
 			System.out.println(tokens.toString());
+			
+			String path=ChooserPanel.getPath();
+			if(path!=null) {
+				FileWriter writer = new FileWriter(path+"\\translated.txt");
+				writer.write(tokens.toString());
+				writer.close();
+			}
+			else {
+				Path pathAttuale = Paths.get("");
+				String directoryName = pathAttuale.toAbsolutePath().toString();
+				System.out.println(directoryName);
+				FileWriter writer = new FileWriter(directoryName+"\\translated.txt");
+				writer.write(tokens.toString());
+				writer.close();
+			}
+				
+			System.out.println("Successfully wrote to che file.");
+			
+			
 			
 		} catch (Exception e) {
 			System.out.println ("Parsing con ANTLR abortito\n\n");
