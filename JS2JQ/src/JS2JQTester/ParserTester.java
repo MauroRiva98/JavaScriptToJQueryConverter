@@ -23,8 +23,8 @@ public class ParserTester {
 	
 	public static void main(String[] args) {
 		TokenRewriteStream tokens;
-	  	//String fileIn = ".\\resources\\input.file";
-		String fileIn = ChooserPanel.getResourcePath();
+	  	String fileIn = ".\\resources\\input.file";
+		//String fileIn = ChooserPanel.getResourcePath();
 		
 		try {
 			//System.out.println ("Parsing con ANTLR lexer");
@@ -56,8 +56,7 @@ public class ParserTester {
 				for (int i=0; i<h.getErrorList().size(); i++) {
 					//System.err.println ("Errore " + (i+1) + 
 					//		":\t" + h.getErrorList().get(i)+"");
-					consoleOutput += "Errore " + (i+1) + 
-							":\t" + h.getErrorList().get(i)+"";
+					consoleOutput += h.getErrorList().get(i)+"";
 				}
 			//System.out.println(tokens.toString());
 			
@@ -81,7 +80,7 @@ public class ParserTester {
 			ChooserPanel.resetResourcePath();
 			
 			//System.out.println("Successfully wrote to the file.");
-			consoleOutput += "Successfully wrote to the file. \n";
+			consoleOutput += "\nSuccessfully wrote to the file. \n";
 			
 			
 			

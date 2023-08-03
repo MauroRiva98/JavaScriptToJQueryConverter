@@ -1,7 +1,7 @@
 if(true){
-	document.€.getElementById("myText").value = "Johnny Bravo";
+	document.€.getElementById("myText").val("Johnny Bravo");
 }
-x.style.display = "none";
+x.hide();
 const xhttp = new XMLHttpRequest();
 --pippo++;
 	function(){
@@ -10,13 +10,13 @@ const xhttp = new XMLHttpRequest();
 
   xhttp.onload = function() {
     if (this.status == 200) {
-            document.getElementById("myText").value = "Johnny Bravo" + "ciao"; 
+            $("#myText").val("Johnny Bravo" + "ciao"; 
        }
 	if(this.status == 200)
 			console.log("error");
 	
       
-  }
+  })
   xhttp.open("GET", "https://api.example.com/data", true, "user", "password");
   xhttp.send("stringa");
 

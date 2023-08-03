@@ -1,5 +1,10 @@
 package JS2JQConverter;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Hashtable;
@@ -56,14 +61,14 @@ public class Handler {
 			tk = input.LT(-1);
 
 		if (tk.getType() == JavaScriptToJQueryConverterLexer.ERROR_TK)
-			errMsg = "Lexical Error " + LEXICAL_ERROR;
+			errMsg = "Lexical Error ";
 		else 
-			errMsg = "Syntax Error " + SYNTAX_ERROR;
+			errMsg = "Syntax Error ";
 
 		errMsg += " at [" + tk.getLine() + ", " + (tk.getCharPositionInLine()+1) + "]: " +
 					" on token '" + tk.getText() + "'";
 //		errMsg += "\n" + hdr + "\n**********\n" + msg;
-		errorList.add(errMsg);
+		errorList.add(errMsg +"\n");
 	}
 
 	// ***** gestione errori semantici
@@ -71,27 +76,17 @@ public class Handler {
 		String errMsg;
 		// i primi due casi non dovrebbero mai avvenire... ma giusto in caso...
 		if (code == LEXICAL_ERROR)
-			errMsg = "Fake Lexical Error " + code;
+			errMsg = "Fake Lexical Error ";
 		else if (code == SYNTAX_ERROR)
-			errMsg = "Fake Syntax Error " + code;
+			errMsg = "Fake Syntax Error ";
 		else
-			errMsg = "Semantic Error " + code; 
+			errMsg = "Semantic Error "; 
 	
 		if (tk == null)
 			tk = input.LT(-1);
 		errMsg += " at [" + tk.getLine() + ", " + (tk.getCharPositionInLine()+1) + "]: ";
 		
-		if (code == UNDECLARED_VAR_ERROR)
-			errMsg += "The variable '" + tk.getText() + "' is undeclared";
-		else if (code == DECLARED_VAR_ERROR)
-			errMsg += "The variable '" + tk.getText() + "' has been already declared";
-		else if (code == INC_ERROR)
-			errMsg += "Cannot use '++' or '--' before and after the variable '" + tk.getText() + "'";
-		else if (code == MISS_INC_ERROR)
-			errMsg += "Missing '++' or '--' before or after the variable '" + tk.getText() + "'";
-		else if (code == DIV_BY_ZERO_ERROR)
-			errMsg += "Division by 0";
-		else if (code == FUNCTION_NAME_ERROR)
+		if (code == FUNCTION_NAME_ERROR)
 			errMsg += "The function declaration must have a name in this context";
 		else if (code == LAST_DOT_ERROR)
 			errMsg += "An instruction cannot ends with a dot";
@@ -102,15 +97,9 @@ public class Handler {
 		else if(code == MISS_INC_DEC)
 			errMsg += "Missing '++' or '--' before or after the variable ";
 
-		
-		errorList.add(errMsg);
+		errorList.add(errMsg +"\n");
 	}
 	
-	public void test(String rule, Token start) {
-		//System.out.println("$(\"#" + i.getText().substring(1, i.getText().length()-1) + "\");");
-		int index = start.getTokenIndex();
-		System.out.println(input.get(index).getText());
-	}
 	
 	public void checkFunctionName (Token name, Token func) {
 		if (name == null) {
@@ -121,7 +110,7 @@ public class Handler {
 				index--;
 				if(input.get(index).getChannel() != JavaScriptToJQueryConverterLexer.HIDDEN) {
 					int prec = input.get(index).getType();
-					if(prec != 7 && prec != 13 && prec != 61)
+					if(prec != getTokenNumber("ASSIGN") && prec != getTokenNumber("CL") && prec != getTokenNumber("LP"))
 						myErrorHandler(FUNCTION_NAME_ERROR, func);
 					break;
 				}
@@ -130,14 +119,11 @@ public class Handler {
 	}
 	
 	public void checkLastDot(Token last) {
-		if (last.getType()==28) {
+		if (last.getType()==getTokenNumber("DOT")) {
 			myErrorHandler(LAST_DOT_ERROR, last);
 		}
 	}
 	
-	public void prova(Token first) {
-		((TokenRewriteStream) input).replace(first.getTokenIndex(), "Prova");
-	}
 	
 	public void translateGet(Token typeGet, Token start, Token end) {
 		String type = typeGet.getText();
@@ -145,7 +131,7 @@ public class Handler {
 		int index = typeGet.getTokenIndex();
 		index+=2;
 		Vector<Token> parameters = new Vector<Token>();
-		while(input.get(index).getType() != 84 && index < input.size()) { //84 --> RP
+		while(input.get(index).getType() != getTokenNumber("RP") && index < input.size()) {
 			parameters.add(input.get(index));
 			index++;
 		}
@@ -165,7 +151,7 @@ public class Handler {
 			return;
 		}
 			
-		if(parameters.get(0).getType() == 90 && parameters.size()==1) {
+		if(parameters.get(0).getType() == getTokenNumber("STRING") && parameters.size()==1) {
 			param += parameters.get(0).getText().substring(1, parameters.get(0).getText().length()-1);
 			if(endString)
 				param += "]\"";
@@ -188,66 +174,24 @@ public class Handler {
 		
 	}
 	
-	/*TOKENS usati: 
-	 * 28 --> Punto
-	 * 61 --> LP
-	 * 7  --> Assign
-	 * 76 --> PlusEq
-	 * 47 --> ID
-	 * */
+	
 	public void translateId(Token start, Token stop) { //funzione chiamata da IdDotArrayRule
 		int index = start.getTokenIndex();
 		while(index <= stop.getTokenIndex()) {
-			if (input.get(index).getType()==47){
+			
+			if (input.get(index).getType()==getTokenNumber("ID")){
 				Token id = input.get(index);
 				
-				int idx = index;
-				Token prec=input.get(index);;
-				Token doublePrec = input.get(index);;
-				int find = 0;
-				while(find<2) {
-					if(idx-1<0) 
-						break;
-					idx--;
-					if(input.get(idx).getChannel()!=JavaScriptToJQueryConverterLexer.HIDDEN) {
-						if(find==0)
-							prec = input.get(idx);
-						else
-							doublePrec = input.get(idx);
-						find++;
-					}
-				}
-				idx = index;
+				TokensNotHidden tnh = new TokensNotHidden(2, 3, index, input);	
 				
-				find=0;
-				Token succ= input.get(index);
-				Token doubleSucc = input.get(index);
-				Token tripleSucc = input.get(index);
-	
-				while(find<3) {
-					if(idx+1>=input.size())  //controllo oltre alla regola 
-						break;
-					idx++;
-					if(input.get(idx).getChannel()!=JavaScriptToJQueryConverterLexer.HIDDEN) {
-						if(find==0)
-							succ = input.get(idx);
-						else if (find==1)
-							doubleSucc = input.get(idx);
-						else if (find==2)
-							tripleSucc = input.get(idx);
-						find++;
-					}
-				}
-				idx = index;
-				
-				if(index > 0 && prec.getType() == 28){
-					if(id.getText().equals("getAttribute") && index<stop.getTokenIndex() && succ.getType()==61) {
+				if(index > 0 && tnh.prec[0].getType() == getTokenNumber("DOT")){
+					if(id.getText().equals("getAttribute") && index<stop.getTokenIndex() && tnh.succ[0].getType()==getTokenNumber("LP")) {
 						((TokenRewriteStream) input).replace(index, "attr");
 					}	
-					else if(id.getText().equals("add") && index>1 && doublePrec.getText().equals("classList") && succ.getType()==61) {
-						((TokenRewriteStream) input).replace(doublePrec.getTokenIndex(), index, "addClass");
+					else if(id.getText().equals("add") && index>1 && tnh.prec[1].getText().equals("classList") && tnh.succ[0].getType()==getTokenNumber("LP")) {
+						((TokenRewriteStream) input).replace(tnh.prec[1].getTokenIndex(), index, "addClass");
 					}
-					else if(succ.getType()!=28 && succ.getType()!=7 && succ.getType()!=76) { //caso: x=document.getElementById("myText").value
+					else if(tnh.succ[0].getType()!=getTokenNumber("DOT") && tnh.succ[0].getType()!=getTokenNumber("ASSIGN") && tnh.succ[0].getType()!=getTokenNumber("PLUSEQ")) { //caso: x=document.getElementById("myText").value
 						if(id.getText().equals("value")) {
 							((TokenRewriteStream) input).replace(index, "val()");
 						}
@@ -258,9 +202,9 @@ public class Handler {
 							((TokenRewriteStream) input).replace(index, "text()");
 						}
 					}
-					else if(id.getText().equals("style") && succ.getType()==28 && tripleSucc.getType()!=7 && tripleSucc.getType()!=76) {
-						Token param = doubleSucc;
-						((TokenRewriteStream) input).replace(index, doubleSucc.getTokenIndex(), "css(\"" + param.getText() + "\")");
+					else if(id.getText().equals("style") && tnh.succ[0].getType()==getTokenNumber("DOT") && tnh.succ[2].getType()!=getTokenNumber("ASSIGN") && tnh.succ[2].getType()!=getTokenNumber("PLUSEQ")) {
+						Token param = tnh.succ[1];
+						((TokenRewriteStream) input).replace(index, tnh.succ[1].getTokenIndex(), "css(\"" + param.getText() + "\")");
 					}
 				}
 			}
@@ -268,83 +212,42 @@ public class Handler {
 		}
 	}
 	
-	/*TOKENS usati: 
-	 * 28 --> Punto
-	 * 61 --> LP
-	 * 7  --> Assign
-	 * 76 --> PlusEq
-	 * 47 --> ID
-	 * 86 --> SC
-	 * */
 	public void translateIdWithAssign(Token start, Token stop) {
 		int index = start.getTokenIndex();
 		while(index <= stop.getTokenIndex()) {
 			
-			int idx = index;
-			Token prec=input.get(index);
-			Boolean find = false;
-			while(!find) {
-				if(idx-1<0) 
-					break;
-				idx--;
-				if(input.get(idx).getChannel()!=JavaScriptToJQueryConverterLexer.HIDDEN) {
-					prec = input.get(idx);
-					find=true;
-				}
-			}
-			idx = index;
+			TokensNotHidden tnh = new TokensNotHidden(1, 4, index, input);
 			
-			int counter=0;
-			Token succ= input.get(index);
-			Token doubleSucc = input.get(index);
-			Token quadSucc = input.get(index);
-
-			while(counter<4) {
-				if(idx+1>=input.size())  //controllo oltre alla regola 
-					break;
-				idx++;
-				if(input.get(idx).getChannel()!=JavaScriptToJQueryConverterLexer.HIDDEN) {
-					if(counter==0)
-						succ = input.get(idx);
-					else if (counter==1)
-						doubleSucc = input.get(idx);
-					else if (counter==3)
-						quadSucc = input.get(idx);
-					counter++;
-				}
-			}
-			idx = index;
-			
-			if (input.get(index).getType()==47 && (succ.getType()==7 || succ.getType()==76)){ 
+			if (input.get(index).getType()==getTokenNumber("ID") && (tnh.succ[0].getType()==getTokenNumber("ASSIGN") || tnh.succ[0].getType()==getTokenNumber("PLUSEQ"))){ 
 				Token id = input.get(index);
 				
 				String output = "";
 				
 				int end = stop.getTokenIndex();
-				if(stop.getType()==86)
+				if(stop.getType()==getTokenNumber("SC"))
 					end--;
-				output = ((TokenRewriteStream) input).toString(doubleSucc.getTokenIndex(), end);
+				output = ((TokenRewriteStream) input).toString(tnh.succ[1].getTokenIndex(), end);
 				String prefix = "";
-				if(succ.getType()==76) {
-					prefix = input.toString(start.getTokenIndex(), prec.getTokenIndex());
+				if(tnh.succ[0].getType()==getTokenNumber("PLUSEQ")) {
+					prefix = input.toString(start.getTokenIndex(), tnh.prec[0].getTokenIndex());
 				}
-				if(index > 0 && prec.getType() == 28){
+				if(index > 0 && tnh.prec[0].getType() == getTokenNumber("DOT")){
 					if(id.getText().equals("value")) {
-						if(succ.getType()==76) {
+						if(tnh.succ[0].getType()==getTokenNumber("PLUSEQ")) {
 							prefix += "val() + ";
 							output=prefix+output;
 						}
 						((TokenRewriteStream) input).replace(index, end, "val("+ output +")");
 					}
 					else if(id.getText().equals("innerHTML")) {
-						if(succ.getType()==76) {
+						if(tnh.succ[0].getType()==getTokenNumber("PLUSEQ")) {
 							prefix += "html() + ";
 							output=prefix+output;
 						}
 						((TokenRewriteStream) input).replace(index, end, "html(" + output + ")");
 					}
 					else if(id.getText().equals("textContent")){
-						if(succ.getType()==76) {
+						if(tnh.succ[0].getType()==getTokenNumber("PLUSEQ")) {
 							prefix += "text() + ";
 							output=prefix+output;
 						}
@@ -353,13 +256,29 @@ public class Handler {
 				}
 				
 			}
-			else if(input.get(index).getType()==47 && input.get(index).getText().equals("style") && succ.getType()==28) {
+			else if(input.get(index).getType()==getTokenNumber("ID") && input.get(index).getText().equals("style") && tnh.succ[0].getType()==getTokenNumber("DOT")) {
 				String output = "";
 				int end = stop.getTokenIndex();
-				if(stop.getType()==86)
+				if(stop.getType()==getTokenNumber("SC"))
 					end--;
-				output = ((TokenRewriteStream) input).toString(quadSucc.getTokenIndex(), end);
-				((TokenRewriteStream) input).replace(index, end, "css("+ "\"" + doubleSucc.getText() +"\", " + output + ")");
+				if(tnh.succ[1].getText().equals("display") && tnh.succ[2].getType()==getTokenNumber("ASSIGN")) {
+					if(tnh.succ[3].getText().equals("\"none\"")) {
+						output = "hide()";
+						((TokenRewriteStream) input).replace(index, end, output);
+					}
+					else if(tnh.succ[3].getText().equals("\"block\"")) {
+						output = "show()";
+						((TokenRewriteStream) input).replace(index, end, output);
+					}
+					else {
+						output = ((TokenRewriteStream) input).toString(tnh.succ[3].getTokenIndex(), end);
+						((TokenRewriteStream) input).replace(index, end, "css("+ "\"" + tnh.succ[1].getText() +"\", " + output + ")");
+					}	
+				}
+				else {
+					output = ((TokenRewriteStream) input).toString(tnh.succ[3].getTokenIndex(), end);
+					((TokenRewriteStream) input).replace(index, end, "css("+ "\"" + tnh.succ[1].getText() +"\", " + output + ")");
+				}
 			}
 			index++;
 		}
@@ -369,10 +288,10 @@ public class Handler {
 		int index = start.getTokenIndex();
 		Boolean findNew = false;
 		while(index<=stop.getTokenIndex()) {
-			if(input.get(index).getType()==68) { // 68 --> new
+			if(input.get(index).getType()==getTokenNumber("NEW")) { 
 				findNew=true;
 			}
-			if(findNew && input.get(index).getType()==47 && input.get(index).getText().equals("XMLHttpRequest")) { //47 --> ID
+			if(findNew && input.get(index).getType()==getTokenNumber("ID") && input.get(index).getText().equals("XMLHttpRequest")) { 
 				AjaxInformation x = new AjaxInformation(lastId, start.getTokenIndex(), stop.getTokenIndex());
 				ajax.add(x);
 			}
@@ -382,7 +301,7 @@ public class Handler {
 	
 	public void saveVariable(String text, Token start, Token stop, Token o1, Token o2) {
 		int index = start.getTokenIndex();
-		while(input.get(index).getType()!=47)
+		while(input.get(index).getType()!=getTokenNumber("ID"))
 			index++;
 		text = input.get(index).getText();
 		//mancherebbe controllo su ++/-- dopo la variabile
@@ -407,30 +326,9 @@ public class Handler {
 
 	
 	public void getAjaxAttribute(Token start, Token stop) {
-		if(start.getType()==47) {
-			int idx=start.getTokenIndex();
-			int counter=0;
-			Token succ= input.get(idx);
-			Token doubleSucc = input.get(idx);
-			Token tripleSucc = input.get(idx);
-			Token quadSucc = input.get(idx);
-
-			while(counter<4) {
-				if(idx+1>=input.size())  //controllo oltre alla regola 
-					break;
-				idx++;
-				if(input.get(idx).getChannel()!=JavaScriptToJQueryConverterLexer.HIDDEN) {
-					if(counter==0)
-						succ = input.get(idx);
-					else if (counter==1)
-						doubleSucc = input.get(idx);
-					else if (counter==2)
-						tripleSucc = input.get(idx);
-					else if (counter==3)
-						quadSucc = input.get(idx);
-					counter++;
-				}
-			}
+		if(start.getType()==getTokenNumber("ID")) {
+			int index=start.getTokenIndex();
+			TokensNotHidden tnh = new TokensNotHidden(0, 4, index, input);
 			AjaxInformation block = null;
 			for(int i=0; i<ajax.size(); i++) {
 				if(start.getText().equals(ajax.get(i).getVariableName())) {
@@ -440,13 +338,13 @@ public class Handler {
 			}
 			if(block==null) return;
 			
-			if(succ.getType()==28 && doubleSucc.getType()==47 && tripleSucc.getType()==7) { //DOT, ID, ASSIGN
+			if(tnh.succ[0].getType()==getTokenNumber("DOT") && tnh.succ[1].getType()==getTokenNumber("ID") && tnh.succ[2].getType()==getTokenNumber("ASSIGN")) { 
 				int end = stop.getTokenIndex();
-				if(stop.getType()==86) { //SC
+				if(stop.getType()==getTokenNumber("SC")) { 
 					end--;
 				}
-				String value = input.toString(quadSucc.getTokenIndex(), end);
-				if(doubleSucc.getText().equals("onload") || doubleSucc.getText().equals("onreadystatechange")) {
+				String value = input.toString(tnh.succ[3].getTokenIndex(), end);
+				if(tnh.succ[1].getText().equals("onload") || tnh.succ[1].getText().equals("onreadystatechange")) {
 					String[] arrOfStr = value.split("\\(", 2);
 					String in = "(data, textStaus, jqXHR";
 					if(!arrOfStr[1].startsWith(")"))
@@ -454,37 +352,16 @@ public class Handler {
 					value = value.replaceFirst("\\(", in);
 					value = value.replaceAll(block.getVariableName(), "jqXHR");
 				}
-				block.propertyMap.put(doubleSucc.getText(), value);
+				block.propertyMap.put(tnh.succ[1].getText(), value);
 			}
 		}
 	}
 	
 	public void getAjaxMethod(Token start, Token stop) {
-		if(start.getType()==47) {
+		if(start.getType()==getTokenNumber("ID")) {
 			
 			int idx=start.getTokenIndex();
-			int counter=0;
-			Token succ= input.get(idx);
-			Token doubleSucc = input.get(idx);
-			Token tripleSucc = input.get(idx);
-			Token quadSucc = input.get(idx);
-
-			while(counter<4) {
-				if(idx+1>=input.size())  //controllo oltre alla regola 
-					break;
-				idx++;
-				if(input.get(idx).getChannel()!=JavaScriptToJQueryConverterLexer.HIDDEN) {
-					if(counter==0)
-						succ = input.get(idx);
-					else if (counter==1)
-						doubleSucc = input.get(idx);
-					else if (counter==2)
-						tripleSucc = input.get(idx);
-					else if (counter==3)
-						quadSucc = input.get(idx);
-					counter++;
-				}
-			}
+			TokensNotHidden tnh = new TokensNotHidden(0, 4, idx, input);
 			
 			AjaxInformation block = null;
 			for(int i=0; i<ajax.size(); i++) {
@@ -494,12 +371,12 @@ public class Handler {
 				}
 			}
 			if(block==null) return;
-			if(succ.getType()==28 && doubleSucc.getType()==47 && tripleSucc.getType()==61) { //DOT, ID, LP
-				int index = quadSucc.getTokenIndex();
-				if(doubleSucc.getText().equals("open")) {
+			if(tnh.succ[0].getType()==getTokenNumber("DOT") && tnh.succ[1].getType()==getTokenNumber("ID") && tnh.succ[2].getType()==getTokenNumber("LP")) { 
+				int index = tnh.succ[3].getTokenIndex();
+				if(tnh.succ[1].getText().equals("open")) {
 					int c = 0;
-					while(input.get(index).getType()!=84) { //RP
-						while(input.get(index).getType()==15 || input.get(index).getChannel() == JavaScriptToJQueryConverterLexer.HIDDEN) //CM
+					while(input.get(index).getType()!=getTokenNumber("RP")) {
+						while(input.get(index).getType()==getTokenNumber("CM") || input.get(index).getChannel() == JavaScriptToJQueryConverterLexer.HIDDEN) 
 							index++;
 						if(c==0)
 							block.propertyMap.put("method", input.get(index).getText());
@@ -518,12 +395,12 @@ public class Handler {
 					}
 					
 				}
-				else if(doubleSucc.getText().equals("send")){
-					if(quadSucc.getType()!=84) {
-						int i = quadSucc.getTokenIndex();
-						while(input.get(i).getType()!=84)
+				else if(tnh.succ[1].getText().equals("send")){
+					if(tnh.succ[3].getType()!=getTokenNumber("RP")) {
+						int i = tnh.succ[3].getTokenIndex();
+						while(input.get(i).getType()!=getTokenNumber("RP"))
 							i++;
-						String s = input.toString(quadSucc.getTokenIndex(), i-1);
+						String s = input.toString(tnh.succ[3].getTokenIndex(), i-1);
 						block.propertyMap.put("data", s);
 						translateAjax(block);
 					}
@@ -536,7 +413,7 @@ public class Handler {
 		block.sendReached = true;
 		if(block.propertyMap.get("url")==null || block.propertyMap.get("method")==null || (block.propertyMap.get("onload")==null && block.propertyMap.get("onreadystatechange")==null)) {
 			block.translateFlag = false;
-			block.errorMessage = "Cannot translate ajax request, missing parameters on variable" + block.getVariableName();  //TODO migliorare segnalazione errore
+			block.errorMessage = "Cannot translate the ajax call because some mandatory parameters are missing" + block.getVariableName(); 
 		}
 		if(block.translateFlag) {
 			String output = "$.ajax({url:" + block.propertyMap.get("url") + ", type: " + block.propertyMap.get("method") + ", ";
@@ -571,19 +448,20 @@ public class Handler {
 			
 			output += "})";
 			
-			if(input.get(block.indexAjax[1]+1).getType()!=86)
+			if(input.get(block.indexAjax[1]+1).getType()!=getTokenNumber("SC"))
 				output += ";";
 			
-			if(input.get(block.indexVariableInizialization[1]+1).getType()==86)
+			if(input.get(block.indexVariableInizialization[1]+1).getType()==getTokenNumber("SC"))
 				block.indexVariableInizialization[1] += 1;
 				
 			((TokenRewriteStream) input).delete(block.indexVariableInizialization[0], block.indexVariableInizialization[1]);
 			((TokenRewriteStream) input).replace(block.indexAjax[0], block.indexAjax[1], output);
 			
 		}
-		else
-			System.err.println(block.errorMessage);
-			ParserTester.consoleOutput+=block.errorMessage;
+		else {
+			//System.err.println(block.errorMessage);
+			ParserTester.consoleOutput+="Ajax Error at [" + input.get(block.indexAjax[0]).getLine() + ", "+ input.get(block.indexAjax[0]).getCharPositionInLine()+ "]: " + block.errorMessage +"\n";
+		}
 	}
 
 	public void searchStatus(Token start, Token stop) {
@@ -599,21 +477,21 @@ public class Handler {
 		
 		while(index<=stop.getTokenIndex()) { 
 			TokensNotHidden tnh = new TokensNotHidden(1, 7, index, input);
-			if(input.get(index).getType()==95 && tnh.succ[1].getText().equals("status")) {
-				if(tnh.succ[0].getType()==28 && (tnh.succ[2].getType()==94 || tnh.succ[2].getType()==31) && tnh.prec[0].getType()==61 && tnh.succ[3].getType()==54 && tnh.succ[4].getType()==84) { //31 --> EQ, 94 --> TEQ, 61--> LP, 54 --> INT, 84 --> RP
+			if(input.get(index).getType()==getTokenNumber("THIS") && tnh.succ[1].getText().equals("status")) {
+				if(tnh.succ[0].getType()==getTokenNumber("DOT") && (tnh.succ[2].getType()==getTokenNumber("TEQ") || tnh.succ[2].getType()==getTokenNumber("EQ")) && tnh.prec[0].getType()==getTokenNumber("LP") && tnh.succ[3].getType()==getTokenNumber("INTEGER") && tnh.succ[4].getType()==getTokenNumber("RP")) {
 					flagStatus = true;
 					Integer status = Integer.parseInt(tnh.succ[3].getText()); 
 					int begin;
 					int end;
-					if(tnh.succ[5].getType()==57) { //LBR
+					if(tnh.succ[5].getType()==getTokenNumber("LBR")) {
 						begin = tnh.succ[6].getTokenIndex(); 
 						int idx = begin;
 						int lbr = 1;
 						int rbr = 0;
 						while(lbr-rbr!=0) {
-							if(input.get(idx).getType()==57)
+							if(input.get(idx).getType()==getTokenNumber("LBR"))
 								lbr++;
-							else if(input.get(idx).getType()==82) //RBR
+							else if(input.get(idx).getType()==getTokenNumber("RBR")) //RBR
 								rbr++;
 							if(lbr-rbr!=0)
 								idx++;
@@ -623,7 +501,7 @@ public class Handler {
 					else {
 						begin = tnh.succ[5].getTokenIndex();
 						int idx = begin;
-						while(input.get(idx).getType()!=29 && idx<=stop.getTokenIndex()) {
+						while(input.get(idx).getType()!=getTokenNumber("ELSE") && idx<=stop.getTokenIndex()) {
 							idx++;
 						}
 						end = idx-1;
@@ -631,120 +509,45 @@ public class Handler {
 					String code = input.toString(begin, end);
 					if(block.statusMap.get(status)!=null) {
 						block.translateFlag = false;
-						block.errorMessage = "Duplicated status"; //SISTEMARE SEGNALAZIONE ERRORE
+						block.errorMessage = "Cannot translate the ajax call because a status has two functions assigned"; 
 					}else
 						block.statusMap.put(status, code);
 				}
 				else {
 					block.translateFlag = false;
-					block.errorMessage = "intraducibile (if)"; //SISTEMARE MESSAGGIO
+					block.errorMessage = "Cannot translate the ajax call because an if statement has more conditions other than the status one"; 
 				}
 			}
-			if(input.get(index).getType()==29 && tnh.succ[0].getType()!=48 && flagStatus) { //29 --> ELSE, 48 --> IF
+			if(input.get(index).getType()==getTokenNumber("ELSE") && tnh.succ[0].getType()!=getTokenNumber("IF") && flagStatus) { 
 				block.translateFlag = false;
-				block.errorMessage = "Intraducibile (else)"; //SISTEMARE MESSAGGIO
+				block.errorMessage = "Cannot translate the ajax call because an if statement with the status condition contains an else"; 
 			}
 			index++;
 		}
 	}
-	
-	/*public void checkIncDec(Token before, Token after, Token id) {
-		System.out.println("CHECKINCDEC FOR");
-		if(before != null && after != null)
-			myErrorHandler(DUPLICATE_INC_DEC, id);
-		else if(before == null && after == null)
-			myErrorHandler(MISS_INC_DEC, id);
-	}*/
 	
 	public void checkDuplicateIncDec(Token before, Token after, Token id) {
 		if(before != null && after != null)
 			myErrorHandler(DUPLICATE_INC_DEC, id);
 	}
 	
-	
-	/*
-	public void declareVar (Token t, Token v) {
-		if (t!=null && v!=null) {
-			String name = v.getText();
-			//VarDescriptor vd = new VarDescriptor(name, t.getText());
-			if (symbolTable.containsKey(name))
-				myErrorHandler(DECLARED_VAR_ERROR, v);
-			else {
-				symbolTable.putIfAbsent(name, vd);
-				System.out.println("Hai appena dichiarato:" + name + 
-										" di tipo "+t.getText());
+	public int getTokenNumber(String token) {
+		File tokenFile = new File("src/JS2JQConverter/JavaScriptToJQueryConverter.tokens");
+		try {
+			FileReader fr = new FileReader(tokenFile);
+			BufferedReader br=new BufferedReader(fr); 
+			String line;
+			String [] array;
+			while((line=br.readLine())!=null) {
+				array = line.split("=");
+				if(array[0].equals(token))
+					return Integer.parseInt(array[1]);
 			}
+			fr.close();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-	}
-	*/
-
-
-	// ****
-	
-	/*public boolean checkReference(Token var) {
-		if (var!=null) {
-			String name = var.getText();
-			if (!symbolTable.containsKey(name))
-				myErrorHandler(UNDECLARED_VAR_ERROR, var);
-			else return true;
-		}
-		return false;		
-	}
-	*/
-
-	/*
-	public void assignValue(Token n, float v) {
-		if (n != null && checkReference(n)) {
-			String name = n.getText();
-			VarDescriptor vd = symbolTable.get(name);
-			if (vd != null)
-				vd.value = v;
-			System.out.println("Hai assegnato il valore " + v + " alla variabile " + name);
-		}
+		return -1;
 	}
 
-	// *****
-	public float getVarValue(Token x) {
-		if (x != null && checkReference(x)) {
-			String name = x.getText();
-			VarDescriptor vd = symbolTable.get(name);
-			if (vd != null)
-				return vd.value;
-		}
-		return 0;
-	}
-	*/
-
-	public float convertToFloat(Token n) {
-		if (n != null)
-			return Float.parseFloat(n.getText());
-		return 0;
-	}
-
-	public float calculateAdd(float t1, Token op, float t2) {
-		float res = t1;
-		if (op != null) {
-			if (op.getText().equals("+"))
-				res = t1+t2;
-			else
-				res = t1-t2;
-		}
-			
-		return res;
-	}
-
-
-	public float calculateMul(float f1, Token op, float f2) {
-		float res = f1;
-		if (op != null) {
-			if (op.getText().equals("*"))
-				res = f1*f2;
-			else if (f2 != 0)
-				res = f1/f2;
-			else 
-				myErrorHandler(DIV_BY_ZERO_ERROR, op);
-		}
-			
-		return res;
-	}
 }
