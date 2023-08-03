@@ -17,58 +17,74 @@ public class ChooserPanel extends JPanel{
 	private JButton buttonPathTranslation;
 	private JFileChooser fileChooser;
 	private static String path;
+	private static String resourcePath;
+	private static String fileName;
 	
 	public ChooserPanel() {
 		buttonFileChooser = new JButton("Upload File");
 		buttonPathTranslation = new JButton("Select the path for translation");
 		fileChooser = new JFileChooser();
+		fileChooser.addChoosableFileFilter(new FileFilterTxtJs());
+		//se non voglio proprio visualizzare Tutti i File nel selettore ma solo i filtrati aggiungo questa
+		fileChooser.setAcceptAllFileFilterUsed(false);
+		
 		setLayout(new FlowLayout());
 		add(buttonFileChooser);
 		add(buttonPathTranslation);
 	
-	buttonFileChooser.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			if(fileChooser.showOpenDialog(ChooserPanel.this)==JFileChooser.APPROVE_OPTION) {
-				WindowFrame.textArea.append(fileChooser.getSize().toString());
-				if(fileChooser.getSelectedFile().toString().equals("")==false) {
-					WindowFrame.textArea.append("File selected for translation to JQuery: \n" + fileChooser.getSelectedFile().toString() + "\n");
-					//copia file in resources
-					File source = new File(fileChooser.getSelectedFile().toString());
-					File dest = new File("resources\\input.file");
-					try {
-						Files.deleteIfExists(dest.toPath());
-					    Files.copy(source.toPath(), dest.toPath());
-					} catch (IOException e1) {
-					    e1.printStackTrace();
-					}
+		buttonFileChooser.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(fileChooser.showOpenDialog(ChooserPanel.this)==JFileChooser.APPROVE_OPTION) {
+						if(path==null)
+							TextAreaPanel.textArea.setText(""); //Pulisco da eventuali errori segnalati
+						WindowFrame.textAreaPanel.appendText("File selected for translation to JQuery: \n" + fileChooser.getSelectedFile().toString() + "\n");
+						resourcePath = fileChooser.getSelectedFile().toString();
+						/*//copia file in resources - non serve
+						File source = new File(fileChooser.getSelectedFile().toString());
+						File dest = new File("resources\\input.file");
+						try {
+							Files.deleteIfExists(dest.toPath());
+						    Files.copy(source.toPath(), dest.toPath());
+						} catch (IOException e1) {
+						    e1.printStackTrace();
+						}*/
+						
 				}
-				else 
-					WindowFrame.textArea.append("Seleziona un file!");
+			}
+		});
+		
+		buttonPathTranslation.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(fileChooser.showSaveDialog(ChooserPanel.this)==JFileChooser.APPROVE_OPTION) {
+						path = fileChooser.getSelectedFile().toString();
+						fileName = path;
+						int index = path.lastIndexOf("\\");
+						path = path.substring(0, index);
+						fileName = fileName.substring(index+1, fileName.length());
+						if(resourcePath==null)
+							TextAreaPanel.textArea.setText(""); //Pulisco da eventuali errori segnalati
+						WindowFrame.textAreaPanel.appendText("Path selected for translation download: \n" + path + "\n");
 					
-			}
-		}
-	});
-	
-	buttonPathTranslation.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			if(fileChooser.showOpenDialog(ChooserPanel.this)==JFileChooser.APPROVE_OPTION) {
-				if(fileChooser.getSelectedFile().toString().equals("")==false) {
-					path = fileChooser.getSelectedFile().toString();
-					int index = path.lastIndexOf("\\");
-					path = path.substring(0, index);
-					WindowFrame.textArea.append("Path selected for translation download: \n" + path + "\n");
 				}
-				else
-					WindowFrame.textArea.append("Seleziona una directory");
 			}
-		}
-	});
-	
-	
+		});
 	}
 	
 	public static String getPath() {
 		return path;
 	}
+	public static void resetPath() {
+		path = null;
+	}
 	
+	public static String getResourcePath() {
+		return resourcePath;
+	}
+	public static void resetResourcePath() {
+		resourcePath = null;
+	}
+	
+	public static String getFileName() {
+		return fileName;
+	}
 }

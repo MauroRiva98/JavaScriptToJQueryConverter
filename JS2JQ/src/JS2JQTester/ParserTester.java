@@ -19,14 +19,18 @@ import JS2JQGui.*;
 public class ParserTester {
 
 	static JavaScriptToJQueryConverterParser parser;
-  
+	public static String consoleOutput; //output on TextArea in JS2JQ Gui
+	
 	public static void main(String[] args) {
 		TokenRewriteStream tokens;
-	  	String fileIn = ".\\resources\\input.file";
-
+	  	//String fileIn = ".\\resources\\input.file";
+		String fileIn = ChooserPanel.getResourcePath();
+		
 		try {
-			System.out.println ("Parsing con ANTLR lexer");
-			System.out.println ("-----------------------");
+			//System.out.println ("Parsing con ANTLR lexer");
+			//System.out.println ("-----------------------");
+			
+			consoleOutput += "Parsing con ANTLR lexer \n -----------------------\n";
 
 			// 1.Istanzio il lexer passandogli il documento da analizzare
 			JavaScriptToJQueryConverterLexer lexer = new JavaScriptToJQueryConverterLexer(
@@ -45,39 +49,50 @@ public class ParserTester {
 			// 5.controllo i risultati
 			Handler h = parser.getHandler();
 			if (h.getErrorList().size() == 0) {
-				System.out.println ("Parsing terminato con successo");
+				//System.out.println ("Parsing terminato con successo");
+				consoleOutput += "\nParsing terminato con successo\n\n";
 			}
 			else
-				for (int i=0; i<h.getErrorList().size(); i++)
-					System.err.println ("Errore " + (i+1) + 
-							":\t" + h.getErrorList().get(i)+"");
-			
-			System.out.println(tokens.toString());
+				for (int i=0; i<h.getErrorList().size(); i++) {
+					//System.err.println ("Errore " + (i+1) + 
+					//		":\t" + h.getErrorList().get(i)+"");
+					consoleOutput += "Errore " + (i+1) + 
+							":\t" + h.getErrorList().get(i)+"";
+				}
+			//System.out.println(tokens.toString());
 			
 			String path=ChooserPanel.getPath();
+			
 			if(path!=null) {
-				FileWriter writer = new FileWriter(path+"\\translated.txt");
+				FileWriter writer = new FileWriter(path+"\\" + ChooserPanel.getFileName() + ".txt");
 				writer.write(tokens.toString());
 				writer.close();
 			}
 			else {
 				Path pathAttuale = Paths.get("");
 				String directoryName = pathAttuale.toAbsolutePath().toString();
-				System.out.println(directoryName);
+				//System.out.println(directoryName);
 				FileWriter writer = new FileWriter(directoryName+"\\translated.txt");
 				writer.write(tokens.toString());
 				writer.close();
 			}
-				
-			System.out.println("Successfully wrote to che file.");
+			
+			ChooserPanel.resetPath();
+			ChooserPanel.resetResourcePath();
+			
+			//System.out.println("Successfully wrote to the file.");
+			consoleOutput += "Successfully wrote to the file. \n";
 			
 			
 			
 		} catch (Exception e) {
 			System.out.println ("Parsing con ANTLR abortito\n\n");
+			consoleOutput += "Parsing con ANTLR abortito\n\n";
 			e.printStackTrace();
 		}
 
+		System.out.println(consoleOutput);
+		
   }
 
 }

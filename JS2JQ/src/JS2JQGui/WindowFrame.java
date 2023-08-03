@@ -7,18 +7,25 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import javax.swing.*;
+
+import JS2JQTester.ParserTester;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.SystemColor;
+import java.awt.TextArea;
 
 public class WindowFrame extends JFrame{
 	
 	//public JFileChooser fileChooser;
-	public static JTextArea textArea;
+	//public static JTextArea textArea;
 	private JButton btnTranslate;
+	static TextAreaPanel textAreaPanel;
 	//private JButton buttonFileChooser; //
 	private ChooserPanel chooserButtons;
 	
@@ -31,12 +38,13 @@ public class WindowFrame extends JFrame{
 		chooserButtons = new ChooserPanel();
 		//fileChooser = new JFileChooser();
 		//buttonFileChooser = new JButton("Upload File"); //
-		textArea = new JTextArea();
-		textArea.setEditable(false);
-		textArea.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+		//textArea = new JTextArea();
+		textAreaPanel = new TextAreaPanel();
+		//textArea.setEditable(false);
+		//textArea.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
 		btnTranslate = new JButton("TRANSLATE ");
 		btnTranslate.setBackground(SystemColor.textHighlight);
-		btnTranslate.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnTranslate.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnTranslate.setIcon(new ImageIcon("C:\\Users\\boffe\\Downloads\\2793765piccola.png"));
 		
 		/*buttonFileChooser.addActionListener(new ActionListener() {
@@ -58,18 +66,31 @@ public class WindowFrame extends JFrame{
 		
 		btnTranslate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textArea.append("*************************\nCONSOLE OUTPUT: \n");
-				JS2JQTester.ParserTester.main(null);
+				if(ChooserPanel.getResourcePath() != null) {
+					if(ChooserPanel.getPath()==null) {
+						Path pathAttuale = Paths.get("");
+						String directoryName = pathAttuale.toAbsolutePath().toString();
+						textAreaPanel.appendText("No directory path selected!  Setted to default path and default file name: \n" + directoryName + "\n");
+					}
+					textAreaPanel.appendText("\n*****************************************\n\nCONSOLE OUTPUT: \n\n");
+					JS2JQTester.ParserTester.main(null);
+					textAreaPanel.appendText(ParserTester.consoleOutput);
+					ParserTester.consoleOutput = "";
+				}
+				else 
+					textAreaPanel.appendText("ATTENTION: No input file path selected!  \n");
 			}
 		});
 		
-		PrintStream printStream = new PrintStream(new CustomOutputStream(textArea));
+		//Change output stream
+		/*PrintStream printStream = new PrintStream(new CustomOutputStream(textArea));
 		System.setOut(printStream);
-		System.setErr(printStream);
+		System.setErr(printStream); */
+		
 		
 		//getContentPane().add(buttonFileChooser, BorderLayout.PAGE_START);
 		getContentPane().add(chooserButtons, BorderLayout.PAGE_START);
-		getContentPane().add(textArea, BorderLayout.CENTER);
+		getContentPane().add(textAreaPanel, BorderLayout.CENTER);
 		getContentPane().add(btnTranslate, BorderLayout.PAGE_END);
 		
 		setSize(800, 700);

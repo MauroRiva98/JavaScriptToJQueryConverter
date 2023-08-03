@@ -12,6 +12,7 @@ import org.antlr.runtime.TokenRewriteStream;
 import org.antlr.runtime.TokenStream;
 
 import JS2JQConverter.JavaScriptToJQueryConverterLexer;
+import JS2JQTester.ParserTester;
 
 public class Handler {
 	public static int LEXICAL_ERROR = 0;
@@ -33,7 +34,6 @@ public class Handler {
 	TokenStream input;
 	//TokenRewriteStream input;
 	String lastId;
-	
 	Vector<AjaxInformation> ajax;
 	
 	// ******
@@ -583,6 +583,7 @@ public class Handler {
 		}
 		else
 			System.err.println(block.errorMessage);
+			ParserTester.consoleOutput+=block.errorMessage;
 	}
 
 	public void searchStatus(Token start, Token stop) {
