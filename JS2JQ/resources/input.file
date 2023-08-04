@@ -1,25 +1,10 @@
-if(true){
-	document.€.getElementById("myText").value = "Johnny Bravo";
-}
-x.style.display = "none";
 const xhttp = new XMLHttpRequest();
---pippo++;
-	function(){
-
+xhttp.onload = function(){
+	if(this.status == 200){
+		ciaoo = 1;
 	}
+}
+xhttp.open("GET", "ciao.txt");
+xhttp.send();
 
-  xhttp.onload = function() {
-    if (this.status == 200) {
-            document.getElementById("myText").value = "Johnny Bravo" + "ciao"; 
-       }
-	if(this.status == 200)
-			console.log("error");
-	
-      
-  }
-  xhttp.open("GET", "https://api.example.com/data", true, "user", "password");
-  xhttp.send("stringa");
-
-prova copia
-riprova
-ciaoo
+element.value = 42;

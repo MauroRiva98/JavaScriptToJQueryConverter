@@ -19,6 +19,7 @@ public class ChooserPanel extends JPanel{
 	private static String path;
 	private static String resourcePath;
 	private static String fileName;
+	private static String extension;
 	
 	public ChooserPanel() {
 		buttonFileChooser = new JButton("Upload File");
@@ -39,6 +40,9 @@ public class ChooserPanel extends JPanel{
 							TextAreaPanel.textArea.setText(""); //Pulisco da eventuali errori segnalati
 						WindowFrame.textAreaPanel.appendText("File selected for translation to JQuery: \n" + fileChooser.getSelectedFile().toString() + "\n");
 						resourcePath = fileChooser.getSelectedFile().toString();
+						int i = resourcePath.lastIndexOf(".");
+						extension = resourcePath.substring(i+1, resourcePath.length());
+						
 						/*//copia file in resources - non serve
 						File source = new File(fileChooser.getSelectedFile().toString());
 						File dest = new File("resources\\input.file");
@@ -75,6 +79,10 @@ public class ChooserPanel extends JPanel{
 	}
 	public static void resetPath() {
 		path = null;
+	}
+	
+	public static String getExtension() {
+		return extension;
 	}
 	
 	public static String getResourcePath() {

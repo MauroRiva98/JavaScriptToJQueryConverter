@@ -291,7 +291,7 @@ public class Handler {
 			if(input.get(index).getType()==getTokenNumber("NEW")) { 
 				findNew=true;
 			}
-			if(findNew && input.get(index).getType()==getTokenNumber("ID") && input.get(index).getText().equals("XMLHttpRequest")) { 
+			if(findNew && input.get(index).getType()==getTokenNumber("ID") && input.get(index).getText().equals("XMLHttpRequest")) {
 				AjaxInformation x = new AjaxInformation(lastId, start.getTokenIndex(), stop.getTokenIndex());
 				ajax.add(x);
 			}
@@ -359,10 +359,8 @@ public class Handler {
 	
 	public void getAjaxMethod(Token start, Token stop) {
 		if(start.getType()==getTokenNumber("ID")) {
-			
 			int idx=start.getTokenIndex();
 			TokensNotHidden tnh = new TokensNotHidden(0, 4, idx, input);
-			
 			AjaxInformation block = null;
 			for(int i=0; i<ajax.size(); i++) {
 				if(start.getText().equals(ajax.get(i).getVariableName())) {
@@ -402,8 +400,8 @@ public class Handler {
 							i++;
 						String s = input.toString(tnh.succ[3].getTokenIndex(), i-1);
 						block.propertyMap.put("data", s);
-						translateAjax(block);
 					}
+					translateAjax(block);
 				}
 			}
 		}

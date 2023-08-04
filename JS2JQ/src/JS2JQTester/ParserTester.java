@@ -19,18 +19,18 @@ import JS2JQGui.*;
 public class ParserTester {
 
 	static JavaScriptToJQueryConverterParser parser;
-	public static String consoleOutput; //output on TextArea in JS2JQ Gui
+	public static String consoleOutput = ""; //output on TextArea in JS2JQ Gui
 	
 	public static void main(String[] args) {
 		TokenRewriteStream tokens;
-	  	String fileIn = ".\\resources\\input.file";
-		//String fileIn = ChooserPanel.getResourcePath();
+	  	//String fileIn = ".\\resources\\input.file";
+		String fileIn = ChooserPanel.getResourcePath();
 		
 		try {
 			//System.out.println ("Parsing con ANTLR lexer");
 			//System.out.println ("-----------------------");
 			
-			consoleOutput += "Parsing con ANTLR lexer \n -----------------------\n";
+			//consoleOutput += "Parsing con ANTLR lexer \n -----------------------\n";
 
 			// 1.Istanzio il lexer passandogli il documento da analizzare
 			JavaScriptToJQueryConverterLexer lexer = new JavaScriptToJQueryConverterLexer(
@@ -50,7 +50,7 @@ public class ParserTester {
 			Handler h = parser.getHandler();
 			if (h.getErrorList().size() == 0) {
 				//System.out.println ("Parsing terminato con successo");
-				consoleOutput += "\nParsing terminato con successo\n\n";
+				//consoleOutput += "\nParsing terminato con successo\n\n";
 			}
 			else
 				for (int i=0; i<h.getErrorList().size(); i++) {
@@ -63,7 +63,7 @@ public class ParserTester {
 			String path=ChooserPanel.getPath();
 			
 			if(path!=null) {
-				FileWriter writer = new FileWriter(path+"\\" + ChooserPanel.getFileName() + ".txt");
+				FileWriter writer = new FileWriter(path+"\\" + ChooserPanel.getFileName() + "." + ChooserPanel.getExtension());
 				writer.write(tokens.toString());
 				writer.close();
 			}
@@ -85,8 +85,8 @@ public class ParserTester {
 			
 			
 		} catch (Exception e) {
-			System.out.println ("Parsing con ANTLR abortito\n\n");
-			consoleOutput += "Parsing con ANTLR abortito\n\n";
+			//System.out.println ("Parsing con ANTLR abortito\n\n");
+			//consoleOutput += "Parsing con ANTLR abortito\n\n";
 			e.printStackTrace();
 		}
 
