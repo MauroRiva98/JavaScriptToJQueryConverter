@@ -72,7 +72,7 @@ public class Handler {
 	}
 
 	// ***** gestione errori semantici
-	void myErrorHandler(int code, Token tk) {
+	public void semanticErrorHandler(int code, Token tk) {
 		String errMsg;
 		// i primi due casi non dovrebbero mai avvenire... ma giusto in caso...
 		if (code == LEXICAL_ERROR)
@@ -105,13 +105,13 @@ public class Handler {
 		if (name == null) {
 			int index = func.getTokenIndex();
 			if(index == 0)
-				myErrorHandler(FUNCTION_NAME_ERROR, func);
+				semanticErrorHandler(FUNCTION_NAME_ERROR, func);
 			while(index > 0) {
 				index--;
 				if(input.get(index).getChannel() != JavaScriptToJQueryConverterLexer.HIDDEN) {
 					int prec = input.get(index).getType();
 					if(prec != getTokenNumber("ASSIGN") && prec != getTokenNumber("CL") && prec != getTokenNumber("LP"))
-						myErrorHandler(FUNCTION_NAME_ERROR, func);
+						semanticErrorHandler(FUNCTION_NAME_ERROR, func);
 					break;
 				}
 			}
@@ -120,7 +120,7 @@ public class Handler {
 	
 	public void checkLastDot(Token last) {
 		if (last.getType()==getTokenNumber("DOT")) {
-			myErrorHandler(LAST_DOT_ERROR, last);
+			semanticErrorHandler(LAST_DOT_ERROR, last);
 		}
 	}
 	
@@ -147,7 +147,7 @@ public class Handler {
 		else if (type.equals("getElementsByTagName"))
 			param += "\"";
 		else{
-			myErrorHandler(GET_ERROR, typeGet);
+			semanticErrorHandler(GET_ERROR, typeGet);
 			return;
 		}
 			
@@ -478,6 +478,13 @@ public class Handler {
 			if(input.get(index).getType()==getTokenNumber("THIS") && tnh.succ[1].getText().equals("status")) {
 				if(tnh.succ[0].getType()==getTokenNumber("DOT") && (tnh.succ[2].getType()==getTokenNumber("TEQ") || tnh.succ[2].getType()==getTokenNumber("EQ")) && tnh.prec[0].getType()==getTokenNumber("LP") && tnh.succ[3].getType()==getTokenNumber("INTEGER") && tnh.succ[4].getType()==getTokenNumber("RP")) {
 					flagStatus = true;
+					TokensNotHidden b = new TokensNotHidden(1, 0, start.getTokenIndex(), input);
+					TokensNotHidden e = new TokensNotHidden(0, 1, stop.getTokenIndex(), input);
+					if(b.prec[0].getType()!=getTokenNumber("LBR") || e.succ[0].getType()!=getTokenNumber("RBR")) {
+						block.translateFlag = false;
+						block.errorMessage = "Cannot translate the ajax call because there are some istructions outside the status if statement"; 
+						return;
+					}
 					Integer status = Integer.parseInt(tnh.succ[3].getText()); 
 					int begin;
 					int end;
@@ -489,7 +496,7 @@ public class Handler {
 						while(lbr-rbr!=0) {
 							if(input.get(idx).getType()==getTokenNumber("LBR"))
 								lbr++;
-							else if(input.get(idx).getType()==getTokenNumber("RBR")) //RBR
+							else if(input.get(idx).getType()==getTokenNumber("RBR"))
 								rbr++;
 							if(lbr-rbr!=0)
 								idx++;
@@ -526,7 +533,7 @@ public class Handler {
 	
 	public void checkDuplicateIncDec(Token before, Token after, Token id) {
 		if(before != null && after != null)
-			myErrorHandler(DUPLICATE_INC_DEC, id);
+			semanticErrorHandler(DUPLICATE_INC_DEC, id);
 	}
 	
 	public int getTokenNumber(String token) {

@@ -32,7 +32,7 @@ public class WindowFrame extends JFrame{
 	public WindowFrame() {
 		
 		super("JavaScript to JQuery Converter");
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\boffe\\Downloads\\2793765piccola.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("resources\\logo.png"));
 		getContentPane().setLayout(new BorderLayout());
 		
 		chooserButtons = new ChooserPanel();
@@ -45,7 +45,7 @@ public class WindowFrame extends JFrame{
 		btnTranslate = new JButton("TRANSLATE ");
 		btnTranslate.setBackground(SystemColor.textHighlight);
 		btnTranslate.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnTranslate.setIcon(new ImageIcon("C:\\Users\\boffe\\Downloads\\2793765piccola.png"));
+		btnTranslate.setIcon(new ImageIcon("resources\\logo.png"));
 		
 		/*buttonFileChooser.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
