@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 
 import javax.swing.*;
 
-import JS2JQTester.ParserTester;
+import JS2JQStarter.JS2JQParserStarter;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -73,9 +73,9 @@ public class WindowFrame extends JFrame{
 						textAreaPanel.appendText("No directory path selected!  Setted to default path and default file name: \n" + directoryName + "\n");
 					}
 					textAreaPanel.appendText("\n*****************************************\n\nCONSOLE OUTPUT: \n\n");
-					JS2JQTester.ParserTester.main(null);
-					textAreaPanel.appendText(ParserTester.consoleOutput);
-					ParserTester.consoleOutput = "";
+					JS2JQStarter.JS2JQParserStarter.main(null);
+					textAreaPanel.appendText(JS2JQParserStarter.consoleOutput);
+					JS2JQParserStarter.consoleOutput = "";
 				}
 				else 
 					textAreaPanel.appendText("ATTENTION: No input file path selected!  \n");

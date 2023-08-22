@@ -1,4 +1,4 @@
-package JS2JQTester;
+package JS2JQStarter;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -16,7 +16,7 @@ import JS2JQConverter.Handler;
 import JS2JQGui.*;
 
 
-public class ParserTester {
+public class JS2JQParserStarter {
 
 	static JavaScriptToJQueryConverterParser parser;
 	public static String consoleOutput = ""; //output on TextArea in JS2JQ Gui
