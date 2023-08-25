@@ -22,11 +22,8 @@ import java.awt.TextArea;
 
 public class WindowFrame extends JFrame{
 	
-	//public JFileChooser fileChooser;
-	//public static JTextArea textArea;
 	private JButton btnTranslate;
 	static TextAreaPanel textAreaPanel;
-	//private JButton buttonFileChooser; //
 	private ChooserPanel chooserButtons;
 	
 	public WindowFrame() {
@@ -36,33 +33,12 @@ public class WindowFrame extends JFrame{
 		getContentPane().setLayout(new BorderLayout());
 		
 		chooserButtons = new ChooserPanel();
-		//fileChooser = new JFileChooser();
-		//buttonFileChooser = new JButton("Upload File"); //
-		//textArea = new JTextArea();
 		textAreaPanel = new TextAreaPanel();
-		//textArea.setEditable(false);
-		//textArea.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
 		btnTranslate = new JButton("TRANSLATE ");
 		btnTranslate.setBackground(SystemColor.textHighlight);
 		btnTranslate.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnTranslate.setIcon(new ImageIcon("resources\\logo.png"));
 		
-		/*buttonFileChooser.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(fileChooser.showOpenDialog(WindowFrame.this)==JFileChooser.APPROVE_OPTION) {
-					textArea.append("File selected for translation to JQuery: \n" + fileChooser.getSelectedFile().toString() + "\n");
-					//
-					File source = new File(fileChooser.getSelectedFile().toString());
-					File dest = new File("resources\\input.file");
-					try {
-						Files.deleteIfExists(dest.toPath());
-					    Files.copy(source.toPath(), dest.toPath());
-					} catch (IOException e1) {
-					    e1.printStackTrace();
-					}
-				}
-			}
-		});*/
 		
 		btnTranslate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -82,13 +58,6 @@ public class WindowFrame extends JFrame{
 			}
 		});
 		
-		//Change output stream
-		/*PrintStream printStream = new PrintStream(new CustomOutputStream(textArea));
-		System.setOut(printStream);
-		System.setErr(printStream); */
-		
-		
-		//getContentPane().add(buttonFileChooser, BorderLayout.PAGE_START);
 		getContentPane().add(chooserButtons, BorderLayout.PAGE_START);
 		getContentPane().add(textAreaPanel, BorderLayout.CENTER);
 		getContentPane().add(btnTranslate, BorderLayout.PAGE_END);

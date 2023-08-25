@@ -1,17 +1,4 @@
-if(true){
-	$("#myText").val("Johnny Bravo");
-}
-const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    if (this.status == 200) {
-            $("#myText").val("Johnny Bravo" + "ciao"; cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-       }
-	if(this.status == 404 && pippo)
-			console.log("error");
-      
-  })
-  xhttp.open("GET", "https://api.example.com/data", true, "user", "password");
-  xhttp.send("stringa");
 
-prova1
-provafinale
+$.ajax({url:"file.txt", type: "GET", statusCode: {404: function(data, textStatus, jqXHR) {console.log("error");
+	}, 200: function(data, textStatus, jqXHR) {console.log("ok");
+	}}});

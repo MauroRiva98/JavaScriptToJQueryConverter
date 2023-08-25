@@ -6,9 +6,8 @@ import javax.swing.filechooser.FileFilter;
 
 public class FileFilterTxtJs extends FileFilter{
 
-	@Override //cosa accetta nel menu
+	@Override 
 	public boolean accept(File f) {
-		// TODO Auto-generated method stub
 		
 		if(f.isDirectory())
 			return true;
@@ -24,9 +23,8 @@ public class FileFilterTxtJs extends FileFilter{
 		return false;
 	}
 
-	@Override //da la descrizione visualizzata nel riquadro
+	@Override
 	public String getDescription() {
-		// TODO Auto-generated method stub
 		return "File TXT o JS (*.txt or *.js)";
 	}
 

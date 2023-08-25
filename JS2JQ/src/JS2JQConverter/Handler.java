@@ -33,8 +33,6 @@ public class Handler {
 	public static int DUPLICATE_INC_DEC = 10;
 	public static int MISS_INC_DEC = 11;
 	
-	//Hashtable<String, VarDescriptor> symbolTable;
-	// ******
 	List<String> errorList;
 	TokenStream input;
 	//TokenRewriteStream input;
@@ -45,7 +43,6 @@ public class Handler {
 	public Handler (TokenStream input) {
 		this.input = input;
 		this.ajax = new Vector<AjaxInformation>();
-		//symbolTable = new Hashtable<String, VarDescriptor>(101);
 		errorList = new ArrayList<String>();
 	}
 	
@@ -67,14 +64,13 @@ public class Handler {
 
 		errMsg += " at [" + tk.getLine() + ", " + (tk.getCharPositionInLine()+1) + "]: " +
 					" on token '" + tk.getText() + "'";
-//		errMsg += "\n" + hdr + "\n**********\n" + msg;
+		//errMsg += "\n" + hdr + "\n**********\n" + msg;
 		errorList.add(errMsg +"\n");
 	}
 
 	// ***** gestione errori semantici
 	public void semanticErrorHandler(int code, Token tk) {
 		String errMsg;
-		// i primi due casi non dovrebbero mai avvenire... ma giusto in caso...
 		if (code == LEXICAL_ERROR)
 			errMsg = "Fake Lexical Error ";
 		else if (code == SYNTAX_ERROR)
@@ -304,7 +300,7 @@ public class Handler {
 		while(input.get(index).getType()!=getTokenNumber("ID"))
 			index++;
 		text = input.get(index).getText();
-		//mancherebbe controllo su ++/-- dopo la variabile
+		//Possibile implementazione futura: controllo ++/-- dopo la variabile
 		if(!text.equals("XMLHttpRequest")) {
 			lastId = text;
 			for(int i=0; i<ajax.size(); i++) {
@@ -317,14 +313,12 @@ public class Handler {
 		
 	}
 	
-	
 	private void ajaxCall(AjaxInformation ajax, Token start, Token stop) {
 		if(ajax.indexAjax[0] == -1)
 			ajax.indexAjax[0] = start.getTokenIndex();
 		ajax.indexAjax[1] = stop.getTokenIndex();
 	}
 
-	
 	public void getAjaxAttribute(Token start, Token stop) {
 		if(start.getType()==getTokenNumber("ID")) {
 			int index=start.getTokenIndex();
@@ -457,7 +451,6 @@ public class Handler {
 			
 		}
 		else {
-			//System.err.println(block.errorMessage);
 			JS2JQParserStarter.consoleOutput+="Ajax Error at [" + input.get(block.indexAjax[0]).getLine() + ", "+ input.get(block.indexAjax[0]).getCharPositionInLine()+ "]: " + block.errorMessage +"\n";
 		}
 	}

@@ -26,7 +26,7 @@ public class ChooserPanel extends JPanel{
 		buttonPathTranslation = new JButton("Select the path for translation");
 		fileChooser = new JFileChooser();
 		fileChooser.addChoosableFileFilter(new FileFilterTxtJs());
-		//se non voglio proprio visualizzare Tutti i File nel selettore ma solo i filtrati aggiungo questa
+		//Filtro i file nel selettore
 		fileChooser.setAcceptAllFileFilterUsed(false);
 		
 		setLayout(new FlowLayout());
@@ -41,18 +41,7 @@ public class ChooserPanel extends JPanel{
 						WindowFrame.textAreaPanel.appendText("File selected for translation to JQuery: \n" + fileChooser.getSelectedFile().toString() + "\n");
 						resourcePath = fileChooser.getSelectedFile().toString();
 						int i = resourcePath.lastIndexOf(".");
-						extension = resourcePath.substring(i+1, resourcePath.length());
-						
-						/*//copia file in resources - non serve
-						File source = new File(fileChooser.getSelectedFile().toString());
-						File dest = new File("resources\\input.file");
-						try {
-							Files.deleteIfExists(dest.toPath());
-						    Files.copy(source.toPath(), dest.toPath());
-						} catch (IOException e1) {
-						    e1.printStackTrace();
-						}*/
-						
+						extension = resourcePath.substring(i+1, resourcePath.length());	
 				}
 			}
 		});

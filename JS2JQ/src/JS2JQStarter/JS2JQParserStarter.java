@@ -27,10 +27,6 @@ public class JS2JQParserStarter {
 		String fileIn = ChooserPanel.getResourcePath();
 		
 		try {
-			//System.out.println ("Parsing con ANTLR lexer");
-			//System.out.println ("-----------------------");
-			
-			//consoleOutput += "Parsing con ANTLR lexer \n -----------------------\n";
 
 			// 1.Istanzio il lexer passandogli il documento da analizzare
 			JavaScriptToJQueryConverterLexer lexer = new JavaScriptToJQueryConverterLexer(
@@ -58,7 +54,6 @@ public class JS2JQParserStarter {
 					//		":\t" + h.getErrorList().get(i)+"");
 					consoleOutput += h.getErrorList().get(i)+"";
 				}
-			//System.out.println(tokens.toString());
 			
 			String path=ChooserPanel.getPath();
 			
