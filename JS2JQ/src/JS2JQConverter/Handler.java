@@ -200,6 +200,7 @@ public class Handler {
 					}
 					else if(id.getText().equals("style") && tnh.succ[0].getType()==getTokenNumber("DOT") && tnh.succ[2].getType()!=getTokenNumber("ASSIGN") && tnh.succ[2].getType()!=getTokenNumber("PLUSEQ")) {
 						Token param = tnh.succ[1];
+						System.out.println("QUAAA");
 						((TokenRewriteStream) input).replace(index, tnh.succ[1].getTokenIndex(), "css(\"" + param.getText() + "\")");
 					}
 				}
@@ -267,11 +268,13 @@ public class Handler {
 						((TokenRewriteStream) input).replace(index, end, output);
 					}
 					else {
+						System.out.println("QUI");
 						output = ((TokenRewriteStream) input).toString(tnh.succ[3].getTokenIndex(), end);
 						((TokenRewriteStream) input).replace(index, end, "css("+ "\"" + tnh.succ[1].getText() +"\", " + output + ")");
 					}	
 				}
-				else {
+				else if (tnh.succ[2].getType()==getTokenNumber("ASSIGN")){ //eliminandolo funziona
+					//System.out.println("NON DEVE ENTRARE QUI, PERCHè C'E QUESTO ELSE?");
 					output = ((TokenRewriteStream) input).toString(tnh.succ[3].getTokenIndex(), end);
 					((TokenRewriteStream) input).replace(index, end, "css("+ "\"" + tnh.succ[1].getText() +"\", " + output + ")");
 				}
@@ -405,7 +408,7 @@ public class Handler {
 		block.sendReached = true;
 		if(block.propertyMap.get("url")==null || block.propertyMap.get("method")==null || (block.propertyMap.get("onload")==null && block.propertyMap.get("onreadystatechange")==null)) {
 			block.translateFlag = false;
-			block.errorMessage = "Cannot translate the ajax call because some mandatory parameters are missing" + block.getVariableName(); 
+			block.errorMessage = "Cannot translate the ajax call because some mandatory parameters are missing, in variable: " + block.getVariableName(); 
 		}
 		if(block.translateFlag) {
 			String output = "$.ajax({url:" + block.propertyMap.get("url") + ", type: " + block.propertyMap.get("method") + ", ";

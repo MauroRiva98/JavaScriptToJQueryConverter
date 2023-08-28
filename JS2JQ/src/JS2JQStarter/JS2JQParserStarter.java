@@ -81,7 +81,7 @@ public class JS2JQParserStarter {
 			
 		} catch (Exception e) {
 			//System.out.println ("Parsing con ANTLR abortito\n\n");
-			//consoleOutput += "Parsing con ANTLR abortito\n\n";
+			consoleOutput += "Translation interrupted\n\n";
 			e.printStackTrace();
 		}
 
